@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: Monografia.aux
+A level-1 auxiliary file: pretexto/capa_externa.aux
+A level-1 auxiliary file: pretexto/capa.aux
+A level-1 auxiliary file: pretexto/folhadeaprovacao.aux
+A level-1 auxiliary file: pretexto/resumo.aux
+A level-1 auxiliary file: pretexto/abstract.aux
+A level-1 auxiliary file: pretexto/dedicatoria.aux
+A level-1 auxiliary file: pretexto/epistrofe.aux
+A level-1 auxiliary file: chp1/introducao.aux
+A level-1 auxiliary file: chp2/hd.aux
+A level-1 auxiliary file: chp3/ferramentas.aux
+A level-1 auxiliary file: chp4/metodologia.aux
+A level-1 auxiliary file: chp5/resultados.aux
+A level-1 auxiliary file: chp6/conclusoes.aux
+The style file: abnt-alf.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: abnt-options.bib
+Database file #2: referencias.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
++---------------------------------------------------------+
+| Estilo bibliografico abnt-alf.bst versao 1.53           |
+| Implementa a NBR6023, NBR10520 e NBR10523               |
+| Em caso de duvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 56 entries,
+            6522 wiz_defined-function locations,
+            1498 strings with 18412 characters,
+and the built_in function-call counts, 45971 in all, are:
+= -- 4386
+> -- 970
+< -- 480
++ -- 841
+- -- 307
+* -- 2728
+:= -- 5766
+add.period$ -- 204
+call.type$ -- 59
+change.case$ -- 411
+chr.to.int$ -- 88
+cite$ -- 49
+duplicate$ -- 3484
+empty$ -- 3364
+format.name$ -- 1443
+if$ -- 10470
+int.to.chr$ -- 8
+int.to.str$ -- 1
+missing$ -- 933
+newline$ -- 258
+num.names$ -- 245
+pop$ -- 1096
+preamble$ -- 1
+purify$ -- 184
+quote$ -- 0
+skip$ -- 4078
+stack$ -- 1
+substring$ -- 1748
+swap$ -- 1256
+text.length$ -- 33
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 0
+while$ -- 325
+width$ -- 0
+write$ -- 748

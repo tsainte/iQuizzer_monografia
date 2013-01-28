@@ -1,0 +1,32 @@
+\geometry{verbose,a4paper,tmargin=30mm,bmargin=20mm,lmargin=30mm,rmargin=20mm}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+
+\pagestyle{fancyplain}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+\fancyhead[L]{\upshape\rightmark}
+\renewcommand{\headrulewidth}{0.2pt}
+
+\makeatletter
+\renewcommand{\@makeschapterhead}[1]{%
+\vspace*{-15 pt}%
+{\setlength{\parindent}{0pt} \raggedright \LARGE\scshape
+{\ #1\par\nobreak\vspace{50 pt}}}{\thispagestyle{empty}}}
+\makeatother
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+\vspace*{-15 pt}%
+{\setlength{\parindent}{0pt} \raggedright \LARGE\scshape
+{\thechapter.\ #1\par\nobreak\vspace{50 pt}}}{\thispagestyle{empty}}}
+\makeatother
+
+\titleformat*{\section}{\Large}
+\titleformat*{\subsection}{\bfseries\large}
+\titleformat*{\subsubsection}{\slshape}
+
+
+
+%{\thispagestyle{empty}}

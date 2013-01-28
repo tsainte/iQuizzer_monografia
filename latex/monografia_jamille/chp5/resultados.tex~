@@ -1,0 +1,197 @@
+\chapter{Resultados} \label{CHP:RESULT}
+
+Este capítulo aborda os resultados deste trabalho. Entre eles estão a camada de aplicação, os resultados obtidos a partir da metodologia descrita na Seção \ref{metodologia}, assim como sua análise temporal.
+\section{Camada de Aplicação}
+
+A implementação da camada de aplicação é um programa que  compreende, além dos algoritmos de teste, uma interface para que o usuário possa executá-los e para isto foram implementados funções de listagem dos discos presentes no sistema, e a filtragem para que o usuário possa escolher em que disco deseja realizar testes.
+
+A Figura \ref{FIG:telainicial}, mostra a interface inicial da implementação da camada de aplicação. Ela contém o título do programa, as listagens dos algoritmos e dispositivos disponíveis. Entre colchetes estão os parâmetros que devem ser passados para o programa durante a execução de cada teste. Esta figura demonstra a  execução do programa sem a passagem de parâmetros, isto faz com que o mesmo realize a listagem das opções disponíveis.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[scale=0.5]{figs/tela.png}
+  \caption{Tela inicial da Camada de Aplicação}
+  \label{FIG:telainicial}
+\end{figure}
+
+O usuário pode obter informações sobre os parâmetros esperados  executando a opção \textbf{-h} ou \textbf{--help}.
+A tela exibida durante a ajuda é mostrada na Figura \ref{FIG:telahelp}.
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[scale=0.5]{figs/help.png}
+  \caption{Tela de ajuda}
+  \label{FIG:telahelp}
+\end{figure}
+
+A Figura \ref{FIG:telapercent} mostra um algoritmo sendo executado. Para executar um algoritmo os seguintes parâmetros devem ser passados: \textbf{-d} ou \textbf{- -device}  ``disco'' \textbf{-a} ou \textbf{- -algorithm}  ``algoritmo''. No caso da figura os parâmetros passados foram: \textbf{ -d /dev/sdb -a short}. O programa então passa a exibir uma barra de progresso com o percentual do teste concluído, qual algoritmo está sendo executado e em que dispositivo.
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[scale=0.5]{figs/percent.png}
+  \caption{Tela de teste em execução}
+  \label{FIG:telapercent}
+\end{figure}
+
+Na conclusão do teste, o tempo de execução é mostrado e o resultado do teste é apresentado, como mostrado na Figura \ref{FIG:telafinal}. O teste mostrado levou 120 segundos e foi concluído com sucesso.
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[scale=0.5]{figs/final.png}
+  \caption{Tela de teste concluído}
+  \label{FIG:telafinal}
+\end{figure}
+
+\section{Testes}
+
+Nesta seção são apresentados os resultados obtidos com a metodologia descrita no capítulo anterior. Para a realização dos testes foram utilizados 12 discos rígidos, 9 do tipo \ac{HDD} (H1, H2, H3, H4, H5, H6, H7, H8 e H9) e 3 do tipo \ac{SSD} (S1, S2 e S3), com defeitos conhecidos. Cada teste descrito nas tabelas é o resultado obtido na maior parte de 3 execuções, ou seja, o valor apresentado se repetiu de duas a três vezes.  A notação utilizada em todas as tabelas de resultados é descrita na Tabela \ref{TAB:not}. Na Tabela \ref{TAB:ResultsLTTFrame}, os dispositivos testados são listados assim como  modelos, \emph{form factors}, capacidades de armazenamento e o resultado obtido testando o dispositivo com outro \emph{software} de diagnóstico.
+
+\begin{table}[htb!]
+    \begin{center}
+      \begin{tabular}{|c|c|}
+        \hline
+        % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+        Abreviação / Símbolo & Definição \\ \hline
+        $\times$ & Teste falhou \\ \hline
+        $\checkmark$ & Teste passou \\ \hline
+        $\emptyset$ & Teste não pode ser executado \\ \hline
+        Short & \ac{SMART} \emph{Short Self-Test} \\ \hline
+        Status & \ac{SMART} \emph{Return Status } \\ \hline
+        Conv & \ac{SMART} \emph{Conveyance Self-Test} \\ \hline
+        Linear1 & \emph{Linear Seek Test 1} \\ \hline
+        Linear2 & \emph{Linear Seek Test 2} \\ \hline
+        Random1 & \emph{Random Seek Test 1} \\ \hline
+        Random2 & \emph{Random Seek Test 2} \\ \hline
+        Random3 & \emph{Random Seek Test 3} \\ \hline
+        Funnel1 & \emph{Funnel Seek Test 1} \\ \hline
+        Funnel2 & \emph{Funnel Seek Test 2} \\ \hline
+        Surface1 & \emph{Surface Scan Test 1} \\ \hline
+        Surface2 & \emph{Surface Scan Test 2} \\ \hline
+        Target & \emph{Targeted Read Test} \\ \hline
+
+      \end{tabular}
+    \caption{Notação utilizada nas tabelas de resultados }
+    \label{TAB:not}
+    \end{center}
+\end{table}
+
+
+\begin{table}[htb!]
+    \begin{center}
+       \begin{tabular}{|c|p{5cm}|c|c|c|}
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         Dispositivo & Modelo & Capacidade & \emph{Form Factor} & PC-Doctor \\ \hline
+         H1 &  Seagate ST3500418AS & 500 GB & 3.5'' & $\checkmark$ \\ \hline
+         H2 &  Western Digital WD2500AAKX083CA0 & 250GB & 3.5''&$\times$ \\ \hline
+         H3 &  Seagate ST31000528AS & 1 TB &  3.5''&$\times$ \\ \hline
+         H4 &  Seagate ST3500418AS & 500 GB & 2.5''& $\checkmark$ \\ \hline
+         H5 &  Hitachi HTS725050A9A364 & 500 GB  &2.5''& $\times$ \\ \hline
+         H6 &  Hitachi HTS545032B9A300 & 320 GB & 2.5''&$\times$ \\ \hline
+         H7 & Seagate ST9250315AS & 250 GB  & 2.5''& $\times$ \\ \hline
+         H8 & Toshiba MK5061GSY & 500GB &  2.5''&$\times$  \\ \hline
+         H9 & Hitachi HTS723232A7A364 & 320 GB  &  2.5''&$\checkmark$   \\ \hline
+         S1 & Kingston SNV425S264GB & 64 GB  & 2.5''& $\checkmark$  \\ \hline
+         S2 & Toshiba THN5NC128GCSJ & 160 GB &  2.5''&$\times$ \\ \hline
+         S3 & Kingston  SV100S264G& 64 GB & 2.5''& $\checkmark$  \\ \hline
+
+       \end{tabular}
+    \caption{Lista dos dispositivos testados}
+    \label{TAB:ResultsLTTFrame}
+    \end{center}
+\end{table}
+
+Uma sequência de execução dos algoritmos foi definida com base nos \emph{softwares} do mercado e uma série de hipóteses foi levantada. O primeiro questionamento é relativo à execução do \emph{Targeted Read Test}, teste que realiza leituras específicas em regiões onde algum tipo de problema foi detectado, a fim de determinar qual a melhor ordem de execução, no início  ou no final  dos testes.
+
+O segundo questionamento é em relação à quantidade de setores checados no algoritmo \emph{Random Seek}, para isso o desempenho de três taxas distintas é avaliado.
+
+O terceiro é quanto à validade da distinção feita nos algoritmos de \emph{Surface Scan} e \emph{Linear Seek}, se realizar os testes indo das menores para as maiores LBAs, ou o contrário, apresenta variações significativas de desempenho.
+
+Por último, uma hipótese  é levantada sobre o funcionamento do teste \emph{Funnel Seek}. Se além da alternância no sentido de ``crescimento'' da LBA analisada, a leitura de setores mais específicos como os setores iniciais do disco, que contém informações sobre a tabela de partição\footnote{\ac{MBR}, setor que contém a tabela de partições do disco e informações sobre a inicialização do sistema operacional, localizado no setor 0.}, pode influenciar no desempenho do algoritmo.
+
+A ordem de execução dos testes definida foi: \emph{Target Read Test}, SMART \emph{Status Test}, SMART \emph{Short Self-Test}, SMART \emph{Conveyance Self-Test}, \emph{Random Seek} 1, 2 e 3, \emph{Funnel Seek} 1 e 2, \emph{Linear Seek} 1 e 2, \emph{Surface Scan} 1 e 2, e \emph{Target Read Test} e os resultados são apresentados na Tabela \ref{TAB:ResultsFrame}.
+
+\begin{table}[htb!]
+    \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Algoritmos & H1 & H2 & H3 & H4 & H5 & H6 & H7 & H8 & H9 & S1 & S2 & S3 \\ \hline
+  Status & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Short & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$  & $\checkmark$  & $\times$  & $\times$  & $\checkmark$  & $\checkmark$  & $\times$ & $\checkmark$ \\ \hline
+  Conv & $\checkmark$  & $\times$ & $\times$ & $\checkmark$ & $\emptyset$ & $\emptyset$ &$\times$ & $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$ \\ \hline
+  Random1 & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Random2 & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\times$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Random3 & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\times$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Funnel1 & $\checkmark$  & $\checkmark$   & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\times$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Funnel2 & $\checkmark$  & $\times$  & $\checkmark$  & $\checkmark$  & $\times$  & $\checkmark$  & $\times$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Linear1 & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Linear2 & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Surface1 & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Surface2 & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$  & $\checkmark$ & $\checkmark$ \\ \hline
+  Target   & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ & $\times$ & $\times$ & $\checkmark$  & $\checkmark$  & $\times$ & $\checkmark$ \\
+  \hline
+  \end{tabular}
+    \caption{Resultados dos Testes.}
+    \label{TAB:ResultsFrame}
+    \end{center}
+\end{table}
+
+Os melhores resultados obtidos individualmente foram \emph{SMART Short Self-Test} e \emph{Targeted Read Test} que detectaram 6 dos 7 dispositivos com falhas. Depois destes estão o \emph{Funnel Seek 2} e o  \emph{SMART Conveyance Self-Test}, que detectaram sozinhos 3 dos 7 dispositivos falhos. Entretanto, vale salientar que o \emph{SMART Conveyance Self-Test} não pode ser executado na maioria dos dispositivos, pois estes não têm suporte a este tipo de teste. Em seguida está o \emph{Surface Scan 2}, que detectou 2 dos 7 dispositivos falhos e o \emph{Random Seek 2}, \emph{Random Seek 3}, \emph{Funnel Seek 1} e  \emph{Surface Scan 1} que detectaram apenas 1 dos 7 dispositivos falhos. Por último, estão  \emph{Random Seek 1}, \emph{Linear Seek 1} e \emph{Linear Seek 2}, que não detectaram nenhum dispositivo falho. O alerta de falha dado pelo \emph{SMART Return Status} foi dado apenas para 1 dispositivo e em nenhum dos testes foi observado resultados ``falsos positivos''.
+
+Há importantes pontos a serem analisados, das três rodadas de testes executas, a primeira apresentou resultados diferentes entre a execução do \emph{Targeted Read Test} no início e no final dos testes. A execução inicial detectou apenas 3 dos 7 dispositivos com falhas, depois da execução dos demais testes o \emph{Targeted Read Test} passou a detectar 6 dos 7 dispositivos com falha. Este resultado, da execução final, se repetiu nas duas execuções de cada uma das duas rodadas seguintes. Logo, para o usuário é interessante que este teste seja o último a ser executado.
+
+Este comportamento do \emph{Targeted Read Test} pode ser explicado pela leitura dos \emph{logs} da controladora. Quando outros testes são executados, setores com falha podem ser detectados ou, mesmo que o teste não seja reprovado, qualquer comportamento estranho que tenha ocorrido será registrado no \emph{log} e posteriormente verificado com o \emph{Targeted Read Test}.
+
+ O \emph{Random Seek Test} apresentou baixo desempenho na detecção de dispositivos com falha, apenas os testes 2 e 3 detectaram 1 dos 7 dispositivos falhos. Entretanto, o desempenho dos algoritmos deve ser analisado conjuntamente e como se trata de um algoritmo fundamentado em aleatoriedade, a realização destes testes com outro conjunto de dispositivos pode apresentar resultados variáveis.
+
+ Os algoritmos de \emph{Linear Seek} e \emph{Surface Scan} não se mostraram eficientes, independentemente da ordem de ``crescimento'' das LBAs analisadas, se da menor para a maior ou o contrário.
+
+ Um desempenho interessante foi o do \emph{Funnel Seek Test 2}, que se mostrou significativamente melhor que o \emph{Funnel Seek 1}. Lembrando que a diferença entre eles é a checagem dos 100 primeiros setores do disco feita pelo \emph{Funnel Seek Test 2}.
+
+De maneira geral, o conjunto dos 13 testes implementados foi capaz de detectar os 7 dispositivos defeituosos, alcançando assim o resultado obtido utilizando o PC-Doctor.
+
+\section{Tempo de Execução}
+
+ Além da cobertura de falhas, o tempo de execução dos testes deve ser analisado. Na Tabela \ref{TAB:TimeFrame}, são apresentados os tempos de execução da última rodada dos testes.
+\begin{table}[htb!]
+    \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Algoritmos & H1 & H2 & H3 & H4 & H5 & H6 & H7 & H8 & H9 & S1 & S2 & S3 \\ \hline
+  Status & 0 & 1 & 0 & 0 & 0 & 0 & 14 &  0 & 0 & 0  & 1 & 0 \\ \hline
+  Short & 81 & 10 & 10 & 60 & 50  & 120  & 24 & 41  &  120  & 50  & 11 & 50 \\ \hline
+
+   Conv & 140  &10 & 10 & 121 & - & - & 24 & -&   - & - & - & - \\ \hline
+
+   Random1 & 106  & 82  & 107  & 106  & 126  & 131  &114  & 83  & 137  & 3  & 1& 1 \\ \hline
+
+   Random2 & 159  & 123  & 162  & 160  & 192  & 196  & 163  &  125 & 205  & 4  & 3 & 2 \\ \hline
+
+   Random3 & 214  & 163  & 250  & 213  & 192  & 262  & 213  &  166  & 274  & 6  & 4 & 4 \\ \hline
+
+   Funnel1 & 129  & 52   & 524  & 129  & 150  & 101  & 18  & 103 & 104  & 0  & 0 & 0 \\ \hline
+
+   Funnel2 & 131  & 52  & 400  & 130  & 150  & 102  & 19  & 104  & 106  & 0  & 1 & 1 \\ \hline
+
+   Linear1 & 49  & 31  & 52  & 47  & 71  & 84 & 67  & 43 &  89  & 3  &2 & 2\\ \hline
+
+   Linear2 & 48  & 32  & 52  & 48  & 72  & 84 & 66  & 44  &  89  & 3  & 2 & 2 \\ \hline
+
+   Surface1 & 535 & 7 & 541 & 533 & 848 & 872 & 677 &  501 & 972 & 36  & 19 & 19 \\ \hline
+
+   Surface2 & 536 & 71 & 543 & 533 & 852 & 873 & 678 &  204 & 968 & 36 & 19 & 19 \\ \hline
+
+   Target   & 1 & 27 & 0 & 0 & 32 & 24 & 10 & 14 &  1  & 0 & 0 & 0 \\                                                                                   \hline                                                                                                                                   \end{tabular}                                                                                                                            \caption{Tempos de Execução dos Testes, em segundos.}                                                                                                         \label{TAB:TimeFrame}                                                                                                               \end{center}                                                                                                                           \end{table}
+
+Na tabela há duas grandes ``discrepâncias'' de tempo: a primeira ocorre entre o tempo levado para executar os testes em dispositivos SSD e a segunda ocorre quando uma falha é encontrada. Neste caso, em uma leitura normal leva-se um tempo maior para o resultado da leitura, pois várias tentativas são feitas. Entretanto, quando um setor falho é encontrado, a condição de parada do algoritmo é satisfeita e ele é encerrado. Como no teste de \emph{Surface Scan 1} do H2, que durou 7 segundos, enquanto que o mesmo teste para o H1, que tem o dobro da capacidade, levou 535 segundos, por exemplo.
+
+Os testes mais rápidos foram os de \emph{SMART Return Status} e \emph{Targeted Read}. Em vários dispositivos a execução levou menos de 1 segundo. Entre os testes de \emph{Random Seek} os testes variaram de 82  a 274 segundos para \acp{HDD} e entre 1 e 6 para \acp{SSD}. Os testes mais demorados foram os de \emph{Surface Scan}, chegando a durar 972 segundos, como no caso do H9.
+
+Uma seleção de algoritmos foi feita com base na análise dos resultados dos testes e dos tempos de execução. Os cinco algoritmos selecionados foram: \emph{SMART Return Status}, \emph{SMART Short Self-Test}, \emph{Random Seek Test 2}, \emph{Funnel Seek Test 2} e \emph{Target Read Test}. Considerando apenas esta combinação de algoritmos foi possível detectar todos os dispositivos com falha e a soma dos tempos de execução foi inferior aos 10 minutos colocados como objetivo para a execução de um teste rápido e eficiente no diagnóstico de discos rígidos.
+
+O \emph{SMART Return Status} foi escolhido por ser um importante sinalizador importante da ``saúde'' do dispositivo. O \emph{SMART Short Self-Test} e o \emph{Target Read Test} foram escolhidos por terem apresentado a melhor capacidade de detecção de falhas  entre os algoritmos avaliados. Por fim,  o \emph{Random Seek Test 2} e o \emph{Funnel Seek Test 2} foram escolhidos por terem apresentado uma capacidade mediana de detecção e  servirem de complemento ao \emph{Target Read Test}.
+
+\section{Resumo do Capítulo}
+
+Neste capítulo foram apresentados os resultados obtidos no desenvolvimento do \emph{Framework} proposto: a criação de um programa capaz de executar testes de diagnóstico e que possibilitou a análise de algoritmos de teste  e a seleção dos algoritmos mais eficientes com base na análise realizada.
+
+No próximo capítulo são apresentadas as conclusões e propostas de continuação deste trabalho. 

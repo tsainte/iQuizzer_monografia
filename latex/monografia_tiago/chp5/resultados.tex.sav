@@ -1,0 +1,196 @@
+\chapter{Resultados} \label{CHP:RESULT}%%
+
+Os resultados dos testes realizados a partir da metodologia descrita no cap\'{\i}tulo \ref{CHP:MET} s\~{a}o resumidamente apresentados nas Tabelas ~\ref{TAB:MATC1}~a~\ref{TAB:MATC3}. A simula\c{c}\~{a}o de cada um dos tr\^{e}s m\'{e}todos \'{e} realizada e logo ap\'{o}s s\~{a}o geradas as tabelas de matrizes de confus\~{a}o de cada um. Nestas tabelas s\~{a}o mostrados as classifica\c{c}\~{o}es dos gestos realizados ap\'{o}s as cem repeti\c{c}\~{o}es do processo de treinamento e teste (\emph{hold-out}). Os elementos presentes na diagonal principal da matriz de confus\~{a}o representam as amostras corretamente classificadas, enquanto que os pontos fora desta diagonal representam as amostras erroneamente classificadas. Al\'{e}m disso, s\~{a}o apresentados alguns par\^{a}metros estat\'{\i}sticos calculados em cima das taxas de reconhecimento encontradas. Os gestos apresentados no cap\'{\i}tulo ~\ref{CHP:MET} s\~{a}o identificados pelas letras do alfabeto de (a) at\'{e} (i), como mostra a figura ~\ref{FIG:GTRE}.
+
+\section{Desempenho do Reconhecimento de Cada M\'{e}todo}
+Nesta se\c{c}\~{a}o se discute os resultados dos treinamentos e testes realizados, seguindo a metodologia apresentada no cap\'{\i}tulo anterior com cada um dos tr\^{e}s m\'{e}todos. A seguir s\~{a}o apresentados os resultados dos testes de cada um dos m\'{e}todos, as matrizes de confus\~{a}o geradas, os gr\'{a}ficos de taxas de acerto dos gestos e os gr\'{a}fico com as taxas de acerto de cada itera\c{c}\~{a}o no treinamento/teste de cada um dos m\'{e}todos.
+
+\subsection{Primeiro M\'{e}todo (Objeto Segmentado)}
+Com base na matriz de confus\~{a}o mostrada na Tabela~\ref{TAB:MATC1}, observa-se que para o primeiro m\'{e}todo, dentre as taxas de acerto de todos os gestos estudados, pelo menos $78,2\%$ e no m\'{a}ximo $95,93\%$ dos gestos adquiridos s\~{a}o classificadas corretamente.
+
+\begin{table}[!htb]
+  \centering
+  \caption{Resultado de classifica\c{c}\~{a}o para o primeiro m\'{e}todo.} \label{TAB:MATC1}
+\begin{tabular}{ccccccccccc}
+&		&	\multicolumn{9}{c}{Gesto Realizado} \\%	&		&		&		&		&		&		&		 &		 \\
+&		&	(a)	&	(b)	&	(c)	&	(d)	&	(e)	&	(f)	&	(g)	&	(h)	&	(i)\\
+    \cline{3-11} \multirow{9}{*}{\begin{sideways}Gesto Reconhecido\end{sideways}}
+&	a	&	\textbf{6436} &         141 &          4 &          21 &          0 &         132 &        212 &         232 &   384
+\\
+&	b	&	 301 &        \textbf{6706} &         253 &          25 &        70 &          71 &         88 &         247 &   455
+\\
+&	c	&	  76 &         345 &        \textbf{7003} &          79 &        83 &         154 &         45 &          77 &   69 \\
+&	d	&	  46 &         244 &         221 &        \textbf{7557} &       106 &          85 &         82 &         147 &   77 \\
+&	e	&	  75 &         190 &         297 &         223 &      \textbf{7674} &          59 &         59 &         106 &   93
+\\
+&	f	&	 274 &          55 &          91 &          57 &          1 &       \textbf{6878} &        368 &         316 &  243 \\
+&	g	&	 345 &          48 &          43 &          31 &          7 &         262 &      \textbf{6893} &         186 &  216 \\
+&	h	&	 259 &         200 &          50 &           7 &         26 &         220 &          146 &     \textbf{6456} &  209 \\
+&	i	&	 211 &         140 &          12 &           5 &         32 &          79 &          144 &         175 & \textbf{6265} \\
+\cline{3-11}
+\end{tabular}
+\end{table}
+
+ O gesto (i) com $78,2\%$ obt\'{e}m o pior reconhecimento, seguido pelo gesto (a) com $80,21\%$ e do gesto (h) com $81,28\%$ dos gestos corretamente reconhecidos. O gesto (e) resulta na melhor taxa de acerto com $95,93\%$. Os demais gestos obt\'{e}m uma taxa de acerto na faixa de $83,1\%$ a $87,82\%$ das amostras de teste, conforme exibido na Figura ~\ref{FIG:ACERTOMET1}.
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[bb = 0 0 635 409, width = 0.7 \linewidth]{figs/grafico_taxa_acerto_cada_gesto_objeto_segmentado.png}
+    \caption{Taxas de acerto de cada gesto para o primeiro m\'{e}todo (objeto segmentado).}
+    \label{FIG:ACERTOMET1}
+\end{figure}
+
+
+O gr\'{a}fico da Figura ~\ref{FIG:GRAFTREINMET1} mostra a porcentagem de acerto em cada uma das $100$ itera\c{c}\~{o}es do m\'{e}todo \emph{hold-out}. Pode-se ver que a pior taxa de acerto foi na itera\c{c}\~{a}o $57$ onde se obteve uma taxa de aproximadamente $59\%$ e que em algumas itera\c{c}\~{o}es se chegou bem pr\'{o}ximo da taxa m\'{a}xima de $100\%$.
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[bb = 0 0 896 490, width = 0.7 \linewidth]{figs/grafico_porc_acerto_objeto_segmentado.png}
+    \caption{Taxas de acerto de cada itera\c{c}\~{a}o para o treinamento do primeiro m\'{e}todo usando \emph{hold-out}.}
+    \label{FIG:GRAFTREINMET1}
+\end{figure}
+
+\subsection{Segundo M\'{e}todo (Contorno)}
+Para o reconhecimento feito a partir do segundo m\'{e}todo, observa-se pela Tabela ~\ref{TAB:MATC2} que os gestos (a), (h) e (g) obt\'{e}m os piores resultados, com $82,78\%$, $88,81\%$ e $89,2\%$,  respectivamente. O gesto (e) atinge um \'{o}timo resultado e alcan\c{c}a a maior taxa de $98,06\%$. Os demais gestos resultam em taxas de acerto pr\'{o}ximas disso, chegando a mais de $90\%$ como pode ser visto na Figura ~\ref{FIG:ACERTOMET2}.
+
+\begin{table}[!htbp]
+  \centering
+  \caption{resultado de classifica\c{c}\~{a}o para o segundo m\'{e}todo.} \label{TAB:MATC2}
+\begin{tabular}{ccccccccccc}
+&		&	\multicolumn{9}{c}{Gesto Realizado} \\%	&		&		&		&		&		&		&		 &		 \\
+&		&	(a)	&	(b)	&	(c)	&	(d)	&	(e)	&	(f)	&	(g)	&	(h)	&	(i)\\
+\cline{3-11} \multirow{9}{*}{\begin{sideways}Gesto Reconhecido\end{sideways}}
+&	a	&	\textbf{6627} &          47 &          11 &          0 &          0 &         12 &         232 &          64 &     52 \\
+&	b	&	 270 &        \textbf{7562} &          76 &         11 &          0 &          6 &          82 &         139 &     22 \\
+&	c	&	  93 &          101 &       \textbf{7254} &        180 &          0 &         11 &          55 &          43 &     74 \\
+&	d	&	 114 &            1 &         149 &      \textbf{7394} &          29 &        74 &           1 &         113 &      1 \\
+&	e	&	  34 &           17 &         122 &         183 &        \textbf{7857} &      28 &          43 &          70 &     28 \\
+&	f	&	  45 &           35 &         132 &         107 &          5 &     \textbf{7616} &         233 &         117 &    105 \\
+&	g	&	 331 &            1 &          42 &          31 &          0 &       107 &       \textbf{7136} &          51 &     68 \\
+&	h	&	  15 &          121 &          66 &          37 &         34 &        63 &         34 &        \textbf{7212} &    147 \\
+&	i	&	 476 &          126 &          99 &          74 &         87 &        98 &        184 &         311 &    \textbf{7372} \\
+\cline{3-11}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[bb = 0 0 627 418, width =0.7 \linewidth]{figs/grafico_taxa_acerto_cada_gesto_contorno.png}
+    \caption{Taxas de acerto de cada gesto para o segundo m\'{e}todo (contorno).}
+    \label{FIG:ACERTOMET2}
+\end{figure}
+
+Durante o processo de treinamento e teste do m\'{e}todo \emph{hold-out} se obteve uma boa m\'{e}dia de taxa de acerto, cerca de $91\%$. Em algumas itera\c{c}\~{o}es do treinamento alcan\c{c}a-se a taxa m\'{a}xima de $100\%$, mas um fato interessante \'{e} que na itera\c{c}\~{a}o $42$, se obteve um caso isolado em que a taxa de acerto foi apenas $10,4\%$. Provavelmente, a amostra de testes foi formada por gestos com alta correla\c{c}\~{a}o entre si, o que gerou uma grande confus\~{a}o no reconhecimento dos mesmos. O gr\'{a}fico onde se pode analisar com clareza essas taxas de acerto, onde todas as porcentagens de acerto de todas itera\c{c}\~{o}es podem ser vistos na Figura ~\ref{FIG:GRAFTREINMET2}.
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[bb = 0 0 896 490, width = 0.7 \linewidth]{figs/grafico_porc_acerto_contorno.png}
+    \caption{Taxas de acerto de cada itera\c{c}\~{a}o para o treinamento do segundo m\'{e}todo usando holdout.}
+    \label{FIG:GRAFTREINMET2}
+\end{figure}
+
+\subsection{Terceiro M\'{e}todo (Pontos Cr\'{\i}ticos)}
+
+Com base na matriz de confus\~{a}o mostrada na Tabela~\ref{TAB:MATC3}, observa-se que os gestos com maiores taxas de acerto s\~{a}o os (d), (e), (f) e (h). Nestas classes, a taxa de acerto s\~{a}o superiores a $92\%$. O gesto que obt\'{e}m menor taxa de reconhecimento \'{e} o gesto (a), pr\'{o}ximo a $80,15\%$.
+
+
+\begin{table}[!htb]
+  \centering
+  \caption{Resultado de classifica\c{c}\~{a}o para o terceiro m\'{e}todo.} \label{TAB:MATC3}
+  \begin{tabular}{ccccccccccc}
+%    \hline
+    % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    &		&	\multicolumn{9}{c}{Gesto Realizado} \\%	&		&		&		&		&		&		&		 &		 \\
+    &		&	(a)	&	(b)	&	(c)	&	(d)	&	(e)	&	(f)	&	(g)	&	(h)	&	(i)\\
+    \cline{3-11} \multirow{9}{*}{\begin{sideways}Gesto Reconhecido\end{sideways}}
+    &	a	&	\textbf{6359} &	 25	    &   3	&	40	  &	    0	  &	   66   &	173   &	   73	  &	    17   \\
+    &	b	&	316  &	\textbf{7257}	&	156	&	27	  &	    2	  &	    0   &	171	  &	   72	  &	    75	 \\
+    &	c	&	13	 &	158	  &	\textbf{7233}	&   184	  &	  209	  &	   66   &	  0	  &	   49	  &	    53	 \\
+    &	d	&	82 	 &	 71	  &	   113  &	\textbf{7535} &	  89	  &	    6   &	 45	  &    39	  &	   128	 \\
+    &	e	&	96	 &	 63	  &	   186  &	  114   &	\textbf{7632} &	  145	&	 85	  &	   63	  &	    94	 \\
+    &	f	&	247	 &	124	  &	    58  &	   41   &	106	  &	\textbf{7476}	&	389	  &	   99	  &	   156	 \\
+    &	g	&	237	 &	 91	  &	   120  &	   90   &	 82	  &	  81	  &	\textbf{6982} &	   48     &	   171	 \\
+    &	h	&	251	 &	 90	  &	    32  &	   62   &	  0	  &	  79	  & 	17	 &	\textbf{7322} &	   165	 \\
+    &	i	&	332	 &	 23	  &	    50  &	   21   &	  1	  &	  111	  &	    153	 &	  122   &	\textbf{7188}\\
+    \cline{3-11}
+%    \hline
+  \end{tabular}
+\end{table}
+
+Al\'{e}m disso, verifica-se algumas confus\~{o}es: o gesto (g) \'{e} erroneamente classificado como o gesto (f) in\'{u}meras vezes. J\'{a} o gesto (a), que obteve o pior desempenho, foi confundido mais vezes com o gesto (i). E tamb\'{e}m foi confundido in\'{u}meras vezes com os gestos  (b), (f), (g) e (h).Na Figura ~\ref{FIG:ACERTOMET3} se tem as taxas de acerto para cada gesto durante o treinamento usando o m\'{e}todo $3$. Verifica-se que as taxas de acerto por classe s\~{a}o superiores a $80\%$.
+
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[ bb = 0 0 640 409, width =0.7 \linewidth]{figs/grafico_taxa_acerto_cada_gesto_pontos_criticos.png}
+    \caption{Taxas de acerto de cada gesto para o terceiro m\'{e}todo (pontos cr\'{\i}ticos).}
+    \label{FIG:ACERTOMET3}
+\end{figure}
+
+ No gr\'{a}fico da Figura ~\ref{FIG:GRAFTREINMET3} \'{e} exibido as taxas de acerto de cada itera\c{c}\~{a}o de treinamento/teste do m\'{e}todo \emph{holdout}. Pelo gr\'{a}fico percebe-se que na itera\c{c}\~{a}o $16$ se obteve a pior taxa de acerto, chegando a aproximadamente $20\%$. Muito inferior em rela\c{c}\~{a}o as outras itera\c{c}\~{o}es, onde na maioria a taxa de acerto se manteve superior a $80\%$.
+
+\begin{figure}[!htb]
+\centering
+    \includegraphics[bb = 0 0 804 411, width =0.7 \linewidth]{figs/grafico_porc_acerto_pontos_criticos.png}
+    \caption{Taxas de acerto de cada itera\c{c}\~{a}o para o treinamento do terceiro m\'{e}todo usando holdout.}
+    \label{FIG:GRAFTREINMET3}
+\end{figure}
+
+\subsection{Avalia\c{c}\~{a}o do Desempenho de Cada M\'{e}todo}
+
+Os resultados mostram que o segundo m\'{e}todo descreve melhor a forma da m\~{a}o do que os outros dois, sendo capaz de reconhecer corretamente uma maior quantidade de amostras para a maior parte dos gestos testados.
+
+O primeiro m\'{e}todo \'{e} influenciado pela quantidade de pontos presentes na forma do objeto. Como h\'{a} uma pequena varia\c{c}\~{a}o entre o n\'{u}mero de \emph{pixels} para gestos diferentes, visto que a maior parte dos pontos utilizados para calcular os momentos encontram-se no centro da m\~{a}o (palma), a qual n\~{a}o muda de um gesto para outro, ocorre uma maior confus\~{a}o entre as caracter\'{\i}sticas extra\'{\i}das.
+
+O terceiro m\'{e}todo possibilita um melhor reconhecimento, comparando-o com o segundo m\'{e}todo, para os gestos (b), (f), (h) e (i). Isto mostra que o terceiro m\'{e}todo, apesar de apresentar um menor n\'{u}mero de pontos, tamb\'{e}m representa eficientemente a forma da m\~{a}o. Para os gestos (a) e (e), as taxas de acerto usando o terceiro m\'{e}todo s\~{a}o equivalentes \`{a}s taxas alcan\c{c}adas pelo segundo m\'{e}todo. Por outro lado, os gestos (b) e (f) obt\'{e}m um pior reconhecimento se comparado aos primeiro e segundo m\'{e}todos.
+
+As estat\'{\i}sticas da taxas de acerto m\'{e}dia, desvio padr\~{a}o, taxa de acerto m\'{a}xima e taxa de acerto m\'{\i}nima s\~{a}o mostradas na Tabela ~\ref{TAB:ACERTO}.
+
+\begin{table}[!htb]
+  \centering
+  \caption{taxas de acerto ap\'{o}s dez rodadas de \emph{hold-out}.}\label{TAB:ACERTO}
+  \begin{tabular}{ccccc}
+&	                    &	\multicolumn{3}{c}{M\'{e}todos}	\\
+\hline
+&	                    &	Primeiro	&	Segundo	&	Terceiro	\\
+\hline
+\multirow{4}{*}{\begin{sideways}Acerto\end{sideways}}
+& M\'{e}dio	        &	85,9278\%	&	91,71\%	&	90,25\%\\
+& Desvio Padr\~{a}o	&	8,1407\%    &	11,41\%     &	11,52\%	\\
+& M\'{a}ximo	    &	99,0278\%	&	100\%	    &	99,86\%\\
+& M\'{\i}nimo	    &	59,0278\%	&	10,41\%	&	20,83\%\\
+\hline
+  \end{tabular}
+\end{table}
+
+Atrav\'{e}s dos dados desta Tabela, observa-se que os tr\^{e}s m\'{e}todos possuem taxas de acerto m\'{e}dia superiores \`{a} 85\%, evidenciando que as caracter\'{\i}sticas utilizadas conseguem discriminar bem os tipos de gestos utilizados.
+
+Comparando o terceiro m\'{e}todo com os demais, percebe-se que este consegue obter maiores taxas de acerto associado a uma quantidade menor de pontos para extrair as caracter\'{\i}sticas. Isto demonstra a relev\^{a}ncia destes pontos na representa\c{c}\~{a}o da forma.
+
+\section{Desempenho Computacional}
+Os tr\^{e}s m\'{e}todos foram treinados e executados sob as mesmas condi\c{c}\~{o}es, no mesmo computador e com um n\'{u}mero igual de itera\c{c}\~{o}es do m\'{e}todo \emph{hold-out}. Os tempos de processamento obtidos para cada um dos m\'{e}todos podem ser vistos na Tabela ~\ref{TAB:CUSTOCOMP}.
+
+Analisando a primeira linha da tabela, temos o tempo de treinamento de cada m\'{e}todo mensurado em horas. Percebe-se que h\'{a} uma grande diferen\c{c}a de tempo entre o segundo m\'{e}todo e os demais, ele \'{e} aproximadamente duas vezes menor. Isso se deve ao fato de que a rede neural do segundo m\'{e}todo converge melhor do que os demais, o que consequentemente gera um tempo de treinamento muito menor. Com os outros m\'{e}todos, a rede leva mais tempo para convergir e o treinamento se extende at\'{e} extrapolar o n\'{u}mero de \'{e}pocas estipulado, ou at\'{e} que o m\'{\i}nimo gradiente da rede seja atingido.
+
+Na segunda linha da tabela tem-se o tempo de extra\c{c}\~{a}o de caracter\'{\i}sticas de cada m\'{e}todo. Os tempos foram obtidos executando-se o algoritmo $n$ vezes e realizando, logo em seguida, o c\'{a}lculo da m\'{e}dia desses tempos. No caso dos tempos exibidos na tabela, foi usado $n = 5000$. Como pode ser visto o terceiro m\'{e}todo foi o que obteve o menor tempo. Era de se esperar esse resultado, j\'{a} que ele possui menos pontos e como o vetor de caracter\'{\i}sticas \'{e} calculado a partir dos pontos do objeto, menos pontos implicar\'{a} em um menor custo computacional.
+
+\begin{table}[!htb]
+  \centering
+  \caption{Custo computacional de treinamento e de extra\c{c}\~{a}o das caracter\'{\i}sticas.}\label{TAB:CUSTOCOMP}
+  \begin{tabular}{ccccc}
+&	                    &	\multicolumn{3}{c}{M\'{e}todos}	\\
+\hline
+&	                    &	Primeiro	&	Segundo	&	Terceiro	\\
+\hline
+\multirow{2}{*}{\begin{sideways}Tempo\end{sideways}}
+& Treinamento (h)                   &	10,52	&	4,43	 &	12,9   \\
+& Extra\c{c}\~{a}o das Caracter\'{\i}sticas (ms) &	1,0716  &	0,4088   &	0,3332 \\
+\hline
+  \end{tabular}
+\end{table}
+
+\section{Desempenho Computacional em um Sistema Embarcado}
+Al\'{e}m de realizar os testes 
+
+\section{Resumo do Cap\'{\i}tulo}
+Neste cap\'{\i}tulo foram descritos os resultados obtidos com a extra\c{c}\~{a}o de caracter\'{\i}sticas para reconhecimento de gestos a partir dos tr\^{e}s m\'{e}todos avaliados. Atrav\'{e}s dos resultados, percebeu-se que o m\'{e}todo de extra\c{c}\~{a}o de caracter\'{\i}sticas a partir dos pontos cr\'{\i}ticos obteve bons resultados mesmo tendo uma quantidade de pontos muito inferior se comparado aos outros m\'{e}todos.  Pode-se perceber que apesar do objeto segmentado ter mais pontos, a extra\c{c}\~{a}o de caracter\'{\i}sticas atrav\'{e}s desse m\'{e}todo tem as piores taxas de reconhecimento al\'{e}m de levarem mais tempo para serem calculadas. No pr\'{o}ximo cap\'{\i}tulo s\~{a}o apresentados as considera\c{c}\~{o}es finais e as perspectivas de trabalhos futuros.

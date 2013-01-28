@@ -1,0 +1,676 @@
+\chapter{Fundamenta\c{c}\~{a}o Te\'{o}rica} \label{CHP:REVI}%%
+
+Com o intuito de facilitar a compreens\~{a}o deste trabalho algumas defini\c{c}\~{o}es s\~{a}o importantes. Neste cap\'{\i}tulo ser\'{a} descrito alguns 
+fundamentos da \'{a}rea de \ac{PDI}, e tamb\'{e}m explica um pouco sobre \ac{RNA} que s\~{a}o usadas para a classifica\c{c}\~{a}o dos gestos e por 
+fim, descreve as etapas que formam um sistema de \ac{VC}.
+
+\section{Fundamentos de Processamento Digital de Imagens}
+
+\subsection{Imagem e V\'{\i}deo Digitais}
+
+O primeiro passo para qualquer sistema que se baseia no processamento de imagens, \'{e} representar uma imagem digitalmente. Ela pode 
+ser definida como uma fun\c{c}\~{a}o bi-dimensional $f(x,y)$, em que $x$ e $y$  s\~{a}o coordenadas espaciais e a amplitude de $f$ \'{e} a 
+intensidade ou n\'{\i}vel de cinza da imagem naquela coordenada. Quando $x$,$y$ e $f$ s\~{a}o todos finitos e discretos, a imagem $f(x,y)$ 
+\'{e} denomidada de imagem digital. Uma imagem digital \'{e} composta por um n\'{u}mero finito de elementos, onde cada um destes tem 
+localiza\c{c}\~{a}o e intensidade particulares, denominados de \emph{picture elements}, \emph{pixels}. Onde este \'{u}ltimo \'{e} o termo mais 
+utilizado para se referir a o elemento de uma imagem digital\cite{GONZALEZ:2008}.
+
+Usando a mesma linha de racioc\'{\i}nio, podemos definir que um v\'{\i}deo \'{e} uma fun\c{c}\~{a}o de intensidade espa\c{c}o-temporal definida por 
+$F(x,y,t)$, onde $x$, $y$ s\~{a}o coordenadas espaciais e $t$ \'{e} a vari\'{a}vel temporal. Se $x$, $y$, $t$ e o valor de $F$ s\~{a}o todos 
+finitos e discretos, a fun\c{c}\~{a}o $F(x,y,t)$ corresponde a um v\'{\i}deo digital. Desta forma, pode-se dizer que o v\'{\i}deo digital \'{e} uma 
+sequ\^{e}ncia de imagens digitais do tipo $f(x,y)$. Onde cada uma destas imagens \'{e} denominada de \emph{frame}\cite{TEKALP:1995}.
+
+\subsection{Espa\c{c}os de Cores}
+
+Cor \'{e} uma experi\^{e}ncia rica e completa, usualmente causada pelo sistema de vis\~{a}o respondendo diferentemente a diferentes 
+comprimentos de ondas da luz. Embora as cores dos objetos parecem ser uma caracter\'{\i}stica \'{u}til para identific\'{a}-los, atualmente 
+ainda \'{e} muito dif\'{\i}cil us\'{a}-las\cite{FORSYTH:2003}.
+
+Embora o processo executado pelo cer\'{e}bro humano em perceber e interpretar as cores seja um fen\^{o}meno fisiopsicol\'{o}gico que n\~{a}o \'{e} 
+totalmente compreendido, a natureza fis\'{\i}ca da cor pode ser expressa formalmente com base em resultados experimentias e te\'{o}ricos. 
+Basicamente, as cores que os humanos e alguns outros animais percebem em um objeto s\~{a}o determinados pela natureza da luz refletida 
+de um objeto. Como \'{e} mostrado na Figura ~\ref{FIG:LUZVIS}, a luz vis\'{\i}vel \'{e} composta de uma estreita banda de frequ\^{e}ncias no 
+espectro eletromagn\'{e}tico. Por exemplo, objetos verdes ir\~{a}o refletir a luz com comprimentos de onda principalmente no intervalo 
+entre $500$ e $570 nm$ enquanto absorver\~{a}o a maior parte da energia dos outros comprimentos de onda\cite{GONZALEZ:2008}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 490 262, width = 0.7 \linewidth]{figs/luz_visivel.png}
+\caption[Comprimentos de onda do espectro vis\'{\i}vel]{Comprimentos de onda compreendendo o intervalo do espectro eletromagn\'{e}tico 
+vis\'{\i}vel.} \label{FIG:LUZVIS}
+\end{figure}
+
+Descrever as cores precisamente \'{e} uma mat\'{e}ria de grande import\^{a}ncia comercial. Muitos produtos est\~{a}o intimamente associados com 
+cores espec\'{\i}ficas e os fabricantes est\~{a}o dispostos a encarar grandes problemas para garantir que diferentes lotes tenham a mesma 
+cor. Isto requer um sistema padr\~{a}o de representa\c{c}\~{a}o das cores, um modelo de cores\cite{FORSYTH:2003}.
+
+Essa representa\c{c}\~{a}o padr\~{a}o \'{e} obtida atrav\'{e}s dos espa\c{c}os de cores. Um espa\c{c}o ou modelo de cores \'{e} um sistema tridimensional de 
+coordenadas em que cada eixo corresponde a uma cor prim\'{a}ria e cada cor \'{e} representada por um ponto nesse sistema tridimensional 
+\cite{BARROS:2010}.
+
+\subsubsection{Espa\c{c}o de Cores RGB}
+
+O espa\c{c}o de cores \ac{RGB} \'{e} um espa\c{c}o de cores linear que formalmente utiliza comprimentos de onda prim\'{a}rios($645.16 nm$ para o 
+\emph{R}(Vermelho), $526.32 nm$ para o \emph{G}(Verde) e $444.44 nm$ para o \emph{B}(Azul)) para representa\c{c}\~{a}o das cores. Todas as 
+cores dispon\'{\i}veis s\~{a}o comumente representadas por um cubo unit\'{a}rio, cujos limites representam os pesos de \emph{R}, \emph{G} e 
+\emph{B} como pode ser visto na Figura ~\ref{FIG:CUBORGB}\cite{FORSYTH:2003}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 468 504, width = 0.3 \linewidth]{figs/CuboRGB.png}
+\caption{Representa\c{c}\~{a}o do Cubo RGB do espa\c{c}o de cores RGB.} \label{FIG:CUBORGB}
+\end{figure}
+
+Imagens representadas com o modelo de cor \ac{RGB} consiste de tr\^{e}s imagens componentes, uma para cada cor prim\'{a}ria. Essas tr\^{e}s 
+imagens s\~{a}o combinadas para produzir uma imagem completa que possa ser exibida em um monitor\cite{GONZALEZ:2008}. Este espa\c{c}o \'{e} 
+provavelmente o mais utilizado dentre os modelos de cores, por\'{e}m existe uma certa dificuldade em especificar uma cor atrav\'{e}s de 
+cores prim\'{a}rias. Isso faz com que as inform\c{c}\~{o}es de cores e intensidade fiquem juntas, dificultando processos em que esses 
+componentes precisam ser analisados separadamente\cite{BARROS:2010}. Para tal fim, outros espa\c{c}os de cores podem ser utilizados, 
+com o espa\c{c}o de cores \ac{YCbCr}.
+
+\subsubsection{Espa\c{c}o de Cores YCbCr}
+
+O espa\c{c}o de cores \ac{YCbCr} \'{e} um sinal codificado \ac{RGB} n\~{a}o-linear onde a cor \'{e} representada pela lumin\^{a}ncia (calculado a 
+partir de uma soma ponderada dos valores RGB) e pelas componentes Cb e Cr (chamadas de cromin\^{a}ncia, as quais s\~{a}o formadas pela 
+subtra\c{c}\~{a}o da ilumina\c{c}\~{a}o com os componentes azul e vermelho, respectivamente)\cite{GONZALEZ:2008}. A matriz de transforma\c{c}\~{a}o deste 
+espa\c{c}o de cor \'{e} dada por:
+
+\begin{equation}
+\left[ {\begin{array}{*{20}c}
+   Y  \\
+   {Cb}  \\
+   {Cr}  \\
+\end{array}} \right] = \left[ {\begin{array}{*{20}c}
+   {0.299} & {0.587} & {0.114}  \\
+   { - 0.169} & { - 0.331} & {0.5}  \\
+   {0.5} & { - 0.419} & { - 0.0813}  \\
+\end{array}} \right]\left[ {\begin{array}{*{20}c}
+   R  \\
+   G  \\
+   B  \\
+\end{array}} \right]
+\end{equation}
+
+\subsection{Histograma}
+
+O histograma de uma imagem digital com n\'{\i}veis de intensidade variando de $[0, L - 1]$ \'{e} uma fun\c{c}\~{a}o discreta $h(r_k) = n_k$, onde 
+$r_k$ \'{e} o valor da k-\'{e}sima intensidade e $n_k$ \'{e} o n\'{u}mero de \emph{pixels} da imagem com intensidade $r_k$. \'{E} uma pr\'{a}tica comum 
+normalizar o histograma dividindo cada um dos seus componentes pelo n\'{u}mero total de pixels da imagem, denotado pelo produto $MN$, 
+em que $M$ e $N$ s\~{a}o respectivamente a linha e a coluna da dimens\~{a}o da imagem. Assim, um histograma normalizado \'{e} dado por:
+
+\begin{equation}
+p(r_k) = \frac{r_k}{MN}, k = 0,1,\ldots,L-1
+\end{equation}
+
+Guardada as devidas propor\c{c}\~{o}es, $p(r_k)$ \'{e} uma estimativa da probabilidade de ocorr\^{e}ncia de um n\'{\i}vel de intensidade $r_k$ de uma 
+imagem \cite{GONZALEZ:2008}.
+
+O histograma de uma imagem carrega informa\c{c}\~{o}es importantes a respeito do seu conte\'{u}do. Se os valores dos \emph{pixels} de uma 
+imagem est\~{a}o concentrados nas regi\~{o}es de baixa intensidades, como na Figura ~\ref{FIG:HIST1}, a imagem \'{e} "escura". Uma imagem 
+"clara" tem os valores dos seus \emph{pixels} concentrados nas regi\~{o}es de alta intensidades, como na Figura ~\ref{FIG:HIST2}. Al\'{e}m 
+disso, o histograma pode revelar se uma imagem cont\'{e}m duas \'{a}reas com diferentes n\'{\i}veis de intensidades, como mostra a Figura 
+~\ref{FIG:HIST3} \cite{PITAS:2000}.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:HIST1}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma1.jpg}}
+\subfigure[\label{FIG:HIST2}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma2.jpg}}
+\subfigure[\label{FIG:HIST3}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma3.jpg}}
+\caption[Exemplo de histogramas em imagens com luminosidades diferentes]{Exemplo de histogramas em imagens com luminosidades 
+diferentes:(a) Histograma de uma imagem escura. (b) Histograma de uma imagem clara. (c) Histograma de uma imagem contendo duas 
+regi\~{o}es com diferentes distribui\c{c}\~{o}es.} \label{FIG:HIST}
+\end{figure}
+
+A manipula\c{c}\~{a}o de histogramas pode ser usada para melhoramento de imagens. Por exemplo, se o histograma da imagem est\'{a} concentrado 
+em uma pequena regi\~{a}o de intensidade, a qualidade da mesma pode ser melhorada modificando o seu histograma. Al\'{e}m disso, por prover 
+estat\'{\i}sticas \'{u}teis da imagem, a informa\c{c}\~{a}o dos histogramas s\~{a}o usadas em outras aplica\c{c}\~{o}es de processamento de imagens, como 
+compress\~{a}o de imagem, segmenta\c{c}\~{a}o. Eles s\~{a}o simples de calcular via software, tornando desnecess\'{a}rio implementa\c{c}\~{o}es de hardware, o 
+que os fazem uma ferramenta bastante utilizada para processamento de imagems em tempo real\cite{GONZALEZ:2008}.
+
+\section{Sistema de Vis\~{a}o Computacional}
+
+As imagens digitais s\~{a}o objetos de estudos de tr\^{e}s \'{a}reas do conhecimento: Processamento Digital de Imagens, Computa\c{c}\~{a}o Gr\'{a}fica e 
+Vis\~{a}o Artificial \cite{AUZUIR:2005}, conforme visto na Figura ~\ref{FIG:AREASIMAGEMDIGITAL}.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:PROCDIGIMAGENS}]{\includegraphics[scale = 0.7, bb = 0 0 598 149]{figs/AreasImagens.png}}
+\subfigure[\label{FIG:COMPGRAF}]{\includegraphics[scale = 0.7, bb = 0 0 598 125]{figs/AreasImagens2.png}}
+\subfigure[\label{FIG:VISARTIF}]{\includegraphics[scale = 0.7, bb = 0 0 598 139]{figs/AreasImagens3.png}}
+\caption{\'{A}reas que utilizam imagens digitais como objetos de estudo.}\label{FIG:AREASIMAGEMDIGITAL}
+\end{figure}
+
+Sistemas de \ac{PDI} tem, de maneira geral, como entrada uma imagem digital e em sua sa\'{\i}da se obt\'{e}m tamb\'{e}m uma imagem digital como 
+resultado, conforme pode ser visto na Figura ~\ref{FIG:PROCDIGIMAGENS}. Entre as tr\^{e}s \'{a}reas, essa \'{e} a mais antiga e abrange 
+opera\c{c}\~{o}es de realce, restaura\c{c}\~{a}o, extra\c{c}\~{a}o de ru\'{\i}do, entre outros. A Astronomia foi a primeira ci\^{e}ncia a utiliz\'{a}-la de modo a 
+melhorar a qualidade das imagens recebidas de sat\'{e}lites e sondas espaciais \cite{HEIDJEN:1995}.
+
+J\'{a} os sistemas de \ac{CG} sintetizam uma imagem representativa de uma cena a partir de uma descri\c{c}\~{a}o da mesma ou da rela\c{c}\~{a}o de 
+seus atributos, como \'{e} mostrado na Figura ~\ref{FIG:COMPGRAF}. Dentre as \'{a}reas que trabalham com imagens, esta \'{e} a que tem maior 
+liga\c{c}\~{a}o com arte, pois seus recursos est\~{a}o sendo cada vez mais utilizados pelos profissionais da \'{a}rea de modelagem, pintura, 
+desenho, cinema, televis\~{a}o, vem como pelos jogos de \emph{videogame} e sistemas de realidade virtual, possuindo uma vasta gama de 
+aplica\c{c}\~{o}es \cite{HEIDJEN:1995}.
+
+E por fim, sistemas de Vis\~{a}o Artificial ou Vis\~{a}o Computacional \'{e} definido como um sistema computadorizado capaz de adquirir, 
+processar e interpretar imagens correspondentes a cenas reais, que tem como entrada uma imagem digital e como sa\'{\i}da, fornecem 
+atributos da cena correspondente a imagem, como \'{e} exibido na Figura ~\ref{FIG:VISARTIF}. A Vis\~{a}o Artificial utiliza v\'{a}rios 
+recursos de \ac{PDI} manipulando a imagem de entrada para que se torne mais f\'{a}cil a aplica\c{c}\~{a}o de algoritmos do Sistema de Vis\~{a}o 
+propriamente dito. Estes algoritmos, que geralmente s\~{a}o das \'{a}reas de \ac{IA} e Reconhecimento de Padr\~{o}es, s\~{a}o os respons\'{a}veis por 
+extrair informa\c{c}\~{o}es ou atributos da imagem de entrada e tomar uma decis\~{a}o sobre o conte\'{u}do da mesma 
+\cite{HEIDJEN:1995}\cite{AUZUIR:2005}. As etapas que comp\~{o}em um sistema de \ac{VC} \'{e} mostrada na Figura X e descrita nas subse\c{c}\~{o}es 
+seguintes.
+
+\subsection{Aquisi\c{c}\~{a}o}
+
+Processamento digital exige que as imagens sejam obtidas sob a forma de sinais de energia el\'{e}trica. Estes sinais podem ser 
+digitalizados em uma sequ\^{e}ncia de n\'{u}meros para que assim, possam ser processados por um computador \cite{JAHNE:2005}. Por se 
+trabalhar com imagens, \'{e} de fundamental import\^{a}ncia que o processo de forma\c{c}\~{a}o da imagem digital n\~{a}o se perca muita informa\c{c}\~{a}o 
+visual\cite{BOVIK:2009}.
+
+A etapa de aquisi\c{c}\~{a}o consiste da captura das imagens por um elemento sensor, gerando uma matriz com valores discretos \`{a} qual podem 
+ser aplicadas diversas opera\c{c}\~{o}es\cite{GONZALEZ:2008}.
+
+As imagens s\~{a}o geradas pela combina\c{c}\~{a}o de uma fonte de "ilumina\c{c}\~{a}o" e a reflex\~{a}o ou absor\c{c}\~{a}o da energia daquela fonte pelos 
+elementos da "cena" que ser\~{a}o processados. Onde a ilumina\c{c}\~{a}o pode ser oriunda de v\'{a}rios tipos de fontes, podendo formar diferentes 
+tipos de imagens de entrada. Por exemplo, ela pode ser originada de uma fonte de energia eletromagn\'{e}tica como radar, 
+infravermelho, raio-x, microondas, raios gama, ou at\'{e} serem energia de ondas ac\'{u}sticas (sistemas de imagem ultra-som), ou ainda 
+energias de ondas magn\'{e}ticas (tomografia)\cite{GONZALEZ:2007}\cite{AUZUIR:2005}.
+
+\subsection{Pr\'{e}-Processamento}
+
+A etapa de pr\'{e}-processamento, que geralmente est\~{a}o presentes nos sistemas de \ac{VC}, utilizam t\'{e}cnicas cl\'{a}ssicas de \ac{PDI} para 
+filtrar ru\'{\i}dos, real\c{c}ar e restaurar imagens. Onde o principal objetivo desta etapa \'{e} processar a imagem de maneira que o resultado 
+\'{e} mais adequado que a imagem original para uma determinada aplica\c{c}\~{a}o. Aumentando, desta forma, as chances de sucesso dos processos 
+seguintes \cite{GONZALEZ:2007}.
+
+As opera\c{c}\~{o}es de realce e de restaura\c{c}\~{a}o podem ser tratadas como filtros digitais bidimensionais e podem ser divididas em duas 
+grandes categorias: m\'{e}todos de dom\'{\i}nio espacial e m\'{e}todos no dom\'{\i}nio da frequ\^{e}ncia. Nos m\'{e}todos no dom\'{\i}nio da frequ\^{e}ncia, a imagem 
+\'{e} transformada para um outro dom\'{\i}nio, processada e em seguida revertida para o dom\'{\i}nio espacial. J\'{a} nos de dom\'{\i}nio espacial as 
+opera\c{c}\~{o}es s\~{a}o feitas em um \'{u}nico \emph{pixel} ou em uma vizinhan\c{c}a de \emph{pixels}, s\~{a}o procedimentos que podem ser denotados 
+pela express\~{a}o ~\ref{EQU:DOMINESPAC}
+
+\begin{equation}
+\label{EQU:DOMINESPAC}
+g(x,y) = T[f(x,y)]
+\end{equation}
+
+onde $f(x,y)$ \'{e} a imagem de entrada, $g(x,y)$ \'{e} a imagem processada, e $T$ \'{e} o operador em $f$, definido por alguma vizinhan\c{c}a de 
+$(x,y)$ \cite{GONZALEZ:2007}\cite{PITAS:2000}.
+
+Uma das t\'{e}cnicas mais usadas no dom\'{\i}nio espacial \'{e} o filtro da m\'{e}dia, que tem como vantagem reduzir os ru\'{\i}dos de uma imagem e como 
+desvantagem \'{e} que ele causa borramento reduzindo os detalhes da imagem. O que, dependendo da aplica\c{c}\~{a}o, pode ser usado como 
+vantagem tamb\'{e}m. O filtro da m\'{e}dia \'{e} tamb\'{e}m um filtro passa baixa, pois mant\'{e}m as baixas frequ\^{e}ncias espaciais e suprimi os 
+componentes de alta frequ\^{e}ncia \cite{NIXON:2002}. Ele consiste de uma m\'{a}scara de tamanho $2N + 1 \times 2N + 1$, onde o 
+\emph{pixel} $(x,y)$ da imagem $f$ em que a janela est\'{a} centrada \'{e} substitu\'{\i}do na imagem filtrada $g$ atrav\'{e}s da seguinte 
+express\~{a}o:
+
+\begin{equation}
+\label{EQU:FILTMED}
+g(x,y) = \frac{1}{(2N + 1)(2N + 1)}\sum\limits_{i=-\frac{N}{2}}^{\frac{N}{2}}\sum\limits_{j=-\frac{N}{2}}^{\frac{N}{2}} f(x + i, y 
++ j)
+\end{equation}
+
+\subsection{Segmenta\c{c}\~{a}o de Imagens}
+
+Segmenta\c{c}\~{a}o consiste em checar cada \emph{pixel} individualmente e analisar se ele pertence ou n\~{a}o a um objeto de interesse. O 
+\emph{pixel} recebe o valor um se ele pertencer ao objeto, e zero caso contr\'{a}rio \cite{JAHNE:2005}. Desta forma, a imagem \'{e} 
+subdividida em regi\~{o}es ou objetos, onde cada uma destas tem alguma caracter\'{\i}stica (brilho, textura, cor) com um alto grau de 
+uniformidade \cite{DAVIES:2004}.
+
+O n\'{\i}vel de subdivis\~{a}o empregado depende do problema a ser resolvido. A precis\~{a}o da segmenta\c{c}\~{a}o determinar\'{a} o eventual sucesso ou 
+fracasso do sistema de \ac{VC}. Por esta raz\~{a}o, deve-se dedicar um cuidado consider\'{a}vel para aumentar a probabilidade de uma 
+segmenta\c{c}\~{a}o robusta. Quando for poss\'{\i}vel, deve-se algumas medidas de controle do ambiente evitando uma segmenta\c{c}\~{a}o falha 
+\cite{GONZALEZ:2007}.
+
+Algoritmos de segmenta\c{c}\~{a}o geralmente s\~{a}o baseados em uma das duas propriedades b\'{a}sicas dos valores de intensidade: descontinuidade 
+e similaridade. Na primeira categoria, a abordagem \'{e} particionar a imagem baseado em mudan\c{c}as abruptas de intensidade, como as 
+bordas de uma imagem. A principal abordagem na segunda categoria \'{e} particionar a imagem em regi\~{o}es que s\~{a}o similares de acordo com 
+um conjunto de crit\'{e}rios pr\'{e}-definidos. Limiariza\c{c}\~{a}o e crescimento de regi\~{a}o s\~{a}o exemplos de m\'{e}todos desta categoria 
+\cite{GONZALEZ:2007}.
+
+Considere o histograma da Figura ~\ref{FIG:LIMIARIZACAO} como correspondendo ao histograma de uma imagem qualquer, composta de 
+objetos claros e um fundo escuro. Uma maneira f\'{a}cil de extrair os objetos do fundo \'{e} selecionar um limiar $T$ que separe os dois 
+agrupamentos. Assim, qualquer ponto (x,y) na imagem tal que $f(x,y) > T$ \'{e} chamado de um ponto do objeto; caso contr\'{a}rio, o ponto 
+\'{e} chamado de ponto do fundo \cite{FREITAS:2007}. Dessa forma, a imagem segmentada $g(x,y)$ \'{e} dada por:
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 812 322, width = 0.7 \linewidth]{figs/Limiariza\c{c}\~{a}o.png}
+\caption{Exemplo da aplica\c{c}\~{a}o do processo de Limiariza\c{c}\~{a}o sobre um histograma.} \label{FIG:LIMIARIZACAO}
+\end{figure}
+
+\begin{equation}
+  \begin{array}{*{20}c}
+   \begin{array}{l}
+ {\rm g(x,y) } \\
+ \end{array}  \\
+\end{array}{\rm  = }\left\{ {\begin{array}{*{20}c}
+   1, & \textrm{se f(x,y) $\geq$ T} \\
+   0, & \textrm{caso contr\'{a}rio} \\
+\end{array}} \right.
+\end{equation}
+
+A t\'{e}cnica de limiariza\c{c}\~{a}o \'{e} conceitualmente a mais simples abordagem que pode ser usada para segmenta\c{c}\~{a}o \cite{JAHNE:2005}. Devido 
+as suas propriedades intuitivas e simplicidade de implementa\c{c}\~{a}o, \'{e} uma t\'{e}cnica bastante utilizada na literatura 
+\cite{GONZALEZ:2007}.
+
+
+\subsection{Representa\c{c}\~{a}o e Descri\c{c}\~{a}o}
+
+Representa\c{c}\~{a}o e descri\c{c}\~{a}o de formas \'{e} uma quest\~{a}o importante no processamento de imagens. Elas s\~{a}o obtidas atrav\'{e}s de t\'{e}cnicas de 
+\ac{PDI} e podem ser usadas para aplica\c{c}\~{o}es de reconhecimento de objetos \cite{PITAS:2000}.
+
+Uma representa\c{c}\~{a}o compacta para a forma dos objetos n\~{a}o \'{e} de muita utilidade se for exigida uma grande quantidade de esfor\c{c}o para 
+calcul\'{a}-la e se esta representa\c{c}\~{a}o \'{e} pesada demais para se calcular os par\^{a}metros diretamente. Par\^{a}metros de forma s\~{a}o extra\'{\i}dos 
+dos objetos para descrever sua forma, compar\'{a}-la \`{a} forma de objetos modelos, ou dividir objetos em classes de diferentes formas. 
+Neste ponto se levanta uma grande quest\~{a}o, como par\^{a}metros de forma podem ser invariantes a certas transforma\c{c}\~{o}es sofridas pelas 
+imagens. Objetos podem ser vistos de diferentes dist\^{a}ncias e de diferentes pontos de vista, desta forma, \'{e} desej\'{a}vel achar m\'{e}todos 
+de representa\c{c}\~{a}o de forma que tenham as seguintes propriedades\cite{JAHNE:2005}\cite{PITAS:2000}: \\
+
+\begin{enumerate}
+    \item \textbf{Unicidade} -- Uma caracter\'{\i}stica de crucial import\^{a}ncia em reconhecimento de objetos, cada objeto deve ter 
+        uma \'{u}nica representa\c{c}\~{a}o.
+    \item \textbf{Integralidade} -- \'{E} fundamental que o objeto n\~{a}o tenha uma representa\c{c}\~{a}o amb\'{\i}gua.
+    \item \textbf{Invariante a transforma\c{c}\~{o}es geom\'{e}tricas} -- \'{E} muito importante em aplica\c{c}\~{o}es de reconhecimento que a 
+        representa\c{c}\~{a}o de forma seja invariante a transla\c{c}\~{a}o, rota\c{c}\~{a}o, escala e reflex\~{a}o.
+    \item \textbf{Sensibilidade} -- Esta \'{e} a habilidade de o m\'{e}todo de representa\c{c}\~{a}o refletir facilmente as diferen\c{c}as entre 
+        objetos similares.
+    \item \textbf{Abstra\c{c}\~{a}o de detalhes} -- \'{E} a habilidade do m\'{e}todo representar as caracter\'{\i}sticas b\'{a}sicas da forma e 
+        abstrair os detalhes. Esta propriedade est\'{a} diretamente realcionada a robustez a ru\'{\i}do do m\'{e}todo.
+\end{enumerate}
+
+Depois de uma imagem ter sido dividida em regi\~{o}es por algum m\'{e}todo de segmenta\c{c}\~{a}o, o conjunto de pixels segmentados \'{e} representado 
+e descrito de uma forma adequada para um posterior processamento pelo computador. Basicamente representar uma regi\~{a}o envolve duas 
+escolhas: a primeira \'{e} representar as regi\~{o}es em termos de suas caracter\'{\i}sticas externas (suas fronteiras), a segunda \'{e} 
+representar a regi\~{a}o em termos de suas caracter\'{\i}sticas internas (os \emph{pixels} que compreendem a regi\~{a}o) \cite{GONZALEZ:2008}.
+
+Uma representa\c{c}\~{a}o externa \'{e} escolhida quando o foco principal est\'{a} nas caracter\'{\i}sticas da forma, como cantos e inflex\~{o}es. J\'{a} a 
+representa\c{c}\~{a}o interna \'{e} selecionada quando o objetivo prim\'{a}rio \'{e} observar as propriedades locais do objeto, como cores e textura 
+por exemplo \cite{MOESLUND:2001}.
+
+Na categoria de representa\c{c}\~{a}o externa, o m\'{e}todo de c\'{o}digo em cadeia \'{e} bastante utilizado. Ele \'{e} uma estrutura de dados usada para 
+representar a borda de um objeto atrav\'{e}s de uma sequ\^{e}ncia de segmentos de linhas retas conectadas de dire\c{c}\~{a}o e comprimentos 
+especificados \cite{JAHNE:2005}\cite{GONZALEZ:2008}.
+
+Uma regi\~{a}o geralmente descreve um conte\'{u}do (pontos interiores) que s\~{a}o rodeados por uma borda (ou per\'{\i}metro), que frequentemente \'{e} 
+chamado de regi\~{a}o do contorno. Um ponto pode ser definido como pertencente ao contorno se na regi\~{a}o da qual ele faz parte exista 
+pelo menos um \emph{pixel} na sua vizinhan\c{c}a que n\~{a}o faz parte da regi\~{a}o \cite{NIXON:2002}.
+
+Para definir os pontos internos e os de contorno, \'{e} preciso considerar as regi\~{o}es de vizinhan\c{c}a entre os \emph{pixels} que s\~{a}o 
+descritas atrav\'{e}s de regras de conectividade. Existem duas maneiras comuns de definir a conectividade: conectividade-4 (onde 
+apenas os vizinhos imediatos s\~{a}o analisados); ou conectividade-8 onde todos os oito \emph{pixels} ao redor do \emph{pixel} 
+escolhido s\~{a}o analisados \`{a} conectividade. Ambos os tipos de conectividade s\~{a}o ilustrados na Figura ~\ref{FIG:CONECT}, onde o 
+\emph{pixel} a ser analisado \'{e} mostrado em cinza claro e os \emph{pixels} da sua vizinhan\c{c}a em cinza escuro.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:CONECT4}]{\includegraphics[bb = 0 0 367 308, width = 0.4 \linewidth]{figs/Conectividade4.png}}
+\subfigure[\label{FIG:CONECT8}]{\includegraphics[bb = 0 0 367 309, width = 0.4 \linewidth]{figs/Conectividade8.png}}
+\caption[Principais tipos de an\'{a}lise de conectividade]{Principais tipos de an\'{a}lise de conectividade: (a) conectividade-4; (b) 
+conectividade-8} \label{FIG:CONECT}
+\end{figure}
+
+
+Para obter a representa\c{c}\~{a}o de um contorno no algoritmo de c\'{o}digo em cadeia, se armazena as posi\c{c}\~{o}es relativas entre \emph{pixels} 
+consecutivos. Ou seja, o conjunto de \emph{pixels} na borda de um objeto \'{e} traduzido em um conjunto de conex\~{o}es entre eles. Dessa 
+forma, dado um \emph{pixel} inicial \'{e} necess\'{a}rio determinar a dire\c{c}\~{a}o em que o pr\'{o}ximo \emph{pixel} ser\'{a} encontrado. Onde, esse 
+pr\'{o}ximo \emph{pixel} \'{e} um dos pontos adjacentes em uma das principais dire\c{c}\~{o}es da b\'{u}ssola. E assim, o c\'{o}digo em cadeia \'{e} formado 
+se concatenando o n\'{u}mero que representa a dire\c{c}\~{a}o do pr\'{o}ximo \emph{pixel}. Isso \'{e} repetido para cada ponto at\'{e} que o ponto inicial 
+seja alcan\c{c}ado, que ser\'{a} quando toda a forma estiver completamente analisada.
+
+As dire\c{c}\~{o}es na conectividade-4 e conectividade-8 \'{e} mostrada na Figura ~\ref{FIG:CODIGOCONECT}. Na conectividade-4 o \emph{pixel} 
+de origem tem quatro vizinhos nas dire\c{c}\~{o}es norte, leste, sul e oeste, s\~{a}o os vizinhos imediatos (Figura ~\ref{FIG:CODIGOCONECT4}). 
+J\'{a} na conectividade-8, al\'{e}m dos quatro vizinhos imediatos, se tem os vizinhos nas dire\c{c}\~{o}es nordeste, sudeste, sudoeste e noroeste, 
+que s\~{a}o os pontos dos cantos(Figura ~\ref{FIG:CODIGOCONECT8})\cite{NIXON:2002}.
+
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:CODIGOCONECT4}]{\includegraphics[bb = 0 0 371 311, width = 0.4 \linewidth]{figs/CodigoConectividade4.png}}
+\subfigure[\label{FIG:CODIGOCONECT8}]{\includegraphics[bb = 0 0 371 311, width = 0.4 \linewidth]{figs/CodigoConectividade8.png}}
+\caption[C\'{o}digo em cadeia dos tipos de conectividade]{C\'{o}digo em cadeia dos tipos de conectividade:(a) c\'{o}digo da conectividade-4 
+(b)c\'{o}digo da conectividade-8} \label{FIG:CODIGOCONECT}
+\end{figure}
+
+
+Na Figura ~\ref{FIG:EXEMPLOCCODE} tem-se um exemplo da aplica\c{c}\~{a}o do c\'{o}digo em cadeia. Na Figura ~\ref{FIG:EXEMPLOCCFORMA} h\'{a} o 
+contorno de um objeto qualquer. O ponto inicial ser\'{a} o que tem a palavra "In\'{\i}cio", o sentido de varredura ser\'{a} o hor\'{a}rio e usando 
+conectividade-8. Desta forma, a dire\c{c}\~{a}o do ponto inicial para o pr\'{o}ximo ser\'{a} sudeste, cujo c\'{o}digo seguindo a conven\c{c}\~{a}o da Figura 
+~\ref{FIG:CODIGOCONECT8} \'{e} $3$. Assim, o primeiro valor da lista encadeada \'{e} $3$. A dire\c{c}\~{a}o partindo de \textbf{P1} o vizinho mais 
+pr\'{o}ximo \'{e} ao sul, \textbf{P2}, cujo c\'{o}digo \'{e} $4$. Esse valor \'{e} concatenado a lista, que fica com $3,4$. O pr\'{o}ximo ponto depois de 
+\textbf{P2} \'{e} o \textbf{P3} que fica ao sudeste novamente, cujo c\'{o}digo \'{e} 3. Repete-se o processo para todos os pontos do contorno 
+at\'{e} o ponto inicial. Neste caso o \'{u}ltimo ponto \'{e} o \textbf{P15}, cujo vizinho \'{e} o ponto inicial. Na Figura 
+~\ref{FIG:EXEMPLOCCCON8} tem-se o c\'{o}digo em cadeia para o contorno da Figura ~\ref{FIG:EXEMPLOCCFORMA} e na Figura 
+~\ref{FIG:EXEMPLOCCCON4} tamb\'{e}m tem o exemplo de c\'{o}digo em cadeia usando conectividade-4 para o mesmo contorno.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:EXEMPLOCCFORMA}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode.png}}
+\subfigure[\label{FIG:EXEMPLOCCCON4}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode2.png}}
+\subfigure[\label{FIG:EXEMPLOCCCON8}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode3.png}}
+\caption[Exemplos do c\'{o}digo em cadeia aplicado em uma forma]{Exemplos do c\'{o}digo em cadeia, aplicado em uma forma, usando 
+conectividade-$4$ e conectividade-$8$ } \label{FIG:EXEMPLOCCODE}
+
+\end{figure}
+
+Ap\'{o}s o processo de representa\c{c}\~{a}o de um objeto, a tarega seguinte \'{e} a de descri\c{c}\~{a}o ou sele\c{c}\~{a}o de atributos, de forma a extrair 
+atributos dos dados representados que resultem em alguma informa\c{c}\~{a}o quantitativa de interesse ou que sejam b\'{a}sicos para 
+diferenciar uma classe de objetos de outra; essa diferencia\c{c}\~{a}o ocorre na fase seguinte de reconhecimento \cite{HIGASHIMO:2006}.
+
+A partir da representa\c{c}\~{a}o do contorno obtida com o c\'{o}digo em cadeia, pode se extrair os pontos cr\'{\i}ticos. Pontos cr\'{\i}ticos ou cantos 
+s\~{a}o descritores muito importantes de um objeto, pois a informa\c{c}\~{a}o sobre uma forma se concentra em seus cantos \cite{MASOOD:2007}. 
+Eles s\~{a}o definidos como pontos onde a linha do contorno da regi\~{a}o apresenta uma varia\c{c}\~{a}o brusca de dire\c{c}\~{a}o, ou seja, um ponto com 
+alto valor de amplitude no sinal de curvatura \cite{AUZUIR:2005}.
+
+A curvatura $k(t)$ de uma curva param\'{e}trica $c(t) = (x(t), y(t))$ \'{e} definida como:
+
+\begin{equation}
+k(t) = \frac{\dot{x}(t)\ddot{y}(t) - \ddot{x}(t)\dot{y}(t)}{(\dot{x}(t)^{2} + \dot{y}(t)^{2})^{1.5}}
+\label{EQU:CURVPARAM}
+\end{equation}
+
+Devido ao fato de o contorno ter natureza discreta, o c\'{a}lculo das derivadas de $x(t)$ e $y(t)$ se torna um problema computacional 
+dificultando o uso da Equa\c{c}\~{a}o ~\ref{EQU:CURVPARAM} para estimar a curvatura \cite{COSTA:2001}.
+
+Para evitar os c\'{a}lculos de derivada, pode-se usar uma abordagem em que se define medidas de curvatura alternativas baseadas nos 
+\^{a}ngulos entre vetores definidos em termos dos elementos discretos do contorno. Considere $c(n) = (x(n),y(n))$ como sendo uma curva 
+discreta. Desta forma, os seguintes vetores podem ser definidos \cite{COSTA:2001}:
+
+\begin{equation}
+v_{i}(n) = (x(n) - x(n-i), y(n) - y(n-i))
+\label{EQU:VETCURV1}
+\end{equation}
+\begin{equation}
+w_{i}(n) = (x(n) - x(n+i), y(n) - y(n+i))
+\label{EQU:VETCURV2}
+\end{equation} 
+
+Como pode ser visto na Figura ~\ref{FIG:CURV1} os vetores s\~{a}o definidos entre o ponto atual do contorno e os vizinhos que est\~{a}o \`{a} 
+direita e \`{a} esquerda.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 446 295, width = 0.4 \linewidth]{figs/curv1.png}
+\caption{Indica\c{c}\~{a}o da curvatura baseada no \^{a}ngulo.} \label{FIG:CURV1}
+\end{figure}
+
+Com base nos vetores da figura anterior \citet{JOHNSTON:1973} propuseram o modelo digital de pontos de alta curvatura, ele \'{e} 
+definido pela Equa\c{c}\~{a}o ~\ref{EQU:CURVDIG} que se encontra a seguir:
+
+\begin{equation}
+r_{i}(n) = \frac{v_{i}(n)w_{i}(n)}{||v_{i}(n)||||w_{i}(n)||}
+\label{EQU:CURVDIG}
+\end{equation}
+
+onde $r_i(n)$ \'{e} o cosseno do \^{a}ngulo entre os vetores $v_i(n)$ e $w_i(n)$. Dessa forma, temos que $-1 <= r_i(n) <= 1$ para linhas 
+retas e $r_i(n) = 1$ quando o \^{a}ngulo se torna $0^\circ$. De maneira que, $r_i(n)$ pode ser usado como uma medida capaz de 
+localizar pontos de alta curvatura, ou que sejam maiores que um certo limiar.
+
+
+\subsection{Reconhecimento}
+
+
+
+\begin{document}
+
+\chapter{Fundamenta\c{c}\~{a}o Te\'{o}rica} \label{CHP:REVI}%%
+
+Com o intuito de facilitar a compreens\~{a}o deste trabalho algumas defini\c{c}\~{o}es s\~{a}o importantes. Neste cap\'{\i}tulo ser\'{a} descrito alguns fundamentos da \'{a}rea de \ac{PDI}, e tamb\'{e}m explica um pouco sobre \ac{RNA} que s\~{a}o usadas para a classifica\c{c}\~{a}o dos gestos e por fim, descreve as etapas que formam um sistema de \ac{VC}.
+
+\section{Fundamentos de Processamento Digital de Imagens}
+
+\subsection{Imagem e V\'{\i}deo Digitais}
+
+O primeiro passo para qualquer sistema que se baseia no processamento de imagens, \'{e} representar uma imagem digitalmente. Ela pode ser definida como uma fun\c{c}\~{a}o bi-dimensional $f(x,y)$, em que $x$ e $y$  s\~{a}o coordenadas espaciais e a amplitude de $f$ \'{e} a intensidade ou n\'{\i}vel de cinza da imagem naquela coordenada. Quando $x$,$y$ e $f$ s\~{a}o todos finitos e discretos, a imagem $f(x,y)$ \'{e} denomidada de imagem digital. Uma imagem digital \'{e} composta por um n\'{u}mero finito de elementos, onde cada um destes tem localiza\c{c}\~{a}o e intensidade particulares, denominados de \emph{picture elements}, \emph{pixels}. Onde este \'{u}ltimo \'{e} o termo mais utilizado para se referir a o elemento de uma imagem digital\cite{GONZALEZ:2008}.
+
+Usando a mesma linha de racioc\'{\i}nio, podemos definir que um v\'{\i}deo \'{e} uma fun\c{c}\~{a}o de intensidade espa\c{c}o-temporal definida por $F(x,y,t)$, onde $x$, $y$ s\~{a}o coordenadas espaciais e $t$ \'{e} a vari\'{a}vel temporal. Se $x$, $y$, $t$ e o valor de $F$ s\~{a}o todos finitos e discretos, a fun\c{c}\~{a}o $F(x,y,t)$ corresponde a um v\'{\i}deo digital. Desta forma, pode-se dizer que o v\'{\i}deo digital \'{e} uma sequ\^{e}ncia de imagens digitais do tipo $f(x,y)$. Onde cada uma destas imagens \'{e} denominada de \emph{frame}\cite{TEKALP:1995}.
+
+\subsection{Espa\c{c}os de Cores}
+
+Cor \'{e} uma experi\^{e}ncia rica e completa, usualmente causada pelo sistema de vis\~{a}o respondendo diferentemente a diferentes comprimentos de ondas da luz. Embora as cores dos objetos parecem ser uma caracter\'{\i}stica \'{u}til para identific\'{a}-los, atualmente ainda \'{e} muito dif\'{\i}cil us\'{a}-las\cite{FORSYTH:2003}.
+
+Embora o processo executado pelo cer\'{e}bro humano em perceber e interpretar as cores seja um fen\^{o}meno fisiopsicol\'{o}gico que n\~{a}o \'{e} totalmente compreendido, a natureza fis\'{\i}ca da cor pode ser expressa formalmente com base em resultados experimentias e te\'{o}ricos. Basicamente, as cores que os humanos e alguns outros animais percebem em um objeto s\~{a}o determinados pela natureza da luz refletida de um objeto. Como \'{e} mostrado na Figura ~\ref{FIG:LUZVIS}, a luz vis\'{\i}vel \'{e} composta de uma estreita banda de frequ\^{e}ncias no espectro eletromagn\'{e}tico. Por exemplo, objetos verdes ir\~{a}o refletir a luz com comprimentos de onda principalmente no intervalo entre $500$ e $570 nm$ enquanto absorver\~{a}o a maior parte da energia dos outros comprimentos de onda\cite{GONZALEZ:2008}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 490 262, width = 0.7 \linewidth]{figs/luz_visivel.png}
+\caption[Comprimentos de onda do espectro vis\'{\i}vel]{Comprimentos de onda compreendendo o intervalo do espectro eletromagn\'{e}tico vis\'{\i}vel.} \label{FIG:LUZVIS}
+\end{figure}
+
+Descrever as cores precisamente \'{e} uma mat\'{e}ria de grande import\^{a}ncia comercial. Muitos produtos est\~{a}o intimamente associados com cores espec\'{\i}ficas e os fabricantes est\~{a}o dispostos a encarar grandes problemas para garantir que diferentes lotes tenham a mesma cor. Isto requer um sistema padr\~{a}o de representa\c{c}\~{a}o das cores, um modelo de cores\cite{FORSYTH:2003}.
+
+Essa representa\c{c}\~{a}o padr\~{a}o \'{e} obtida atrav\'{e}s dos espa\c{c}os de cores. Um espa\c{c}o ou modelo de cores \'{e} um sistema tridimensional de coordenadas em que cada eixo corresponde a uma cor prim\'{a}ria e cada cor \'{e} representada por um ponto nesse sistema tridimensional \cite{BARROS:2010}.
+
+\subsubsection{Espa\c{c}o de Cores RGB}
+
+O espa\c{c}o de cores \ac{RGB} \'{e} um espa\c{c}o de cores linear que formalmente utiliza comprimentos de onda prim\'{a}rios($645.16 nm$ para o \emph{R}(Vermelho), $526.32 nm$ para o \emph{G}(Verde) e $444.44 nm$ para o \emph{B}(Azul)) para representa\c{c}\~{a}o das cores. Todas as cores dispon\'{\i}veis s\~{a}o comumente representadas por um cubo unit\'{a}rio, cujos limites representam os pesos de \emph{R}, \emph{G} e \emph{B} como pode ser visto na Figura ~\ref{FIG:CUBORGB}\cite{FORSYTH:2003}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 468 504, width = 0.3 \linewidth]{figs/CuboRGB.png}
+\caption{Representa\c{c}\~{a}o do Cubo RGB do espa\c{c}o de cores RGB.} \label{FIG:CUBORGB}
+\end{figure}
+
+Imagens representadas com o modelo de cor \ac{RGB} consiste de tr\^{e}s imagens componentes, uma para cada cor prim\'{a}ria. Essas tr\^{e}s imagens s\~{a}o combinadas para produzir uma imagem completa que possa ser exibida em um monitor\cite{GONZALEZ:2008}. Este espa\c{c}o \'{e} provavelmente o mais utilizado dentre os modelos de cores, por\'{e}m existe uma certa dificuldade em especificar uma cor atrav\'{e}s de cores prim\'{a}rias. Isso faz com que as inform\c{c}\~{o}es de cores e intensidade fiquem juntas, dificultando processos em que esses componentes precisam ser analisados separadamente\cite{BARROS:2010}. Para tal fim, outros espa\c{c}os de cores podem ser utilizados, com o espa\c{c}o de cores \ac{YCbCr}.
+
+\subsubsection{Espa\c{c}o de Cores YCbCr}
+
+O espa\c{c}o de cores \ac{YCbCr} \'{e} um sinal codificado \ac{RGB} n\~{a}o-linear onde a cor \'{e} representada pela lumin\^{a}ncia (calculado a partir de uma soma ponderada dos valores RGB) e pelas componentes Cb e Cr (chamadas de cromin\^{a}ncia, as quais s\~{a}o formadas pela subtra\c{c}\~{a}o da ilumina\c{c}\~{a}o com os componentes azul e vermelho, respectivamente)\cite{GONZALEZ:2008}. A matriz de transforma\c{c}\~{a}o deste espa\c{c}o de cor \'{e} dada por:
+
+\begin{equation}
+\left[ {\begin{array}{*{20}c}
+   Y  \\
+   {Cb}  \\
+   {Cr}  \\
+\end{array}} \right] = \left[ {\begin{array}{*{20}c}
+   {0.299} & {0.587} & {0.114}  \\
+   { - 0.169} & { - 0.331} & {0.5}  \\
+   {0.5} & { - 0.419} & { - 0.0813}  \\
+\end{array}} \right]\left[ {\begin{array}{*{20}c}
+   R  \\
+   G  \\
+   B  \\
+\end{array}} \right]
+\end{equation}
+
+\subsection{Histograma}
+
+O histograma de uma imagem digital com n\'{\i}veis de intensidade variando de $[0, L - 1]$ \'{e} uma fun\c{c}\~{a}o discreta $h(r_k) = n_k$, onde $r_k$ \'{e} o valor da k-\'{e}sima intensidade e $n_k$ \'{e} o n\'{u}mero de \emph{pixels} da imagem com intensidade $r_k$. \'{E} uma pr\'{a}tica comum normalizar o histograma dividindo cada um dos seus componentes pelo n\'{u}mero total de pixels da imagem, denotado pelo produto $MN$, em que $M$ e $N$ s\~{a}o respectivamente a linha e a coluna da dimens\~{a}o da imagem. Assim, um histograma normalizado \'{e} dado por:
+
+\begin{equation}
+p(r_k) = \frac{r_k}{MN}, k = 0,1,\ldots,L-1
+\end{equation}
+
+Guardada as devidas propor\c{c}\~{o}es, $p(r_k)$ \'{e} uma estimativa da probabilidade de ocorr\^{e}ncia de um n\'{\i}vel de intensidade $r_k$ de uma imagem \cite{GONZALEZ:2008}.
+
+O histograma de uma imagem carrega informa\c{c}\~{o}es importantes a respeito do seu conte\'{u}do. Se os valores dos \emph{pixels} de uma imagem est\~{a}o concentrados nas regi\~{o}es de baixa intensidades, como na Figura ~\ref{FIG:HIST1}, a imagem \'{e} "escura". Uma imagem "clara" tem os valores dos seus \emph{pixels} concentrados nas regi\~{o}es de alta intensidades, como na Figura ~\ref{FIG:HIST2}. Al\'{e}m disso, o histograma pode revelar se uma imagem cont\'{e}m duas \'{a}reas com diferentes n\'{\i}veis de intensidades, como mostra a Figura ~\ref{FIG:HIST3} \cite{PITAS:2000}.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:HIST1}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma1.jpg}}
+\subfigure[\label{FIG:HIST2}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma2.jpg}}
+\subfigure[\label{FIG:HIST3}]{\includegraphics[bb = 0 0 279 254, width = 0.3 \linewidth]{figs/Histograma3.jpg}}
+\caption[Exemplo de histogramas em imagens com luminosidades diferentes]{Exemplo de histogramas em imagens com luminosidades diferentes:(a) Histograma de uma imagem escura. (b) Histograma de uma imagem clara. (c) Histograma de uma imagem contendo duas regi\~{o}es com diferentes distribui\c{c}\~{o}es.} \label{FIG:HIST}
+\end{figure}
+
+A manipula\c{c}\~{a}o de histogramas pode ser usada para melhoramento de imagens. Por exemplo, se o histograma da imagem est\'{a} concentrado em uma pequena regi\~{a}o de intensidade, a qualidade da mesma pode ser melhorada modificando o seu histograma. Al\'{e}m disso, por prover estat\'{\i}sticas \'{u}teis da imagem, a informa\c{c}\~{a}o dos histogramas s\~{a}o usadas em outras aplica\c{c}\~{o}es de processamento de imagens, como compress\~{a}o de imagem, segmenta\c{c}\~{a}o. Eles s\~{a}o simples de calcular via software, tornando desnecess\'{a}rio implementa\c{c}\~{o}es de hardware, o que os fazem uma ferramenta bastante utilizada para processamento de imagems em tempo real\cite{GONZALEZ:2008}.
+
+\section{Sistema de Vis\~{a}o Computacional}
+
+As imagens digitais s\~{a}o objetos de estudos de tr\^{e}s \'{a}reas do conhecimento: Processamento Digital de Imagens, Computa\c{c}\~{a}o Gr\'{a}fica e Vis\~{a}o Artificial \cite{AUZUIR:2005}, conforme visto na Figura ~\ref{FIG:AREASIMAGEMDIGITAL}.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:PROCDIGIMAGENS}]{\includegraphics[scale = 0.7, bb = 0 0 598 149]{figs/AreasImagens.png}}
+\subfigure[\label{FIG:COMPGRAF}]{\includegraphics[scale = 0.7, bb = 0 0 598 125]{figs/AreasImagens2.png}}
+\subfigure[\label{FIG:VISARTIF}]{\includegraphics[scale = 0.7, bb = 0 0 598 139]{figs/AreasImagens3.png}}
+\caption{\'{A}reas que utilizam imagens digitais como objetos de estudo.}\label{FIG:AREASIMAGEMDIGITAL}
+\end{figure}
+
+Sistemas de \ac{PDI} tem, de maneira geral, como entrada uma imagem digital e em sua sa\'{\i}da se obt\'{e}m tamb\'{e}m uma imagem digital como resultado, conforme pode ser visto na Figura ~\ref{FIG:PROCDIGIMAGENS}. Entre as tr\^{e}s \'{a}reas, essa \'{e} a mais antiga e abrange opera\c{c}\~{o}es de realce, restaura\c{c}\~{a}o, extra\c{c}\~{a}o de ru\'{\i}do, entre outros. A Astronomia foi a primeira ci\^{e}ncia a utiliz\'{a}-la de modo a melhorar a qualidade das imagens recebidas de sat\'{e}lites e sondas espaciais \cite{HEIDJEN:1995}.
+
+J\'{a} os sistemas de \ac{CG} sintetizam uma imagem representativa de uma cena a partir de uma descri\c{c}\~{a}o da mesma ou da rela\c{c}\~{a}o de seus atributos, como \'{e} mostrado na Figura ~\ref{FIG:COMPGRAF}. Dentre as \'{a}reas que trabalham com imagens, esta \'{e} a que tem maior liga\c{c}\~{a}o com arte, pois seus recursos est\~{a}o sendo cada vez mais utilizados pelos profissionais da \'{a}rea de modelagem, pintura, desenho, cinema, televis\~{a}o, vem como pelos jogos de \emph{videogame} e sistemas de realidade virtual, possuindo uma vasta gama de aplica\c{c}\~{o}es \cite{HEIDJEN:1995}.
+
+E por fim, sistemas de Vis\~{a}o Artificial ou Vis\~{a}o Computacional \'{e} definido como um sistema computadorizado capaz de adquirir, processar e interpretar imagens correspondentes a cenas reais, que tem como entrada uma imagem digital e como sa\'{\i}da, fornecem atributos da cena correspondente a imagem, como \'{e} exibido na Figura ~\ref{FIG:VISARTIF}. A Vis\~{a}o Artificial utiliza v\'{a}rios recursos de \ac{PDI} manipulando a imagem de entrada para que se torne mais f\'{a}cil a aplica\c{c}\~{a}o de algoritmos do Sistema de Vis\~{a}o propriamente dito. Estes algoritmos, que geralmente s\~{a}o das \'{a}reas de \ac{IA} e Reconhecimento de Padr\~{o}es, s\~{a}o os respons\'{a}veis por extrair informa\c{c}\~{o}es ou atributos da imagem de entrada e tomar uma decis\~{a}o sobre o conte\'{u}do da mesma \cite{HEIDJEN:1995}\cite{AUZUIR:2005}. As etapas que comp\~{o}em um sistema de \ac{VC} \'{e} mostrada na Figura X e descrita nas subse\c{c}\~{o}es seguintes.
+
+\subsection{Aquisi\c{c}\~{a}o}
+
+Processamento digital exige que as imagens sejam obtidas sob a forma de sinais de energia el\'{e}trica. Estes sinais podem ser digitalizados em uma sequ\^{e}ncia de n\'{u}meros para que assim, possam ser processados por um computador \cite{JAHNE:2005}. Por se trabalhar com imagens, \'{e} de fundamental import\^{a}ncia que o processo de forma\c{c}\~{a}o da imagem digital n\~{a}o se perca muita informa\c{c}\~{a}o visual\cite{BOVIK:2009}.
+
+A etapa de aquisi\c{c}\~{a}o consiste da captura das imagens por um elemento sensor, gerando uma matriz com valores discretos \`{a} qual podem ser aplicadas diversas opera\c{c}\~{o}es\cite{GONZALEZ:2008}.
+
+As imagens s\~{a}o geradas pela combina\c{c}\~{a}o de uma fonte de "ilumina\c{c}\~{a}o" e a reflex\~{a}o ou absor\c{c}\~{a}o da energia daquela fonte pelos elementos da "cena" que ser\~{a}o processados. Onde a ilumina\c{c}\~{a}o pode ser oriunda de v\'{a}rios tipos de fontes, podendo formar diferentes tipos de imagens de entrada. Por exemplo, ela pode ser originada de uma fonte de energia eletromagn\'{e}tica como radar, infravermelho, raio-x, microondas, raios gama, ou at\'{e} serem energia de ondas ac\'{u}sticas (sistemas de imagem ultra-som), ou ainda energias de ondas magn\'{e}ticas (tomografia)\cite{GONZALEZ:2007}\cite{AUZUIR:2005}.
+
+\subsection{Pr\'{e}-Processamento}
+
+A etapa de pr\'{e}-processamento, que geralmente est\~{a}o presentes nos sistemas de \ac{VC}, utilizam t\'{e}cnicas cl\'{a}ssicas de \ac{PDI} para filtrar ru\'{\i}dos, real\c{c}ar e restaurar imagens. Onde o principal objetivo desta etapa \'{e} processar a imagem de maneira que o resultado \'{e} mais adequado que a imagem original para uma determinada aplica\c{c}\~{a}o. Aumentando, desta forma, as chances de sucesso dos processos seguintes \cite{GONZALEZ:2007}.
+
+As opera\c{c}\~{o}es de realce e de restaura\c{c}\~{a}o podem ser tratadas como filtros digitais bidimensionais e podem ser divididas em duas grandes categorias: m\'{e}todos de dom\'{\i}nio espacial e m\'{e}todos no dom\'{\i}nio da frequ\^{e}ncia. Nos m\'{e}todos no dom\'{\i}nio da frequ\^{e}ncia, a imagem \'{e} transformada para um outro dom\'{\i}nio, processada e em seguida revertida para o dom\'{\i}nio espacial. J\'{a} nos de dom\'{\i}nio espacial as opera\c{c}\~{o}es s\~{a}o feitas em um \'{u}nico \emph{pixel} ou em uma vizinhan\c{c}a de \emph{pixels}, s\~{a}o procedimentos que podem ser denotados pela express\~{a}o ~\ref{EQU:DOMINESPAC}
+
+\begin{equation}
+\label{EQU:DOMINESPAC}
+g(x,y) = T[f(x,y)]
+\end{equation}
+
+onde $f(x,y)$ \'{e} a imagem de entrada, $g(x,y)$ \'{e} a imagem processada, e $T$ \'{e} o operador em $f$, definido por alguma vizinhan\c{c}a de $(x,y)$ \cite{GONZALEZ:2007}\cite{PITAS:2000}.
+
+Uma das t\'{e}cnicas mais usadas no dom\'{\i}nio espacial \'{e} o filtro da m\'{e}dia, que tem como vantagem reduzir os ru\'{\i}dos de uma imagem e como desvantagem \'{e} que ele causa borramento reduzindo os detalhes da imagem. O que, dependendo da aplica\c{c}\~{a}o, pode ser usado como vantagem tamb\'{e}m. O filtro da m\'{e}dia \'{e} tamb\'{e}m um filtro passa baixa, pois mant\'{e}m as baixas frequ\^{e}ncias espaciais e suprimi os componentes de alta frequ\^{e}ncia \cite{NIXON:2002}. Ele consiste de uma m\'{a}scara de tamanho $2N + 1 \times 2N + 1$, onde o \emph{pixel} $(x,y)$ da imagem $f$ em que a janela est\'{a} centrada \'{e} substitu\'{\i}do na imagem filtrada $g$ atrav\'{e}s da seguinte express\~{a}o:
+
+\begin{equation}
+\label{EQU:FILTMED}
+g(x,y) = \frac{1}{(2N + 1)(2N + 1)}\sum\limits_{i=-\frac{N}{2}}^{\frac{N}{2}}\sum\limits_{j=-\frac{N}{2}}^{\frac{N}{2}} f(x + i, y + j)
+\end{equation}
+
+\subsection{Segmenta\c{c}\~{a}o de Imagens}
+
+Segmenta\c{c}\~{a}o consiste em checar cada \emph{pixel} individualmente e analisar se ele pertence ou n\~{a}o a um objeto de interesse. O \emph{pixel} recebe o valor um se ele pertencer ao objeto, e zero caso contr\'{a}rio \cite{JAHNE:2005}. Desta forma, a imagem \'{e} subdividida em regi\~{o}es ou objetos, onde cada uma destas tem alguma caracter\'{\i}stica (brilho, textura, cor) com um alto grau de uniformidade \cite{DAVIES:2004}.
+
+O n\'{\i}vel de subdivis\~{a}o empregado depende do problema a ser resolvido. A precis\~{a}o da segmenta\c{c}\~{a}o determinar\'{a} o eventual sucesso ou fracasso do sistema de \ac{VC}. Por esta raz\~{a}o, deve-se dedicar um cuidado consider\'{a}vel para aumentar a probabilidade de uma segmenta\c{c}\~{a}o robusta. Quando for poss\'{\i}vel, deve-se algumas medidas de controle do ambiente evitando uma segmenta\c{c}\~{a}o falha \cite{GONZALEZ:2007}.
+
+Algoritmos de segmenta\c{c}\~{a}o geralmente s\~{a}o baseados em uma das duas propriedades b\'{a}sicas dos valores de intensidade: descontinuidade e similaridade. Na primeira categoria, a abordagem \'{e} particionar a imagem baseado em mudan\c{c}as abruptas de intensidade, como as bordas de uma imagem. A principal abordagem na segunda categoria \'{e} particionar a imagem em regi\~{o}es que s\~{a}o similares de acordo com um conjunto de crit\'{e}rios pr\'{e}-definidos. Limiariza\c{c}\~{a}o e crescimento de regi\~{a}o s\~{a}o exemplos de m\'{e}todos desta categoria \cite{GONZALEZ:2007}.
+
+Considere o histograma da Figura ~\ref{FIG:LIMIARIZACAO} como correspondendo ao histograma de uma imagem qualquer, composta de objetos claros e um fundo escuro. Uma maneira f\'{a}cil de extrair os objetos do fundo \'{e} selecionar um limiar $T$ que separe os dois agrupamentos. Assim, qualquer ponto (x,y) na imagem tal que $f(x,y) > T$ \'{e} chamado de um ponto do objeto; caso contr\'{a}rio, o ponto \'{e} chamado de ponto do fundo \cite{FREITAS:2007}. Dessa forma, a imagem segmentada $g(x,y)$ \'{e} dada por:
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 812 322, width = 0.7 \linewidth]{figs/Limiariza\c{c}\~{a}o.png}
+\caption{Exemplo da aplica\c{c}\~{a}o do processo de Limiariza\c{c}\~{a}o sobre um histograma.} \label{FIG:LIMIARIZACAO}
+\end{figure}
+
+\begin{equation}
+  \begin{array}{*{20}c}
+   \begin{array}{l}
+ {\rm g(x,y) } \\
+ \end{array}  \\
+\end{array}{\rm  = }\left\{ {\begin{array}{*{20}c}
+   1, & \textrm{se f(x,y) $\geq$ T} \\
+   0, & \textrm{caso contr\'{a}rio} \\
+\end{array}} \right.
+\end{equation}
+
+A t\'{e}cnica de limiariza\c{c}\~{a}o \'{e} conceitualmente a mais simples abordagem que pode ser usada para segmenta\c{c}\~{a}o \cite{JAHNE:2005}. Devido as suas propriedades intuitivas e simplicidade de implementa\c{c}\~{a}o, \'{e} uma t\'{e}cnica bastante utilizada na literatura \cite{GONZALEZ:2007}.
+
+
+\subsection{Representa\c{c}\~{a}o e Descri\c{c}\~{a}o}
+
+Representa\c{c}\~{a}o e descri\c{c}\~{a}o de formas \'{e} uma quest\~{a}o importante no processamento de imagens. Elas s\~{a}o obtidas atrav\'{e}s de t\'{e}cnicas de \ac{PDI} e podem ser usadas para aplica\c{c}\~{o}es de reconhecimento de objetos \cite{PITAS:2000}.
+
+Uma representa\c{c}\~{a}o compacta para a forma dos objetos n\~{a}o \'{e} de muita utilidade se for exigida uma grande quantidade de esfor\c{c}o para calcul\'{a}-la e se esta representa\c{c}\~{a}o \'{e} pesada demais para se calcular os par\^{a}metros diretamente. Par\^{a}metros de forma s\~{a}o extra\'{\i}dos dos objetos para descrever sua forma, compar\'{a}-la \`{a} forma de objetos modelos, ou dividir objetos em classes de diferentes formas. Neste ponto se levanta uma grande quest\~{a}o, como par\^{a}metros de forma podem ser invariantes a certas transforma\c{c}\~{o}es sofridas pelas imagens. Objetos podem ser vistos de diferentes dist\^{a}ncias e de diferentes pontos de vista, desta forma, \'{e} desej\'{a}vel achar m\'{e}todos de representa\c{c}\~{a}o de forma que tenham as seguintes propriedades\cite{JAHNE:2005}\cite{PITAS:2000}: \\
+
+\begin{enumerate}
+    \item \textbf{Unicidade} -- Uma caracter\'{\i}stica de crucial import\^{a}ncia em reconhecimento de objetos, cada objeto deve ter uma \'{u}nica representa\c{c}\~{a}o.
+    \item \textbf{Integralidade} -- \'{E} fundamental que o objeto n\~{a}o tenha uma representa\c{c}\~{a}o amb\'{\i}gua.
+    \item \textbf{Invariante a transforma\c{c}\~{o}es geom\'{e}tricas} -- \'{E} muito importante em aplica\c{c}\~{o}es de reconhecimento que a representa\c{c}\~{a}o de forma seja invariante a transla\c{c}\~{a}o, rota\c{c}\~{a}o, escala e reflex\~{a}o.
+    \item \textbf{Sensibilidade} -- Esta \'{e} a habilidade de o m\'{e}todo de representa\c{c}\~{a}o refletir facilmente as diferen\c{c}as entre objetos similares.
+    \item \textbf{Abstra\c{c}\~{a}o de detalhes} -- \'{E} a habilidade do m\'{e}todo representar as caracter\'{\i}sticas b\'{a}sicas da forma e abstrair os detalhes. Esta propriedade est\'{a} diretamente realcionada a robustez a ru\'{\i}do do m\'{e}todo.
+\end{enumerate}
+
+Depois de uma imagem ter sido dividida em regi\~{o}es por algum m\'{e}todo de segmenta\c{c}\~{a}o, o conjunto de pixels segmentados \'{e} representado e descrito de uma forma adequada para um posterior processamento pelo computador. Basicamente representar uma regi\~{a}o envolve duas escolhas: a primeira \'{e} representar as regi\~{o}es em termos de suas caracter\'{\i}sticas externas (suas fronteiras), a segunda \'{e} representar a regi\~{a}o em termos de suas caracter\'{\i}sticas internas (os \emph{pixels} que compreendem a regi\~{a}o) \cite{GONZALEZ:2008}.
+
+Uma representa\c{c}\~{a}o externa \'{e} escolhida quando o foco principal est\'{a} nas caracter\'{\i}sticas da forma, como cantos e inflex\~{o}es. J\'{a} a representa\c{c}\~{a}o interna \'{e} selecionada quando o objetivo prim\'{a}rio \'{e} observar as propriedades locais do objeto, como cores e textura por exemplo \cite{MOESLUND:2001}.
+
+Na categoria de representa\c{c}\~{a}o externa, o m\'{e}todo de c\'{o}digo em cadeia \'{e} bastante utilizado. Ele \'{e} uma estrutura de dados usada para representar a borda de um objeto atrav\'{e}s de uma sequ\^{e}ncia de segmentos de linhas retas conectadas de dire\c{c}\~{a}o e comprimentos especificados \cite{JAHNE:2005}\cite{GONZALEZ:2008}.
+
+Uma regi\~{a}o geralmente descreve um conte\'{u}do (pontos interiores) que s\~{a}o rodeados por uma borda (ou per\'{\i}metro), que frequentemente \'{e} chamado de regi\~{a}o do contorno. Um ponto pode ser definido como pertencente ao contorno se na regi\~{a}o da qual ele faz parte exista pelo menos um \emph{pixel} na sua vizinhan\c{c}a que n\~{a}o faz parte da regi\~{a}o \cite{NIXON:2002}.
+
+Para definir os pontos internos e os de contorno, \'{e} preciso considerar as regi\~{o}es de vizinhan\c{c}a entre os \emph{pixels} que s\~{a}o descritas atrav\'{e}s de regras de conectividade. Existem duas maneiras comuns de definir a conectividade: conectividade-4 (onde apenas os vizinhos imediatos s\~{a}o analisados); ou conectividade-8 onde todos os oito \emph{pixels} ao redor do \emph{pixel} escolhido s\~{a}o analisados \`{a} conectividade. Ambos os tipos de conectividade s\~{a}o ilustrados na Figura ~\ref{FIG:CONECT}, onde o \emph{pixel} a ser analisado \'{e} mostrado em cinza claro e os \emph{pixels} da sua vizinhan\c{c}a em cinza escuro.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:CONECT4}]{\includegraphics[bb = 0 0 367 308, width = 0.4 \linewidth]{figs/Conectividade4.png}}
+\subfigure[\label{FIG:CONECT8}]{\includegraphics[bb = 0 0 367 309, width = 0.4 \linewidth]{figs/Conectividade8.png}}
+\caption[Principais tipos de an\'{a}lise de conectividade]{Principais tipos de an\'{a}lise de conectividade: (a) conectividade-4; (b) conectividade-8} \label{FIG:CONECT}
+\end{figure}
+
+
+Para obter a representa\c{c}\~{a}o de um contorno no algoritmo de c\'{o}digo em cadeia, se armazena as posi\c{c}\~{o}es relativas entre \emph{pixels} consecutivos. Ou seja, o conjunto de \emph{pixels} na borda de um objeto \'{e} traduzido em um conjunto de conex\~{o}es entre eles. Dessa forma, dado um \emph{pixel} inicial \'{e} necess\'{a}rio determinar a dire\c{c}\~{a}o em que o pr\'{o}ximo \emph{pixel} ser\'{a} encontrado. Onde, esse pr\'{o}ximo \emph{pixel} \'{e} um dos pontos adjacentes em uma das principais dire\c{c}\~{o}es da b\'{u}ssola. E assim, o c\'{o}digo em cadeia \'{e} formado se concatenando o n\'{u}mero que representa a dire\c{c}\~{a}o do pr\'{o}ximo \emph{pixel}. Isso \'{e} repetido para cada ponto at\'{e} que o ponto inicial seja alcan\c{c}ado, que ser\'{a} quando toda a forma estiver completamente analisada.
+
+As dire\c{c}\~{o}es na conectividade-4 e conectividade-8 \'{e} mostrada na Figura ~\ref{FIG:CODIGOCONECT}. Na conectividade-4 o \emph{pixel} de origem tem quatro vizinhos nas dire\c{c}\~{o}es norte, leste, sul e oeste, s\~{a}o os vizinhos imediatos (Figura ~\ref{FIG:CODIGOCONECT4}). J\'{a} na conectividade-8, al\'{e}m dos quatro vizinhos imediatos, se tem os vizinhos nas dire\c{c}\~{o}es nordeste, sudeste, sudoeste e noroeste, que s\~{a}o os pontos dos cantos(Figura ~\ref{FIG:CODIGOCONECT8})\cite{NIXON:2002}.
+
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:CODIGOCONECT4}]{\includegraphics[bb = 0 0 371 311, width = 0.4 \linewidth]{figs/CodigoConectividade4.png}}
+\subfigure[\label{FIG:CODIGOCONECT8}]{\includegraphics[bb = 0 0 371 311, width = 0.4 \linewidth]{figs/CodigoConectividade8.png}}
+\caption[C\'{o}digo em cadeia dos tipos de conectividade]{C\'{o}digo em cadeia dos tipos de conectividade:(a) c\'{o}digo da conectividade-4 (b)c\'{o}digo da conectividade-8} \label{FIG:CODIGOCONECT}
+\end{figure}
+
+
+Na Figura ~\ref{FIG:EXEMPLOCCODE} tem-se um exemplo da aplica\c{c}\~{a}o do c\'{o}digo em cadeia. Na Figura ~\ref{FIG:EXEMPLOCCFORMA} h\'{a} o contorno de um objeto qualquer. O ponto inicial ser\'{a} o que tem a palavra "In\'{\i}cio", o sentido de varredura ser\'{a} o hor\'{a}rio e usando conectividade-8. Desta forma, a dire\c{c}\~{a}o do ponto inicial para o pr\'{o}ximo ser\'{a} sudeste, cujo c\'{o}digo seguindo a conven\c{c}\~{a}o da Figura ~\ref{FIG:CODIGOCONECT8} \'{e} $3$. Assim, o primeiro valor da lista encadeada \'{e} $3$. A dire\c{c}\~{a}o partindo de \textbf{P1} o vizinho mais pr\'{o}ximo \'{e} ao sul, \textbf{P2}, cujo c\'{o}digo \'{e} $4$. Esse valor \'{e} concatenado a lista, que fica com $3,4$. O pr\'{o}ximo ponto depois de \textbf{P2} \'{e} o \textbf{P3} que fica ao sudeste novamente, cujo c\'{o}digo \'{e} 3. Repete-se o processo para todos os pontos do contorno at\'{e} o ponto inicial. Neste caso o \'{u}ltimo ponto \'{e} o \textbf{P15}, cujo vizinho \'{e} o ponto inicial. Na Figura ~\ref{FIG:EXEMPLOCCCON8} tem-se o c\'{o}digo em cadeia para o contorno da Figura ~\ref{FIG:EXEMPLOCCFORMA} e na Figura ~\ref{FIG:EXEMPLOCCCON4} tamb\'{e}m tem o exemplo de c\'{o}digo em cadeia usando conectividade-4 para o mesmo contorno.
+
+\begin{figure}[h]
+\centering
+\subfigure[\label{FIG:EXEMPLOCCFORMA}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode.png}}
+\subfigure[\label{FIG:EXEMPLOCCCON4}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode2.png}}
+\subfigure[\label{FIG:EXEMPLOCCCON8}]{\includegraphics[width = 3.5 cm, bb = 0 0 300 311]{figs/ExemploChainCode3.png}}
+\caption[Exemplos do c\'{o}digo em cadeia aplicado em uma forma]{Exemplos do c\'{o}digo em cadeia, aplicado em uma forma, usando conectividade-$4$ e conectividade-$8$ } \label{FIG:EXEMPLOCCODE}
+
+\end{figure}
+
+Ap\'{o}s o processo de representa\c{c}\~{a}o de um objeto, a tarega seguinte \'{e} a de descri\c{c}\~{a}o ou sele\c{c}\~{a}o de atributos, de forma a extrair atributos dos dados representados que resultem em alguma informa\c{c}\~{a}o quantitativa de interesse ou que sejam b\'{a}sicos para diferenciar uma classe de objetos de outra; essa diferencia\c{c}\~{a}o ocorre na fase seguinte de reconhecimento \cite{HIGASHIMO:2006}.
+
+A partir da representa\c{c}\~{a}o do contorno obtida com o c\'{o}digo em cadeia, pode se extrair os pontos cr\'{\i}ticos. Pontos cr\'{\i}ticos ou cantos s\~{a}o descritores muito importantes de um objeto, pois a informa\c{c}\~{a}o sobre uma forma se concentra em seus cantos \cite{MASOOD:2007}. Eles s\~{a}o definidos como pontos onde a linha do contorno da regi\~{a}o apresenta uma varia\c{c}\~{a}o brusca de dire\c{c}\~{a}o, ou seja, um ponto com alto valor de amplitude no sinal de curvatura \cite{AUZUIR:2005}.
+
+A curvatura $k(t)$ de uma curva param\'{e}trica $c(t) = (x(t), y(t))$ \'{e} definida como:
+
+\begin{equation}
+k(t) = \frac{\dot{x}(t)\ddot{y}(t) - \ddot{x}(t)\dot{y}(t)}{(\dot{x}(t)^{2} + \dot{y}(t)^{2})^{1.5}}
+\label{EQU:CURVPARAM}
+\end{equation}
+
+Devido ao fato de o contorno ter natureza discreta, o c\'{a}lculo das derivadas de $x(t)$ e $y(t)$ se torna um problema computacional dificultando o uso da Equa\c{c}\~{a}o ~\ref{EQU:CURVPARAM} para estimar a curvatura \cite{COSTA:2001}.
+
+Para evitar os c\'{a}lculos de derivada, pode-se usar uma abordagem em que se define medidas de curvatura alternativas baseadas nos \^{a}ngulos entre vetores definidos em termos dos elementos discretos do contorno. Considere $c(n) = (x(n),y(n))$ como sendo uma curva discreta. Desta forma, os seguintes vetores podem ser definidos \cite{COSTA:2001}:
+
+\begin{equation}
+v_{i}(n) = (x(n) - x(n-i), y(n) - y(n-i))
+\label{EQU:VETCURV1}
+\end{equation}
+\begin{equation}
+w_{i}(n) = (x(n) - x(n+i), y(n) - y(n+i))
+\label{EQU:VETCURV2}
+\end{equation} 
+
+Como pode ser visto na Figura ~\ref{FIG:CURV1} os vetores s\~{a}o definidos entre o ponto atual do contorno e os vizinhos que est\~{a}o \`{a} direita e \`{a} esquerda.
+
+\begin{figure}[h]
+\centering
+\includegraphics[bb = 0 0 446 295, width = 0.4 \linewidth]{figs/curv1.png}
+\caption{Indica\c{c}\~{a}o da curvatura baseada no \^{a}ngulo.} \label{FIG:CURV1}
+\end{figure}
+
+Com base nos vetores da figura anterior \citet{JOHNSTON:1973} propuseram o modelo digital de pontos de alta curvatura, ele \'{e} definido pela Equa\c{c}\~{a}o ~\ref{EQU:CURVDIG} que se encontra a seguir:
+
+\begin{equation}
+r_{i}(n) = \frac{v_{i}(n)w_{i}(n)}{||v_{i}(n)||||w_{i}(n)||}
+\label{EQU:CURVDIG}
+\end{equation}
+
+onde $r_i(n)$ \'{e} o cosseno do \^{a}ngulo entre os vetores $v_i(n)$ e $w_i(n)$. Dessa forma, temos que $-1 <= r_i(n) <= 1$ para linhas retas e $r_i(n) = 1$ quando o \^{a}ngulo se torna $0^\circ$. De maneira que, $r_i(n)$ pode ser usado como uma medida capaz de localizar pontos de alta curvatura, ou que sejam maiores que um certo limiar.
+
+
+\subsection{Reconhecimento}
+
+
+
+\end{document}

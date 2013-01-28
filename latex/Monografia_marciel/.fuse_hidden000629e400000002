@@ -1,0 +1,75 @@
+\relax 
+\catcode`"\active
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\citation{abnt-url-package=hyperref}
+\citation{abnt-nbr10520=2002}
+\citation{abnt-and-type=e}
+\citation{abnt-full-initials=no}
+\citation{abnt-last-names=abnt}
+\citation{abnt-etal-list=2}
+\citation{abnt-etal-text=emph}
+\@input{pre_text/capa.aux}
+\HyPL@Entry{0<</P(\376\377\0001)>>}
+\select@language{brazil}
+\@writefile{toc}{\select@language{brazil}}
+\@writefile{lof}{\select@language{brazil}}
+\@writefile{lot}{\select@language{brazil}}
+\HyPL@Entry{1<</P(\376\377\0001)>>}
+\@input{pre_text/folhadeaprovacao.aux}
+\HyPL@Entry{2<</P(\376\377\0002)>>}
+\@input{pre_text/dedicatoria.aux}
+\HyPL@Entry{3<</P(\376\377\0003)>>}
+\@input{pre_text/epigrafe.aux}
+\HyPL@Entry{4<</P(\376\377\0004)>>}
+\@input{pre_text/agradecimentos.aux}
+\HyPL@Entry{5<</P(\376\377\0005)>>}
+\@input{pre_text/resumo.aux}
+\HyPL@Entry{6<</P(\376\377\0006)>>}
+\@input{pre_text/abstract.aux}
+\HyPL@Entry{7<</P(\376\377\0007)>>}
+\HyPL@Entry{8<</P(\376\377\0008)>>}
+\HyPL@Entry{9<</P(\376\377\0009)>>}
+\@writefile{toc}{\contentsline {chapter}{Lista de Figuras}{9}{chapter*.5}}
+\HyPL@Entry{10<</P(\376\377\0001\0000)>>}
+\@writefile{toc}{\contentsline {chapter}{Lista de Tabelas}{10}{chapter*.6}}
+\@input{cap1/introducao.aux}
+\HyPL@Entry{11<</P(\376\377\0001\0001)>>}
+\HyPL@Entry{12<</P(\376\377\0001\0002)>>}
+\HyPL@Entry{13<</P(\376\377\0001\0003)>>}
+\HyPL@Entry{14<</P(\376\377\0001\0004)>>}
+\@input{cap2/outrocap.aux}
+\HyPL@Entry{15<</P(\376\377\0001\0005)>>}
+\HyPL@Entry{16<</P(\376\377\0001\0006)>>}
+\HyPL@Entry{17<</P(\376\377\0001\0007)>>}
+\HyPL@Entry{18<</P(\376\377\0001\0008)>>}
+\citation{ACP95}
+\bibdata{abnt-options,bibliografia}
+\HyPL@Entry{19<</P(\376\377\0001\0009)>>}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Este \'e um Cap\IeC {\'\i }tulo}{19}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Esta \'e uma Se\c c\~ao do Cap\IeC {\'\i }tulo}{19}{section.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Esta \'e uma Subse\c c\~ao do Cap\IeC {\'\i }tulo}{19}{subsection.3.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1.1}Esta \'e uma Sub-Subse\c c\~ao do Cap\IeC {\'\i }tulo}{19}{subsubsection.3.1.1.1}}
+\bibcite{ACP95}{Anderson, Culler e Patterson 1995}
+\bibciteEXPL{ACP95}{Anderson, Culler e Patterson}
+\bibciteIMPL{ACP95}{ANDERSON; CULLER; PATTERSON}
+\bibciteYEAR{ACP95}{1995}
+\bibstyle{abnt-alf}
+\HyPL@Entry{20<</P(\376\377\0002\0000)>>}
+\@writefile{toc}{\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{20}{chapter*.7}}
+\ttl@finishall

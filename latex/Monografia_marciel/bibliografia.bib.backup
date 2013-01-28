@@ -1,0 +1,38 @@
+@book{balanis3,
+      author = "Balanis, Constantine A.",
+      title = "Antenna Theory - Analysis and Design",
+      edition="3ª", 
+      publisher = "John Wiley \& Sons",
+      address = "New Jersey, USA",
+      year = "2005",
+      isbn = "0-471-66782-X",
+      }
+      
+@book{microwaverf,
+      author = "Sorrentino, Roberto and Bianchi, Giovanni",
+      title = "Microwave and RF Engineering",
+      publisher = "John Wiley \& Sons",
+      address = "Chichester, United Kingdom",
+      year = "2010",
+      isbn = "978-0-470-75862-5",
+      }
+      
+@book{arraybasics,
+      author = "Visser, Hubregt J.",
+      title = "Array and Phased Array Antenna Basics",
+      publisher = "John Wiley \& Sons",
+      address = "Chichester, United Kingdom",
+      year = "2005",
+      isbn = "978-0-470-87117-1",
+      }
+
+@book{pozar4,
+      author = "Pozar, David M.",
+      title = "Microwave Engineering",
+      edition="4ª", 
+      publisher = "John Wiley \& Sons",
+      address = "New Jersey, USA",
+      year = "2012",
+      isbn = "978-0-470-63155-3",
+      }
+

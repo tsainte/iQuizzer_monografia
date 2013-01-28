@@ -1,0 +1,19 @@
+% ----------------------------------------------------------------------- %
+% Pequena dedicatória ou uma epígrafe (uma citação pertinente ao seu 
+% trabalho ou que represente o seu modo de pensar.) 
+% 
+%
+% Arquivo: dedicatoria.tex
+% ----------------------------------------------------------------------- %
+\thispagestyle{empty}
+\vspace*{\fill}
+
+{ \raggedleft
+
+
+\textit{Sempre que te perguntarem se podes fazer um trabalho, \\
+respondas que sim e te ponhas em seguida a aprender como se faz. \\
+F. Roosevelt}
+
+~
+}

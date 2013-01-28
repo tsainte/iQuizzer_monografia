@@ -1,0 +1,11 @@
+\chapter{Conclusão}
+Neste trabalho foi desenvolvido um \emph{framework} para dar suporte ao desenvolvimento de testes de diagnóstico de discos rígidos usados em computadores pessoais. Utilizou-se o sistema Linux pois, mesmo sendo empregado  por uma pequena parcela do mercado, possibilita a realização de testes em computadores com qualquer sistema operacional instalado, bastando apenas a reinicialização.
+O programa desenvolvido com a camada de aplicação, criada utilizando o \emph{framework} apresentado neste trabalho, mostrou-se bastante eficiente pois apresentou desempenho similar aos das ferramentas de diagnóstico do mercado. Todos os dispositivos com falhas foram detectados, utilizando apenas uma combinação de 5 testes, com tempo de execução inferior a 10 minutos.
+Entretanto, a maior contribuição deste trabalho está não apenas na análise realizada da eficiência dos algoritmos de testes, mas em  fornecer os recursos necessários para  a implementação de novos algoritmos de maneira simples, como os principais comandos necessários, uma camada de aplicação que encapsula estes comandos e um método de inserção de falhas, útil na validação de novos comandos e algoritmos de teste.
+Durante o desenvolvimento deste trabalho, algumas dificuldades foram enfrentadas, principalmente devido à documentação dos padrões \ac{ATA} e \ac{SCSI}, que se mostrou superficial e mal organizada. Há livros que se dedicam a fazer uma análise mais detalhada destes padrões, entretanto os mesmos são antigos e estão um pouco defasados. Para contornar este empecilho, vários testes e experimentos foram realizados para tentar deduzir, através de investigação, o comportamento que não era descrito pela documentação.
+
+\section{Perspectivas Futuras}
+
+
+Este trabalho pode ser continuado de diversas maneiras. Pode-se trabalhar na implementação de mais comandos \ac{SCSI}, visando dar cobertura também a discos \ac{SAS} e a servidores. A interface gráfica deve ser aprimorada, para que se torne mais robusta e mais  agradável de ser utilizada. Por fim, a principal vertente de continuação deste trabalho é o  desenvolvimento de novos algoritmos e o aprimoramento dos testes implementados aqui, com a realização de mais rodadas de teste e a experimentação de novos parâmetros em um conjunto maior de discos rígidos.
+

@@ -1,0 +1,534 @@
+This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2010.2.1)  1 FEB 2010 11:14
+entering extended mode
+**D:/Dissertação/pretexto/capa.tex
+(D:/Dissertação/pretexto/capa.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2008-06-18, ngerman-x-2008-06-18, french, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{center}
+                  
+? 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--3
+[] 
+ []
+
+! Undefined control sequence.
+<argument>  \autor 
+                   
+l.12      \textsc{ \autor }
+                            \\%
+? 
+! Undefined control sequence.
+l.16     {\large
+                         \textbf{\titulo}\\
+? 
+! Undefined control sequence.
+<recently read> \titulo 
+                        
+l.16     {\large         \textbf{\titulo}
+                                         \\
+? 
+
+! LaTeX Error: Environment tabularx undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33     \begin{tabularx}
+                         {\textwidth}{XX}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.33     \begin{tabularx}{\textwidth}
+                                     {XX}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.33     \begin{tabularx}{\textwidth}
+                                     {XX}
+? 
+Missing character: There is no X in font nullfont!
+Missing character: There is no X in font nullfont!
+! Misplaced alignment tab character &.
+l.34     &
+           \emph{Proposta de Disserta\c{c}\~{a}o de Mestrado apresentada \`{...
+
+? 
+
+Overfull \hbox (19.17763pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Pro- 
+ []
+
+
+Overfull \hbox (22.23318pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 posta 
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 de 
+ []
+
+
+Overfull \hbox (18.2832pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Dis- 
+ []
+
+
+Overfull \hbox (36.16086pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 sertac~ao 
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 de 
+ []
+
+
+Overfull \hbox (40.01639pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Mestrado 
+ []
+
+
+Overfull \hbox (13.79991pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 ap- 
+ []
+
+
+Overfull \hbox (11.88321pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 re- 
+ []
+
+
+Overfull \hbox (17.88876pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 sen- 
+ []
+
+
+Overfull \hbox (18.65544pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 tada 
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 a 
+ []
+
+
+Overfull \hbox (15.84433pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Co- 
+ []
+
+
+Overfull \hbox (12.90546pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 or- 
+ []
+
+
+Overfull \hbox (35.26645pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 denac~ao 
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 do 
+ []
+
+
+Overfull \hbox (25.93872pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Curso 
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 de 
+ []
+
+
+Overfull \hbox (19.56099pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Pos- 
+ []
+
+
+Overfull \hbox (46.9636pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Graduac~ao 
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 em 
+ []
+
+
+Overfull \hbox (15.98323pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 En- 
+ []
+
+
+Overfull \hbox (18.39986pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 gen- 
+ []
+
+
+Overfull \hbox (22.61653pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 haria 
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 de 
+ []
+
+
+Overfull \hbox (21.72205pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Tele- 
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 in- 
+ []
+
+
+Overfull \hbox (41.27194pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 formatica 
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 da 
+ []
+
+
+Overfull \hbox (19.69987pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Uni- 
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 ver- 
+ []
+
+
+Overfull \hbox (10.73326pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 si- 
+ []
+
+
+Overfull \hbox (19.93321pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 dade 
+ []
+
+
+Overfull \hbox (18.53873pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Fed- 
+ []
+
+
+Overfull \hbox (15.97209pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 eral 
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 do 
+ []
+
+
+Overfull \hbox (25.68314pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 Ceara 
+ []
+
+
+Overfull \hbox (22.48874pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 como 
+ []
+
+
+Overfull \hbox (21.84982pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 parte 
+ []
+
+
+Overfull \hbox (14.31104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 dos 
+ []
+
+
+Overfull \hbox (15.97205pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 req- 
+ []
+
+
+Overfull \hbox (12.01103pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 ui- 
+ []
+
+
+Overfull \hbox (10.73326pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 si- 
+ []
+
+
+Overfull \hbox (12.52214pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 tos 
+ []
+
+
+Overfull \hbox (18.52763pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 para 
+ []
+
+
+Overfull \hbox (38.07751pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 obtenc~ao 
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 do 
+ []
+
+
+Overfull \hbox (18.78319pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 grau 
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/m/it/10 de 
+ []
+
+
+Overfull \hbox (34.51909pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 Mestre 
+ []
+
+
+Overfull \hbox (14.76651pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 em 
+ []
+
+
+Overfull \hbox (18.21092pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 En- 
+ []
+
+
+Overfull \hbox (21.28867pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 gen- 
+ []
+
+
+Overfull \hbox (26.3053pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 haria 
+ []
+
+
+Overfull \hbox (11.2332pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 de 
+ []
+
+
+Overfull \hbox (24.83304pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 Tele- 
+ []
+
+
+Overfull \hbox (14.19987pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 in- 
+ []
+
+
+Overfull \hbox (51.39954pt too wide) in paragraph at lines 33--36
+ \OT1/cmr/bx/it/10 formatica\OT1/cmr/m/it/10 . 
+ []
+
+! Misplaced alignment tab character &.
+l.38     &
+                      \textbf{\'{A}rea de Concentra\c{c}\~{a}o:} Sinais e Si...
+
+? 
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (24.29153pt too wide) in paragraph at lines 38--38
+ [][]\OT1/cmr/bx/n/10 Area 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 38--38
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (24.27765pt too wide) in paragraph at lines 38--38
+ \OT1/cmr/bx/n/10 Con- 
+ []
+
+
+Overfull \hbox (20.60406pt too wide) in paragraph at lines 38--38
+ \OT1/cmr/bx/n/10 cen- 
+ []
+
+
+Overfull \hbox (34.44423pt too wide) in paragraph at lines 38--38
+ \OT1/cmr/bx/n/10 trac~ao: 
+ []
+
+! Misplaced alignment tab character &.
+l.40     &
+                  \textbf{Orientador :} \orientador\\
+? 
+! Undefined control sequence.
+l.40 ...&        \textbf{Orientador :} \orientador
+                                                  \\
+? 
+
+Overfull \hbox (54.84694pt too wide) in paragraph at lines 40--40
+ []\OT1/cmr/bx/n/10 Orientador 
+ []
+
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 40--40
+ \OT1/cmr/bx/n/10 : 
+ []
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.41     &
+                  \textbf{Co-orientador :} \coorientador\\
+? 
+! Undefined control sequence.
+l.41 ...    \textbf{Co-orientador :} \coorientador
+                                                  \\
+? 
+
+Overfull \hbox (17.8888pt too wide) in paragraph at lines 41--41
+ []\OT1/cmr/bx/n/10 Co- 
+ []
+
+
+Overfull \hbox (51.95807pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 orientador 
+ []
+
+
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 41--41
+ \OT1/cmr/bx/n/10 : 
+ []
+
+
+! LaTeX Error: \begin{center} on input line 3 ended by \end{tabularx}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43     \end{tabularx}
+                       
+? 
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48     {\normalsize
+                         \textsc{Fortaleza -- Cear\'{a} \\%
+? 
+
+Overfull \hbox (51.78857pt too wide) in paragraph at lines 49--49
+ []\OT1/cmr/m/sc/10 Fortaleza 
+ []
+
+
+Overfull \hbox (5.52773pt too wide) in paragraph at lines 49--49
+ \OT1/cmr/m/sc/10 -- 
+ []
+
+
+Overfull \hbox (31.72762pt too wide) in paragraph at lines 49--49
+ \OT1/cmr/m/sc/10 Cear[]a 
+ []
+
+! Undefined control sequence.
+<recently read> \monthname 
+                           
+l.49                             \monthname~2010}
+                                                 }
+? 
+
+Overfull \hbox (24.72198pt too wide) in paragraph at lines 49--50
+ [] \OT1/cmr/m/sc/10 2010 
+ []
+
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\end
+
+*
+Runaway argument?
+! Paragraph ended before \end was complete.
+<to be read again> 
+                   \par 
+<*> 
+    
+? 
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+! Emergency stop.
+<*> 
+    
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 25 strings out of 95304
+ 306 string characters out of 1182725
+ 47021 words of memory out of 1500000
+ 3320 multiletter control sequences out of 110000
+ 4954 words of font info for 18 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 15i,1n,11p,207b,159s stack positions out of 5000i,500n,10000p,200000b,5000s
+!  ==> Fatal error occurred, no output PDF file produced!

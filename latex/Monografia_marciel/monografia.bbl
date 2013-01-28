@@ -1,0 +1,44 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[Balanis 2005]{balanis3}
+\abntrefinfo{Balanis}{BALANIS}{2005}
+{BALANIS, C.~A. \emph{Antenna Theory - Analysis and Design}. 3ª. ed. New
+  Jersey, USA: John Wiley \& Sons, 2005.
+ISBN 0-471-66782-X.}
+
+\bibitem[Ishii 1995]{microwavehandbook}
+\abntrefinfo{Ishii}{ISHII}{1995}
+{ISHII, T.~K. \emph{Handbook of Microwave Technolo gy}. California, USA:
+  Academic Press, 1995.
+ISBN 0-12-374696-5.}
+
+\bibitem[Ludwig e Bretchko 2000]{rfcircuit}
+\abntrefinfo{Ludwig e Bretchko}{LUDWIG; BRETCHKO}{2000}
+{LUDWIG, R.; BRETCHKO, P. \emph{RF Circuit Design - Theory and Applications}.
+  New Jersey, USA: Prentice Hall, 2000.
+ISBN 0-13-095323-7.}
+
+\bibitem[Pozar 2012]{pozar4}
+\abntrefinfo{Pozar}{POZAR}{2012}
+{POZAR, D.~M. \emph{Microwave Engineering}. 4ª. ed. New Jersey, USA: John
+  Wiley \& Sons, 2012.
+ISBN 978-0-470-63155-3.}
+
+\bibitem[Sorrentino e Bianchi 2010]{microwaverf}
+\abntrefinfo{Sorrentino e Bianchi}{SORRENTINO; BIANCHI}{2010}
+{SORRENTINO, R.; BIANCHI, G. \emph{Microwave and RF Engineering}. Chichester,
+  United Kingdom: John Wiley \& Sons, 2010.
+ISBN 978-0-470-75862-5.}
+
+\bibitem[Visser 2005]{arraybasics}
+\abntrefinfo{Visser}{VISSER}{2005}
+{VISSER, H.~J. \emph{Array and Phased Array Antenna Basics}. Chichester, United
+  Kingdom: John Wiley \& Sons, 2005.
+ISBN 978-0-470-87117-1.}
+
+\end{thebibliography}

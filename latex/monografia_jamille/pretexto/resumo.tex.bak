@@ -1,0 +1,12 @@
+\pdfbookmark[1]{Resumo}{CHP:RESUM0}
+\chapter*{Resumo}
+\label{CHP:RESUM0}%%
+\thispagestyle{empty}
+\acresetall
+\PARstartOne{D}{iscos} rígidos são elementos fundamentais em qualquer sistema computacional moderno e é importante monitorar a ``saúde'' destes dispositivos, pois são utilizados desde computadores pessoais a aplicações de risco. Este trabalho  tem como objetivo construir um \emph{framework} em sistema Linux, utilizando comandos dos padrões \ac{ATA} e \ac{SCSI}, para dar suporte ao desenvolvimento de algoritmos de teste de discos rígidos. Para demonstrar o uso do framework, são implementados alguns algoritmos de teste rápido, testes que variam entre 5 e 10 minutos, que apresentaram resultados comparáveis com ferramentas de diagnóstico do mercado. Por último estes algoritmos são embarcados em uma versão inicializável do Linux, o que permite realizar testes em quais quer computadores que suportem inicialização por \emph{pendrive} ou \emph{live cd}, independentemente do sistema operacional instalado. Os resultados dos testes dos algoritmos foram bastante satisfatórios, demonstrando a eficiência do \emph{framework}.
+
+Para o desenvolvimento do trabalho todos os comandos foram desenvolvidos em linguagem C++ ANSI. Vários comandos \ac{ATA} e \ac{SCSI} foram implementados para dar suporte a leitura, auto-teste e outras funcionalidades e a partir deles os algoritmos são implementados.
+ 
+\newline
+\noindent \textbf{Palavras-chaves:} Framework de Diagnóstico, Discos Rígidos, HDD, SSD, SCSI, ATA.
+

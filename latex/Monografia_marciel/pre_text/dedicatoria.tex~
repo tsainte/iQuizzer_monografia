@@ -1,0 +1,17 @@
+﻿% ----------------------------------------------------------------------- %
+% Pequena dedicatória ou uma epígrafe (uma citação pertinente ao seu 
+% trabalho ou que represente o seu modo de pensar.) 
+% 
+%
+% Arquivo: dedicatoria.tex
+% ----------------------------------------------------------------------- %
+\thispagestyle{empty}
+\vspace*{\fill}
+
+{ \raggedleft
+
+
+\textit{Dedico este trabalho a Maria Salete Carneiro, mulher, guerreira e vencedora, minha segunda mãe, cujo maior desejo era ainda estar no nosso convívio para presenciar o encerramento desse ciclo acadêmico em minha vida.}
+
+~
+}

@@ -1,0 +1,67 @@
+\chapter{Metodologia} \label{CHP:MET}%%
+
+Neste cap\'{\i}tulo s\~{a}o descritos, primeiramente, o ambiente de simula\c{c}\~{a}o utilizado para implementar e testar os algoritmos, os gestos testados neste trabalho e as t\'{e}cnicas empregadas para extrair as caracter\'{\i}sticas que ir\~{a}o compor os dados utilizados na descri\c{c}\~{a}o desses gestos. Em seguida, tem-se a arquitetura e configura\c{c}\~{a}o da rede neural usada para treinamento e classifica\c{c}\~{a}o dos gestos, e por fim, \'{e} descrita a forma de avalia\c{c}\~{a}o dos m\'{e}todos de extra\c{c}\~{a}o de caracter\'{\i}sticas.
+
+\section{Ambiente de Simula\c{c}\~{a}o}
+Para o desenvolvimento deste trabalho foram utilizados dois ambientes: o primeiro para desenvolvimento em C ANSI, onde foi usado o Visual Studio Express 2008 da Microsoft integrado ao \ac{OpenCV} da Intel e o segundo foi o Matlab R2008a da Mathworks. O primeiro ambiente \'{e} usado para desenvolver o algoritmo principal. Nele, usa-se o \ac{OpenCV}, uma \ac{API} implementada em C ANSI que cont\'{e}m uma s\'{e}rie de fun\c{c}\~{o}es na \'{a}rea de processamento de imagens. Atrav\'{e}s de uma \emph{webcam} , o \ac{OpenCV} \'{e} utilizado para realizar a aquisi\c{c}\~{a}o das imagens dos gestos, tornando poss\'{\i}vel o processamento das mesmas para extra\c{c}\~{a}o dos dados a serem utilizados no treinamento. Todo esse algoritmo foi desenvolvido no Visual Studio. J\'{a} o segundo ambiente, o Matlab, foi utilizado para realizar o treinamento da rede neural empregada na classifica\c{c}\~{a}o dos gestos testados e tamb\'{e}m para realizar os c\'{a}lculos de avalia\c{c}\~{a}o dos m\'{e}todos propostos para extra\c{c}\~{a}o de caracter\'{\i}sticas.
+
+\section{M\'{e}todos Usados para Descri\c{c}\~{a}o do Gesto}
+Neste trabalho foram testados nove ($9$) gestos, mostrados na Figura ~\ref{FIG:GTRE}, realizados por dez ($10$) indiv\'{\i}duos diferentes.
+
+\begin{figure}[h]
+     \centering
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 0 330 180 476, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 190 330 360 476, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 370 330 540 476, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 550 330 720 476, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 730 330 900 476, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 0 170 180 300, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 190 170 360 300, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 370 170 540 300, clip]{figs/gestos.png}}
+     \subfigure[]{\includegraphics[scale = 0.4 , bb = 550 170 720 300, clip]{figs/gestos.png}}
+     \caption{Gestos realizados no treinamento e classifica\c{c}\~{a}o.}
+     \label{FIG:GTRE}
+\end{figure}
+
+Para avaliar a influ\^{e}ncia da redu\c{c}\~{a}o da informa\c{c}\~{a}o na classifica\c{c}\~{a}o dos gestos, s\~{a}o propostos tr\^{e}s m\'{e}todos de extra\c{c}\~{a}o de caracter\'{\i}sticas em cima das mesmas amostras de gestos. Em um primeiro momento, realiza-se a aquisi\c{c}\~{a}o da imagem do gesto, baseando-se no m\'{e}todo de segmenta\c{c}\~{a}o de imagens descrito na Se\c{c}\~{a}o ~\ref{SEC:SEGMEN}, onde se obt\'{e}m a imagem binarizada com apenas a segmenta\c{c}\~{a}o da m\~{a}o. A partir dessa imagem binarizada, \'{e} extra\'{\i}do o contorno da m\~{a}o usando o m\'{e}todo de c\'{o}digo em cadeia apresentado na Se\c{c}\~{a}o ~\ref{SEC:CONTORNO} e em seguida extrai-se os pontos cr\'{\i}ticos, que foram definidos na se\c{c}\~{a}o ~\ref{SEC:DESCRICAO}. De posse dessas imagens, a primeira com apenas a m\~{a}o segmentada, a segunda com apenas o contorno da m\~{a}o e a terceira com apenas os pontos cr\'{\i}ticos, \'{e} poss\'{\i}vel encontrar o vetor de caracter\'{\i}sticas (ou atributos) de cada m\'{e}todo:
+
+ \begin{enumerate}
+    \item O primeiro m\'{e}todo consiste em extrair as caracter\'{\i}sticas do gesto a partir da m\~{a}o segmentada, que possui em m\'{e}dia seis mil ($6000$) \emph{pixels}.
+
+    \item O segundo m\'{e}todo extrai as caracter\'{\i}sticas do gesto a partir do contorno da m\~{a}o, o qual possui em m\'{e}dia quinhentos ($500$) \emph{pixels}.
+    \item Por fim, o terceiro m\'{e}todo obt\'{e}m as caracter\'{\i}sticas a partir dos pontos extremos dos dedos (ou pontos cr\'{\i}ticos), para cada dedo tem-se tr\^{e}s pontos ($3$) para represent\'{a}-lo (um ($1$) ponto de pico e dois ($2$) pontos de vale) o que fornece no m\'{a}ximo quinze ($15$) \emph{pixels}.
+\end{enumerate}
+
+A extra\c{c}\~{a}o de caracter\'{\i}sticas consiste em calcular o vetor de atributos para cada um dos tr\^{e}s m\'{e}todos. Este vetor \'{e} formado pelas $12$ caracter\'{\i}sticas definidas no cap\'{\i}tulo ~\ref{CHP:MET} na se\c{c}\~{a}o ~\ref{SEC:MOMHU}, que s\~{a}o: os sete momentos invariantes de Hu (definidos na Equa\c{c}\~{a}o ~\ref{EQU:MOMENTOSHU}), a excentricidade (definida na Equa\c{c}\~{a}o ~\ref{EQU:EXCENT}), a circularidade (definida na Equa\c{c}\~{a}o ~\ref{EQU:CIRC}), a dispers\~{a}o (Equa\c{c}\~{a}o ~\ref{EQU:DISP}) e o maior e o menor momento de in\'{e}rcia (que podem ser vistos nas Equa\c{c}\~{o}es ~\ref{EQU:MAIORMOMIN} e ~\ref{EQU:MENORMOMIN} respectivamente). O vetor de atributos \'{e} formado da seguinte maneira:
+\begin{eqnarray}\label{E18}
+x = \left[ \begin{array}{l}
+ x_i  \\
+ x_{i + 1}  \\
+ x_{i + 2}  \\
+ ... \\
+ x_n  \\
+ \end{array} \right].
+ \end{eqnarray}
+
+Esse vetor \'{e} a entrada de um  classificador baseado em Redes Neurais Artificiais.
+
+\section{Treinamento e Classifica\c{c}\~{a}o}
+Para realizar o treinamento da rede foram adquiridas $400$ amostras de cada gesto, $40$ amostras de cada indiv\'{\i}duo, totalizando $3600$ amostras para cada um dos m\'{e}todos. O treinamento desta rede \'{e} feito em ambiente Matlab, separando $80\%$ dos dados para treinamento e $20\%$ para teste. A configura\c{c}\~{a}o da Rede Neural \'{e} do tipo MLP e a quantidade de \'{e}pocas usadas em cada treinamento \'{e} de $500$. A estrutura da Rede \'{e} do tipo duas camadas, na qual a primeira camada tem $12$ neur\^{o}nios e a segunda tem o n\'{u}mero de neur\^{o}nios correspondente ao n\'{u}mero de classes poss\'{\i}veis, no caso $9$ neur\^{o}nios, conforme mostrado na Figura ~\ref{FIG:GTRE}. Realizado o treinamento, armazena-se os pesos gerados pela rede neural.
+
+Com a rede treinada, realiza-se a classifica\c{c}\~{a}o dos gestos nos dados separados para teste. Seguindo o mesmo processo do treinamento, realiza-se a aquisi\c{c}\~{a}o da imagem, a segmenta\c{c}\~{a}o do objeto e a extra\c{c}\~{a}o de caracter\'{\i}sticas, gerando o vetor de atributos para cada imagem de teste. Usa-se este vetor como entrada para a rede neural, produzindo como sa\'{\i}da a classifica\c{c}\~{a}o do gesto. Um resumo da metodologia descrita \'{e} mostrada na Figura~\ref{FIG:METOD}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[bb = 0 0 711 317, width = 1.1 \linewidth]{figs/Metodologia.png}
+  \caption{Etapas realizadas no desenvolvimento deste trabalho.}\label{FIG:METOD}
+\end{figure}
+
+\section{Metodologia de Compara\c{c}\~{a}o dos M\'{e}todos de Extra\c{c}\~{a}o}
+
+A fim de se obter uma avalia\c{c}\~{a}o estat\'{\i}stica consistente, a rede neural \'{e} avaliada atrav\'{e}s do m\'{e}todo \emph{hold out} \cite{SOLANGE:2005} com $20\%$ do conjunto de dados sendo separados para teste. O processamento de treinamento e teste da rede s\~{a}o repetidos $100$ vezes, avaliando as taxas de acerto/erro de classifica\c{c}\~{a}o da rede atrav\'{e}s da sua representa\c{c}\~{a}o em forma tabular (matriz de confus\~{a}o). A matriz de confus\~{a}o \'{e} uma ferramenta muito empregada no processo de aprendizagem supervisionado. Cada coluna da matriz representa o n\'{u}mero de vezes que aquela classe foi escolhida, ou seja, aquela classe foi a sa\'{\i}da da rede, enquanto cada linha representa o n\'{u}mero de vezes que uma determinada classe realmente foi a entrada da rede.
+
+A utiliza\c{c}\~{a}o da matriz de confus\~{a}o permite visualizar mais facilmente se o sistema est\'{a} confundindo classes e pode-se usar seus dados para calcular as taxas de acerto das classes do sistema. Ap\'{o}s as rodadas de \emph{hold-out} s\~{a}o calculados alguns par\^{a}metros estat\'{\i}sticos importantes das taxas de acerto, como valor m\'{e}dio, desvio padr\~{a}o e os valores m\'{\i}nimo e m\'{a}ximo das taxas de acerto de cada m\'{e}todo. O c\'{a}lculo desses par\^{a}metros estat\'{\i}sticos fornecer\'{a} informa\c{c}\~{o}es \'{u}teis que permitir\~{a}o avaliar matematicamente o desempenho de cada um dos m\'{e}todos.
+
+\section{Resumo do Cap\'{\i}tulo}
+Neste cap\'{\i}tulo foram descritos as ferramentas utilizadas no desenvolvimento deste trabalho, os gestos que podem ser reconhecidos pelo sistema e tr\^{e}s m\'{e}todos de se extrair atributos para treinamento propostos neste trabalho. Tamb\'{e}m foi descrito neste cap\'{\i}tulo os passos para realizar o treinamento e classifica\c{c}\~{a}o dos gestos, e quais os m\'{e}todos de compara\c{c}\~{a}o utilizado para se avaliar cada m\'{e}todo. No cap\'{\i}tulo seguinte, s\~{a}o apresentados os resultados dos testes de simula\c{c}\~{a}o para cada um dos m\'{e}todos.
+

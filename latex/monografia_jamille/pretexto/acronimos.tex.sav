@@ -1,0 +1,85 @@
+\begin{acronym}
+
+% Meus
+
+\acro{ABS}{\emph{Air Bearing Heads}}
+
+\acro{ANSI}{\emph{American National Standards Institute}}
+
+\acro{ATA}{\emph{Advanced Technology Attachment}}
+
+\acro{ATAPI}{\emph{Advanced Technology Attachment Packet Interface}}
+
+\acro{BD}{\emph{Blu-Ray Disk}}
+
+\acro{CD-ROM}{\emph{Compact Disk - Read Only Memory}}
+
+\acro{DVD}{\emph{Digital Versatile Disk}}
+
+\acro{DASD}{\emph{Direct Access Storage Devices}}
+
+\acro{IBM}{\emph{International Business Machines}}
+
+\acro{HD}{\emph{Hard Disk}}
+
+\acro{HDD}{\emph{Hard Disk Drive} (Unidade de Disco Rígido)}
+
+\acro{HD-DVD}{\emph{High Definition DVD}}
+
+\acro{IDE}{\emph{Integrated Drive Electronics}}
+
+\acro{PC}{\emph{Personal Computer}}
+
+\acro{PCB}{\emph{Printed Circuit Board}}
+
+\acro{RAM}{\emph{Random Access Memory}}
+
+\acro{RAMAC}{\emph{Random Access Method of Accounting and Control}}
+
+\acro{ROM}{\emph{Read Only Memory}}
+
+\acro{SCSI}{\emph{Small Computer System Interface}}
+
+\acro{SMART}{\emph{Self-Monitoring, Analysis and Reporting Technology}}
+
+\acro{SSD}{\emph{Solid-State Drive}(Unidade de Estado Sólido)}
+
+\acro{TB}{\emph{Tera Byte}}
+
+\acro{VCM}{\emph{Voice Coil Motor}}
+
+
+
+% Antigos
+
+\acro{VC}{Vis\~{a}o Computacional}
+
+\acro{RGB}{\emph{Red}(Vermelho), \emph{Green}(Verde) e \emph{Blue}(Azul)}
+
+\acro{YCbCr}{Lumin\^{a}ncia (Y), Cromin\^{a}ncia Azul (Cb) e Cromin\^{a}ncia Vermelha (Cr)}
+
+\acro{FPU}{Unidade de Ponto Flutuante (\emph{Floating Point Unit})}
+
+\acro{OpenCV}{\emph{Open Source Computer Vision Library}}
+
+\acro{API}{Interface de Programa\c{c}\~{a}o de Aplicativos (\emph{Application Programming Interface})}
+
+\acro{SIDI}{Samsung Instituto de Desenvolvimento para Inform\'{a}tica}
+
+\acro{FPS}{\emph{Frames} por segundo}
+
+\acro{RNA}{Redes Neurais Artificiais}
+
+\acro{CG}{Computa\c{c}\~{a}o Gr\'{a}fica}
+
+\acro{IA}{Intelig\^{e}ncia Artificial}
+
+\acro{PDI}{Processamento Digital de Imagens}
+
+\acro{MLP}{Multi Layer Perceptron}
+
+\acro{RP}{Reconhecimento de Padr\~{o}es}
+
+\acro{LIBRAS}{Linguagem Brasileira de Sinais}
+
+\end{acronym} 

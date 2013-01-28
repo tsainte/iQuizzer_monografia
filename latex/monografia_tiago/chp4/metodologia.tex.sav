@@ -1,0 +1,234 @@
+\chapter{Metodologia e Implementação} \label{CHP:MET}%%
+
+Este capítulo apresenta as metodologias de desenvolvimento e de teste utilizadas neste projeto, bem como os detalhes de implementação do \emph{framework} proposto e os algoritmos implementados.  Na Seção \ref{implementacao} as estratégias de implementação dos comandos \ac{ATA} e \ac{SCSI} são apresentadas, as abordagens adotadas são discutidas e é feito o detalhamento do \emph{framework}, da camada de aplicação e do \emph{Bootable} criado.
+
+A Seção \ref{metodologia} descreve o ambiente de desenvolvimento e os recursos utilizados, comenta o método de inserção de falhas utilizado e descreve a metodologia de teste.
+
+\section{Metodologia}\label{metodologia}
+ No desenvolvimento deste trabalho, foram utilizados diversos \acp{HD}, para validação dos comandos e algoritmos, \emph{laptops} e \emph{desktops}, para realização dos teste e validação do funcionamento do \emph{Bootable}. Todos os computadores e \acp{HD} utilizados, exceto o computador pessoal da autora, fazem parte do acervo do \ac{LESC}\footnote{Laboratório de pesquisa e desenvolvimento com vasta experiência no desenvolvimento de \emph{softwares} de diagnóstico para linhas de produção e usuários finais.}, da \ac{UFC}.
+
+Na validação dos comandos foram gerados pequenos módulos executáveis para que os comandos pudessem ser validados individualmente. Foi desenvolvido um método de inserção de falha descrito na Seção \ref{insercaofalha}, usado para validar os comandos e os algoritmos de teste.
+
+\subsection{Inserção de Falhas}\label{insercaofalha}
+Na validação dos algoritmos foram utilizados \acp{HD} em boas condições, sem falhas detectadas por outras ferramentas de diagnóstico, nos quais foram ``inseridos'' falhas em alguns setores, através do comando \ac{ATA} \textsc{Write Uncorrectable (45h)}. Com este comando é possível configurar setores para que retornem \emph{status} de falha, quando um comando de leitura for executado. Há duas opções disponíveis, criar um erro pseudo incorrigível, com \emph{log}, e criar um erro sinalizado, sem \emph{log}. Na primeira opção, quando um comando de leitura for executado, o erro de leitura será incluído nos \emph{logs} da controladora e do \ac{SMART} e na segunda opção o comando retornará erro, mas este não será inserido nos \emph{logs}. Neste trabalho utilizou-se a primeira opção, para ajudar na validação de comandos, como \textsc{Read Log Ext (2Fh)}, e na implementação de testes, como o \emph{Targeted Read}, que se baseia na leitura dos \emph{logs} armazenados.
+
+Para remover a falha inserida é necessário realizar um comando de escrita no setor configurado, o dado armazenado será perdido e o setor não retornará \emph{status} de erro na realização de novos comandos de leitura, a menos, é claro, que este setor se torne realmente falho. Neste trabalho utilizou-se os comandos \textsc{Write Sector(s) (30h)} e \textsc{Write Sector(s) Ext (34h)} para remover as falhas ``inseridas''.
+
+\subsection{Metodologia de Teste}\label{metodologiateste}
+Os testes foram realizados utilizando discos rígidos com falhas conhecidas,  detectadas por outros \emph{softwares}, no caso Lenovo \emph{ThinkVantage ToolBox}, desenvolvido pela PC-Doctor disponível nos computadores Lenovo e executado no Windows, e \emph{smartmootools}, executado no Linux.
+
+Os algoritmos implementados foram testados utilizando 12 \acp{HD} nos quais estes algoritmos foram executados. Destes \acp{HD} 9 são do tipo \ac{HDD} e 3 do tipo \ac{SSD}, entre eles há \acp{HD} com falhas e \acp{HD} em perfeito estado de funcionamento. Foram utilizados discos de dois tipos de \emph{form factor}, $2.5 in$ e $3.5 in$.  Uma sequência de algoritmos foi definida e executada 3 vezes para cada dispositivo. Os resultados foram comparados e estão descritos no Capítulo \ref{CHP:RESULT}.
+
+
+\section{Implementação} \label{implementacao}
+
+O intuito deste trabalho é o desenvolvimento de um \emph{framework} para dar suporte ao desenvolvimento de testes  de diagnóstico para serem executados em \emph{desktops} e \emph{laptops}.  Neste trabalho alguns testes foram implementados, apenas para demonstrar a eficiência do \emph{framework} e servir de base para uma análise preliminar sobre a validade dos mesmos, pois, tendo em vista que para uma análise estatística confiável destes algoritmos seria necessária uma grande quantidade de discos rígidos, variações de parâmetros e repetições de testes, e não seria possível concluir no tempo previsto, de um semestre.
+
+Como dito anteriormente, a capacidade de armazenamento dos discos rígidos vem crescendo fortemente. Testar todos os setores de um disco rígido pode levar muitas horas e \emph{softwares} de diagnóstico como PC-Doctor, Aida32 e Hard Disk Sentinel, oferecem testes rápidos, que analisam amostras de setores, que levam de 5 a 10 minutos, e é para o desenvolvimento deste tipo de teste que o \emph{framework} foi pensado.
+
+Na Seção \ref{eolinux} a implementação dos comandos \ac{ATA} e \ac{SCSI} no Linux é descrita. O \emph{framework} proposto é descrito na Seção \ref{framework} e o \emph{bootable} na Seção \ref{bootable}.
+
+
+\subsection{ATA, SCSI, SMART e o Linux} \label{eolinux}
+
+No Linux, lidar com dispositivos \ac{SCSI} e \ac{ATA} é bastante simples, similar ao trato de arquivos de entrada e saída padrão. Os comandos são enviados aos dispositivos através dos \emph{drivers}, \emph{softwares} que conectam o sistema operacional ao \emph{hardware} do computador \cite{Tanenbaum:2001}.
+
+Os dispositivos correspondem a arquivos no diretório \emph{/dev}  e utilizam-se de chamadas de sistema, por exemplo, para comandá-los. Usa-se a chamada \emph{open()} para criar um descritor para o dispositivo, como mostrado no próximo parágrafo. Uma vez criado o descritor, os comandos podem ser escritos e lidos através dele com as chamadas \emph{read()}, \emph{write()} ou \emph{ioctl()}, como descrito em \cite{Final}, \cite{SCSI:programming}.
+
+
+\begin{quote}
+\textsf{int fd = open (device\_name, O\_RDWR);}
+\end{quote}
+
+Discos \ac{SCSI} são acessados através do \emph{driver} \emph{sd}, para discos rígidos,  e \emph{sg}, para quaisquer dispositivos \ac{SCSI}, ambos disponibilizados pelo pacote sg3-utils. Neste trabalho, os dados serão escritos e lidos usando a estrutura sg\_io\_hdr\_t, descrita em (\emph{scsi/sg.h}) e a seguir, enviadas através do \emph{driver sg}.
+
+
+\begin{quote}
+\textsf{int dxfer\_direction: especifica a direção da transferência de dados.\\unsigned char *dxferp: ponteiro para os dados transferidos.\\unsigned char * cmdp: ponteiro para o comando.\\ unsigned char * sbp: ponteiro para o sense buffer.\\  unsigned char masked\_status: status GOOD ou CHECK CONDITION.}
+\end{quote}
+
+Os comandos \ac{SCSI} têm,  em geral, 6, 10, 12 ou 16 \emph{bytes} de tamanho e são enviados no formato de um bloco descritor de comando, que é um dos campos da estrutura sg\_io\_hdr\_t e contém \emph{opcode} do comando, \ac{LBA} (endereço do setor), tamanho em \emph{bytes} a ser transferido e outras flags de comando, como descrito na Figura \ref{FIG:scsi10}, um comando de 10 bytes.
+
+Depois de receber um comando, o dispositivo \emph{alvo} responde com um \emph{byte} de \emph{status} e retorna uma estrutura chamada sense buffer com mais informações. Utilizam-se algumas abordagens mostradas em \cite{Final}, \cite{Tao:2009}, quanto ao uso das chamadas \emph{read()/write()} ou \emph{ioctl}. Neste trabalho foi adotado o uso da chamada \emph{ioctl}, que equivale ao uso de uma chamada \emph{write()} seguida de uma chamada \emph{read()}. No caso de um comando que retorne erro, usando \emph{read()/write()}, é necessário o envio de outro comando, o \textsc{Request Sense}, para obter mais informações sobre o problema; com o uso do \emph{ioctl()} a própria estrutura já retorna todas as informações, no campo \emph{sense\_buffer}. No próximo parágrafo o envio de um comando por \emph{ioctl()} é descrito, onde fd é o descritor do dispositivo, p\_hdr é uma instanciação da estrutura sg\_io\_hdr\_t e SG\_IO é o parâmetro referente ao \emph{driver sg}.
+
+\begin{quote}
+\textsf{int ret = ioctl(fd, SG\_IO, p\_hdr);}
+\end{quote}
+
+%\begin{table}[htb!]
+   % \begin{center}
+\begin{figure}%[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/scsiCdb.pdf}\\
+  %\caption{Família de padrões ATA}\label{FIG:Ata}
+    \caption{Comando de 10 bytes típico, adaptado de \cite{SCSI:Sam}}
+    \label{FIG:scsi10}
+\end{figure}
+
+O processamento em  discos \ac{SATA}/\ac{ATA} é um pouco diferente, pois algumas vezes, as controladoras \ac{SATA} estão conectadas através de um barramento do tipo PCI, o que leva o sistema operacional a interpretá-lo como um adaptador de barramento\footnote{\emph{Host Bus Adapter (HBA).}} \ac{SCSI} \cite{SCSI:toolbox}. Isto impossibilita o envio de comandos \ac{ATA} aos discos, para ter acesso aos discos utiliza-se a camada de tradução \ac{SCSI}-\ac{ATA}, que encapsula comandos \ac{ATA} em comandos \ac{SCSI}, provida no Linux pela biblioteca libATA \cite{Bart:2010}, fazendo uso do comando \textsc{ATA Pass-Through}. A camada de tradução é descrita em \cite{SCSI:ATAtranslation} e o comando é detalhado em \cite{SCSI:AtaPassThrough}. Como o sistema \ac{SMART} é especificado pelo padrão \ac{ATA}, os comandos de \ac{SMART} também são enviados via \textsc{ATA Pass-Through}.
+
+O envio de comandos via \textsc{ATA Pass-Through} apresentou alguns detalhes peculiares durante o desenvolvimento. A ordem de preenchimento da estrutura de dados do comando a ser enviado influencia no resultado do comando. Na Figura \ref{FIG:atapassthrough} a estrutura do comando é apresentada. Diversos testes foram realizados em diferentes discos rígidos e verificou-se que apenas quando os campos \emph{LBA\_LOW(0:7)},  \emph{LBA\_MID(0:7)},  \emph{LBA\_HIGH(0:7)} eram preenchidos em sequência o comando respondia adequadamente. Não foram encontradas referências a isso na documentação dos padrões \ac{ATA} e \ac{SCSI}, apenas uma sequência de bytes comentados em um código fonte que implementava um dos comandos \ac{SCSI}. Outro detalhe é que a resposta dos comandos enviados via \textsc{ATA Pass-Through} varia de acordo com o fabricante, pois uma certa quantidade de \emph{bytes} é coletada antes da estrutura que descreve a resposta. Esta quantidade varia de acordo com o fabricante, em torno de 22 \emph{bytes}, depois destes \emph{bytes} a sequência de \emph{bytes} 09h 0ch marca o início da estrutura de descrição de resultados, também não há referência a isto nas documentações dos padrões \ac{ATA} e \ac{SCSI}.
+
+\begin{figure}%[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/atapassthrough.pdf}\\
+  %\caption{Família de padrões ATA}\label{FIG:Ata}
+    \caption{Comando ATA Pass-Through, adaptado de \cite{SCSI:AtaPassThrough}}
+    \label{FIG:atapassthrough}
+\end{figure}
+
+
+\subsection{\emph{Framework} Proposto} \label{framework}
+
+O \emph{framework} foi implementado em linguagem C++, escolhida por reunir características de linguagens de alto e baixo nível. Esta foi desenvolvida para ser compatível e tão eficiente e portável quanto a linguagem C e suporta múltiplos paradigmas de programação, principalmente a programação estruturada e a programação orientada a objetos.
+
+Os padrões \ac{ATA} e \ac{SCSI} disponibilizam vários tipos de comandos, desde comandos simples para a leitura de informações sobre o fabricante do dispositivo até comandos para aplicações de segurança, e nem todos os comandos são úteis para este trabalho, que se propõem a execução de algoritmos de leitura e testes \ac{SMART}. Alguns comandos foram selecionados e são listados nesta Seção. Foram implementados os principais comandos de leitura e verificação de \acp{LBA}, comandos \ac{SMART} e de auto-teste e comandos para leitura dos \emph{logs} gerados pela controladora. Estes \emph{logs} contêm informações como os comandos que retornaram erro e em que \acp{LBA} eles foram executados, como descrito na Seção \ref{falhashd}, isto é um recurso útil para a verificação de falhas temporárias e checagem da vizinhança.
+
+O \emph{framework} é descrito como um diagrama de classes na Figura \ref{FIG:Framework}. Nesta Figura, a classe \emph{ScsiCmd} implementa a estrutura de um comando \ac{SCSI}, bem como as suas funcionalidades, várias classes são herdeiras da classe \emph{ScsiCmd}, entre elas a classe \emph{ATAPassThrough}, de onde os comandos \ac{ATA}, entre eles o \ac{SMART}, herdam suas características.
+
+Neste diagrama são descritas apenas as classes que implementam comandos \ac{ATA} e \ac{SCSI} e que foram utilizadas na implementação de testes. Todos os comandos implementados são detalhados nas Tabelas \ref{TAB:scsi_selected} e \ref{TAB:ata_selected}. As classes \emph{Inquiry}, \emph{ModeSense}, \emph{ReadCapacity}, \emph{Read}, \emph{Verify} e \emph{TestUnitRead} implementam comandos \ac{SCSI} puros e podem ser usados para outros tipos de dispositivos. No centro do diagrama está a classe \emph{AtaPassThrough}, dela são herdeiras as classes \emph{ReadVerify}, \emph{ReadVerifyExt}\footnote{A diferença entre \emph{ReadVerify} e \emph{ReadVerifyExt}, assim como \emph{ReadSector} e \emph{ReadSectorExt}, é o tamanho da ac{LBA} endereçada. Os comandos ``Ext'' utilizam \ac{LBA} de 48 bits e os outros de 28 bits.}, \emph{ReadSector}, \emph{ReadSectorExt}, \emph{Identify}, \emph{ReadLogExt}, \emph{WriteSector}, \emph{WriteUncorrectable} e \emph{SmartCmd}, estes comandos são \ac{ATA}. As classes ligadas à \emph{SmartCmd} implementam um mesmo comando, que contém várias funcionalidades diferentes. São elas: \emph{SmartStatus}, \emph{EnableSmart}, \emph{DisableSmart}, \emph{SmartReadLog}, \emph{AbortSelfTest}, \emph{ShortSelfTestSmart}, \emph{ExtendedSelfTestSmart} e \emph{ConveyanceSelfTestSmart}.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=15cm]{figs/framework.pdf}\\
+  \caption{Diagrama de Classes do Framework}\label{FIG:Framework}
+\end{figure}
+
+A Tabela \ref{TAB:scsi_selected}, descreve  os comandos \ac{SCSI} implementados e a Tabela \ref{TAB:ata_selected} os comandos \ac{ATA}, enviados via \textsc{ATA Pass-Through}.
+
+\begin{table}
+    \caption{Comandos \ac{SCSI} selecionados em ordem alfabética}
+    \label{TAB:scsi_selected}
+    \vspace{-10pt}
+    \begin{center}
+       \begin{tabular}{|p{5 cm}|c|p{7 cm}|}
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         Comando & Código  & Descrição  \\ \hline
+         \textsc{ATA Pass-Through (16)} & 85h & Este comando permite o envio encapsulado de comandos \ac{ATA} através de comandos \ac{SCSI}  \\ \hline
+         \textsc{Inquiry} & 12h & Permite coletar informações sobre o dispositivo, o fabricante entre outros.  \\   \hline
+         \textsc{Log Select} & 4Ch &  Permite coletar informações dos \emph{logs} da controladora. \\ \hline
+         \textsc{Log Sense} & 4Dh & Permite coletar informações dos \emph{logs} da controladora. Funciona em conjunto com o comando \textsc{Log Select}   \\ \hline
+         \textsc{Mode Sense (6)} & 1Ah &   Permite coletar informações de páginas específicas do dispositivo. \\    \hline
+         \textsc{Read (10)} & 28h &   Permite a leitura de um setor específico do dispositivo. Requisita a transferência de dados. \\   \hline
+         \textsc{Read Capacity (10)} & 25h &   Permite coletar informações sobre a capacidade do dispositivo, devolve a última \ac{LBA} válida.  \\    \hline
+         \textsc{Read Defect Data (10)} & 37h &  Permite coletar informações sobre os setores defeituosos no dispositivo.* \footnote{*Comando voltado para o desenvolvimento de testes em discos \ac{SCSI}, ainda não validados por não haver dispositivos compatíveis no Laboratório. }  \\ \hline
+         \textsc{Reassign Blocks} & 07h &   Envia a requisição para que a controladora remapei os setores defeituosos.*  \\   \hline
+         \textsc{Receive Diagnostic Results} & 1Ch   & Permite coletar informações da página específica de diagnóstico. Usado em conjunto com \textsc{Send Diagnostic}.  \\    \hline
+         \textsc{Send Diagnostic} & 1Dh &   Requisita a execução de auto-testes pelo dispositivo. \\   \hline
+         \textsc{Test Unit Ready} & 00h &  Testa se a unidade está pronta para receber comandos   \\ \hline
+         \textsc{Verify (10)} & 2Fh  &   Realiza a verificação de um setor, compara o conteúdo do setor e os códigos de checagem de erro. \\   \hline
+          \end{tabular}
+    \end{center}
+    \vspace{-15pt}
+\end{table}
+
+\begin{table}
+    \caption{Comandos \ac{ATA} selecionados em ordem alfabética}
+    \label{TAB:ata_selected}
+    \vspace{-10pt}
+    \begin{center}
+       \begin{tabular}{|p{5 cm}|c|p{8 cm}|}
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         Comando & Código  & Descrição  \\ \hline
+         \textsc{Read Sector} & 20h  & Usado para ler o conteúdo de um ou mais setores \\ \hline
+         \textsc{Read Sector Ext} & 24h  & Usado para ler o conteúdo de um ou mais setores \\ \hline
+         \textsc{Read Verify Sectors} & 40h  & Usado para verificar o conteúdo de um ou mais setores \\ \hline
+         \textsc{Read Verify Sectors Ext} & 44h  & Usado para verificar o conteúdo de um ou mais setores \\ \hline
+         \textsc{SMART} & B0h & Este comando implementa diferentes funcionalidades relacionadas com o sistema \ac{SMART}, que foram implementadas em diferentes classes no \emph{framework} proposto. São eles:
+         \begin{itemize}
+                                                \item \textsc{Diasable Operations (B0h/D9h)}
+                                                \item \textsc{Enable Operations (B0h/D8h)}
+                                                \item \textsc{Execute off-line immediate (B0h/D4h)}, este subcomando executa os auto-testes \ac{SMART}, que são determinados através dos parâmetros passados na estrutura do comando.
+                                                \item \textsc{Read Data (B0h/D0h)}
+                                                \item \textsc{Read Log (B0h/D5h)}
+                                                \item \textsc{Return Status (B0h/DAh)}
+                                              \end{itemize} \\ \hline
+         \textsc{Write Sector} & 30h & Usado para escrever dados em um ou mais setores \\ \hline
+         \textsc{Write Uncorrectable} & 45h  & Usado para inserir erros \\ \hline
+
+
+       \end{tabular}
+    \end{center}
+    \vspace{-15pt}
+\end{table}
+
+\subsection{Camada da Aplicação}
+
+Na camada de aplicação os algoritmos de teste são implementados e também outras funções para auxiliar na execução do teste como funções de listagem de dispositivos, filtragem de \emph{pendrives} e discos rígidos externos, tratamento de \emph{strings} e uso de expressão regular, que não serão detalhados aqui, por não ser o foco deste trabalho.
+
+Os testes são voltados para computadores em uso. Logo, eles não podem realizar escritas no disco rígido, pois isso poderia corromper os dados ou o sistema de arquivos do usuário. Os dispositivos \acp{SSD} tem comportamento físico ``similar'' a memórias \ac{RAM}, para as quais existem vários testes consagrados como os testes do tipo \emph{MARCH}, \emph{Moving Inversion}, \emph{GALPAK} \cite{adams2003high}. Entretanto, todos estes algoritmos utilizam operações de escritas na verificação da memória, o que impossibilita o seu uso para diagnóstico de discos rígidos.
+
+Os algoritmos implementados são de dois tipos,  \ac{SMART} e de busca, que se baseiam na descrição dada nos manuais de ajuda pelos \emph{softwares} de diagnóstico, pois como se trata de uma linha de estudo bastante comercial, há pouca ou nenhuma informação sobre eles. Os algoritmos são descritos a seguir:
+% Explicar porque Read Verify em vez de Read.
+
+\begin{itemize}
+  \item \ac{SMART} \emph{Return Status} executa o comando \ac{SMART} \emph{Return Status} e verifica se as medidas coletadas excedem o limiar máximo. Este comando retorna um alerta binário do tipo: Irá Falhar/Não Irá Falhar. Este alerta pretende avisar ao usuário quanto à probabilidade de o sistema falhar durante as próximas 24 horas de funcionamento.
+  \item \ac{SMART} \emph{Short Self-Test} executa o comando \ac{SMART} \emph{Execute off-line immediate}, com o subcomando \emph{Execute SMART short self-test routine in off-line mode}.
+  \item \ac{SMART} \emph{Extended Self-Test} executa o comando \ac{SMART} \emph{Execute off-line immediate}, com o subcomando \emph{Execute SMART extended self-test routine in off-line mode}.
+  \item \ac{SMART} \emph{Conveyance Self-Test}  executa o comando \ac{SMART} \emph{Execute off-line immediate}, com o subcomando \emph{Execute SMART conveyance self-test routine in off-line mode}.
+  \item \emph{Linear Seek} executa leituras com o comando \textsc{Read Verify} de modo que as leituras sejam feitas com o mesmo espaçamento, como descrito na Figura \ref{FIG:LinearSeek}. O espaçamento utilizado é calculado em função do tamanho do disco e  5000 setores são analisados. Se algum setor falho for encontrado o teste será encerrado.
+      \begin{itemize}
+        \item \emph{Linear Seek 1} Inicia o teste da menor para a maior \ac{LBA}.
+        \item \emph{Linear Seek 2} Inicia o teste da maior para a menor \ac{LBA}.
+      \end{itemize}
+  \item \emph{Funnel Seek} executa leituras com o comando \textsc{Read Verify}, de modo que as leituras sejam feitas em dois sentidos, o algoritmo alternará leituras da menor \ac{LBA} para a maior e da maior para a menor \ac{LBA} , como descrito na Figura \ref{FIG:FunnelSeek}. Se algum setor falho for encontrado o teste será encerrado.
+      \begin{itemize}
+        \item \emph{Funnel Seek 1} Neste algoritmo são utilizados dois passos, um passo fixo de 350.000 \acp{LBA} e um passo aleatório limitado a 10.000 \acp{LBA}. Uma variável é utilizada para monitorar a condição de parada, a cada execução um número de LBA é gerado somando a posição atual, iniciada em zero, o passo fixo e o passo aleatório. Esta LBA é analisada, primeiro sentido, e também a LBA correspondente ao valor total de LBAs menos o número gerado, segundo sentido. O teste termina quando a LBA gerada no primeiro sentido for maior ou igual ao valor total de LBAs.
+      \item \emph{Funnel Seek 2} Realiza o mesmo procedimento do \emph{Funnel Seek 1}, entretanto no início do teste as 100 primeiras LBAs são analisadas e no final do teste a primeira e a última LBAs são analisadas.
+      \end{itemize}
+  \item \emph{Random Seek} executa leituras com o comando \textsc{Read Verify} de modo que um percentual do disco seja analisado e as leituras sejam feitas de maneira aleatória, como descrito na Figura \ref{FIG:RandomSeek}. Se algum setor falho for encontrado o teste será encerrado.
+   \begin{itemize}
+     \item \emph{Random Seek 1} executa leituras em 5000 setores.
+     \item \emph{Random Seek 2} executa leituras em 7500 setores.
+     \item \emph{Random Seek 3} executa leituras em 10000 setores.
+   \end{itemize}
+  \item \emph{Surface Scan}, executa leituras com o comando \textsc{Read Verify}. As leituras são  feitas com o mesmo espaçamento, para cada passo dado um grupo de setores, trecho da superfície, é analisado, como descrito na Figura \ref{FIG:SurfaceScan}.  Se algum setor falho for encontrado o teste será encerrado.
+    \begin{itemize}
+      \item \emph{Surface Scan 1} Divide o Disco em 2.000 ``lotes'' de setores e para cada início de ``lote'' 30 setores são analisados. O algoritmo começa executando da menor para a maior LBA.
+      \item \emph{Surface Scan 2} Mesmo procedimento do \emph{Surface Scan 1}, mas segue o sentido oposto, começa executando da maior para a menor LBA.
+    \end{itemize}
+  \item \emph{Targeted Read Test}, este teste realiza a leitura do \emph{log} de falhas da controladora, identifica os setores listados e realiza novas leituras, nos setores e na sua vizinhança, para determinar se o mesmo continua com falhas. Cada LBA encontrado nos \emph{logs}, é analisada e também os 5 setores anteriores e posteriores a ele. Este teste é comentado em \cite{PCdoc} e descrito na Figura \ref{FIG:TargetedRead}. O teste é finalizado quando todas os setores listados ou quando mais de 5 setores falhos são encontrados.
+
+\end{itemize}
+
+\begin{figure}[htb!]
+    \centering
+    \subfigure[a][Linear Seek]{\includegraphics[width=5cm]{figs/linearseek.pdf}}
+        \label{FIG:LinearSeek}
+    \subfigure[b][Funnel Seek]{\includegraphics[width=8cm]{figs/funnelseek.pdf}}
+        \label{FIG:FunnelSeek}
+    \caption{Fluxograma dos algoritmos implementados: \emph{Linear e Funnel Seek}}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+\subfigure[c][Random Seek]{\includegraphics[width=5cm]{figs/randomseek.pdf}}
+        \label{FIG:RandomSeek}
+    \subfigure[d][Surface Scan]{\includegraphics[width=5cm]{figs/surfacescan.pdf}}
+        \label{FIG:SurfaceScan}
+\caption{Fluxograma dos algoritmos implementados: \emph{Random Seek e Surface Scan}}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \subfigure[e][Targeted Read]{\includegraphics[width=10cm]{figs/targetedread.pdf}}
+        \label{FIG:TargetedRead}
+        \caption{Fluxograma dos algoritmos implementados: \emph{Targeted Read}}
+\end{figure}
+
+As quantidades de setores testadas em cada teste foram escolhidas com base no tempo médio de execução, avaliado em testes pré-eliminares em \acp{HDD} (que são mais lentos que \acp{SSD}). Neste testes observou-se que o tempo médio para leitura de 5000 setores, em vários \emph{desktops} e \emph{laptops}, variava de 50 a 60 segundos, tempo próximo ao observado nos \emph{softwares} do mercado para cada teste realizado.
+
+\subsection{\emph{Bootable}}\label{bootable}
+
+ Utilizou-se  um sistema Debian GNU/Linux para criar uma versão inicializável do Linux.  Ele foi criado a partir de uma versão de 64 bits do Debian 6.0 Squeeze, kernel 2.6.32-5-amd64, usando o sistema de arquivos \emph{squashfs}. Este sistema de arquivos somente de leitura e que implementa compressão, sendo o mais indicado para versões inicializáveis, \emph{live cd} ou \emph{pendrive} \cite{squash}.
+
+ No total, o \emph{bootable} ocupa cerca de 200 MB e pode ser utilizado em qualquer computador que suporte inicialização por cd ou \emph{pendrive}. O processo de criação e atualização do \emph{bootable} é descrito em \cite{boot:ram}. Uma ``imagem'' deste sistema de arquivos, com o Debian Squeeze instalado, foi modificada e nela o binário gerado na compilação da camada de aplicação foi inserido. Esta nova ``imagem'' é então copiada para \emph{pendrives} ou mídias ópticas, como \acp{CD} ou \acp{DVD}, e está pronta para ser executada.
+
+ O binário gerado na camada de aplicação pode ser executado pelo \emph{bootable}, através da reinicialização do sistema, e pelo terminal, como um programa comum em outros sistemas Linux em execução, como Ubuntu, CentOS e outros, sem requerer reinicialização. Nos dois casos os parâmetros são passados por linha de comando.
+
+\section{Resumo do Capítulo}
+
+
+Este capítulo detalhou a implementação do \emph{framework} e algoritmos propostos, bem como as razões pelos quais foram escolhidos. No próximo capítulo os resultados do algoritmos implementados serão comparados com os testes de ferramentas de diagnóstico do mercado. 

@@ -1,0 +1,228 @@
+%/**
+% * @file tese.tex
+% * @brief This file have the configuration parameters of Dr. Degree thesis.
+% * @ingroup Documentation
+% * @author $Author: rodcosta $
+% * @date $Date: 2009/07/12 18:54:10 $
+%**
+\documentclass[12pt,a4paper,oneside,final]{book}
+%%% para vers\~{o}es parciais do dumento final utilizar:
+%\documentclass[12pt,a4paper,draft]{book}
+%\documentclass[12pt,a4paper,twoside,fleqn,draft]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBULO DO DOCUMENTO COME\c{C}A AQUI
+%\usepackage{natbib}
+%\bibliographystyle{elsart-harv}
+%inclui coisas da abnt
+%\bibliographystyle{abntcite}
+%\usepackage{hvfoat}
+\usepackage{datetimepor}
+\usepackage{monografia}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{monografia_defs}
+\usepackage[none]{hyphenat}
+\usepackage[latin1]{inputenc}
+\usepackage{assinatura}
+\usepackage{color}
+\usepackage{multirow}
+% \bibstyle{abnt-alf}
+\usepackage{sidecap}
+\usepackage{ifthen}
+\usepackage{psfrag}
+\usepackage{supertabular}
+\usepackage[subfigure]{tocloft}
+
+% Permite utilizar configuracoes da linguagem portugesa do Brasil e Inglesa
+\usepackage[english,brazil]{babel}
+% Permite especificar codificacao das entradas (caracteres acentuados - á - sem usar \'a)
+%\usepackage[latin1]{inputenc}
+% Permite utilização de referencias cruzadas
+\usepackage[brazil]{varioref}
+\usepackage[T1]{fontenc}
+%
+\newcommand{\titulo}{Estudo comparativo das plataformas Android e iOS para aplicações RESTful}
+\newcommand{\autor}{Tiago Augusto da Silva Bencardino}
+\newcommand{\orientador}{Prof. Dr. José Marques Soares}
+\newcommand{\coorientador}{Prof. }
+\newcommand{\membroa}{Prof. p1}
+\newcommand{\membrob}{Prof. p2}
+\newcommand{\membroc}{Prof. p3}
+\renewcommand{\eqref}[1]{equa\c{c}\~{a}o~\ref{#1}}
+\newcommand{\eqrefp}[1]{equa\c{c}\~{o}es~\ref{#1}}
+\newcommand{\ok}{$\blacksquare$}
+\newcommand{\nok}{$\square$}
+
+\newcommand{\secao}{\section}
+\newcommand{\capitulo}{\chapter}
+\newcommand{\subsecao}{\subsection}
+
+\newcommand{\secref}[1]{se\c{c}\~{a}o~\ref{#1}}
+\newcommand{\secrefp}[1]{se\c{c}\~{o}es~\ref{#1}}
+\newcommand{\tabref}[1]{Tabela~\ref{#1}}
+\newcommand{\tabrefp}[1]{Tabelas~\ref{#1}}
+\newcommand{\figref}[1]{Figura~\ref{#1}}
+\newcommand{\figrefp}[1]{Figuras~\ref{#1}}
+\newcommand{\quadro}[1]{Quadro~\ref{#1}}
+\usepackage[breaklinks,final,pdftitle={\titulo},pdfauthor = {\autor}]{hyperref}
+
+%\usepackage{hyperref}
+\usepackage[sort]{cite}
+\usepackage[alf,abnt-and-type=e,abnt-full-initials=no,abnt-last-names=abnt,abnt-etal-list=2,abnt-etal-text = emph]{abntcite}
+\newcommand{\citet}[1]{\citeonline{#1}}
+
+%\newcommand{\eqref}[1]{(\ref{#1})}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\newcommand{\secref}[1]{se\c{c}\~{a}o~\ref{#1}}
+%\newcommand{\secrefp}[1]{se\c{c}\~{o}es~\ref{#1}}
+%\newcommand{\tabref}[1]{Tabela~\ref{#1}}
+%\newcommand{\tabrefp}[1]{Tabelas~\ref{#1}}
+%\newcommand{\figref}[1]{Figura~\ref{#1}}
+%\newcommand{\figrefp}[1]{Figuras~\ref{#1}}
+%
+%\usepackage[dvips]{graphicx}
+%\usepackage[portuges]{babel}
+\usepackage[printonlyused]{acronym}
+\usepackage{hvfloat}
+
+\usepackage{tabularx}
+\usepackage{here}
+\usepackage{listings}
+% Definindo novos tipos de lista
+\usepackage{tocloft}
+\usepackage{etoolbox}
+%\newcommand{\listexamplename}{\textbf{\Huge{Lista de Quadros}}}
+%\newlistof{example}{exp}{\listexamplename}
+%\newcommand{\example}[1]{%
+%    \refstepcounter{example}
+%    \par\noident\textbf{Quadro \theexample.#1}
+%    \addcontentsline{exp}{example}
+%    {\protect\numberline{\theexample}#1}\par
+%}
+%
+    \usepackage{longtable}
+\usepackage{supertabular}
+
+\hyphenation{defei-tuoso Fe-de-ral Uni-ver-si-da-de Dis-cos atri-bu-tos re-sul-ta-dos ar-ma-ze-na-men-to}
+\hyphenation{tem-pe-ra-tu-ra sis-te-ma lei-tu-ra }
+
+
+\begin{document}
+%padronizacao
+\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
+
+%\usepackage[final]{pdfpages}
+%\usepackage{Fancyhdr}
+%\bibliographystyle{IEEEtranPor}
+% \includeonly{capa,agradecimentos}
+% \includeonly{capa_externa,capa}
+%%% PREAMBULO DO DOCUMENTO ACABA AQUI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPA
+
+\pagenumbering{Roman}
+\include{pretexto/capa_externa}
+\include{pretexto/capa}
+\include{pretexto/folhadeaprovacao}
+\frontmatter \pagestyle{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% RESUMO
+
+\include{pretexto/resumo}
+\include{pretexto/abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DEDICATRIA
+\include{pretexto/dedicatoria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AGRADECIMENTOS
+%\include{pretexto/agradecimentos}
+\include{pretexto/epistrofe}
+%\include{dedicatoria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ABREVIA\c{C}\~{O}ES
+\begin{singlespace}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% \'{I}NDICE
+    %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    \pdfbookmark[1]{Sumário}{sumario_label} %\label{sumario_label}
+    \tableofcontents%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE FIGURAS
+    \newpage
+    %\pdfbookmark[1]{Lista de Figuras}
+    \listoffigures%
+    \addcontentsline{toc}{chapter}{Lista de Figuras}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE TABELAS
+    \newpage
+    \listoftables%
+    \addcontentsline{toc}{chapter}{Lista de Tabelas}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE QUADROS
+  %  \newpage
+%    \addcontentsline{toc}{chapter}{Lista de Quadros}%
+%    \chapter*{Lista de Quadros}%%
+%    \input{pretexto/quadros}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE ALGORITMOS
+    %    \listofalgorithms%
+    %    \addcontentsline{toc}{chapter}{Lista de Algoritmos}%
+     %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    %%%%%%%%
+    %%%% NOTA\c{C}\^{A}O
+%    \addcontentsline{toc}{chapter}{Lista de S\'{\i}mbolos}%
+%    \chapter*{Lista de S\'{\i}mbolos}%%
+%    \LTXtable{\textwidth}{pretexto/simbolos}%%
+    \newpage
+    \addcontentsline{toc}{chapter}{Lista de Siglas}%
+    \chapter*{Lista de Siglas}%%
+    \input{pretexto/acronimos}
+    %\LTXtable{\textwidth}{pretexto/siglas}%%
+    %GATHER{pretexto/simbolos.tex}%%
+    %GATHER{pretexto/siglas.tex}%%
+\end{singlespace}
+
+\pagestyle{capitulo} \setlength{\parskip}{1ex plus 0.5ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 1: INTRODUÇÃO
+\mainmatter
+\include{chp1/introducao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAPÍTULO 2: Server-Side
+\include{chp2/fundamentacao}
+%%%% CAPÍTULO 3: Aplicação
+\include{chp3/aplicacao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAPÍTULO 4: Rails
+\include{chp4/rails}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAPÍTULO 5: iOS
+\include{chp5/comparativo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAPÍTULO 7: Resultados
+\include{chp6/resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAPÍTULO 8: Conclusões
+\include{chp7/conclusoes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AP\^{E}NDICE
+%\appendix
+%\begin{appendices}
+%\include{apendice/ata}
+%%\include{apendice/scsi}
+%\end{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% INDICE REMISSIVO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% GLOSS\'{A}RIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% REFER\^{E}NCIAS BIBLIOGR\'{A}FICAS
+%\bibliographystyle{abnt-alf}
+%\usepackage[num]{abntcite}
+%\bibliographystyle{abnt-alf}
+%\bibliographystyle{plain}
+\bibliography{referencias}
+\addcontentsline{toc}{chapter}{\bibname}
+\end{document}

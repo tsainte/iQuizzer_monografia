@@ -1,0 +1,172 @@
+\chapter{Fundamentação Teórica} \label{CHP:TEO}%%
+
+Neste capítulo são explorados os alicerces deste trabalho: os fundamentos de diagnóstico de falha, os padrões adotados em discos rígidos e como interagir com eles através do Linux.
+
+\section{Fundamentos de Diagnóstico de Falhas}
+
+Primeiramente, para explicar o conceito deste trabalho, é necessário que se defina o conceito de falha, o conceito de diagnóstico e as origens das falhas no dispositivo em estudo, os discos rígidos.
+
+\subsection{Falha, Erro e Defeito}
+
+Embora sejam usadas como sinônimo, estas palavras tem significados diferentes para sistemas de computação. A falha está associada ao universo físico, o erro é a representação da falha no universo da informação, é causado por uma falha, e o defeito é um desvio da especificação e ocorre em consequência de um erro \cite{lee1990fault}, as relações de causa entre elas estão ilustradas na Figura \ref{FIG:falha_erro_defeito}.
+
+Uma falha pode ser ocasionada por um problema em nível de \emph{hardware}, uma flutuação de tensão ou um impacto que cause uma avaria em  um setor de um disco rígido, por exemplo, e não necessariamente leva a um estado de erro. O erro acontece quando uma informação é corrompida devido a um setor falho e também não necessariamente leva a um estado de defeito, que é detectado no nível de usuário, pois talvez a informação corrompida nunca seja usada, ou possa ser recuperada. % Ex: Hamming Reed Solomons
+
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=10cm, angle=0]{figs/falha_erro_defeito.jpg}\\
+  \caption{Modelo de três universos, adaptada de \cite{Wesz:2007}}
+ \label{FIG:falha_erro_defeito}
+\end{figure}
+
+\subsection{Diagnóstico de Falhas}
+
+Com o propósito de evitar que um sistema se torne defeituoso, as falhas devem ser detectadas e diagnosticadas. A detecção de falhas se baseia em sistemas teóricos, modelos de processo ou funções matemáticas para reconhecer sintomas de falha. Estes sintomas são desvios das características do processo modelado. O diagnóstico de falhas é diferente da detecção de falhas, que consiste em reconhecer que uma falha aconteceu.
+
+Diagnosticar falhas consiste na identificação do tipo de falha com a maior quantidade de detalhes possíveis, bem como a extensão da falha, localização e o momento da detecção \cite{Isermann:2011}. O procedimento de diagnóstico é baseado na observação e análise de sintomas e no conhecimento prévio sobre o processo. Os sintomas disponíveis podem ser:
+
+\begin{description}
+  \item[Sintomas Analíticos.] São o resultado da comparação entre os sinais de um processo e do seu modelo de detecção de falha. Verifica-se se estes sinais excederam algum limiar pré-determinado;
+  \item[Sintomas Heurísticos.] São resultado da análise de um operador humano. Trata-se de impressões quanto a ruído, oscilações, cores e fumaça obtidos por inspeção. Tratados muitas vezes como medidas qualitativas;
+  \item[Histórico de processos e estatísticas de falha.] Este histórico inclui informações sobre tempo de execução e reparo e descrevem a frequência de certas falhas no processo;
+  \item[Representação unificada dos sintomas.] É a observação conjunta de sintomas analíticos e heurísticos, através de mecanismos de inferência de sistemas \emph{fuzzy};
+  \item[Relações Falha-Sintomas.] Consistem na análise inversa das relações de causa e efeito. Na análise direta, observam-se falhas que geram eventos que geram sintomas. Na análise inversa, as falhas são deduzidas a partir dos sintomas observados;
+\end{description}
+
+\subsection{Falhas em Discos Rígidos}\label{falhashd}
+
+Segundo \cite{Kari:1997}, as falhas em discos rígidos podem ser ocasionadas por falhas no meio de armazenamento, que podem causar a perda de dados, ou por outras falhas como problemas de alimentação, problemas na controladora do disco ou software, por exemplo, e que não necessariamente causam a perda de dados, mas levam a sua indisponibilidade temporária.
+
+Os discos rígidos são organizados em pequenos módulos de armazenamento, chamados de setores,  nos \acp{HDD}, ou blocos, nos \acp{SSD}. Aqui estes módulos serão chamados genericamente de setores. Estes setores dispõem das seguintes informações: identificação, usada para localizar o setor, como \ac{LBA}, por exemplo; dados, a informação em si; campos de sincronização, usados internamente pela controladora para guiar o processo de leitura; espaçadores (\emph{Gaps}), usados  para separar setores e dar tempo para que a controladora processe o que estava sendo lido; e códigos de correção de erro, como \ac{CRC}, por exemplo \cite{Sector:2001}, que são usados pela controladora para detectar a ocorrência de falhas.
+
+As falhas em discos rígidos podem ser divididas quanto à duração, como temporárias ou permanente; e quanto à magnitude, como parcial, intermediária  ou total \cite{Kari:1997}. Falhas temporárias podem ser causadas por mudanças de estado do sistema. Um exemplo de situação de falha temporária é quando um comando não é completado com sucesso e através da repetição ele pode ser completado sem erros. Falhas permanentes são duradouras, mas os erros causados por elas talvez possam ser contornados por códigos de correção de erro ou leitura de outros setores, por exemplo. Em relação à magnitude, uma falha pode afetar todo o disco ou uma pequena parte dele. Normalmente, um setor é a mínima área afetada.
+
+As falhas podem ser geradas no processo de fabricação. Alguns \acp{HD} novos já saem de fábrica com setores falhos\footnote{Em inglês \emph{Bad blocks} ou \emph{Bad sectors}} e outros setores se danificam em decorrência do uso e desgaste natural. Os setores falhos são remapeados em uma área reservada. Enquanto que nos \acp{HDD} isto pode gerar perda de desempenho, pois gera mais movimentos de busca para ler um arquivo, por exemplo, nos \acp{SSD} este mapeamento é praticamente transparente. A área reservada  tem duas funções principais: servir de armazenamento temporário de novos dados e ser uma espécie de memória ``reserva'' , onde os setores com falha são remapeados, aumentando a longevidade do disco rígido \cite{Morimoto:20102}.
+
+ A área reservada é gerenciada pela controladora e se relaciona com a diferença entre a nomenclatura decimal utilizada pelos fabricantes e a nomenclatura binária usada pelos sistema operacional. Por exemplo, cada 1GB de memória na nomenclatura do fabricante corresponde a $10^9$ \emph{bytes}, o que para um sistema operacional corresponde a $2^{30}$ \emph{bytes} e a diferença entre as duas notações, igual a 73.741.824 \emph{bytes}, é a quantidade de memória a ser usada como área reservada.
+
+O remapeamento de setores com falha é transparente para o sistema operacional. Quando um setor falho é requisitado, a controladora intercepta e devolve o dado correto do novo bloco atribuído àquele endereço na área reservada. Apenas quando esta área está totalmente cheia, o sistema operacional começa a indicar a existência de setores falhos.
+
+Nos \acp{SSD} os tipos mais comuns de falha em células de memória estão relacionados a distúrbios de gravação, problemas na retenção de dados e defeitos de fabricação. Cada célula armazena um bit de memória. Os distúrbios de gravação consistem na corrupção de dados de células escritas durante a escrita de outras células na mesma matriz de memória \cite{Bez:2003}. Estes distúrbios podem acontecer nas células de mesma coluna ou linha.
+
+Nos \acp{HDD}, assim como nos \acp{SSD}, existem distúrbios de gravação, problemas na retenção de dados e defeitos de fabricação. Os distúrbios de gravação podem ocorrer entre setores adjacentes, trilhas vizinhas e até mesmo entre \emph{platters}, já que há um movimento unificado à todas as cabeças. Um exemplo de distúrbio de gravação é a propagação radial do erro \cite{Zhao:2007}, onde, por algum motivo, uma trilha não é escrita como um círculo perfeito\footnote{Este fenômeno é chamado \emph{track misregistration} (TMR)} e, quando esta é referenciada para leitura, a cabeça segue um círculo perfeito assim como para as trilhas seguintes, onde os setores desejados não estão e outros setores são lidos.
+
+Além das falhas originadas pelo desgastes ou defeitos de fabricação do meio magnético, os \acp{HDD} podem apresentar várias fontes de falhas inseridas pelas partes móveis  assim como por fatores ambientais e impactos físicos. Por exemplo, quando uma tentativa de leitura de um setor falha, a causa tanto pode ser um distúrbio de gravação, quanto uma falha no atuador, que não conseguiu posicionar a cabeça corretamente. Outro exemplo é a folga existente entre as cabeças e os \emph{platters}, que diminui com o aumento da temperatura, com a diminuição da pressão atmosférica, e também com o aumento da humidade do ar. Esta diminuição da folga pode levar ao choque das cabeças com pontos de maior rugosidade nos \emph{platters} e estes choques podem gerar erros de leitura e gravação e danificar o disco rígido.
+
+Há dois meios de detectar setores falhos em discos rígidos: através de requisições normais do sistema operacional, leituras e escritas, e através de buscas, como execuções de  algoritmos de testes, por exemplo. Segundo \cite{Kari:1997}, as falhas em discos rígidos estão fortemente relacionadas umas com as outras, ou seja, a probabilidade de um setor falhar é significativamente maior em áreas próximas às regiões de falhas conhecidas. Falhas temporárias são o primeiro sinal de deterioração do meio e podem ser usadas para predizer falhas permanentes. Estas informações podem ser utilizadas no desenvolvimento de algoritmos de teste.
+
+
+\section{SMART}
+
+A indústria de \acp{HD} adotou um sistema de monitoramento para discos rígidos, o sistema \acs{SMART}, visando detectar falhas, disponibilizar diferentes tipo de auto-teste e relatar medidas indicadoras de confiabilidade. O \ac{SMART}  prevê falhas em discos rígidos individualmente, diferentemente dos modelos de confiabilidade, que depois de análises estatísticas calculam a probabilidade de falha de uma população de discos rígidos, supondo que todos são iguais. O \ac{SMART} prevê falhas através de medidas e contagens, como a quantidade de setores realocados, taxa de erro de leitura, a quantidade de choques físicos sofridos e o tempo total de uso, por exemplo.  Na Tabela \ref{TAB:smart} alguns atributos monitorados pelo \ac{SMART} são mostrados.
+
+\begin{table}[htb!]
+    \begin{center}
+\label{TAB:smart}\caption{Exemplos de atributos \ac{SMART} para \ac{ATA}}
+\vspace{-20pt}
+    %\centering
+        \begin{tabular}{|c|p{6 cm}|p{6 cm}|}
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         Identificador & Atributo  & Descrição  \\ \hline
+         01 & Taxa de erro de leitura (\emph{Read Error Rate}) & Frequência de erros durante a leitura de dados do disco. \\ \hline
+         02 & Desempenho (\emph{Throughput Performance}) & Eficiência média do disco. \\ \hline
+         05 & Contagem de setores realocados (\emph{Reallocated Sectors Count}) & Contagem dos setores realocados na área reservada. \\ \hline
+         08 & Desempenho das operações de busca (\emph{Seek Time Performance}) & Desempenho médio das operações de busca nos discos magnéticos. A diminuição deste atributo pode indicar problemas no sistema mecânico. \\ \hline
+         191 & Taxa de erro devido a impactos (\emph{G-sense Error Rate})& Frequência de erros resultantes de impactos e vibrações. \\ \hline
+         194 & Temperatura (\emph{Temperature}) & Temperatura interna do disco. \\ \hline
+         197 & Contagem atual de setores pendentes (\emph{Current Pending Sector Count}) & Número de setores esperando para serem remapeados. \\ \hline
+        \end{tabular}
+        
+    \end{center}
+
+\end{table}
+%SMART é baseado no monitoramento de medidas relevantes, internas ao \emph{drive}, para detectar falhas.
+
+Um algoritmo de alerta de falha é executado pelo \emph{firmware} da controladora do disco rígido e checa se as medidas excederam o limiar máximo e gera um alerta binário do tipo: Irá falhar, Não Irá Falhar. Os limiares máximos são definidos pelos fabricantes. O objetivo é gerar o alerta 24 horas antes de o \emph{drive} falhar, \cite{Hughes:2002}.
+
+Há comandos padronizados para habilitação e leitura desses alertas de falha pelos sistemas operacionais. Alguns computadores checam o \ac{SMART} durante a inicialização do sistema operacional e alguns fabricantes disponibilizam programas de diagnóstico que lêem os alertas do \ac{SMART} \cite{Hughes:2002}. O sistema \ac{SMART} foi especificado para o padrão \ac{ATA}, detalhado na próxima seção e o seu equivalente em discos \ac{SCSI} é a combinação dos comando \textsc{Send Diagnostic} e \textsc{Receive Diagnostic Results}. O \ac{SMART} também disponibiliza testes para verificar as condições do disco rígido \cite{ATA8:ACS}, \cite{Self}. Estes testes são descritos a seguir.
+\begin{description}
+  \item[\ac{SMART} \emph{Short Self-Test.}] Avalia o desempenho elétrico, mecânico e de leitura do disco. Realiza buscas em pequenas áreas do disco e checa a lista de setores pendentes (setores com falhas e que ainda não foram remapeados)\footnote{A controladora armazena informações como esta em \emph{logs}, que podem ser acessados por comandos específicos, \ac{ATA} ou \ac{SCSI}}, com prováveis erros de leitura.
+  \item[\ac{SMART} \emph{Extended Self-Test.}] Segue o mesmo princípio do \ac{SMART} \emph{Short Self-Test}, mas realiza a leitura de toda a superfície do disco, geralmente é um processo bastante demorado.
+  \item[\ac{SMART} \emph{Conveyance Self-Test.}] identifica danos ocorridos durante o transporte do disco rígido.
+  \item[\ac{SMART} \emph{Selective Self-Test.}] executa teste apenas em alguns trechos do disco.
+\end{description}
+
+\section{Protocolos}
+
+Como dito anteriormente, \ac{ATA} e \ac{SCSI} são os padrões de comunicação utilizados para discos rígidos. Eles são planejados em camadas. São elas: camada de aplicação, onde são definidos conjuntos de comandos e especificações, camada de transporte, onde são definidos protocolos de transporte e serviços, e camada de interconexão física, que definem conectores, cabeamento, mecanismos de sinalização \cite{ATA8:AAM} \cite{SCSI:Sam}.
+
+\subsection{SCSI}
+
+O \ac{SCSI} é um padrão genérico que permite  conectar computadores a discos rígidos, \emph{scanners}, leitores ópticos, entre outros dispositivos. A conexão \ac{SCSI} pode acontecer entre quaisquer dois dispositivos \ac{SCSI}. Um deles é o \emph{iniciador}, que começa a transmissão, e o outro é o \emph{alvo}, que recebe os comandos e os executa \cite{Zielski:2007}.
+
+A Figura \ref{FIG:ScsiLayer} mostra o caminho percorrido pelos comandos enviados pelo dispositivo \textbf{iniciador} até chegar ao dispositivo \textbf{alvo}. O \textbf{iniciador} envia um comando, que é tratado por um protocolo de transporte, de onde é transmitido para o dispositivo \textbf{alvo} através de uma conexão física. Ao chegar no dispositivo \textbf{alvo} o comando passa por um protocolo de transporte e é então processado e executado por ele.
+
+Note que os protocolos de transporte e interconexões físicas não interferem no comando enviado. Logo, outros padrões podem ser utilizados para transmitir comandos \ac{SCSI}, como acontece com o padrão \ac{ATAPI}, onde comandos \ac{SCSI} são encapsulados e mandados através do \ac{SATA} ou \ac{PATA}, protocolos de transporte e de interconexão física \ac{ATA}.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/scsiLayer.pdf}\\
+  \caption{SCSI, modelo de camadas, adaptada de \cite{SCSI:Sam}}
+  \label{FIG:ScsiLayer}
+\end{figure}
+
+
+Na Figura \ref{FIG:Scsi} a família de padrões \ac{SCSI} é apresentada \cite{t10}. No topo da figura estão o conjunto de comandos primários\footnote{\emph{SCSI Primary Commands - 4 (SPC-4)}, versão mais recente.}, compartilhado por todos os tipos de dispositivos, e os conjuntos de comandos específicos, utilizados por diferentes grupos de dispositivo, como os de comandos de blocos\footnote{\emph{SCSI Block Commands - 3 (SBC-3)}, versão mais recente.} (caso dos \acp{HD}), de \emph{stream}\footnote{\emph{SCSI Stream Commands - 4 (SSC-4)}, versão mais recente.}, de multimídia\footnote{\emph{MultiMedia Command Set - 6 (MMC-6)}, versão mais recente.}, ou da controladora\footnote{\emph{SCSI Controller Commands-2 (SCC-2)}, versão mais recente.}, por exemplo.
+
+No meio da figura estão os protocolos de transporte, \ac{SAS}\footnote{\emph{SAS Protocol Layer - 3 (SPL-3)}}, \emph{fibre channel}\footnote{\emph{Fibre Channel Protocol - 4 (FCP-4)}, versão mais recente.}, \ac{iSCSI}, entre outros. Na base estão as conexões físicas, \ac{SAS}\footnote{\emph{Serial Attached SCSI - 3 (SAS-3)}, versão mais recente.}, \emph{fibre channel}, internet, \ac{USB}, \emph{PCI express}, entre outros. Já na lateral da figura está o modelo de arquitetura \ac{SCSI}\footnote{\emph{SCSI Architecture Model - 5 (SAM-5)}, versão mais recente.}.
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/scsi.png}\\
+  \caption{Família de padrões SCSI, adaptada de \cite{SCSI:Sam}}\label{FIG:Scsi}
+\end{figure}
+
+\subsection{ATA}
+
+O padrão \ac{ATA} foi desenvolvido para ser uma interface entre computadores e discos rígidos. Inicialmente projetado para conectar placas-mãe e discos rígidos com as novas versões passou a conectar dispositivos ópticos, como leitoras de \ac{CD}, \ac{DVD}, e \ac{BD}(\emph{BluRay Disc}), e também fitas magnéticas, através do padrão \ac{ATAPI}, que permite a transmissão de comandos \ac{SCSI} por conexões \ac{ATA}.
+
+O \ac{ATA} permite comunicar um \emph{host}, que pode ser um \emph{software}, o \ac{BIOS} ou um \emph{driver} de um sistema operacional,  a um dispositivo, que pode ser um disco rígido ou um leitor óptico, através de um subsistema de entrega. A Figura \ref{FIG:AtaLayer} mostra como essa comunicação é realizada. O \emph{host} envia um comando, que passa por um protocolo de transporte, de onde é transmitido para o dispositivo através de uma conexão física. Ao chegar no dispositivo, o comando passa por um protocolo de transporte e é então processado e executado por ele.
+
+Assim como no padrão \ac{SCSI}, os protocolos de transporte e interconexões físicas não interferem no comando enviado. Logo, outros padrões podem ser utilizados para transmitir comandos \ac{ATA}, como acontece com o padrão \ac{SCSI}, que pode transmitir comandos \ac{ATA} através de uma camada de tradução\footnote{\emph{SCSI-ATA Translation}}. Comandos \ac{ATA} são encapsulados em comandos \textsc{ATA Pass-Through} e mandados através do \ac{SATA} ou \ac{PATA}, protocolos de transporte e de interconexão física \ac{SCSI}.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/ataLayer.pdf}\\
+  \caption{ATA, modelo de camadas, adaptada de \cite{ATA8:AAM}}\label{FIG:AtaLayer}
+\end{figure}
+
+O desenvolvimento do \ac{ATA} é guiado por um modelo abstrato, especificado através de diversos documentos, também chamados de padrões, como descrito na Figura \ref{FIG:Ata}, adaptada de \cite{ATA8:AAM}. Nela tem-se o modelo de arquitetura\footnote{\emph{ATA/ATAPI Architecture Model (ATA8-AAM)}, versão mais recente.}, que define o modelo de sistema e especificações, o conjunto de comandos\footnote{\emph{ATA/ATAPI Command Set (ATA8-ACS)}, versão mais recente.}, o conjunto de comandos de entrega, que são documentos \ac{SCSI} e \ac{ATAPI}, e os padrões de transporte  \ac{PATA} e \ac{SATA}.
+
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=16cm]{figs/ata.png}\\
+  \caption{Família de padrões ATA}\label{FIG:Ata}
+\end{figure}
+
+\newpage
+\section{Resumo do Capítulo}
+
+Neste capitulo foram explorados os conceitos de falha, erro e defeito, o diagnóstico de falhas, bem como os tipos de falha que ocorrem em discos rígidos. O sistema \ac{SMART} e os protocolos \ac{ATA} e \ac{SCSI}, que são a base de desenvolvimento deste trabalho, foram apresentados.
+
+No próximo capítulo a metodologia utilizada neste trabalho e o desenvolvimento deste trabalho são apresentados.
+
+%Neste cap\'{\i}tulo foram descritos as ferramentas utilizadas no desenvolvimento deste trabalho, os gestos que podem ser reconhecidos pelo sistema e tr\^{e}s m\'{e}todos de se extrair atributos para treinamento propostos neste trabalho. Tamb\'{e}m foi descrito neste cap\'{\i}tulo os passos para realizar o treinamento e classifica\c{c}\~{a}o dos gestos, e quais os m\'{e}todos de compara\c{c}\~{a}o utilizado para se avaliar cada m\'{e}todo. No cap\'{\i}tulo seguinte, s\~{a}o apresentados os resultados dos testes de simula\c{c}\~{a}o para cada um dos m\'{e}todos.
+
+
+%\begin{tabular}{|l|l|l|} \hline
+%\multicolumn{3}{|c|}{Schedulers} \\ \hline
+% RR & \multirow{3}{*}{Immediate}  & Round Robin \\ \cline{1-1} \cline{3-3}
+% EF   & & Earliest First  \\ \cline{1-1} \cline{3-3}
+% LL  & &  Lightest Loaded  \\ \hline
+%\multirow{4}{*}{Batch} & MM & Min-Min \\
+%& MX & Max-Min \\
+%& DL & Dynamic Level \\
+%& RC & Relative Cost \\ \hline
+%\multirow{4}{*}{Evolutionary} & PN & This paper \\
+%& ZO & Genetic Algorithm\\
+%& TA & Tabu search~\cite{GLOV1986j}\\
+%& SA & Simlulated Annealing \\ \hline
+%\end{tabular}

@@ -1,0 +1,22 @@
+\thispagestyle{empty}%
+
+\begin{center}
+    %\includegraphics[width=2.5cm]{figs/UFC.eps} \\%
+    \textsc{ \autor } \\
+     \vspace{.5 cm} \textbf{ \titulo }     \\
+\end{center}
+    \vspace{.2 cm}
+    Esta Monografia foi julgada adequada para a obtenção do diploma de Engenheira do Curso de Graduação em Engenharia de Teleinformática da Universidade Federal do Ceará.
+    \assinatura{\autor}
+    \vspace{0.2 cm}
+     Banca Examinadora:
+     \assinatura{\orientador \\ Orientador}
+     \assinatura{\membroa\\}
+     \assinatura{\membrob \\}
+    \assinatura{\membroc\\}
+%     \assinatura{\membrod}
+     \vspace{0.2 cm}%\null\vfill%%
+
+\begin{center}
+    {\normalsize    Fortaleza, \today}
+\end{center}

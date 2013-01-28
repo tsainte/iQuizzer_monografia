@@ -1,0 +1,64 @@
+\chapter{Introdução} \label{CHP:INTRO}
+
+Vivemos em uma era da tecnologia da informação onde cada aspecto de nossa vida passa por algum tipo de processamento ou armazenamento de informações. Este armazenamento pode ser feito de maneira temporária, como nas memórias \ac{RAM}, ou de maneira permanente, como nos discos rígidos.
+
+Os discos rígidos desempenham um grande papel no desenvolvimento tecnológico atual. Eles são memórias não voláteis, fundamentais ao funcionamento de qualquer sistema computacional moderno, responsáveis por armazenar sistemas operacionais, programas e dados dos usuários.
+
+Atualmente, os dois principais tipos de discos rígidos, considerados neste trabalho como os dispositivos que armazenam o sistema operacional e dados em um computador , são o \ac{HDD}, baseado em armazenamento magnético, que é a tecnologia que domina o mercado, e o \ac{SSD} baseado em memória \emph{flash}, popularizada recentemente. Estas duas tecnologias seguem dois padrões definidos pela \ac{ANSI}, são eles: \ac{ATA}\footnote{\ac{ATA} foi o nome dado ao padrão \ac{IDE} ao ser oficializado pela \ac{ANSI}, ele passou a ser chamado por muitas pessoas como \ac{ATA}, \ac{IDE}, ou ainda IDE$\backslash$ATA} e \ac{SCSI}. Estes padrões definem, entre outras características, os protocolos de comunicação, as conexões físicas e os comandos de controle.
+
+Nas últimas décadas os discos rígidos passaram por grandes mudanças, tais como aumento de densidade, no qual mais dados são gravados no mesmo espaço físico, diminuição de tamanho e o acréscimo da sua capacidade de armazenamento total.
+
+Devido a este aumento da densidade, os discos rígidos estão mais sujeitos a defeitos de fabricação. Além disso, tais dispositivos sofrem desgaste natural decorrente do uso, aumentando a probabilidade de ocorrência de falhas. Estejam eles em sistemas que controlam aplicações críticas, tais como bolsa de valores, plantas de usinas nucleares ou sistemas hospitalares, ou em um \emph{desktop} de um usuário comum, é importante que um sistema de diagnóstico eficiente seja executado periodicamente, visando evitar perda de dados, corrupção de arquivos ou falhas catastróficas, as quais podem implicar inclusive na perda de vidas humanas.
+
+\section{Motivação}
+
+A maioria das ferramentas de diagnóstico de dispositivos de \emph{hardware} disponíveis no mercado, foi desenvolvida para sistemas operacionais \emph{Windows}. Em pesquisas realizadas em \emph{sites} de \emph{downloads}\footnote{Site \emph{www.baixaki.com.br}, 175 resultados para \emph{Windows} e 6 para Linux. Site \emph{www.superdownloads.com.br} 168 resultados para Windows e 17 para Linux, em Setembro de 2011} por ``diagnóstico de hardware'' encontra-se em média, 171 \emph{softwares} para Windows e apenas 11 para Linux. Entretanto nestes resultados estão vários \emph{softwares} que não tratam de discos rígidos, apenas de CPU ou medição de temperatura na placa-mãe, por exemplo. Filtrando esses resultados por ``discos rígidos'' encontramos apenas 75 \emph{softwares} de diagnóstico para \emph{Windows} e 5 para Linux.
+
+Estes \emph{softwares} de diagnóstico executam diferentes algoritmos de teste, para detectar erros de leitura e escrita e avaliar a ``saúde'' do dispositivo, se há setores com falha ou na iminência de falha, dando ao usuário tempo para realizar um \emph{backup} ou substituir o dispositivo. Como a capacidade de armazenamento aumentou fortemente, analisar todos os setores de um disco é cada vez mais demorado, podendo levar várias horas e até dias, por esse motivo 
+
+O \emph{Windows} é o sistema operacional utilizado na maioria dos computadores pessoais. No entanto, Linux é o sistema operacional preferido para servidores e computadores de grande porte, responsáveis por prover os mais diversos serviços. O Linux é extensivamente utilizado desde servidores a sistemas embarcados e possui várias distribuições com diferentes propostas de uso como Fedora, SUSE, Ubuntu, Debian e \emph{Red Hat}, por exemplo, sendo a maioria delas gratuita. Ele dispõe de código aberto, possibilitando ao desenvolvedor o amplo acesso ao sistema e a capacidade para adaptá-lo às suas necessidades. O mesmo dispõe ainda de várias funcionalidades úteis, como versões inicializáveis, que permitem a sua execução em qualquer computador cujo o \ac{BIOS} suporte inicializacação por \emph{Pendrive} ou \ac{CD}.
+
+Há duas maneiras de acessar um \ac{HD} via \emph{software}: Acessando diretamente a controladora do disco ou através de funções disponibilizadas pelo \ac{BIOS}. O meio mais rápido de ter acesso ao disco é acessar diretamente a controladora, através de comandos \ac{ATA} ou \ac{SCSI}, mas isso requer conhecimento sobre o \emph{hardware}, \cite{Carrier:2005file}. Este normalmente é o meio utilizado pelos \emph{softwares} de diagnóstico, que enviam comandos \ac{ATA} e \ac{SCSI} para realizar algoritmos de teste e também ter acesso ao \ac{SMART}, que é um sistema de predição de falhas adotado pela indústria com o intuito de aumentar a confiabilidade dos discos rígidos, disponível na maioria dos \acp{HD}.
+
+No Linux há alguns programas que implementam comandos \ac{ATA} e \ac{SCSI} e acessam o \ac{SMART}, tais como \emph{smartmoontools, hdparm, sg3-utils, util-linux}, entre outros mas eles dispõem de poucas opções para o usuário. Além disso, para utilizá-los em um algoritmo de teste, por exemplo, eles teriam que ser executados através de chamadas de aplicativos, o que pode levar à perda de desempenho e funcionalidade \cite{Tanenbaum:2001}.
+
+Neste sentido, o desenvolvimento de um \emph{framework} para auxiliar no diagnóstico de discos rígidos é proposto neste trabalho. Ele é baseado em comandos \ac{ATA}, \ac{SCSI} e \ac{SMART},  foi projetado para sistemas Linux  e é voltado para execução em \emph{desktops} e \emph{laptops}. A partir deste \emph{framework}, uma camada de aplicação com os algoritmos de testes mais importantes e mais frequentes nas ferramentas de diagnóstico do mercado é implementada. Esta camada foi  portada para uma versão inicializável do Linux, chamada neste trabalho de \emph{Bootable}.
+%Por último, o mesmo será avaliado seu desempenho através de testes com dispositivos defeituosos.
+
+
+\section{Objetivos}
+
+Os objetivos gerais e específicos desta monografia, são apresentados a seguir.
+
+\subsection{Objetivos Gerais}
+
+Desenvolver um \emph{framework} para auxiliar no desenvolvimento de testes de diagnóstico de discos rígidos em sistemas Linux para ser executado em \emph{desktops} e \emph{laptops}. Criar uma camada de aplicação, um programa feito a partir do \emph{framework} desenvolvido, com a implementação de alguns algoritmos de teste. Comparar a eficiência dos algoritmos implementados na camada de aplicação com os testes de ferramentas de diagnóstico do mercado. Portar os testes criados na camada de aplicação para uma versão inicializável do Linux, um \emph{Bootable}.
+
+\subsection{Objetivos Específicos}
+
+Para o desenvolvimento da monografia alguns objetivos específicos precisaram ser definidos, sendo estes listados a seguir:
+
+\begin{enumerate}
+
+   % \item Revisão bibliográfica.
+%    \item Pesquisa e estudo dos padrões \ac{ATA} e \ac{SCSI}.
+%    \item Pesquisa e estudo sobre diagnóstico de falhas.
+    \item Implementação e validação de comandos \ac{ATA} e \ac{SCSI} em linguagem C++.
+    \item Escolha e implementação de algoritmos de teste em C++, baseados nos testes das ferramentas de diagnóstico de mercado.
+    \item Criação de uma versão inicializável do Linux contendo os algoritmos desenvolvidos neste trabalho.
+    \item Avaliação da eficiência dos algoritmos implementados neste trabalho em comparação com os testes realizados por ferramentas de diagnóstico.
+    \item Análise dos resultados.
+
+\end{enumerate}
+
+\section{Organização do Texto}
+
+Este texto está organizada em 6 capítulos.
+O capítulo \ref{CHP:HD} apresenta um apanhado sobre a história e o funcionamento das tecnologias nas quais os discos rígidos atuais se baseiam, os padrões adotados pela indústria são apresentados e um comparativo entre as tecnologias \ac{HDD} e \ac{SSD} é realizado. O capítulo \ref{CHP:TEO} detalha os fundamentos de diagnóstico de falha, as principais falhas em discos rígidos e os padrões  \ac{ATA} e \ac{SCSI}.
+
+No capítulo \ref{CHP:MET}, a arquitetura do \emph{framework} desenvolvido neste trabalho é descrita, bem como os algoritmos de testes implementados, o processo de criação de uma versão inicializável do Linux e a metodologia de testes.
+No capítulo \ref{CHP:RESULT} são descritos e discutidos os resultados obtidos no trabalho, a implementação da camada de aplicação e os resultados obtidos nos testes com os algoritmos implementados. Por fim, o último capítulo apresenta as conclusões, considerações finais e as perspectivas futuras deste trabalho.
+
+
+
+

@@ -1,0 +1,226 @@
+\chapter{Discos Rígidos} \label{CHP:HD}%%
+
+Neste capítulo, a evolução dos discos rígidos é descrita de maneira breve para contextualizar o leitor quanto às tecnologias utilizadas atualmente e ao seu funcionamento.
+
+\section{Introdução}
+%Vivemos em uma era da tecnologia da informação onde cada aspecto de nossa vida passa por algum tipo de processamento ou armazenamento de informações.
+
+Os sistemas modernos de computação usam diferentes tecnologias para armazenar estas informações, seja temporariamente ou permanentemente. Essas tecnologias podem ser memórias de estado sólido, como \ac{ROM}, \ac{RAM} e memórias \emph{Flash},  armazenamento magnético, como \ac{HDD}, \emph{floppy disk} e \emph{tape}, ou armazenamento óptico, como \ac{CD-ROM}, \ac{DVD}, \ac{BD} e \ac{HD-DVD}.
+
+Os discos rígidos desempenham um grande papel neste desenvolvimento tecnológico.  Atualmente, eles tanto podem ser dispositivos de armazenamento magnético como os \acp{HDD}, quanto circuitos de memória \emph{Flash}, no caso dos \acp{SSD} atuais, ou ainda dispositivos híbridos \cite{HD:hibrido}. Os principais fatores considerados na escolha entre essas tecnologias são o custo, a taxa de transferência de dados, o tempo de acesso e a confiabilidade \cite{Mamun:2007}.
+
+A pirâmide de hierarquia de armazenamento, Figura \ref{FIG:PIRAMIDE2}, descreve uma hierarquia de tecnologias de memória em função do custo, da capacidade de armazenamento e do tempo de acesso. Nela, os dois principais tipos de discos rígidos, \ac{HDD} e \ac{SSD}, se encontram na camada intermediária.
+
+ A região superior da pirâmide contém registradores do processador, memória cache e memória \ac{RAM}, que se caracterizam pelo alto custo, rapidez no acesso aos dados e baixa capacidade de armazenamento. Já a região intermediária contém memórias Flash, das quais são feitos os \acp{SSD}, discos magnéticos e discos ópticos, que possuem um custo menor em comparação às memórias internas, maior capacidade de armazenamento e menor velocidade no acesso aos dados. Na região inferior se encontram fitas magnéticas, dispositivos de acesso sequencial usados para cópias de segurança.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.8]{figs/piramide.pdf}
+  \caption{Pirâmide Hierárquica de Armazenamento, adaptada de \cite{Mamun:2007}}
+  \label{FIG:PIRAMIDE2}
+\end{figure}
+
+
+\section{Histórico}
+ O disco rígido, também conhecido como \ac{DASD}, em referência à capacidade de acesso direto, foi um dos dispositivos que mais evoluiu na história da computação.
+
+Em pouco mais de 5 décadas, a indústria de armazenamento de dados evoluiu de um grande aparato de 50 discos de 24 $in$ de diâmetro (aproximadamente 61 cm), com uma capacidade total de 5 MB para discos que armazenam até 4 TB em discos de 3,5 $in$ de diâmetro (pouco menos de 9 cm). Esta enorme evolução se tornou possível graças a avanços em diversas áreas do conhecimento incluindo: materiais, tribologia\footnote{Tribologia é a ciência que estuda a interação de superfícies, submetidas a cargas e a movimentos relativos.}, mecânica, mecatrônica, processamento de sinais  e eletrônica, \cite{Harker:1981}.
+
+Os primeiros \acp{HD} eram significativamente diferentes dos que usamos agora, não apenas em relação ao tamanho, mas em aspectos como capacidade de armazenamento, taxa de transferência de dados e tecnologia utilizada.
+
+Os \acp{HDD} e \acp{SSD} são contemporâneos e foram desenvolvidos pela \ac{IBM}\footnote{A IBM foi o novo nome dado à C-T-R(Computing-Tabulating-Recording Company), empresa fruto da fusão de outras três empresas entre elas a \emph{Tabulating Machine Company}, fundada por Herman Hollerith, especializada no processamento de dados de cartões perfurados.}, empresa que começou a se destacar no início do século XX através do desenvolvimento de máquinas mecânicas e elétricas, como calculadoras de repetição e máquinas datilografia, e que foi responsável por muitos avanços na computação.
+
+As primeiras máquinas utilizavam cartões e fitas de papel para codificar e para armazenar informações, mas, entre outras desvantagens, não havia memória \ac{RAM} suficiente e o \emph{software} e dados iniciais precisavam ser carregados cada vez que a máquina era ligada.
+
+Havia a necessidade de memórias mais eficientes, temporárias e permanentes. Então a \ac{IBM} começou a desenvolver memórias alternativas, principalmente baseadas em magnetismo. Ela desenvolveu os discos magnéticos, exemplificados na Figura \ref{FIG:MAGNETIC_DISK}.a, e com a popularização dos transistores na década de 1950 ela desenvolveu o primeiro dispositivo de memória não volátil de estado sólido chamado \ac{CCROS} \cite{Rent:2010}, o antecessor das memórias \ac{EPROM}, \ac{EEPROM} e \emph{Flash}, mostrado na Figura \ref{FIG:Card_CCROS}.b.
+
+Na mesma época, outro método de \ac{SSD} foi desenvolvido usando magnetismo, era o Núcleo de Memória (\emph{Core Memory}), que utilizava pequenos núcleos individuais de ferrite\footnote{Ferrite, material feito de cerâmica com propriedades eletromagnéticas} unidos por cobre, como exemplificado na Figura \ref{FIG:CORE_MEMORY}.c.
+
+%As tecnologias precursoras dos \acp{SSD} que temos hoje foram foram desenvolvidas foram desenvolvidas na mesma época, a \ac{CCROS} e o núcleo de memória.
+
+\begin{figure}[htb]
+    \center
+    \subfigure[a][Disco Magnético, adaptada de \cite{IBM:MagneticDisk} ]{\includegraphics[width=5cm]{figs/magnetic_disk.jpg}}
+        \label{FIG:MAGNETIC_DISK}
+
+    \qquad
+        \subfigure[b][Cartão CCROS, adaptada de \cite{Richards:1965}]{\includegraphics[width=5cm]{figs/ccros.jpg}}
+        \label{FIG:Card_CCROS}
+    \qquad
+       \subfigure[c][Matriz de Núcleos de Memória,  adaptada de \cite{Rent:2010}]{\includegraphics[width=5cm]{figs/ferritecore_small.png}}
+        \label{FIG:CORE_MEMORY}
+    \caption{Primeiros Dispositivos de Armazenamento}
+\end{figure}
+
+
+\subsection{Primeiros Dispositivos}
+
+O primeiro equipamento a utilizar um \ac{DASD} não volátil foi o \ac{RAMAC}, lançado pela \ac{IBM} em 1956. A unidade de disco do \ac{RAMAC}, chamada IBM 350, mostrada na Figura \ref{FIG:IBM350}, continha 50 discos, cada um com 24 $in$ de diâmetro e que podiam armazenar 5 MB a uma densidade de gravação de 2$Kbits/in^{2}$ \cite{Stevens:1981} e taxa de transferência de dados de $8.8 KB/s$\cite{Harker:1981}. Ela não possuía sistema de controle de malha fechada para posicionamento da cabeça de leitura e escrita.%151, Explicar malha fechada?
+
+Em 1961, o primeiro dispositivo \ac{HDD} a usar de rolamentos de ar, \ac{ABS},\cite{Strom:2007}, foi lançado e, em 1963, o primeiro disco removível.
+
+Em 1964, o primeiro equipamento a utilizar cartões \ac{CCROS}\footnote{Cartões CCROS foram os primeiro dispositivos \ac{SSD}}, é lançado pela \ac{IBM}, era a família IBM System 360, família de \emph{mainframes}.\footnote{Mainframe, computador de grande porte, dedicado normalmente ao processamento de um volume grande de informações. }
+
+Em 1971, a \ac{IBM} lançou o primeiro \ac{HDD} com controle de malha fechada, o IBM 330 \emph{Merlin Drive}. Ele mantinha a posição da cabeça relativa à trilha do disco monitorada por um sensor de movimento.
+
+Em 1973, a IBM introduziu outro modelo de \ac{HDD}, o IBM 3340, que usava cabeça e braço de ferrite. Ele continha  2 ou 4 discos de 14 $in$ de diâmetro, aproximadamente $35,56 cm$, possuía capacidade de armazenamento de 35 MB para um dispositivos com 2 discos, taxa de transferência de dados de 0.8MB/s e densidade de gravação média de $1,69 Mbits/in^{2}$. Este ficou conhecido como disco Winchester, o primeiro \ac{HDD} a usar a malha de controle dos dispositivos atuais. % servo control loop.
+ % Falar da IBM e da ahjuda dela
+  \begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.5]{figs/ibm350.jpg}
+  \caption{IBM 350, adaptada de \cite{Morimoto:2007}}
+  \label{FIG:IBM350}
+\end{figure}
+
+
+\subsection{Desenvolvimento dos \emph{Desktops}}
+
+ O desenvolvimento de computadores \emph{desktop}, no início da década de 1980, representou uma nova era da tecnologia da informação. Este tipo de computador iniciou uma nova demanda na indústria de armazenamento de dados, pois os \acp{HD}, até então usados apenas para soluções corporativas, teriam de se adequar a equipamentos mais compactos.
+
+ A necessidade de \ac{DASD} com tamanho físico adequado a desktops se tornou evidente e foi quando os discos de $5\frac{1}{4}$ $in$ surgiram. Estes dispositivos tinham 5 MB de capacidade de armazenamento e traziam a primeira interface de disco, eram os discos da série ST506, introduzida pela empresa Seagate Technology.
+
+ A série ST506 usava motor de passo como atuador. Esse motor, ao receber um impulso elétrico, movimenta o braço por uma curta distância, correspondente ao comprimento de uma trilha. Eles eram muito suscetíveis a problemas de desalinhamento e não permitiam densidades de gravação muito altas. Logo nos primeiros anos da década de 1980, foi produzido em grande escala o primeiro dispositivo de $5\frac{1}{4}$ $in$ com atuador do tipo \ac{VCM}\footnote{Motores Voice Coil são atuadores cujo funcionamento baseia no de um alto-falante, onde uma bobina é excitada por corrente (sinal de áudio), e um ímã permanente interage com o campo dessa bobina, deslocando um cone e produzindo ondas mecânicas de som.}, dispositivo que atua através de atração e repulsão magnética. %Apesar de o motor de passo continuar presente por mais alguns anos.
+
+ Em 1983, o primeiro \ac{HDD} com discos de $3\frac{1}{2}$ $in$ de diâmetro foi lançado pela empresa Rodime.
+
+ Até então, não havia interfaces de disco padronizadas e as novas interfaces eram vendidas junto com os \acp{HD} e instaladas em slots \ac{ISA} disponíveis na placa-mãe, \cite{Morimoto:2007}. Em 1985 a Quantum Corporation lançou o \emph{Plus HardCard}, em que tanto a controladora quanto o \ac{HD} eram integrados em um único slot \ac{ISA}. Esta integração se mostrou vantajosa pois diminuía problemas de sincronismo e simplificava o projeto, e isto deu origem ao padrão \ac{IDE}.
+
+ Apenas em 1990 o padrão \ac{IDE} foi ratificado pelo \ac{ANSI}, organização que tem por objetivo facilitar a padronização dos trabalhos de seus membros, dando origem ao padrão \ac{ATA}.
+
+  Nos anos seguintes, os \acp{HD} de $5\frac{1}{4}$ $in$ começaram a perder mercado para os \acp{HD} de $3\frac{1}{2}$ $in$ e $2\frac{1}{2}$ $in$, posteriormente usados no mercado de laptops. Estes formatos foram bem aceitos pelo mercado, sendo utilizados até hoje.
+
+ Paralelamente a estes avanços, o desenvolvimento de memórias \emph{Flash} começava a dar os primeiros passos. As memórias \emph{Flash} foram desenvolvidas a partir das memórias \ac{EEPROM}. Em 1984, o Dr. Masuoka publicou sua invenção no artigo ``\emph{A New Flash EEPROM  Cell Using Triple Polysilicon Technology} '' \cite{Masuoka:1984}.
+
+  Em 1987, a Toshiba anuncia as memórias \emph{Flash} do tipo \emph{NAND} e em 1988 a Intel anuncia as memórias \emph{Flash} do tipo \emph{Nor}, \cite{Bez:2003}. Hoje, estes dois tipos são considerados os padrões da indústria. A memória \emph{Flash} do tipo \emph{Nand} é otimizada para o armazenamento de dados em massa e a do tipo \emph{Nor} para o armazenamento de dados e código\footnote{\emph{Flash} do tipo \emph{Nor} são usadas para armazenar informações na BIOS da placa-mãe e \emph{firmwares} em dispositivos diversos, pois, embora requeiram pouco tempo para a leitura, apresentam um tempo de gravação alto.}.  Em 1988, o primeiro produto \emph{Flash} foi apresentado \cite{Kunnet:1988}, tratava-se de um \emph{chip} de memória \emph{Flash} do tipo \emph{Nor} de 256KB.
+
+  Inicialmente, as memórias \emph{Flash} foram usadas para a substituição de memórias EPROM \footnote{EPROM,\emph{Erasable Programmable Read-Only Memory}} \cite{Bez:2003} e só passaram  a ser utilizadas em larga escala no final dos anos 1990.
+   %% checar isso
+   Os primeiros \acp{HD} \ac{SSD} baseados em \emph{Flash} só chegaram ao mercado em 2007.
+
+\section{Padrões Adotados}
+ Com o passar dos anos, várias empresas começaram a fabricar discos rígidos e, visando a compatibilidade entre diferentes discos rígidos e computadores, padrões de tamanho e de interfaces foram adotados.
+
+\subsection{\emph{Form Factors}}
+ Os discos rígidos foram projetados para serem instalados dentro de computadores, e são produzidos em poucos padrões de tamanho e forma. Estes padrões são chamados de \emph{form factors} de discos rígidos, algo como configurações padrão, e se referem principalmente às dimensões externas dos discos rígidos, \cite{Mamun:2007}.
+
+ A Figura \ref{FIG:Form_Factor},  mostra seis \acp{HDD} com as tampas removidas deixando à mostra os \emph{platters} e as cabeças, onde os padrões de discos de 8, 5.25, 3.5, 2.5, 1.8 e 1 $in$ de diâmetro são representados.
+
+Nos \acp{HDD}, os \emph{form factors} geralmente são limitados pelo tamanho do disco e os \acp{SSD}, embora  não tenham esta limitação, geralmente seguem o mesmo padrão para serem compatíveis com as estruturas existentes em \emph{laptops} e \emph{desktops}.
+
+\begin{figure}[htb]
+  % Requires \usepackage{graphicx}
+  \centering
+  \includegraphics[scale =0.45]{figs/form_factors.jpg}\\
+  \caption{ Seis configurações padrão de Discos Rígidos,  adaptada de \cite{Potts:2008}}\label{FIG:Form_Factor}
+\end{figure}
+
+\subsection{Interfaces}
+Da mesma forma que outros componentes dos \acp{HD}, as interfaces que os interligam passaram por muitas mudanças.
+Atualmente existem dois tipos predominantes no mercado: ATA e SCSI, ambas são padrões \ac{ANSI}. Estes padrões definem conectores, conexões físicas, como sinais e temporização, protocolos de transporte, modelos de dispositivos e comandos. Estes modelos e comandos são a base do desenvolvimento do \emph{Framework} proposto neste trabalho e serão detalhados no Capítulo \ref{CHP:TEO}.
+
+O padrão \ac{ATA}, também conhecido como \ac{IDE}, foi projetado para ser uma interface entre computadores e discos rígidos.
+ Diversas versões foram definidas até agora, são elas: \ac{ATA} 1 ou \ac{IDE}, \ac{ATA} 2 ou \ac{EIDE}, \ac{ATA} 3, \ac{ATA}$\backslash$\ac{ATAPI} 4, \ac{ATA}$\backslash$\ac{ATAPI} 5, \ac{ATA}$\backslash$\ac{ATAPI} 6, \ac{ATA}$\backslash$\ac{ATAPI} 7 e \ac{ATA}$\backslash$\ac{ATAPI} 8.
+
+ A versão \ac{ATA} 3 foi a primeira a trazer o sistema \ac{SMART} e, a partir da versão \ac{ATA} 4, o padrão \ac{ATA} se tornou capaz de enviar comandos \ac{SCSI} encapsulados em comandos \ac{ATA}, possibilitando a comunicação com outros periféricos como unidades de discos ópticos. Esta extensão do protocolo \ac{ATA} foi chamada de \acf{ATAPI}.
+
+O padrão \ac{SCSI} foi desenvolvido para ser um padrão genérico para periféricos, como \emph{scanners}, unidades de discos ópticos, mídias removíveis e discos rígidos. Ele foi padronizado pela \ac{ANSI} em 1986 e dele foram desenvolvidas as seguintes versões: \ac{SCSI} 1, \ac{SCSI} 2, com suporte a comandos \emph{multi-thread}, e \ac{SCSI} 3, com separação entre conexão física, protocolos de transporte e conjuntos de comandos \ac{SCSI}.
+
+O \ac{SCSI} oferece  melhor desempenho que o \ac{ATA} em aplicações que requerem velocidade de processamento e transferência de grande quantidades de dados \cite{Mason:2000}, por isso os discos \ac{SCSI} são tipicamente mais caros e, em geral, usados em servidores, onde o alto custo é justificável. Já os discos \ac{ATA} são mais utilizados em computadores pessoais.
+
+Os computadores se tornaram mais rápidos e as interfaces precisavam atender a esta demanda e, neste intuito, tanto o padrão \ac{ATA} quanto o \ac{SCSI}, antes interfaces paralelas, tenderam à serialização, utilizando pares diferenciais, visando alcançar maiores velocidades de transmissão e evitar problemas de interferência entre as vias. Desta iniciativa surgiram os padrões \ac{SATA} e \ac{SAS}, protocolos seriais de transporte e interconexão física das interfaces \ac{ATA} e \ac{SCSI}, respectivamente, e as interfaces anteriores passaram a ser chamadas de \ac{PATA} e \ac{SPI}.
+
+\section{\emph{Hard Disk Drive}}
+
+De maneira resumida os \acp{HDD} são a integração dos seguintes componentes, descritos na Figura \ref{FIG:COMPHDD}:
+\begin{itemize}
+  \item Discos magnéticos (\emph{platters}\footnote{\emph{Platters} são discos magnéticos compostos por duas camadas, o substrato, um disco feito de liga de alumínio ou vidro, extremamente polidos para tentar evitar qualquer rugosidade, e a superfície magnética, que possui apenas alguns micrômetros de espessura \cite{Morimoto:2007}. Neles cada bit é armazenado em um setor de fino segmento destas superfícies através da magnetização do meio pela cabeça de gravação.}), onde os dados são armazenados;
+  \item Motor de rotação, responsável por girar os \emph{platters} a uma velocidade angular constante adequada à leitura e gravação de dados;
+  \item Pares de cabeças de leitura e escrita de dados (há duas para cada lado de um \emph{platter});
+  \item Braço metálico, onde se encontram as cabeças de leitura e escrita;
+  \item Atuador, mecanismo composto por um motor \ac{VCM} e pelo braço metálico;
+  \item Conector, atualmente a maioria são do tipo \ac{SATA} ou \ac{SAS};
+  \item Placa controladora \ac{PCB}, que é responsável por acionar o motor que gira os \emph{platters}, posicionar as cabeças de leitura e escrita, através do atuador, e executar os comandos recebidos pelo sistema através de um conector, tais comandos podem ser \ac{ATA} ou \ac{SCSI}. A placa controladora pode ser interna, como nos discos \ac{SATA}, ou externa, como nos discos \ac{SCSI}, \cite{Carrier:2005file}.
+
+\end{itemize}
+
+% Inserir tabela aqui
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.8]{figs/componenteshdd.png}
+  \caption{Componentes normalmente encontrados em HDDs, adaptada de \cite{Mamun:2007} }
+  \label{FIG:COMPHDD}
+\end{figure}
+
+Ao contrário do que se possa pensar, o \ac{HDD} não é vedado ou blindado. Seu funcionamento se baseia em aerodinâmica. As cabeças não devem entrar em contato com os \emph{platters}, pois isso os danificaria e por isso eles são girados a uma alta velocidade de rotação e só então o braço é movimentado, isto gera uma ``bolsa'' de ar, uma folga entre a cabeça e os \emph{platters}\footnote{Esta folga é chamada de \emph{Head-Disk Clearance}, \cite{Strom:2007}}, fazendo com que as cabeças flutuem\footnote{Esta bolsa de ar criada funciona como rolamento de ar, o sistema \ac{ABS} descrito anteriormente} sobre eles. Esta folga pode ser alterada por parâmetros ambientais como a temperatura, a pressão atmosférica e a umidade do ar \cite{Strom:2007}.
+
+Nos \acp{HDD} existem uma entrada de ar que passa por um filtro, antes de  entrar em contato com os \emph{platters}. Embora não seja blindado, abrir um \ac{HDD} fora de uma  sala limpa\footnote{Sala Limpa, ambiente controlado utilizado para testes ou manufatura de produtos onde a contaminação por partículas presentes no ar interfere no resultado} pode acarretar na inutilização do mesmo, pois qualquer partícula de poeira presente no ambiente poderia danificar a superfície dos \emph{platters} \cite{Zhao:2007}.
+
+Os \acp{HDD} atuais contêm normalmente de 1 a 4 \emph{platters} e, para cada lado de um \emph{platter}, há duas cabeças acopladas, uma de escrita e outra de leitura. Elas estão presas por espaçadores ao braço e embora haja um conjunto de cabeças para cada lado do \emph{platter}, elas não são independentes. Todas se movimentam como uma só, guiadas pelo braço, como mostrado na Figura \ref{FIG:Discos_Cabeça_Braços}.a. Os \emph{platters} são organizados em trilhas concêntricas e estas trilhas organizadas em setores, como mostrado na Figura \ref{FIG:Trilhas_setores}.b.
+
+\begin{figure}[htb]
+    \centering
+    \subfigure[a][Discos, braço e cabeças de um \ac{HDD}, adaptada de \cite{Vasconcelos:2002}]{\includegraphics[width=8cm]{figs/discos_cabecas_braco.png}}
+        \label{FIG:Discos_Cabeça_Braços}
+    \subfigure[b][Trilhas e setores, adaptada de \cite{Vasconcelos:2002} ]{\includegraphics[width=5cm]{figs/trilhas_setores.png}}
+        \label{FIG:Trilhas_setores}
+    \caption{Componentes de um \ac{HDD}}
+\end{figure}
+
+\section{\emph{Solid-State Drive}}
+Os Solid-State Drives (\ac{SSD}) podem ser definidos como dispositivos que armazenam dados em \emph{chips}, na maioria dos casos memórias \emph{Flash}, e sem partes mecânicas, como mostrado na Figura \ref{FIG:SSD}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=6cm]{figs/ssd.png}
+  \caption{Solid-State Drive, adaptada de \cite{Happy:ssd}}
+  \label{FIG:SSD}
+\end{figure}
+
+Os principais componentes de um \ac{SSD} são a controladora, os módulos de memória \emph{cache}, do tipo \ac{DRAM}, e memória \emph{Flash}, normalmente 10 ou 20, e o conector, que pode ser do tipo \ac{SATA}, \ac{SAS}, entre outros \cite{Rent:20102}, como mostrado na Figura \ref{FIG:SSD_comp}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=8cm]{figs/ssd_controller.png}
+  \caption{Componentes de um SSD, adaptada de \cite{Rent:20103}}
+  \label{FIG:SSD_comp}
+\end{figure}
+
+ A controladora, cuja a estrutura é mostrada na Figura \ref{FIG:SSD_controller}, consiste de um processador embarcado, normalmente um microcontrolador de 32 \emph{bits}, que executa código em nível de \emph{firmware}, como o \ac{SMART}, gerencia automaticamente a memória\footnote{\emph{Garbage Collector}} e executa  comandos, como o comando TRIM\footnote{TRIM é um comando \ac{ATA} para gerenciamento de dados, responsável por informar quais blocos de dados não estão mais em uso,\cite{Intel:2010}.}, por exemplo. Ela também gerencia as memórias DRAM, ROM e interfaces de entrada e saída existentes no \ac{SSD}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=8cm]{figs/ssd_controller_elements.png}
+  \caption{Controladora de um SSD, adaptada de \cite{Rent:20103}}
+  \label{FIG:SSD_controller}
+\end{figure}
+
+Nos \acp{SSD} o espaço de armazenamento  é dividido em blocos de dados, em geral de 512KB, e estes blocos em páginas, usualmente  de 4KB. O espaço é preenchido primeiramente sem repetir escritas nos setores, depois que todos os setores são preenchidos.
+%http://www.infowester.com/ssd.php
+
+\section{\emph{Hard Disk Drive} versus \emph{Solid-State Drive } }
+
+Os \acp{HDD} e \acp{SSD} utilizam as mesmas interfaces, possuem controladora, seja ela interna ou externa, organização dos dados em setores, códigos de correção de erro, endereçamento por \ac{LBA}\footnote{Os primeiros \acp{HDD} utilizavam endereçamento baseado no espaço físico, o \ac{CHS}, que identificava um setor pelo cilindro, cabeça e posição na trilha em que estava, mas este modo de endereçamento era limitado pela \ac{BIOS} e foi substituido pelo \ac{LBA}, baseado na representação lógica dos setores. } e área reservada de memória (\emph{spare area}). No entanto, as duas tecnologias usam princípios de armazenamento diferentes, e há muitas diferenças de desempenho e de fontes de falha.
+
+\subsection{Desempenho}
+Em comparação aos \acp{HDD}, os \acp{SSD} são menos afetados por choques físicos, pois não contém partes móveis, são mais silenciosos e têm menor consumo de energia elétrica. %e tempo de acesso e latência. A latência se refere ao tempo de espera antes do setor desejado para escrita ou leitura estar pronto. E o tempo de acesso se refere à soma da latência média e do tempo de busca, tempo necessário para posicionar o braço do \ac{HDD}.
+
+Os \acp{SSD} têm um tempo de inicialização menor, são mais rápidos na escrita e leitura aleatória e na leitura sequencial de arquivos grandes. Na Figura \ref{FIG:benchmark}, um \emph{benchmark}\footnote{Execução séries de testes e ensaios visando avaliar o desempenho relativo de um produto} é mostrado entre \acp{HDD} de 7200 rpm e 5400 rpm e um \ac{SSD} Toshiba MLC NAND\footnote{O \emph{Benchmark} foi realizado usando processador Intel Core2Duo 2.2GHz E4500, memória cache L2 de 2MB, memória RAM de 2GB DDR SDRAM com 800MHz, placa gráfica Intel GMA3100 e sistema operacional Windows$\circledR$ Vista}. Nele, o dispositivo \ac{SSD} apresenta resultados bem superiores em termos de taxa de transferência de dados, especialmente na inicialização de aplicações. Entretanto, os \emph{chips} de memória \emph{flash}, usados nos \acp{SSD}, tem limites de regravação estimados em 10.000 vezes, se forem do tipo \ac{MLC}, ou 100.000, se forem do tipo \ac{SLC} \cite{Morimoto:2010}, o que compromete a sua longevidade, enquanto que nos \acp{HDD}, a quantidade de escritas está associada apenas ao desgaste do material ou a danos físicos.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=11cm]{figs/benchmark.pdf}
+  \caption{\emph{Benchmark} realizado pela PCmark05, adaptada de \cite{Toshiba:2010}}
+  \label{FIG:benchmark}
+\end{figure}
+
+
+
+A capacidade de armazenamento e o custo por GB também são pontos que diferem nas duas tecnologias. Até setembro de 2011, o dispositivo \ac{SSD} de maior capacidade tinha 1.6 TB, \emph{form factor} de $2.5 in$ , e o \ac{HDD} de maior capacidade possuía 4TB, \emph{form factor} de 3.5 $in$. O custo por GB, no dispositivo \ac{HDD}, era de 0,0625 dólares \cite{Parrish:2011} e o  do dispositivo \ac{SSD}, embora não tivesse o preço anunciado, estimava-se um custo por GB superior a 6 dólares, que é  custo por GB de um \ac{SSD} de 1 TB \cite{SHimpo}, o segundo maior dispositivo do tipo. Nestes quesitos, os dispositivos \ac{HDD}, com custos quase 100 vezes menores, são bastante superiores e sua predominância no mercado é justificada.
+
+
+\section{Resumo do Capítulo}
+
+Este capítulo mostrou um pouco da história dos discos rígidos, os principais padrões, a evolução das tecnologias \ac{SSD} e \ac{HDD} e um comparativo entre elas.
+
+No próximo capitulo serão abordados fundamentos de diagnóstico de falha, o sistema \ac{SMART}, e as principais características dos padrões \ac{ATA} e \ac{SCSI}.

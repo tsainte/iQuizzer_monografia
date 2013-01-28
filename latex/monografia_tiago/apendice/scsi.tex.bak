@@ -1,0 +1,252 @@
+\chapter{Criação de Bootable} \label{APX:SCSI}
+%
+%\begin{verbatim}
+%    D - Direct Access Block Device (SBC-3)            Device Column key
+%    .T - Sequential Access Device (SSC-3)             ---------------------
+%    . L - Printer Device (SSC)                        M = Mandatory
+%    .  P - Processor Device (SPC-2)                   O = Optional
+%    .  .W - Write Once Block Device (SBC)             V = Vendor specific
+%    .  . R - C/DVD Device (MMC-6)                     Z = Obsolete -- with
+%    .  .  O - Optical Memory Block Device (SBC)           [std] identifying
+%    .  .  .M - Media Changer Device (SMC-3)               last standard
+%    .  .  . A - Storage Array Device (SCC-2)
+%    .  .  .  E - SCSI Enclosure Services device (SES-2)
+%    .  .  .  .B - Simplified Direct-Access (Reduced Block) device (RBC)
+%    .  .  .  . K - Optical Card Reader/Writer device (OCRW)
+%    .  .  .  .  V - Automation/Device Interface device (ADC-2)
+%    .  .  .  .  .F - Object-based Storage Device (OSD-2)
+%    .  .  .  .  .
+%OP  DTLPWROMAEBKVF  Description
+%00  MMMMMMMMMMMMMM  TEST UNIT READY
+%01   M              REWIND
+%01  Z V ZZZZ        REZERO UNIT [SBC]
+%02  VVVVVV V
+%03  MMMMMMMMMMOMMM  REQUEST SENSE
+%04  M    OO         FORMAT UNIT
+%%04   O              FORMAT MEDIUM
+%%OP  DTLPWROMAEBKVF  Description
+%%04    O             FORMAT
+%%05  VMVVVV V        READ BLOCK LIMITS
+%%06  VVVVVV V
+%%07  OVV O OV        REASSIGN BLOCKS
+%%07         O        INITIALIZE ELEMENT STATUS
+%%08  MMV O OV        READ(6)
+%%08     O            RECEIVE
+%%08                  GET MESSAGE(6)
+%%09  VVVVVV V
+%%0A  OO  O OV        WRITE(6)
+%%0A     M            SEND(6)
+%%0A                  SEND MESSAGE(6)
+%%0A    M             PRINT
+%%0B  Z   ZOZV        SEEK(6) [SBC]
+%%0B   O              SET CAPACITY
+%%0B    O             SLEW AND PRINT
+%%0C  VVVVVV V
+%%0D  VVVVVV V
+%%0E  VVVVVV V
+%%0F  VOVVVV V        READ REVERSE(6)
+%%10  VM VVV          WRITE FILEMARKS(6)
+%%10    O             SYNCHRONIZE BUFFER
+%%11  VMVVVV          SPACE(6)
+%%12  MMMMMMMMMMMMMM  INQUIRY
+%%13  V VVVV
+%%13   O              VERIFY(6)
+%%14  VOOVVV          RECOVER BUFFERED DATA
+%%15  OMO O OOOO OO   MODE SELECT(6)
+%%16  ZZMZO OOOZ O    RESERVE(6) [SPC-2]
+%%16         Z        RESERVE ELEMENT(6) [SMC]
+%%17  ZZMZO OOOZ O    RELEASE(6) [SPC-2]
+%%17         Z        RELEASE ELEMENT(6) [SMC]
+%%18  ZZZZOZO    Z    COPY [SPC]
+%%19  VMVVVV          ERASE(6)
+%%OP  DTLPWROMAEBKVF  Description
+%%1A  OMO O OOOO OO   MODE SENSE(6)
+%%1B  O   OOO O MO O  START STOP UNIT
+%%1B   O          M   LOAD UNLOAD
+%%1B                  SCAN
+%%1B    O             STOP PRINT
+%%1B         O        OPEN/CLOSE IMPORT/EXPORT ELEMENT
+%%1C  OOOOO OOOM OOO  RECEIVE DIAGNOSTIC RESULTS
+%%1D  MMMMM MMOM MMM  SEND DIAGNOSTIC
+%%1E  OO  OOOO   O O  PREVENT ALLOW MEDIUM REMOVAL
+%%1F
+%%20  V   VVV    V
+%%21  V   VVV    V
+%%22  V   VVV    V
+%%23  V   V V    V
+%%23       O          READ FORMAT CAPACITIES
+%%24  V   VV          SET WINDOW
+%%25  M   M M   M     READ CAPACITY(10)
+%%25       O          READ CAPACITY
+%%25             M    READ CARD CAPACITY
+%%25                  GET WINDOW
+%%26  V   VV
+%%27  V   VV
+%%28  M   MOM   MM    READ(10)
+%%28                  GET MESSAGE(10)
+%%29  V   VVO         READ GENERATION
+%%2A  O   MOM   MO    WRITE(10)
+%%2A                  SEND(10)
+%%2A                  SEND MESSAGE(10)
+%%2B  Z   OOO    O    SEEK(10) [SBC]
+%%2B   M              LOCATE(10)
+%%2B         O        POSITION TO ELEMENT
+%%2C  V    OO         ERASE(10)
+%%2D        O         READ UPDATED BLOCK
+%%2D  V
+%%OP  DTLPWROMAEBKVF  Description
+%%2E  O   OOO   MO    WRITE AND VERIFY(10)
+%%2F  O   OOO         VERIFY(10)
+%%30  Z   ZZZ         SEARCH DATA HIGH(10) [SBC]
+%%31  Z   ZZZ         SEARCH DATA EQUAL(10) [SBC]
+%%31                  OBJECT POSITION
+%%32  Z   ZZZ         SEARCH DATA LOW(10) [SBC]
+%%33  Z   OZO         SET LIMITS(10) [SBC]
+%%34  O   O O    O    PRE-FETCH(10)
+%%34   M              READ POSITION
+%%34                  GET DATA BUFFER STATUS
+%%35  O   OOO   MO    SYNCHRONIZE CACHE(10)
+%%36  Z   O O    O    LOCK UNLOCK CACHE(10) [SBC]
+%%37  O     O         READ DEFECT DATA(10)
+%%37         O        INITIALIZE ELEMENT STATUS WITH RANGE
+%%38      O O    O    MEDIUM SCAN
+%%39  ZZZZOZO    Z    COMPARE [SPC]
+%%3A  ZZZZOZO    Z    COPY AND VERIFY [SPC]
+%%3B  OOOOOOOOOOMOOO  WRITE BUFFER
+%%3C  OOOOOOOOOO OOO  READ BUFFER
+%%3D        O         UPDATE BLOCK
+%%3E  O   O O         READ LONG(10)
+%%3F  O   O O         WRITE LONG(10)
+%%OP  DTLPWROMAEBKVF  Description
+%%40  ZZZZOZOZ        CHANGE DEFINITION [SPC]
+%%41  O               WRITE SAME(10)
+%%42  O               UNMAP
+%%42       O          READ SUB-CHANNEL
+%%43       O          READ TOC/PMA/ATIP
+%%44   M          M   REPORT DENSITY SUPPORT
+%%44                  READ HEADER
+%%45       O          PLAY AUDIO(10)
+%%46       M          GET CONFIGURATION
+%%47       O          PLAY AUDIO MSF
+%%48  O         O     SANITIZE
+%%OP  DTLPWROMAEBKVF  Description
+%%49
+%%4A       M          GET EVENT STATUS NOTIFICATION
+%%4B       O          PAUSE/RESUME
+%%4C  OOOOO OOOO OOO  LOG SELECT
+%%4D  OOOOO OOOO OMO  LOG SENSE
+%%4E       O          STOP PLAY/SCAN
+%%4F
+%%50  O               XDWRITE(10)
+%%51  O               XPWRITE(10)
+%%51       O          READ DISC INFORMATION
+%%52  O               XDREAD(10)
+%%52       O          READ TRACK INFORMATION
+%%53  O               XDWRITEREAD(10)
+%%53       O          RESERVE TRACK
+%%54       O          SEND OPC INFORMATION
+%%55  OOO OMOOOOMOMO  MODE SELECT(10)
+%%56  ZZMZO OOOZ      RESERVE(10) [SPC-2]
+%%56         Z        RESERVE ELEMENT(10) [SMC]
+%%57  ZZMZO OOOZ      RELEASE(10) [SPC-2]
+%%57         Z        RELEASE ELEMENT(10) [SMC]
+%%58       O          REPAIR TRACK
+%%59
+%%5A  OOO OMOOOOMOMO  MODE SENSE(10)
+%%5B       O          CLOSE TRACK/SESSION
+%%5C       O          READ BUFFER CAPACITY
+%%5D       O          SEND CUE SHEET
+%%5E  OMOOO OOOO   M  PERSISTENT RESERVE IN
+%%5F  OMOOO OOOO   M  PERSISTENT RESERVE OUT
+%%7E  OO   O OOOO O   extended CDB
+%%7F  O            M  variable length CDB (more than 16 bytes)
+%%80  Z               XDWRITE EXTENDED(16) [SBC]
+%%80   M              WRITE FILEMARKS(16)
+%%81  Z               REBUILD(16) [SBC]
+%%81   O              READ REVERSE(16)
+%%OP  DTLPWROMAEBKVF  Description
+%%82  Z               REGENERATE(16) [SBC]
+%%82   O              ALLOW OVERWRITE
+%%83  OOOOO O    OO   EXTENDED COPY
+%%84  OOOOO O    OO   RECEIVE COPY RESULTS
+%%85  O    O    O     ATA PASS THROUGH(16)
+%%86  OO OO OOOOOOO   ACCESS CONTROL IN
+%%87  OO OO OOOOOOO   ACCESS CONTROL OUT
+%%88  MO  O O   O     READ(16)
+%%89  O               COMPARE AND WRITE
+%%8A  OO  O O   O     WRITE(16)
+%%8B  O               ORWRITE
+%%8C  OO  O OO  O M   READ ATTRIBUTE
+%%8D  OO  O OO  O O   WRITE ATTRIBUTE
+%%8E  O   O O   O     WRITE AND VERIFY(16)
+%%8F  OO  O O   O     VERIFY(16)
+%%90  O   O O   O     PRE-FETCH(16)
+%%91  O   O O   O     SYNCHRONIZE CACHE(16)
+%%91   O              SPACE(16)
+%%92  Z   O O         LOCK UNLOCK CACHE(16) [SBC]
+%%92   M              LOCATE(16)
+%%93  O               WRITE SAME(16)
+%%93   M              ERASE(16)
+%%94 [usage proposed by SCSI Socket Services project]
+%%95 [usage proposed by SCSI Socket Services project]
+%%96 [usage proposed by SCSI Socket Services project]
+%%97 [usage proposed by SCSI Socket Services project]
+%%98
+%%99
+%%9A
+%%9B
+%%9C
+%%9D
+%%9E                  SERVICE ACTION IN(16)
+%%9F              M   SERVICE ACTION OUT(16)
+%%OP  DTLPWROMAEBKVF  Description
+%%A0  MMOOO OMMM OMO  REPORT LUNS
+%%A1       O          BLANK
+%%A1  O         O     ATA PASS THROUGH(12)
+%%A2  OO   O      O   SECURITY PROTOCOL IN
+%%A3  OOO O OOMOOOM   MAINTENANCE (IN)
+%%A3       O          SEND KEY
+%%A4  OOO O OOOOOOO   MAINTENANCE (OUT)
+%%A4       O          REPORT KEY
+%%A5   Z  O OM        MOVE MEDIUM [SMC-2]
+%%A5       O          PLAY AUDIO(12)
+%%A6         O        EXCHANGE MEDIUM
+%%A6       O          LOAD/UNLOAD C/DVD
+%%A7  ZZ  O O         MOVE MEDIUM ATTACHED [SMC-2]
+%%A7       O          SET READ AHEAD
+%%A8  O   OOO         READ(12)
+%%A8                  GET MESSAGE(12)
+%%A9              O   SERVICE ACTION OUT(12)
+%%AA  O   OOO         WRITE(12)
+%%AA                  SEND MESSAGE(12)
+%%AB       O      O   SERVICE ACTION IN(12)
+%%AC        O         ERASE(12)
+%%AC       O          GET PERFORMANCE
+%%AD       O          READ DVD STRUCTURE
+%%AE  O   O O         WRITE AND VERIFY(12)
+%%AF  O   O O         VERIFY(12)
+%%B0      ZZZ         SEARCH DATA HIGH(12) [SBC]
+%%B1      ZZZ         SEARCH DATA EQUAL(12) [SBC]
+%%B2      ZZZ         SEARCH DATA LOW(12) [SBC]
+%%B3  Z   OZO         SET LIMITS(12) [SBC]
+%%B4  ZZ  OZO         READ ELEMENT STATUS ATTACHED [SMC-2]
+%%B5  OO   O      O   SECURITY PROTOCOL OUT
+%%B5         O        REQUEST VOLUME ELEMENT ADDRESS
+%%B6         O        SEND VOLUME TAG
+%%B6       O          SET STREAMING
+%%OP  DTLPWROMAEBKVF  Description
+%%B7  O     O         READ DEFECT DATA(12)
+%%B8   Z  OZOM        READ ELEMENT STATUS [SMC-2]
+%%B9       O          READ CD MSF
+%%BA  O   O OOMO      REDUNDANCY GROUP (IN)
+%%BA       O          SCAN=´-
+%%BB  O   O OOOO      REDUNDANCY GROUP (OUT)
+%%BB       O          SET CD SPEED
+%%BC  O   O OOMO      SPARE (IN)
+%%BD  O   O OOOO      SPARE (OUT)
+%%BD       O          MECHANISM STATUS
+%%BE  O   O OOMO      VOLUME SET (IN)
+%%BE       O          READ CD
+%%BF  O   O OOOO      VOLUME SET (OUT)
+%%BF       O          SEND DVD STRUCTURE
+%\end{verbatim} 

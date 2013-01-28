@@ -1,0 +1,14 @@
+\chapter{Conclus\~{o}es}
+
+Neste trabalho \'{e} realizada uma avalia\c{c}\~{a}o de tr\^{e}s m\'{e}todos diferentes de reconhecer gestos da m\~{a}o humana, com base nos momentos de Hu e descritores de forma.
+
+Dentre os tr\^{e}s m\'{e}todos avaliados, o segundo m\'{e}todo obt\'{e}m as maiores taxas de acerto. Neste m\'{e}todo consegue-se uma representa\c{c}\~{a}o do objeto segmentado com uma pequena quantidade de \emph{pixels}, restando apenas aqueles essenciais para se saber sua forma.
+
+Neste trabalho tamb\'{e}m \'{e} demonstrado que \'{e} poss\'{\i}vel reconhecer gestos utilizando apenas os pontos extremos dos dedos na imagem segmentada. Apesar desta abordagem conter menos pontos que nos outros dois m\'{e}todos, pode-se obter uma boa taxa de acerto no reconhecimento dos gestos estudados. Conclui-se ainda que usar apenas o objeto segmentado, o que supostamente possui uma melhor descri\c{c}\~{a}o da forma do objeto, nem sempre \'{e} mais eficaz do que usar apenas o contorno ou os pontos de alta curvatura.
+
+Devido aos bons resultados dos m\'{e}todos de reconhecimento pelos pontos extremos dos dedos e do contorno, espera-se obter um bom desempenho computacional e embarcar o algoritmo em dispositivos de baixo poder de processamento, j\'{a} que o n\'{u}mero de pontos a serem usados nos c\'{a}lculos \'{e} bem pequeno comparado ao do objeto segmentado. Principalmente o m\'{e}todo baseado em pontos extremos, no qual o n\'{u}mero de pontos a serem processados na extra\c{c}\~{a}o das caracter\'{\i}sticas \'{e} $33$ vezes menor que o m\'{e}todo do contorno e $400$ vezes menor que o m\'{e}todo do objeto segmentado.
+
+A grande contribui\c{c}\~{a}o deste trabalho est\'{a} em concluir que a efic\'{a}cia do reconhecimento de gestos pode ser feito tanto usando uma grande quantidade de informa\c{c}\~{o}es ou apenas alguns pontos de relev\^{a}ncia do objeto.
+
+Como uma proposta futura deve-se implementar um m\'{e}todo de c\'{a}lculo do centr\'{o}ide que n\~{a}o considere o antebra\c{c}o. Com isso, pode-se realizar o reconhecimento de gesto com v\'{a}rios \^{a}ngulos de abertura da c\^{a}mera, aumentando as possibilidades de usabilidade. Se pretende testar o algoritmo para reconhecer mais gestos, como os gestos est\'{a}ticos do alfabeto \ac{LIBRAS} e at\'{e} gestos din\^{a}micos 
+

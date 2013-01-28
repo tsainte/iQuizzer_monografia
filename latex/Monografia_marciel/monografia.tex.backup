@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper,oneside,header=plain,tocpage=prefix]{report}
+%----SELEÇÃO DE FONTES ----%
+%\usepackage{mathpazo}%Palatino LinoType
+%\usepackage[default]{cantarell}%Cantarell
+\usepackage[garamond]{mathdesign}%Adobe Garamond Pro
+%\usepackage[urw-garamond]{mathdesign}
+%\usepackage{fourier}%Adobe Utopia
+%\usepackage{mathptmx}%Times
+%\usepackage{literat}%Literaturnaya
+%\usepackage{newcent}  % New Century Schoolbook + Avant Garde + Courier
+%\usepackage{bookman}  % Bookman + Avant Garde + Courier
+%\usepackage{antt}  % Bookman + Avant Garde + Courier
+%\usepackage[dayroman]{mathdesign}%Adobe Garamond Pro
+%--------------------------%
+\newcommand{\titulo}{Projeto de Antena de Microfita}
+\newcommand{\autor}{Marciel Barros Pereira}
+\newcommand{\orientador}{Prof. Dr. Sérgio Antenor de Carvalho}
+\newcommand{\coorientador}{Prof. }
+\newcommand{\membroa}{Prof. Dr. Nome do Professor Banca 1}
+\newcommand{\membrob}{Prof. Dr. Nome do Professor Banca 2}
+\newcommand{\membroc}{Prof. Dr Nome do Professor Banca 3, se existir}
+\newcommand{\Local}{Fortaleza, Ceará}
+\newcommand{\Data}{\today}
+\newcommand{\DataDefesa}{\today}
+%\newcommand{\DataDefesa}{21 de Dezembro de 2012}
+
+\newcommand{\instituicao}{Universidade Federal do Ceará}
+\newcommand{\departamento}{Departamento de Eng. de Teleinformática}
+\newcommand{\curso}{Curso de de Graduação em Engenharia de Teleinformática}
+\newcommand{\comentario}{Projeto de Final de Curso apresentado à Coordenação do {\curso} da {\instituicao} como requisito parcial para a obtenção do diploma de Engenheiro de Teleinformática.}
+\usepackage{preambulo}
+\usepackage{formatacao_marciel}%formatação pessoal - margens abnt, texto do capitulo em small caps (modificável)
+\usepackage{lipsum}%gerador de texto
+
+\usepackage[usenames,dvipsnames]{pstricks}
+%\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\begin{document}
+\onehalfspacing
+\include{pre_text/capa}%arquivo de capa e folha de rosto
+\include{pre_text/folhadeaprovacao}
+\include{pre_text/dedicatoria}
+\include{pre_text/epigrafe}
+\include{pre_text/agradecimentos}
+\include{pre_text/resumo}
+\include{pre_text/abstract}
+% listas automáticas: sumário, lista de figuras e lista de tabelas
+\pdfbookmark[1]{Sumário}{sumario_label} %\label{sumario_label}
+\tableofcontents
+\newpage
+%---------------------------------------
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}%Adiciona lista de figuras ao sumário
+\newpage
+%---------------------------------------
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}%Adiciona lista de tabelas ao sumário
+\newpage
+%%Ajuste de espaçamento 1,5 linha ao restante do texto:
+\onehalfspacing
+%INCLUIR AQUI OS CAPÍTULOS
+%
+\include{cap1/introducao}
+\include{cap2/outrocap}
+%=======%
+\chapter{Este é um Capítulo}
+\lipsum[1-2]
+\section{Esta é uma Seção do Capítulo}
+\subsection{Esta é uma Subseção do Capítulo}
+\subsubsection{Esta é uma Sub-Subseção do Capítulo}
+\subsection{Subseção2}
+%=======
+citacao 2 \cite{balanis3}
+citacao 3 \cite{microwaverf}
+citacao 4 \cite{arraybasics}
+citacao 5 \cite{pozar4}
+citacao 6 \cite{rfcircuit}
+citacao 7 \cite{microwavehandbook}
+
+\bibstyle{abnt-alf}
+\bibliography{bibliografia}%Adicionar os 
+\end{document}

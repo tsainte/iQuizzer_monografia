@@ -1,0 +1,52 @@
+
+\chapter{Fundamentação teórica} \label{CHP:HD}%%
+
+Neste capítulo, a evolução dos discos rígidos é descrita de maneira breve para contextualizar o leitor quanto às tecnologias utilizadas atualmente e ao seu funcionamento.
+
+\section{Introdução}
+%Vivemos em uma era da tecnologia da informação onde cada aspecto de nossa vida passa por algum tipo de processamento ou armazenamento de informações.
+
+%Os sistemas modernos de computação usam diferentes tecnologias para armazenar estas informações, seja temporariamente ou permanentemente. Essas tecnologias podem ser memórias de estado sólido, como \ac{ROM}, \ac{RAM} e memórias \emph{Flash},  armazenamento magnético, como \ac{HDD}, \emph{floppy disk} e \emph{tape}, ou armazenamento óptico, como \ac{CD-ROM}, \ac{DVD}, \ac{BD} e \ac{HD-DVD}.
+
+%Os discos rígidos desempenham um grande papel neste desenvolvimento tecnológico.  Atualmente, eles tanto podem ser dispositivos de armazenamento magnético como os \acp{HDD}, quanto circuitos de memória \emph{Flash}, no caso dos \acp{SSD} atuais, ou ainda dispositivos híbridos \cite{HD:hibrido}. Os principais fatores considerados na escolha entre essas tecnologias são o custo, a taxa de transferência de dados, o tempo de acesso e a confiabilidade \cite{Mamun:2007}.
+
+%A pirâmide de hierarquia de armazenamento, Figura \ref{FIG:PIRAMIDE2}, descreve uma hierarquia de tecnologias de memória em função do custo, da capacidade de armazenamento e do tempo de acesso. Nela, os dois principais tipos de discos rígidos, \ac{HDD} e \ac{SSD}, se encontram na camada intermediária.
+
+% A região superior da pirâmide contém registradores do processador, memória cache e memória \ac{RAM}, que se caracterizam pelo alto custo, rapidez no acesso aos dados e baixa capacidade de armazenamento. Já a região intermediária contém memórias Flash, das quais são feitos os \acp{SSD}, discos magnéticos e discos ópticos, que possuem um custo menor em comparação às memórias internas, maior capacidade de armazenamento e menor velocidade no acesso aos dados. Na região inferior se encontram fitas magnéticas, dispositivos de acesso sequencial usados para cópias de segurança.
+
+\section{SaaS}
+\section{REST}
+[colocar um bla bla bla inicial, historico, explicando o acronimo, etc]
+\subsection{RESTful}
+
+Em uma arquitetura julgada como RESTful, o método desejado é informado dentro do método HTTP, contido no header do mesmo. Além disso, o escopo da informação é colocado na URL, o que, de acordo com 1, torna uma "combinação poderosa". De acordo com 1, por definição, uma aplicação deixa de ser RESTFul caso o método HTTP não combine com o método da informação, ou seja, com a funcionalidade esperada para aquela estrutura de dados.
+[aqui cabe um exemplo de algo não-RESTful, mas que parece ser]
+
+\section{JSON}
+\subsection{Introdução}
+[aqui cabe acronimo, historico, etc]
+
+\subsection{Definição}
+%=> comparativo com XML
+%==> sobre interpretadores
+De acordo com 1, "é muito mais facil para um browser lidar com uma estrutura javascript oriunda de uma estrutura JSON do que a partir de um documento XML". Ainda de acordo com 1, cada web browser oferece uma interface JavaScript diferente para seus parsers XML, enquanto um objeto JSON, que por definição é um objeto JavaScript, será interpretado da mesma maneira em qualquer interpretador JavaScript.
+%sobre complexidade,
+%sobre tamanho
+De acordo com 1, o JSON é uma alternativa mais leve para serialização de dados do que o XML, definido pelo XML Schema. [apresentar alguma pesquisa comparativa, vinda de algum artigo, pode ser uma boa].
+\subsection{Estrutura}
+[aqui cabe a descrição de como montar um json]
+\section{Rails}
+\subsection{Visão Geral}
+\section{iOS}
+\subsection{Visão Geral}
+ 
+O iOS é um sistema operacional para dispositivos móveis, lançado pela Apple em 2007. Inicialmente, foi desenvolvido para o iPhone, sendo posteriormente aproveitado nos dispositivos iPod Touch, iPad e Apple TV. Ele é um sistema operacional licenciado para rodar apenas em hardware produzido pela Apple, otimizado para a arquitetura de processadores ARM.
+Sua entrada de dados é feita de forma direta, através de multi- toques. Esses toques podem ser desde encostar o dedo, similar a um clique do mouse, até balançar o aparelho, de modo a utilizar seu acelerômetro. Todos os controles de entrada de dados são controlados pela GUI Cocoa Touch.
+\subsection{Ciclo de vida}
+O ciclo de vida constitui uma sequência de eventos entre o início e a finalização da aplicação. Um aplicativo iOS começa quando o usuário toca o ícone da mesma na home do dispositivo. Feito isso, o sistema operacional inicia alguns procedimentos de renderização e chama a função principal (main.m) do aplicativo.
+Uma vez iniciado, o comando da execução passa a ser do UIKit, framework de controle do iOS, que carrega a interface gráfica e lê o loop de eventos. Durante o loop, o UIKit delega cada evento a seu respectivo objeto e responde aos comandos emitidos pelo aplicativo. Quando o usuário realiza uma ação que causa um evento de saída, o UIKit notifica a aplicação e inicia o processo de saída.
+\section{Android}
+\subsection{Visão Geral}
+\subsection{Ciclo de vida}
+
+\section{Resumo do Capítulo}

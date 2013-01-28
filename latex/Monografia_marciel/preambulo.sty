@@ -1,0 +1,51 @@
+\ProvidesPackage{preambulo}
+
+\RequirePackage{datetimepor}
+\RequirePackage{assinatura}
+\RequirePackage{here}
+\RequirePackage{indentfirst}
+\RequirePackage[nottoc,notlof,notlot]{tocbibind}
+
+\usepackage[latin1]{inputenc}
+\usepackage[english,brazil]{babel}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{url,listings,color}
+\usepackage[center]{caption}
+\usepackage{amsfonts,amsthm,amsopn,latexsym}
+\usepackage{epsfig} % para incluir figuras em PostScript
+\DeclareGraphicsExtensions{.jpg,.eps,.png,.pdf,.mps,.gif}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{esint}
+\usepackage{booktabs}           % tabelas profissionais
+\usepackage{setspace}           % espa?o entre linhas
+\usepackage{listings}           %Para inserir c?digos-fonte
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{alltt}
+\usepackage{xcolor}
+\usepackage[breaklinks,final,pdftitle={\titulo},pdfauthor = {\autor},colorlinks=true,linkcolor=blue!30!gray,citecolor=red!30!gray,urlcolor=magenta!50!gray]{hyperref}
+\usepackage[sort]{cite}
+\usepackage[alf,abnt-and-type=e,abnt-full-initials=no,abnt-last-names=abnt,abnt-etal-list=2,abnt-etal-text = emph]{abntcite}
+%\usepackage[alf]{abntcite}
+\usepackage[all]{hypcap}       
+
+
+
+\newcommand{\eqref}[1]{equa\c{c}\~{a}o~\ref{#1}}
+\newcommand{\eqrefp}[1]{equa\c{c}\~{o}es~\ref{#1}}
+\newcommand{\ok}{$\blacksquare$}
+\newcommand{\nok}{$\square$}
+\newcommand{\secao}{\section}
+\newcommand{\capitulo}{\chapter}
+\newcommand{\subsecao}{\subsection}
+\newcommand{\secref}[1]{se\c{c}\~{a}o~\ref{#1}}
+\newcommand{\secrefp}[1]{se\c{c}\~{o}es~\ref{#1}}
+\newcommand{\tabref}[1]{Tabela~\ref{#1}}
+\newcommand{\tabrefp}[1]{Tabelas~\ref{#1}}
+\newcommand{\figref}[1]{Figura~\ref{#1}}
+\newcommand{\figrefp}[1]{Figuras~\ref{#1}}
+\newcommand{\quadro}[1]{Quadro~\ref{#1}}
