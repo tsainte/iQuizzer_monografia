@@ -115,7 +115,7 @@ O Ruby on Rails, também chamado Rails ou RoR, é um framework de desenvolvimento 
 O Rails é um framework full-stack, ou em português, pilha completa. Isso significa que, com ele, é possível desenvolver a aplicação por completo, desde o desenvolvimento dos layouts das paginas, a manutenção do banco de dados. Além disso, o Rails enfatiza o uso de alguns padrões de engenharia de software, a saber:
 \begin{itemize}
 \item Active record: padrão de projeto para armazenamento de dados em banco de dados relacionais.  A interface de um certo objeto deve incluir funções de CRUD,  como inserir, atualizar, apagar e algumas funções de consulta. Cada tabela de um banco de dados é embrulhada (wrapped) em um uma classe, sendo cada instancia dessa classe um registro (tupla) único na tabela.  Esse conceito está definido em FOWLER, Martin. Patterns of enterprise application architecture.
-\item Convenção sobre configuração: modelo de desenvolvimento de software que busca diminuir o número de decisões que os desenvolvedores precisam tomar, ou seja, o desenvolvedor não precisa definir aspectos convencionais da aplicação. Em Rails, é fácil perceber esse padrão na escolha dos nomes das tabelas: se um modelo chama-se ``Usuario'', a tabela correspondente se chamará ``Usuarios'' e, se existir uma relação entre usuários e contas (n:n), a nova tabela automaticamente será dominada ``usuarios_contas''.
+\item Convenção sobre configuração: modelo de desenvolvimento de software que busca diminuir o número de decisões que os desenvolvedores precisam tomar, ou seja, o desenvolvedor não precisa definir aspectos convencionais da aplicação. Em Rails, é fácil perceber esse padrão na escolha dos nomes das tabelas: se um modelo chama-se ``Usuario'', a tabela correspondente se chamará ``Usuarios'' e, se existir uma relação entre usuários e contas (m:m), a nova tabela será denominada, automaticamente, $usuarios_contas$.
 \item DRY (don't repeat yourself): O objetivo principal é reduzir a repetição de informação de qualquer tipo. Esse conceito incentiva o bom uso da reutilização de código, que é também uma das principais vantagens da orientação a objetos.
 \item MVC (model-view-controller): esse padrão de arquitetura de software separa a aplicação em três camadas: uma contendo a lógica da aplicação e regra de negócios, chamada model; uma contendo a entrada e saída de dados com o usuário, chamada view; uma interligando ambas, de maneira a manipular dados da view para o model entender e vice-versa, chamada controller. O principal objetivo dessa arquitetura é a reusabilidade de código e a separação de conceitos.
 \end{itemize}
@@ -126,9 +126,9 @@ O Rails é um framework full-stack, ou em português, pilha completa. Isso signifi
  	O Ruby é uma linguagem interpretada. Antes de se tornar popular, existia apenas um interpretador disponível, escrito em C pelo próprio criador da linguagem. Hoje em dia, o interpretador mais conhecido é o 1.9 ou YARV (Yet Another Ruby VM), para a versão mais atualizada e estável (Ruby 1.9.3.).
  	Existem outros interpretadores Ruby famosos, como:
  \begin{itemize}
- \item JRuby - implementação alternativa que permite usar a JVM do Java para interpetar código Ruby. Uma de suas principais vantagens é a interoperabilidade com código Java existente, além de aproveitar as vantagens já maduras do java: garbage collector, threas nativas, etc.
- \item IronRuby – Implementação .Net da linguagem, mantido pela própria Microsoft
- \item Rubinius –Traz idéias de máquinas virtuais do SmallTalk e é implementada em C/C++.
+ \item JRuby: implementação alternativa que permite usar a JVM do Java para interpetar código Ruby. Uma de suas principais vantagens é a interoperabilidade com código Java existente, além de aproveitar as vantagens já maduras do java: garbage collector, threas nativas, etc.
+ \item IronRuby: Implementação .Net da linguagem, mantido pela própria Microsoft
+ \item Rubinius: Traz idéias de máquinas virtuais do SmallTalk e é implementada em C/C++.
  \end{itemize}
  \section{Smartphones}
 
@@ -145,7 +145,7 @@ O Rails é um framework full-stack, ou em português, pilha completa. Isso signifi
 
  O iOS é um sistema operacional para dispositivos móveis, lançado pela Apple em 2007. Inicialmente, foi desenvolvido para o iPhone, sendo posteriormente aproveitado nos dispositivos iPod Touch, iPad e Apple TV. Ele é um sistema operacional licenciado para rodar apenas em hardware produzido pela Apple, otimizado para a arquitetura de processadores ARM.
  Sua entrada de dados é feita de forma direta, através de multi- toques. Esses toques podem ser desde encostar o dedo, similar a um clique do mouse, até balançar o aparelho, de modo a utilizar seu acelerômetro. Todos os controles de entrada de dados são controlados pela GUI Cocoa Touch.
- O livro ``Use a cabeça – Desenvolvimento para iPhone'' cita que o iPhone revolucionou a maneira de ver um celular: ele é, atualmente, uma plataforma de jogos, um organizador pessoal, um navegador (browser) completo e, claro, um celular. Muito de seu sucesso deve-se ao sucesso da loja virtual ``App Store'', de mídias e aplicativos, que abriu oportunidade para desenvolvedores independentes competirem em escala mundial com grandes empresas de software. 
+ O livro ``Use a cabeça - Desenvolvimento para iPhone'' cita que o iPhone revolucionou a maneira de ver um celular: ele é, atualmente, uma plataforma de jogos, um organizador pessoal, um navegador (browser) completo e, claro, um celular. Muito de seu sucesso deve-se ao sucesso da loja virtual ``App Store'', de mídias e aplicativos, que abriu oportunidade para desenvolvedores independentes competirem em escala mundial com grandes empresas de software. 
 
  \subsection{Linguagem: Objective-c}
  A programação nativa em iOS utiliza uma linguagem de programação chamada Objective-C, com o framework Foundation. 
@@ -162,7 +162,7 @@ O Rails é um framework full-stack, ou em português, pilha completa. Isso signifi
 
  \subsection{Visão Geral}
  	O Android é a resposta do Google para ocupar o segmento de mercado de sistemas operacionais para plataformas móveis. Consiste em um novo sistema baseado no sistema operacional Linux, com diversas aplicações já instaladas, além de um ambiente de desenvolvimento forte e flexível. 
- 	De acordo com ``Google Android – Lecheta'', o Android causou um grande impacto quando foi anunciado, em especial pelas empresas que estavam por trás de seu desenvolvimento: Google, Motorola, LG, Samsung, Sony, entre muitas outras. A esse grupo de empresas, denominado Open Handset Alliance (OHA), coube à padronização de uma plataforma de código aberto e livre para celulares, com o objetivo de atender a demanda do mercado atual.
+ 	De acordo com ``Google Android, Lecheta'', o Android causou um grande impacto quando foi anunciado, em especial pelas empresas que estavam por trás de seu desenvolvimento: Google, Motorola, LG, Samsung, Sony, entre muitas outras. A esse grupo de empresas, denominado Open Handset Alliance (OHA), coube à padronização de uma plataforma de código aberto e livre para celulares, com o objetivo de atender a demanda do mercado atual.
  	Um dos pontos fortes do Android é seu sistema flexível: é fácil integrar aplicações nativas com a sua aplicação, ou até mesmo substituir algumas dessas aplicações nativas pela sua própria. Isso gera um grande apelo para empresas de telefonia, que podem usar dessa personalização para lançarem suas próprias versões de aparelhos Android personalizados.
  	O grande foco do sistema é a interação entre aplicativos: agenda, maps, contatos são facilmente alcançáveis por qualquer aplicação. Essa funcionalidade é realizada por um recurso chamado Intent, que será abordado em capítulos posteriores.
  	Outro ponto forte do Android é que seu sistema operacional é baseado no Linux (baseado no kernel 2.6), ou seja, ele mesmo se encarrega de gerenciar a memoria em uso e os processos. Isso faz com que seja possível rodar mais de uma aplicação (genuinamente) ao mesmo tempo, fazendo com que outros aplicativos rodem em segundo plano durante outros serviços, como ao atender um telefonema ou acessar a internet.  
@@ -185,10 +185,10 @@ O Rails é um framework full-stack, ou em português, pilha completa. Isso signifi
  \item onPause(): é a primeira função a ser chamada quando a Activity perde o foco.
  \item onStop(): é chamado quando uma Activity é substituída por outra Activity
  \item onDestroy(): é o último método a ser executado. Quando o onDestroy() é executado, a Activity é considerada ``morta'' e fica pronta para ser removida pelo Garbage Collector.
- •	onRestart(): Chamado quando a Activity sai do estado de ``stop''; após sua execução, é chamado o método onStart().
+ \item	onRestart(): Chamado quando a Activity sai do estado de ``stop''; após sua execução, é chamado o método onStart().
  \end{itemize}
 
- \section{Redes Sociais} – será que vale mesmo a pena falar sobre isso?
+ \section{Redes Sociais}  será que vale mesmo a pena falar sobre isso?
  \section{Resumo do Capítulo}
 
  	Neste capítulo foram abordadas as três principais tecnologias necessárias para o desenvolvimento deste projeto: computação em nuvem, web services e computação móvel. Tais tecnologias foram aprofundadas em um nível o qual fornecessem ao leitor os pré-requisitos para a compreensão do restante do projeto, o qual será apresentado nos capítulos posteriores.
