@@ -1,20 +1,356 @@
-\chapter{Comparativo Android x iOS} \label{CHP:MET}%%
-\section {Ambientação}
-\subsection{Linguagens}
-\subsection{IDEs}
-\section {Arquitetura}
-\subsection {Arquivos gerados}
-\section {Controles básicos}
-\subsection {Mostrando textos}
-\subsection {Inserindo textos}
-\subsection {Capturando eventos de botões}
-\section {Criando listas}
-\subsection{Listando arrays}
-\subsection{Personalizando linhas}
-\subsection{Capturando eventos de seleção}
-\section {Acesso a dados}
-\subsection {SQLite}
-\subsection {Preferências}
-\section {Parser JSON}
-\section {Conexão HTTP}
+    \chapter{Comparativo Android x iOS} \label{CHP:MET}%%
+    \section {Ambientação}
+     
+    iOS
+    Para implementação nativa de aplicações, utilizamos a IDE gratuita chamada Xcode. Desenvolvida pela Apple Inc., funciona apenas sobre o sistema operacional Mac OS X.  Por padrão, já vem com suporte ao Objective-C, linguagem de programação utilizada para desenvolvimento de aplicativos nativos no Mac OS X e no iOS.
+    Atualmente, o Xcode está na versão 4.5.2 e pode ser baixado via Mac App Store, de forma gratuita para usuários do Mac OS X Lion e OS X Mountain Lion \url{https://itunes.apple.com/us/app/xcode/id497799835}.
+    Para desenvolvimento iOS, é necessário possuir o iOS SDK, que pode ser baixado internamente a ferramenta Xcode. Entretanto, para realização de testes no dispositivo, é necessário a posse da licença de desenvolvimento.
+     
+    Android
+            Para o desenvolvimento de aplicações nativas em Android, necessitamos de um ambiente que possua Android SDK instalado. É possível, por exemplo, gerar aplicativos utilizando apenas um editor de texto, como Notepad ou Gedit. Entretanto, a Google recomenda o uso do Eclipse com ADT Plugin (link).
+           
+     
+    \subsection{IDEs}
+    \section {Arquitetura}
+    \subsection {Arquivos gerados}
+     
+     
+    \section {Controles básicos}
+    \subsection {Mostrando textos}
+    iOS
+    Para exibir textos sem interação direta com o usuário, utilizamos uma instância da classe UILabel. Essa classe possui algumas propriedades para modificação de aspectos, a saber:
+\begin{itemize}
+\item text: o texto mostrado no campo;
+\item textColor: cor do texto;
+\item numberOfLines: número máximo de linhas suportadas;
+\item font: fonte utilizada pelo texto, instância de UIFont.
+\end{itemize}     
+    Android
+     
+    De maneira similar ao iOS, o Android possui um controle específico para mostrar textos na tela, chamado TextView. Um TextView pode ser definido no layout XML ou no próprio Java. Assim como no iOS, possui uma propriedade do tipo String chamada "text", a qual representa o texto apresentado. Possui também algumas propriedades, a saber:
+    [as propriedades legais]
+    Uma diferença importante entre o UILabel e o TextView é que o último aceita interações com o usuário; podemos colocar eventos de interação com o usuário. Essa funcionalidade costuma ser usada com textos que representam links (URLs).
+     
+    \subsection {Inserindo textos}
+     
+    iOS
+            Para entrada de textos, utilizamos uma istância de UITextField. A manipulação do texto é feita através do disparo de uma ação para um ``target'' quando o usuário pressiona o botão ``return'' do teclado.
+    Essa classe normalmente é associada a um UITextFieldDelegate, o qual fornece métodos adicionais de decisão.
+    Quando o usuário toca em um textfield, esse controle torna-se o ``first responder'' e invoca o aparecimento do teclado para o sistema. O teclado deve ser configurado, pelo desenvolvedor, para desaparecer quando o botão de return for pressionado. Isso deve ser feito através da mensagem ``resignFirstResponder'', a ser enviada para o textfield.
+    Para que o textfield não fique ``escondido'' na tela, embaixo do teclado, cabe ao desenvolvedor mover tela de maneira conveniente, de forma a aparecer o conteúdo.
+    A aparência do teclado pode ser configurada utilizando o protocolo UITextInputTraits. Existem, entretanto, alguns tipos de teclado a serem definidos por padrão, como o ASCII, Number, Url, Email, entre outros.
+     
+    Android
+     
+    Para a entrada de texto do usuário, o Android fornece o controle chamado EditText. Assim como o UITextField, esse controle possui uma propriedade chamada "text", que representa o texto mostrado no controle. Esse texto pode ser tanto a entrada do usuário como também um texto configurado via programação pelo aplicativo.
+    O EditText possui algumas propriedades que usamos na aplicação, como as seguintes:
+    [propriedades legais]
+    Para cada EditText, podemos definir o tipo de teclado que será exibido ao interagir com o usuário, como teclados de telefone, numeros e de letras.
+    O EditText possui duas grandes diferenças em relação ao UITextField, a saber:
+\begin{itemize}
+\item O teclado retorna automaticamente quando terminada a edição;
+\item Ao entrar em modo de edição, o EditText faz com que a tela do aplicativo desloque-se, caso seja necessário para aparecer o conteúdo do controle.
+\end{itemize}     
+     
+    \subsection {botões e eventos}
+     
+    iOS
+           
+    Um botão é representando por uma instância da classe UIButton. Os botões interceptam eventos de toque e enviam mensagens para um target pré-definido quando tocados. Métodos para configurar os targets e ações são herdados de UIControl. Possuem título, imagem e outras propriedades de aparência.
+     
+     
+    Os botões respondem a algumas ações, como touch drag, touch down, touch up, entre outros. Para associar um método a um evento, criamos uma IBAction (método) e, ao evento, indicamos tal IBAction. Isso pode ser feito facilmente no Interface Builder/Xcode ``ligando'' o botão ao código correspondente (file's owner desse botão), conforme os passos abaixo:
+\begin{enumerate}     
+\item Arrastar, com o botão direito, o botão ao código do file's owner
+         
+ \item Nomear um IBAction e associar um evento
+ \end{enumerate}    
+     
+    Android
+     
+    Os botões no Android pertencem a classe Button. Existem duas formas de inserir eventos nos botões, a saber:
+\begin{itemize}
+\item via Listener Java: podemos implementar o OnClickListener na Activity ou em alguma classe anônima dentro da Activity, de modo que ao disparar o evento de click, o método onClick da interface seja chamado.
+\item via propriedade onClick no XML: os botões possuem uma propriedade chamada onClick, que recebem uma String como valor. Esse valor é o nome do método da Activity onde o layout contendo esse botão foi inflado.
+    Em nosso projeto, utilizamos somente onClick como propriedade XML, uma vez que toda a parte de layout foi implementada via XML.
+\end{itemize}    
+    \section {Criando listas}
+    iOS
+     
+    Listas em iOS são feitas utilizando instâncias de UITableView. Essa classe, por sua vez, estende de UIScrollView, que habilita a rolagem vertical (e apenas a vertical). Internamente, cada linha (célula) é representada por um objeto de UITableViewCell, que são totalmente configuráveis.
+    Esse controle normalmente é associado a um UINavigationController: quando uma célula é tocada, é feito um push de um novo UIViewController, detalhando a célula.
+    Table views possuem dois estilos, a saber: UITableViewStylePlain e UITableViewGrouped. Uma vez criado o controle, não é possível mudar o estilo. No estilo Plain, as seções de header/footer flutuam nas bordas do conteúdo. Nesse estilo, pode haver um índice variando de A - Z, que facilita a navegação vertical. No estilo Grouped, uma cor padrão é definida para o fundo da view e das células. Nesse estilo, podem ser criadas várias listas, de formas agrupadas. Nesse caso, não podem ter índice.
+    Muitos métodos utilizam o objeto do tipo NSIndexPath como parâmetro e retornam valores. Esse objeto representa o índice da linha atual e da seção atual.
+    Um objeto do tipo Table View necessita de um objeto que atue como fonte de dados (data source) e um objeto que atue como delegate. Normalmente, utilizamos os protocolos UITableViewDataSource e UITableViewDelegate no UIController no qual o table view esteja inserido. O data source fornece informação que o UITableView precisa para construir tabelas e o delegate fornece as células e executa alguns outros métodos de manipulação.
+    A fim de criar uma table view básica, precisamos implementar, no mínimo, os seguintes métodos data source:
+\begin{enumerate}
+\item Número de seções - retorna o número de seções para essa table view
+  \begin{lstlisting}   
+    -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+       \end{lstlisting}   
+\item Número de rows (linhas): retorna o número de linhas para cada uma das seções
+   \begin{lstlisting}  
+    - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
+    (NSInteger)section  
+        \end{lstlisting}     
+\item cell for rows at index: define uma célula para cada index (par linha/seção) da tabela
+\begin{lstlisting}    
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+\end{enumerate}     
+       \end{lstlisting}
+\end{enumerate} 
+    Além desses métodos, é comum implementar um método delegate que responda a cada célula tocada, como a seguir:
+ 
+    I. did select row at index: informa o par (linha/seção) que foi selecionado. A partir do index path, pode-se recuperar a célula selecionada dentro da table view
+\begin{lstlisting}   
+    - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
+    (NSInteger)section  
+          \end{lstlisting}   
+     
+    Para a tela de escolha dos quizzes (GameMenu), implementamos uma table view simples, da seguinte maneira:
+\begin{lstlisting}   
+    -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return1;
+    }
+    -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    //conta no array de quizzes a quantidade de elementos
+    return [self.quizzescount];
+    }
+    -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //reaproveita ou cria uma célula
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil){
+    cell = [[UITableViewCellalloc] init];
+    }
+     
+    //personalização da célula
+    Quiz* q = [self.quizzesobjectAtIndex:indexPath.row];
+    cell.textLabel.text = [q titulo];
+    return cell;
+    }
+    //disparado quando um dos quizzes for selecionado
+    -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Quiz* q = [self.quizzesobjectAtIndex:indexPath.row];
+    GameViewController* gq = [[GameViewControlleralloc] initWithNibName:@"GameViewController"bundle:nil];
+    gq.quiz = q;
+    NSLog(@"quiz.content: %@",q.titulo);
+    NSLog(@"count perguntas: %d", q.perguntas.count);
+    [self.navigationControllerpushViewController:gq animated:YES];
+    }
+            \end{lstlisting} 
+    Android
+            As listas em Android são instâncias da classe widget ListView e, assim como no iOS, já possui rolagem vertical implementada. Os itens da lista são inseridos por outra classe controladora, chamada Adapter.
+            O Adapter é uma classe que provê acesso aos itens que contém a informação, como um array de strings. Além disso, o Adapter é responsável por criar o layout de cada célula.
+            Para a lista simples mostrada em GameMenu, foi implementado uma lista com células padrão da seguinte maneira:
+\begin{lstlisting}   
+        private void carregarLista() {
+     
+         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, quizzes);
+       ListView listView = (ListView)findViewById(R.id.lista_quizzes);
+    listView.setAdapter(arrayAdapter);
+    listView.setOnItemClickListener(this);
+     
+    }
+            \end{lstlisting} 
+            Nesse trecho de código, quizzes é um ArrayList de quizzes. ArrayAdapter e ListView são classes padrão do Android.  
+    Os eventos de clique de célula estão associados a classe que implementa a interface OnItemClickListener.  Tal interface exige a implementação do método onClickListener. Foi utilizado, no iQuizzer, esse listener na classe GameMenu, tendo sido implementado o método da seguinte maneira:
+\begin{lstlisting}   
+            @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+    Quiz quiz = quizzes.get(position);
+      Intent i = new Intent(getApplicationContext(), GameActivity.class);
+      i.putExtra("quiz",quiz);
+      startActivity(i);
+    }
+             \end{lstlisting}    
+    \section{Personalizando linhas de uma lista} -- retirado
+    iOS
+    Android
+    \section {Acesso a dados}
+     
+    \subsection {SQLite}
+            O SQLite é uma biblioteca implementada em C, de domínio público, que representa um banco de dados SQL. Tem como características fundamentais ser contido em si mesmo, livre de servidores, sem configuração e transacional. (\url{http://www.sqlite.org/about.html}).
+            Tanto o iOS quanto o Android possuem abstrações para representar objetos da tabela (active records), conexões e o próprio banco.
+     
+    iOS
+            Existem duas maneiras de se trabalhar com SQLite em iOS: acesso nativo através da biblioteca SQLite.h e Core Data Framework.
+            No acesso nativo, a programação utilizada é a mesma para aplicações nativas em C, ou seja, não há particularidades entre utilizar o SQLite dentro ou fora do iOS. Já em Core Data, a programação é em Objective-C e existe uma camada de abstração do banco de dados.
+            Em nossa aplicação, optamos por usar o Core Data devido à facilidade de fazer a modelagem utilizando o xcdatamodel. O xcdatamodel é uma ferramenta facilitadora, integrada ao Xcode, na qual o desenvolvedor pode ``desenhar'' as tabelas e criar ligações, chamadas ``relationships''. Cada uma das tabelas e relações possuem propriedades, que são facilmente configuradas.
+     
+     
+     
+            Existem três classes principais de abstração de banco de dados, a saber:
+\begin{itemize}
+\item Managed Object Model: é a classe que contém as definições de cada objeto (entidades, active record);
+\item Persistent store coordinator: é a conexão do banco; são configurados os nomes e a localização da base de dados;
+\item Managed Object Context: classe responsável pelas operações básicas de manipulação: inserir objetos, deletar objetos, etc.
+\end{itemize}
+    No iQuizzer para iOS, criamos uma classe chamada DAO e implementamos métodos de CRUD, como pesquisar, inserir, modificar e deletar. Para cada uma das entidades, criamos uma classe de DAO estendida, como QuizDAO ou PerguntaDAO, onde cada uma dessas realiza operações de crud mais especificas e voltadas para as situações que ocorrem na aplicação. Nessas classes de DAO, fazemos manipulação de ``managed object contexto'' e ``persistente store coordinator''.
+            Para cada uma das entidades, criamos um managed object model, estendendo da classe nativa NSManagedObject. É possível criar tais classes com os atributos e relações pré-configuradas selecionando o template ``NSManagedObject subclass''  e selecionando o data model desejado.
+     
+    Android
+     
+    O framework Android possui um pacote chamado android.database.sqlite, que fornece todas as classes necessárias para o gerenciamento do banco de dados privado a cada aplicação. Por padrão, o Android vêm com a versão 3.4.0 do SQLite.
+    Em nossa aplicação, utilizamos as seguintes classes desse pacote:
+\begin{itemize}
+\item SQLiteOpenHelper: Essa classe possui métodos para abrir o banco, como onCreate(SQLiteDatabase) e onUpgrade(SQLiteDatabase, int, int), que abrem, criam e atualizam o banco caso necessário.
+\item SQLiteDatabase: possui métodos para gerenciar o banco SQLite. Com essa classe, foram feitas as interações com as entidades do banco, utilizando essencialmente o método execSQL(String) para entrada e manutenção de tuplas.
+\item Cursor: classe de manipulação de resultados de uma consulta.
+\end{itemize}     
+     
+    \subsection {Preferências}
+            Existem casos onde a complexidade da informação a ser armazenada é pequena, como pares de chave-valor. Em casos onde temos uma informação simples a ser armazenada, utilizamos a memória de preferências para gravar tais valores.
+            Basicamente, essas classes de preferências atuam como um HashTable, que armazena uma estrutura de chave e valor para tipos primitivos, e os valores armazenados estarão no escopo da aplicação mesmo que a aplicação seja encerrada ou o dispositivo desligado.
+            O funcionamento básico dessa funcionalidade é similar no iOS e Android: uma chave (String) é escolhida para ``batizar'' a informação a ser armazenada. Ao momento de inserir/modificar, chamamos de ``set''.  Para recuperar o valor, invocamos um método ``get'', passando o nome da variável que fora batizada como parâmetro.
+            Em nosso aplicativo, utilizamos as memórias de preferências para armazenar o token. Quando a aplicação começa, verifica se há um valor de token válido armazenado. Em caso positivo, a aplicação inicia na tela de menu; caso contrário, é mostrada a tela de login.
+     
+    iOS
+            No iOS, a classe que representa a memória de preferências é chamada de NSUserDefaults. Para ler ou escrever, necessitamos de uma instância de NSUserDefaults - em nossa aplicação, standardUserDefaults. Com a instância, e de posse do valor da chave, podemos escrever os seguintes métodos de acesso:
+\begin{enumerate}     
+\item Instância padrão:
+     
+\item Configurando valor para token:
+\begin{lstlisting}   
+    [defaults setObject:token forKey:@"token"]; //escrita de token
+  \end{lstlisting}    
+\item Recuperando o valor de token:
+\begin{lstlisting}   
+    [defaults objectForKey:@"token"];
+\end{lstlisting} 
+\end{enumerate}     
+    Android
+     
+    No Android, a classe que representa a memória de preferências é chamada deSharedPreferences. De maneira similar ao iOS, temos um método para atribuir valor e outro para recuperar; entretanto, no momento da recuperação, é passado um valor padrão a ser retornado caso não exista o valor procurado.  Além disso, é preciso comitar a memória depois de adicionar um determinado valor.
+    A atribuição e a recuperação são feitas da seguinte maneira:
+\begin{enumerate}
+\item Instância padrão:
+     
+                    SharedPreferencespreferences = PreferenceManager.getDefaultSharedPreferences(context);
+                    SharedPreferences.Editor editor = preferences.edit();
+     
+\item Configurando valor para token:
+\begin{lstlisting}   
+    editor.putString("token", token);
+    editor.commit();
+ \end{lstlisting}       
+\item Recuperando o valor de token:
+\begin{lstlisting}   
+    String token = preferences.getString("token", "");
+\end{lstlisting}   
+\end{enumerate}     
+     
+    \section {Parser JSON}
+     
+            A fim de manipular objetos JSON, tanto na formação quanto na interpretação, existem bibliotecas nativas incorporadas aos frameworks nativos do iOS e do Android. Tais bibliotecas trabalham de maneira similar, utilizando o conceito de chave e valor.
+            Em nossa aplicação, todas as mensagens trocadas entre mobile e servidor utilizam JSON, sendo de vital importância a compreensão dessa funcionalidade.
+            Para baixar quizzes, é recebido o seguinte JSON do servidor, no corpo do HTTP:
+\begin{lstlisting}   
+    {
+        "quiz": {
+            "created_at": "2012-11-05T16:43:14Z",
+    "descricao": "Perguntas sobre fatos marcantes que ocorreram no ano de 2012.",
+            "id": 3,
+            "maxquestoes": 5,
+            "modojogo": 1,
+            "titulo": "Retrospectiva 2012",
+    "updated_at": "2012-12-28T10:18:01Z",
+            "user_id": 1,
+    "perguntas": [.... ]
+    }
+    }
+     \end{lstlisting}   
+    iOS
+            A partir do iOS 5, podemos utilizar a classe NSJSONSerialization para criar e interpretar JSON. Essa classe trabalha com objetos comuns de representação de dados, como NSString, NSNumber, NSArray e NSDictionary, não necessitando de
+            No método de baixar quiz do servidor, utilizamos a seguinte conversão entre o objeto JSON (um NSData contendo o corpo do HTTP) e um objeto Quiz:
+\begin{lstlisting}   
+    NSError* error;
+     
+        NSDictionary* jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+     
+        NSDictionary* jsonQuiz = [jsonObj objectForKey:@"quiz"];
+     
+    //Instanciando quiz a partir de uma entidade
+        Quiz* quiz = [[Quiz alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:managedContext];
+     
+    quiz.titulo = [jsonQuiz objectForKey:@"titulo"];
+    quiz.descricao = [jsonQuiz objectForKey:@"descricao"];
+    quiz.maxquestoes = [jsonQuiz objectForKey:@"maxquestoes"];
+    quiz.modojogo = [jsonQuiz objectForKey:@"modojogo"];
+    quiz.index = [jsonQuiz objectForKey:@"id"];
+ \end{lstlisting}       
+            Ou seja, utilizamos apenas uma conversão entre o JSON e um NSDictionary. Caso a raiz do JSON fosse um array, a única modificação seria que o objeto a ser retornado da conversão seria um NSArray.
+            Para criar um objeto JSON a partir de um NSDictionary ou NSArray, utilizamos o método contrário ao que utilizamos na interpretação do JSON, conforme abaixo:
+\begin{lstlisting}   
+    NSArray* objects = [[NSArray alloc] initWithObjects:jogo.dia, jogo.hora, jogo.pontos, resultados, usuario_id, nil];
+    NSArray* keys = [[NSArray alloc] initWithObjects:@"dia",@"hora",@"pontos",@"resultados_attributes", @"user_id", nil]; //chaves do app server
+     
+        NSMutableDictionary* jsonDict = [[NSMutableDictionary alloc] initWithObjects:objects forKeys:keys];
+     
+    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:nil];
+ \end{lstlisting}       
+    Android
+     
+            No Android, existe uma implementação da biblioteca official disponível em (www.json.org) interna ao framework. Ou seja, a maneira de se trabalhar com JSON é a mesma de aplicações java que utilizam tal biblioteca.
+            No método de baixar quiz do servidor, utilizamos a seguinte conversão entre o objeto JSON (umaString contendo o corpo do HTTP) e um objeto Quiz:
+\begin{lstlisting}   
+    JSONObject jsonObj = new JSONObject(jsonData);
+                    JSONObject jsonQuiz = jsonObj.getJSONObject("quiz");
+                   
+                    Quiz quiz =  new Quiz(jsonQuiz.getInt("id"), jsonQuiz.getString("titulo"), jsonQuiz.getString("descricao"), jsonQuiz.getInt("modojogo"), jsonQuiz.getInt("maxquestoes"));
+ \end{lstlisting}             
+    Verificamos que a maneira de interpretar JSON é bem parecida no iOS e no Android. A diferença notável é que, enquanto o iOS trabalha com objetos ``nativos'' como NSDictionary e NSArray, o Android trabalho com wrappers JSONObject e JSONArray.
+    Na criação de um JSON, como no método de criar jogo para enviar o resultado ao servidor,fora utilizada a seguinte conversão:
+\begin{lstlisting}     
+                  JSONObject jsonObject = new JSONObject();
+                    try{
+                            jsonObject.put("dia", jogo.getDia());
+                            jsonObject.put("hora", jogo.getHora());
+                            jsonObject.put("pontos", jogo.getPontos());
+                            jsonObject.put("resultados_attributes", jsonResultados);
+                            jsonObject.put("user_id", usuario_id);
+                    } catch (Exception e ){
+                            e.printStackTrace();
+                    }
+                    return jsonObject.toString();
+\end{lstlisting}   
+            Novamente podemos observar que a maior diferença é relativa ao wrapper JSONObject e JSONArray, presentes apenas na implementação Android.
+     
+    \section {Conexão HTTP}
+     
+    Conforme já citado, toda a troca de mensagens entre o servidor e nossa aplicação móvel é feita através do protocolo HTTP. Dentro do corpo da mensagem, enviamos ou recebemos um JSON, contendo normalmente um recurso (como uma instância de Quiz ou Pergunta, por exemplo).
+    O protocolo HTTP possui alguns campos em seu cabeçalho que são especialmente úteis para nossa aplicação. São eles:
+\begin{itemize}
+\item Method: nesse campo definimos o tipo de método HTTP que será executado. Esse campo é essecialmente importante para aplicações REST, uma vez que usa os mesmos (GET, POST, PUT e DELETE) para realizar as operações de CRUD.
+\item Content-Type: nesse campo é definido o tipo de arquivo que estará sendo enviado. Para que a aplicação Rails saiba que está sendo enviada uma requisição via mobile com JSON interno, utilizamos o content-type "JSON" para diferenciar. Caso seja uma requisição web normal, vinda do browser, o content-type é "text/plain".
+\end{itemize}     
+    Existem duas formas de tratar as conexões HTTP: sincronamente e assincronamente. Por uma questão de tempo e aproveitamento de código, optamos pela maneira síncrona; entretanto, acreditamos que a maneira assíncrona seja mais bem aceita pelo usuário, uma vez que não interrompe a execução da aplicação e é apontada como trabalho futuro dessa aplicação, na seção 7.3.
+    Em nossa aplicação, criamos uma classe chamada WebService, que possui métodos de comunicação com o servidor web através do protocolo HTTP.
+     
+    iOS
+     
+            A implementação de requisições HTTP é feita utilizando as seguintes classes:
+\begin{itemize}
+\item NSURL: representa a url que será enviada à requisição;
+\item NSURLRequest: representa a requisição HTTP. Na instância dessa classe, definimos o método HTTP desejado, o content-type e o corpo da mensagem;
+\item NSURLConnection: representa a conexão entre o dispositivo e o servidor, possuindo uma url e um request. Além disso, indica a classe delegate da requisição, ou seja, a classe que possui os métodos necessários para tratar as respostas dessa requisição
+\end{itemize}
+     
+    Na classe WebService, foram criados os métodos get e RESTCommand. No método RESTCommand, além de configurarmos a url, o cabeçalho e o corpo do HTTP, definimos um delegate para o objeto NSURLConnection. Esse delegate é responsável por tratar a resposta da requisição, através dos métodos didReceiveData e connectionDidFinishLoading.
+     
+     
+    Android
+     
+            Para utilizar a maneira síncrona, deve-se primeiramente modificar a política de threads padrão do Android. Isso foi feito adicionando o seguinte código no método onCreate da activity principal:
+\begin{lstlisting}              
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+ \end{lstlisting}       
+    Para realizar requisições HTTP, utilizamos instâncias das seguintes classes:
+\begin{itemize}
+\item URL: representa a url que será enviada à requisição;
+\item HttpClient: representa o cliente (alvo) da requisição;
+\item HttpURLConnecction: representa a conexão e configura cabeçalhos HTTP;
+\item OutputStream e BufferedReader: gerenciam os bytes enviados e recebidos durante a transmissão.
+\end{itemize}
+    De maneira análoga ao iOS, foram criados os métodos get e RESTCommand, de forma a fazer a comunicação síncrona.
 
