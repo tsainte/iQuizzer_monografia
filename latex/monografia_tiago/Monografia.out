@@ -13,7 +13,7 @@
 \BOOKMARK [1][-]{section.1.4}{Estrutura da monografia }{chapter.1}% 13
 \BOOKMARK [0][-]{chapter.2}{Fundamentacao}{}% 14
 \BOOKMARK [1][-]{section.2.1}{Servi\347os PaaS}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.1.1}{Defini\347\343o }{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.1}{Defini\347\343o}{section.2.1}% 16
 \BOOKMARK [2][-]{subsection.2.1.2}{Heroku}{section.2.1}% 17
 \BOOKMARK [1][-]{section.2.2}{REST}{chapter.2}% 18
 \BOOKMARK [2][-]{subsection.2.2.1}{RESTful}{section.2.2}% 19
@@ -43,33 +43,36 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Requisitos n\343o-funcionais}{section.3.2}% 43
 \BOOKMARK [1][-]{section.3.3}{Casos de uso}{chapter.3}% 44
 \BOOKMARK [1][-]{section.3.4}{Diagrama de classes}{chapter.3}% 45
-\BOOKMARK [1][-]{section.3.5}{Diagrama de entidades}{chapter.3}% 46
-\BOOKMARK [0][-]{chapter.4}{Implementa\347\343o web}{}% 47
-\BOOKMARK [1][-]{section.4.1}{Cria\347\343o de aplica\347\343o}{chapter.4}% 48
-\BOOKMARK [1][-]{section.4.2}{Rotas}{chapter.4}% 49
-\BOOKMARK [1][-]{section.4.3}{Autentica\347\343o}{chapter.4}% 50
-\BOOKMARK [1][-]{section.4.4}{Front-End com bootstrap}{chapter.4}% 51
-\BOOKMARK [1][-]{section.4.5}{Deploy}{chapter.4}% 52
-\BOOKMARK [0][-]{chapter.5}{Comparativo Android x iOS}{}% 53
-\BOOKMARK [1][-]{section.5.1}{Ambienta\347\343o}{chapter.5}% 54
-\BOOKMARK [2][-]{subsection.5.1.1}{Linguagens}{section.5.1}% 55
-\BOOKMARK [2][-]{subsection.5.1.2}{IDEs}{section.5.1}% 56
-\BOOKMARK [1][-]{section.5.2}{Arquitetura}{chapter.5}% 57
-\BOOKMARK [2][-]{subsection.5.2.1}{Arquivos gerados}{section.5.2}% 58
-\BOOKMARK [1][-]{section.5.3}{Controles b\341sicos}{chapter.5}% 59
-\BOOKMARK [2][-]{subsection.5.3.1}{Mostrando textos}{section.5.3}% 60
-\BOOKMARK [2][-]{subsection.5.3.2}{Inserindo textos}{section.5.3}% 61
-\BOOKMARK [2][-]{subsection.5.3.3}{Capturando eventos de bot\365es}{section.5.3}% 62
-\BOOKMARK [1][-]{section.5.4}{Criando listas}{chapter.5}% 63
-\BOOKMARK [2][-]{subsection.5.4.1}{Listando arrays}{section.5.4}% 64
-\BOOKMARK [2][-]{subsection.5.4.2}{Personalizando linhas}{section.5.4}% 65
-\BOOKMARK [2][-]{subsection.5.4.3}{Capturando eventos de sele\347\343o}{section.5.4}% 66
-\BOOKMARK [1][-]{section.5.5}{Acesso a dados}{chapter.5}% 67
-\BOOKMARK [2][-]{subsection.5.5.1}{SQLite}{section.5.5}% 68
-\BOOKMARK [2][-]{subsection.5.5.2}{Prefer\352ncias}{section.5.5}% 69
-\BOOKMARK [1][-]{section.5.6}{Parser JSON}{chapter.5}% 70
-\BOOKMARK [1][-]{section.5.7}{Conex\343o HTTP}{chapter.5}% 71
-\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 72
-\BOOKMARK [0][-]{chapter.7}{Conclus\343o}{}% 73
-\BOOKMARK [1][-]{section.7.1}{Perspectivas Futuras}{chapter.7}% 74
-\BOOKMARK [0][-]{chapter*.4}{Refer\352ncias Bibliogr\341ficas}{}% 75
+\BOOKMARK [0][-]{chapter.4}{Implementa\347\343o web}{}% 46
+\BOOKMARK [1][-]{section.4.1}{Ambienta\347\343o}{chapter.4}% 47
+\BOOKMARK [1][-]{section.4.2}{Cria\347\343o de aplica\347\343o}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.3}{Estrutura}{chapter.4}% 49
+\BOOKMARK [1][-]{section.4.4}{Banco de dados}{chapter.4}% 50
+\BOOKMARK [2][-]{subsection.4.4.1}{PostgreSQL}{section.4.4}% 51
+\BOOKMARK [2][-]{subsection.4.4.2}{Modelos}{section.4.4}% 52
+\BOOKMARK [2][-]{subsection.4.4.3}{Relacionamentos}{section.4.4}% 53
+\BOOKMARK [1][-]{section.4.5}{Rotas e REST}{chapter.4}% 54
+\BOOKMARK [1][-]{section.4.6}{Autentica\347\343o}{chapter.4}% 55
+\BOOKMARK [1][-]{section.4.7}{Front-End}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.7.1}{Bootstrap}{section.4.7}% 57
+\BOOKMARK [1][-]{section.4.8}{Deploy}{chapter.4}% 58
+\BOOKMARK [0][-]{chapter.5}{Comparativo Android x iOS}{}% 59
+\BOOKMARK [1][-]{section.5.1}{Ambienta\347\343o}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.1.1}{IDEs}{section.5.1}% 61
+\BOOKMARK [1][-]{section.5.2}{Arquitetura}{chapter.5}% 62
+\BOOKMARK [2][-]{subsection.5.2.1}{Arquivos gerados}{section.5.2}% 63
+\BOOKMARK [1][-]{section.5.3}{Controles b\341sicos}{chapter.5}% 64
+\BOOKMARK [2][-]{subsection.5.3.1}{Mostrando textos}{section.5.3}% 65
+\BOOKMARK [2][-]{subsection.5.3.2}{Inserindo textos}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.3}{bot\365es e eventos}{section.5.3}% 67
+\BOOKMARK [1][-]{section.5.4}{Criando listas}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.5}{Personalizando linhas de uma lista}{chapter.5}% 69
+\BOOKMARK [1][-]{section.5.6}{Acesso a dados}{chapter.5}% 70
+\BOOKMARK [2][-]{subsection.5.6.1}{SQLite}{section.5.6}% 71
+\BOOKMARK [2][-]{subsection.5.6.2}{Prefer\352ncias}{section.5.6}% 72
+\BOOKMARK [1][-]{section.5.7}{Parser JSON}{chapter.5}% 73
+\BOOKMARK [1][-]{section.5.8}{Conex\343o HTTP}{chapter.5}% 74
+\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 75
+\BOOKMARK [0][-]{chapter.7}{Conclus\343o}{}% 76
+\BOOKMARK [1][-]{section.7.1}{Perspectivas Futuras}{chapter.7}% 77
+\BOOKMARK [0][-]{chapter*.4}{Refer\352ncias Bibliogr\341ficas}{}% 78
