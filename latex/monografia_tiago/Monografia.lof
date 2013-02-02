@@ -1,10 +1,19 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces MarketShare Q3 2012}}{13}{figure.2.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso para Criador e Jogador }}{20}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de entidades }}{21}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso para Criador e Jogador }}{21}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de entidades }}{22}{figure.3.2}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tela mostrada quando o usuario tenta acessar recurso e nao est\'a logado }}{32}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Edi\c c\~ao de dados do usu\'ario }}{32}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Lembrar senha do usu\'ario }}{32}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Login no mobile (iOS) }}{33}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Exemplo de controle bootstrap }}{35}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela desktop extendida}}{36}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela mobile com menu suprimido }}{36}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Tela mobile com menu extendido }}{36}{figure.4.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

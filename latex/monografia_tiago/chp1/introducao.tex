@@ -5,33 +5,42 @@ Este capítulo visa apresentar o contexto no qual o trabalho realizado está inser
  
         A computação em nuvem propõe que recursos de hardware e software sejam entregues como serviço pela internet. Sob essa visão, sistemas como web services podem ser hospedados sobre uma infraestrutura de terceiros, de modo a diminuir custos operacionais.
 
-Web service é uma solução utilizada para realizar a comunicação entre sistemas distintos, que podem utilizar diferentes tecnologias de implementação e estar sob as mais diversas plataformas.  Dessa forma, aplicações feitas por equipes diferentes, em diferentes contextos, podem se comunicar e executar ações ou consumir recursos.
+		Web service é uma solução utilizada para realizar a comunicação entre sistemas distintos, que podem utilizar diferentes tecnologias de implementação e estar sob as mais diversas plataformas.  Dessa forma, aplicações feitas por equipes diferentes, em diferentes contextos, podem se comunicar e executar ações ou consumir recursos.
+		
+		
         Na prática, a função de um web service é fazer com que os recursos da aplicação do software estejam disponíveis na rede de uma forma normalizada, ou seja, sobre um protocolo onde as duas pontas (cliente e servidor) entendam a mensagem.
-        Existem algumas formas padronizadas de implementar serviços, sendo as mais comuns as soluções em SOAP e REST. REST é um padrão de web service mais comum em computação móvel.
-        A computação móvel pode ser representada como um novo paradigma computacional que permite que usuários desse ambiente tenham acesso a serviços independentemente de sua localização, podendo inclusive, estar em movimento. \url{https://portal.fucapi.br/tec/imagens/revistas/ed02_04.pdf}. Originalmente, telefones celulares possuíam apenas a capacidade de realizar a comunicação por voz. Com o passar do tempo, algumas funcionalidades extras foram sendo implementadas e, atualmente, os dispositivos possuem um amplo poder de processamento e comunicação. Tais aparelhos receberam a nomenclatura comercial de ``smartphone''.
-        Smartphones (ou telefones inteligentes) são celulares com funcionalidades avançadas, que podem ser estendidas através de programas adicionados ao seu sistema operacional.  Em sistemas operacionais como iOS e Android, existem centenas de milhares de aplicativos que podem ser baixados em lojas virtuais, como App Store e Google Play, respectivamente. As categorias líderes em número de aplicativos baixados são jogos e sociais.
-        Rede social é uma estrutura composta por pessoas ou organizações conectadas, de modo a partilhar valores e objetivos comuns. Existem diversos tipos de redes, como as de relacionamento (Facebook, Orkut, Twitter), redes profissionais (LinkedIn), redes comunitárias (Cromaz), entre outros.      
-        Em redes de relacionamentos como Facebook e Orkut, surgiram alguns jogos que buscam interagir as pessoas, aproveitando características de integração social. Tais jogos recebem a denominação de ``social network gaming''.
+        Existem algumas formas padronizadas de implementar serviços, sendo as mais comuns as soluções em \ac{SOAP} e \ac{REST}. \ac{REST} é um padrão de web service mais comum em computação móvel.
+		
+        A computação móvel pode ser representada como um novo paradigma computacional que permite que usuários desse ambiente tenham acesso a serviços independentemente de sua localização, podendo inclusive, estar em movimento \cite {fucapi}. Originalmente, telefones celulares possuíam apenas a capacidade de realizar a comunicação por voz. Com o passar do tempo, algumas funcionalidades extras foram sendo implementadas e, atualmente, os dispositivos possuem um amplo poder de processamento e comunicação. Tais aparelhos receberam a nomenclatura comercial de ``smartphone''.
+		
+        Smartphones (ou telefones inteligentes) são celulares com funcionalidades avançadas, que podem ser estendidas através de programas adicionados ao seu sistema operacional.  Em sistemas operacionais como \emph{iOS} e \emph{Android}, existem centenas de milhares de aplicativos que podem ser baixados em lojas virtuais, como \emph{App Store} e \emph{Google Play}, respectivamente. As categorias líderes em número de aplicativos baixados são jogos e sociais.
+		
+        Rede social é uma estrutura composta por pessoas ou organizações conectadas, de modo a partilhar valores e objetivos comuns. Existem diversos tipos de redes, como as de relacionamento (\emph{Facebook}, \emph{Orkut}, \emph{Twitter}), redes profissionais (\emph{LinkedIn}), redes comunitárias (\emph{Cromaz}), entre outros.      
+		
+        Em redes de relacionamentos como \emph{Facebook} e \emph{Orkut}, surgiram alguns jogos que buscam interagir as pessoas, aproveitando características de integração social. Tais jogos recebem a denominação de ``social network gaming''.
 \section{Objetivos}
  
-Esta seção visa descrever os objetivos deste trabalho através de um panorama geral de seus propósitos e da descrição de pontos específicos que devem ser atendidos.
+	Esta seção visa descrever os objetivos deste trabalho através de um panorama geral de seus propósitos e da descrição de pontos específicos que devem ser atendidos.
  
 \subsection{Objetivos Gerais}
  
-        O principal objetivo desse trabalho é a criação de uma plataforma web, hospedada em um serviço de computação em nuvem, que interaja com duas aplicações mobile (em iOS e em Android), através de um serviço de web service utilizando REST.
-A aplicação web permitirá que pessoas possam criar questionários e enquetes, os quais denominamos de quizzes, e permitirá que essas pessoas acompanhem as respostas marcadas em um relatório.  Por sua vez, as aplicações móveis em iOS e Android permitirão que as pessoas possam baixar os quizzes de seu interesse e jogá-los/responde-los.
- A depender do modo como cada quiz for criado, será creditada uma pontuação por jogo. Além disso, será creditada uma pontuação referente a criação de cada quiz e a adição de perguntas.
+        O principal objetivo desse trabalho é a criação de uma plataforma web, hospedada em um serviço de computação em nuvem, que interaja com duas aplicações mobile (em \emph{iOS} e em \emph{Android}), através de um serviço de web service utilizando \ac{REST}.
+		
+		A aplicação web permitirá que pessoas possam criar questionários e enquetes, os quais denominamos de quizzes, e permitirá que essas pessoas acompanhem as respostas marcadas em um relatório.  Por sua vez, as aplicações móveis em iOS e Android permitirão que as pessoas possam baixar os quizzes de seu interesse e jogá-los, de forma competitiva ou apenas responder, a a depender do modo de jogo inerente ao quiz em questão.	
+			
+		A depender do modo como cada quiz for criado, será creditada uma pontuação por jogo. Além disso, será creditada uma pontuação referente a criação de cada quiz e a adição de perguntas.
  
 \subsection{Objetivos Específicos}
  
 Os objetivos específicos deste trabalho são enumerados a seguir:
 \begin{enumerate}
-\item Análise das tecnologias existentes para implementação da arquitetura proposta
-\item Modelagem de uma interface gráfica de fácil utilização, para sistemas web e mobile
-\item Implementação do sistema web e hospedagem em um serviço de computação em nuvem
-\item Destacar Ruby on Rails como framework web de grande facilidade, fácil manutenção e rápida interação com mobile
-\item Implementação mobile das
-\item Comparação entre algumas funcionalidades e implementações: como  são feitas  em iOS e Android
+\item Análise das tecnologias existentes para implementação da arquitetura proposta;
+\item Modelagem de uma interface gráfica de fácil utilização, para sistemas web e mobile;
+\item Implementação do sistema web e hospedagem em um serviço de computação em nuvem;
+\item Destacar Ruby on Rails como framework web de grande facilidade, fácil manutenção e rápida interação com aplicativos móveis;
+\item Implementação mobile da aplicação;
+\item Comparação entre algumas funcionalidades e implementações: como  são feitas  em \emph{iOS} e \emph{Android};
+\item Documentação de referência para projetos de arquitetura similar.
  \end{enumerate}
 \section{Metodologia utilizada}
  
@@ -40,9 +49,15 @@ Os objetivos específicos deste trabalho são enumerados a seguir:
 \section{Estrutura da monografia }
  
 Esta monografia está organizada em seis capítulos, incluindo-se a Introdução aqui apresentada.
-O capítulo 2 aborda os conceitos gerais que serão utilizados por todo o trabalho, como computação em nuvem, web service e tecnologias correlatas,computação móvel e os trabalhos  relacionados que constituíram o embasamento teórico deste trabalho.
-  No capítulo 3, a aplicação desenvolvida é abordada através da apresentação das ferramentas utilizadas para sua criação e descrição dos requisitos, funcionais e não-funcionais, e das camadas que compõem a arquitetura da aplicação.
-No capítulo 4 apresenta a tecnologia web Ruby on Rails e mostra como algumas funcionalidades foram implementadas.
-No capítulo 5 traça um comparativo entre as funcionalidades que foram implementadas para as plataformas iOS e Android.
-No Capítulo 6 apresenta a metodologia de testes que será proposta para os usuários-teste e, em seguida, realiza a apresentação e análise dos resultados obtidos.
-Por fim, o Capítulo 7 apresenta considerações finais acerca do trabalho realizado.
+
+O capítulo \ref{CHP:FUND} aborda os conceitos gerais que serão utilizados por todo o trabalho, como computação em nuvem, web service e tecnologias correlatas,computação móvel e os trabalhos  relacionados que constituíram o embasamento teórico deste trabalho.
+
+  No capítulo \ref{CHP:APP}, a aplicação desenvolvida é abordada através da apresentação das ferramentas utilizadas para sua criação e descrição dos requisitos, funcionais e não-funcionais, e das camadas que compõem a arquitetura da aplicação.
+  
+No capítulo \ref{CHP:RAILS} apresenta a tecnologia web \emph{Ruby on Rails} e mostra como algumas funcionalidades foram implementadas.
+
+No capítulo \ref{CHP:COMP} traça um comparativo entre as funcionalidades que foram implementadas para as plataformas \emph{iOS} e \emph{Android}.
+
+%No Capítulo 6 apresenta a metodologia de testes que será proposta para os usuários-teste e, em seguida, realiza a apresentação e análise dos resultados obtidos.
+
+Por fim, o capítulo \ref{CHP:CONC} apresenta considerações finais acerca do trabalho realizado.

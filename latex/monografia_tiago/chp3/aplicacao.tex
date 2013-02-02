@@ -1,9 +1,12 @@
-\chapter{Aplicação} \label{CHP:TEO}%%
+\chapter{Aplicação} \label{CHP:APP}%%
  
 \section{Visão geral}
-        Com o intuito de demonstrar a arquitetura em estudo definida nos capítulos 1 e 2, foi idealizado um aplicativo com módulos Web e Mobile de forma a demonstrar todas as tecnologias citadas.
+        Com o intuito de demonstrar a arquitetura em estudo definida nos capítulos \ref{intro} e \ref{fund}, foi idealizado um aplicativo com módulos Web e Mobile, de forma a demonstrar todas as tecnologias citadas.
+		
         Um quiz é uma forma de jogo ou esporte mental, onde os jogadores têm por objetivo responder determinadas questões corretamente. Usualmente, quizzes são usados em educação e entretenimento para medir grau de conhecimento e habilidades, como pensamento rápido e associação mental. Em modalidades mais competitivas, os quizzes podem ter pontuações e, para competições em grupo, pode ter um vencedor (o participante com maior pontuação, por exemplo).
-        Conforme citado no capitulo x,os aplicativos móveis mais requisitados nos mercados de aplicativos móveis são de entretenimento e de jogos. Desse modo, idealizamos um sistema, composto de dois grandes módulos:
+		
+        %Conforme citado no capitulo \ref{fund},os aplicativos móveis mais requisitados nos mercados de aplicativos móveis são de entretenimento e de jogos. Desse modo, idealizamos um sistema, composto de dois grandes módulos:
+		O sistema é formado por dois grandes módulos:
 \begin{itemize}
 \item Sistema web: Nessa parte da aplicação, usuários podem gerenciar suas contas (metadados) e criar quizzes. No momento da criação, tal usuário é denominado ``criador'', e recebe uma pontuação por participação nesse processo. Nesse sistema, também é possível consultar os resultados dos jogos (ou partida) realizada sobre cada um dos quizzes.
 \item Sistema mobile: Nessa parte da aplicação, que está sobre as plataformas Android e iOS de forma nativa, o usuário (agora denominado ``jogador''), pode baixar os quizzes de seu interesse para seu dispositivo e jogá-lo, enviando seu resultado no final para ser consultado posteriormente por um criador.
@@ -43,6 +46,7 @@ O diagrama de casos de uso fornece um modo de descrever a visão externa do siste
 \section{Diagrama de classes}
  
 Diagrama de classes é uma representação da estrutura e relações das classes que servem de modelo para objetos. Com ela, é possível ter uma visão rápida das classes do sistema, de modo a ajudar na implementação do modelo (M do MVC) da aplicação. Além disso, é a base para construção dos diagramas de comunicação, sequencia e estados.
+
         Nesse diagrama, representamos nossas tabelas básicas (core) para o funcionamento da aplicação iQuizzer. Existem três entidades principais, a saber:
 \begin{itemize}
 \item Usuário: é a classe que representa o jogador e o criador do quiz. Além das informações básicas, como nome e email, estão gruardadas informações para login (username, senha) e a pontuação (de criador e jogador).

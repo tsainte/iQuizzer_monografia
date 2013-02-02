@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  31 JAN 2013 22:01
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 FEB 2013 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,19 +802,17 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 (./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
 (./pretexto/abstract.aux) (./pretexto/dedicatoria.aux)
 (./pretexto/epistrofe.aux) (./pretexto/acronimos.aux) (./chp1/introducao.aux)
-(./chp2/fundamentacao.aux) (./chp3/aplicacao.aux
+(./chp2/fundamentacao.aux) (./chp3/aplicacao.aux) (./chp4/rails.aux
 
-LaTeX Warning: Label `CHP:TEO' multiply defined.
+LaTeX Warning: Label `FIG:bootstrapcontrol' multiply defined.
 
-) (./chp4/rails.aux) (./chp5/comparativo.aux
 
-LaTeX Warning: Label `CHP:MET' multiply defined.
+LaTeX Warning: Label `FIG:bootstrapcontrol' multiply defined.
 
-) (./chp6/resultados.aux
 
-LaTeX Warning: Label `CHP:MET' multiply defined.
+LaTeX Warning: Label `FIG:bootstrapcontrol' multiply defined.
 
-) (./chp7/conclusoes.aux))
+) (./chp5/comparativo.aux) (./chp6/resultados.aux) (./chp7/conclusoes.aux))
 \openout1 = `Monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
@@ -944,7 +942,7 @@ LaTeX Info: Redefining \Ref on input line 115.
 \openout2 = `pretexto/capa_externa.aux'.
 
  (./pretexto/capa_externa.tex
-<figs/ufc.jpg, id=315, 383.4325pt x 466.74374pt>
+<figs/ufc.jpg, id=319, 383.4325pt x 466.74374pt>
 File: figs/ufc.jpg Graphic file (type jpg)
  <use figs/ufc.jpg>
 Package pdftex.def Info: figs/ufc.jpg used on input line 4.
@@ -1005,11 +1003,11 @@ ufc.jpg>]
 
 ] (./Monografia.toc [5
 
-])
+] [6])
 \tf@toc=\write5
 \openout5 = `Monografia.toc'.
 
- [6] [7] (./Monografia.lof)
+ [7] (./Monografia.lof)
 \tf@lof=\write6
 \openout6 = `Monografia.lof'.
 
@@ -1045,16 +1043,35 @@ Underfull \hbox (badness 10000) detected at line 4
 []
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [1
+Package acronym Info: Label `acro:SOAP' newly defined as it shall be overridden
+
+although it is yet undefined on input line 12.
+Package acronym Info: Label `acro:REST' newly defined as it shall be overridden
+
+although it is yet undefined on input line 12.
+[1
 
 
 
 
 ]
-Underfull \hbox (badness 10000) detected at line 15
+
+LaTeX Warning: Citation `fucapi' on page 2 undefined on input line 14.
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 14--15
+[]\T1/cmr/m/n/12 A com-pu-ta-ção mó-vel pode ser re-pre-sen-tada como um novo p
+a-ra-digma
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 16--17
+[]\T1/cmr/m/n/12 Smartphones (ou te-le-fo-nes in-te-li-gen-tes) são ce-lu-la-re
+s com fun-ci-o-na-li-da-des
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 21
 []
  []
 
@@ -1065,19 +1082,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) detected at line 36
-[]
+Underfull \hbox (badness 2443) in paragraph at lines 37--38
+[]\T1/cmr/m/n/12 Análise das tec-no-lo-gias exis-ten-tes para im-ple-men-ta-ção
+ da ar-qui-te-tura
  []
 
 
-Underfull \hbox (badness 10000) detected at line 40
+Underfull \hbox (badness 10000) detected at line 45
 []
- []
-
-)
-Underfull \hbox (badness 1297) in paragraph at lines 42--196
-\T1/cmr/m/n/12 cor-re-la-tas,computação mó-vel e os tra-ba-lhos re-la-ci-o-na-d
-os que cons-ti-tuí-ram o
  []
 
 
@@ -1087,6 +1099,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1103,24 +1120,35 @@ Underfull \hbox (badness 10000) detected at line 3
 []
  []
 
+Package acronym Info: Label `acro:NIST' newly defined as it shall be overridden
 
-Underfull \hbox (badness 2073) in paragraph at lines 6--8
-\T1/cmr/m/n/12 com-pu-ta-ção em nú-vem é re-fe-ren-tea ``Cloud Com-pu-ting é um
- mo-delo que
+although it is yet undefined on input line 6.
+Package acronym Info: Label `acro:PaaS' newly defined as it shall be overridden
+
+although it is yet undefined on input line 6.
+
+Underfull \hbox (badness 2103) in paragraph at lines 6--7
+\T1/cmr/m/n/12 com-pu-ta-ção em nú-vem tem a se-guinte de-fi-ni-ção: ``Cloud Co
+m-pu-ting (pt:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-[]\T1/cmr/m/n/12 De acordo com []$\T1/cmtt/m/n/12 http : / / broadcast . racksp
-ace . com / hosting _ knowledge /
- []
+LaTeX Warning: Citation `cloudstack' on page 5 undefined on input line 10.
 
 [5
 
 
 
 ]
-Underfull \hbox (badness 10000) detected at line 29
+
+LaTeX Warning: Citation `guardianstartup' on page 6 undefined on input line 20.
+
+
+
+LaTeX Warning: Citation `faceheroku' on page 6 undefined on input line 27.
+
+
+Underfull \hbox (badness 10000) detected at line 32
 []
  []
 
@@ -1131,6 +1159,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
+Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
+
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:YAML' newly defined as it shall be overridden
+
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
+
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
+although it is yet undefined on input line 51.
+
+
+LaTeX Warning: Citation `restfulws' on page 7 undefined on input line 51.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1138,9 +1183,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Underfull \hbox (badness 10000) detected at line 50
+Underfull \hbox (badness 10000) detected at line 53
 []
  []
+
+
+LaTeX Warning: Citation `restfulws' on page 8 undefined on input line 59.
+
+
+LaTeX Warning: Citation `comparexmljson' on page 8 undefined on input line 64.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1150,15 +1201,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
+LaTeX Warning: Citation `w3json' on page 9 undefined on input line 71.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [9]
-Underfull \hbox (badness 10000) detected at line 99
+Underfull \hbox (badness 10000) detected at line 105
 []
  []
+
+
+LaTeX Warning: Citation `caelum' on page 10 undefined on input line 110.
+
+
+LaTeX Warning: Citation `rails3' on page 10 undefined on input line 112.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1167,6 +1227,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 120.
+
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 1337) in paragraph at lines 120--121
+[]\T1/cmr/m/n/12 Atualmente, Ruby encontra-se en-tre as lin-gua-gens de pro-gra
+-ma-ção mais
+ []
+
+
+LaTeX Warning: Citation `rails4' on page 11 undefined on input line 123.
+
+
+LaTeX Warning: Citation `fowler' on page 11 undefined on input line 128.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1174,57 +1250,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
-[][]$\T1/cmtt/m/n/12 http : / / www . yiiframework . com / doc / guide / 1 . 1 
-/ en / basics . best-[]practices$[]
- []
+Package acronym Info: Label `acro:DRY' newly defined as it shall be overridden
+although it is yet undefined on input line 130.
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 129--130
+LaTeX Warning: Citation `mvc' on page 12 undefined on input line 131.
+
+
+LaTeX Warning: Citation `caelum' on page 12 undefined on input line 135.
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 141--142
 []\T1/cmr/m/n/12 JRuby: im-ple-men-ta-ção al-ter-na-tiva que per-mite usar a JV
 M do Java
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 129--130
+Underfull \hbox (badness 1048) in paragraph at lines 141--142
 \T1/cmr/m/n/12 para in-ter-pe-tar có-digo Ruby. Uma de suas prin-ci-pais van-ta
 -gens é a
  []
 
 
-Underfull \hbox (badness 10000) detected at line 133
+Underfull \hbox (badness 10000) detected at line 145
 []
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 135--139
-[]\T1/cmr/m/n/12 O mer-cado de smartpho-nes está cres-cendo cada vez mais. Esti
-ma-se
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 135--139
-\T1/cmr/m/n/12 que no íni-cio de 2012 o nú-mero de ce-lu-la-res in-te-li-gen-te
-s te-nha atin-gido
- []
-
-
-Underfull \hbox (badness 3826) in paragraph at lines 135--139
-\T1/cmr/m/n/12 a marca de 1 bi-lhão de uni-da-des ven-di-das e, se-gundo pro-je
--ções, esse
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
-\T1/cmr/m/n/12 nú-mero deve do-brar em 2015. []$\T1/cmtt/m/n/12 http : / / fina
-nce . yahoo . com / news /
- []
-
-
-Underfull \hbox (badness 3482) in paragraph at lines 135--139
-\T1/cmtt/m/n/12 number-[]smartphones-[]around-[]world-[]top-[]122000896 . html$
-[] \T1/cmr/m/n/12 Em-bora o nú-mero
- []
+LaTeX Warning: Citation `yahoosmart' on page 12 undefined on input line 147.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1232,17 +1285,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
-Overfull \hbox (174.98218pt too wide) in paragraph at lines 140--142
-[]\T1/cmr/m/n/12 Fonte: []$\T1/cmtt/m/n/12 http : / / www . neowin . net / news
- / gartner-[]microsoft-[]increases-[]mobile-[]os-[]market-[]share-[]in-[]q3-[]2
-012$[]
- []
+[12] <figs/smartpizza.png, id=661, 362.3136pt x 217.7736pt>
+File: figs/smartpizza.png Graphic file (type png)
+
+<use figs/smartpizza.png>
+Package pdftex.def Info: figs/smartpizza.png used on input line 156.
+(pdftex.def)             Requested size: 362.31271pt x 217.77306pt.
 
 
-Underfull \hbox (badness 10000) detected at line 143
-[]
- []
+LaTeX Warning: Citation `neowin' on page 13 undefined on input line 160.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1250,10 +1301,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
-Underfull \hbox (badness 10000) detected at line 161
+[13 <./figs/smartpizza.png>]
+Underfull \hbox (badness 10000) detected at line 164
 []
  []
+
+Package acronym Info: Label `acro:GUI' newly defined as it shall be overridden
+although it is yet undefined on input line 169.
+
+LaTeX Warning: Citation `usecabecaiphone' on page 14 undefined on input line 17
+1.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1262,6 +1319,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [14]
+Underfull \hbox (badness 10000) detected at line 188
+[]
+ []
+
+
+LaTeX Warning: Citation `lecheta' on page 15 undefined on input line 193.
+
+Package acronym Info: Label `acro:OHA' newly defined as it shall be overridden
+although it is yet undefined on input line 193.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1269,16 +1335,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-Underfull \hbox (badness 5231) in paragraph at lines 183--184
-[]\T1/cmr/m/n/12 onStart(): é cha-mado ime-di-a-ta-mente cha-mado após o on-Cre
--ate().
- []
-
-
-Underfull \hbox (badness 10000) detected at line 191
-[]
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1286,18 +1342,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Underfull \hbox (badness 10000) detected at line 192
+Underfull \hbox (badness 5231) in paragraph at lines 218--219
+[]\T1/cmr/m/n/12 onStart(): é cha-mado ime-di-a-ta-mente cha-mado após o on-Cre
+-ate().
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 226
 []
  []
 
-)
+
+Underfull \hbox (badness 10000) detected at line 227
+[]
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[17])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 \openout2 = `chp3/aplicacao.aux'.
 
  (./chp3/aplicacao.tex
@@ -1307,23 +1380,29 @@ Underfull \hbox (badness 10000) detected at line 3
 []
  []
 
-[18
+
+LaTeX Warning: Reference `intro' on page 19 undefined on input line 4.
+
+
+LaTeX Warning: Reference `fund' on page 19 undefined on input line 4.
+
+[19
 
 
 
 ]
-Underfull \hbox (badness 10000) detected at line 13
+Underfull \hbox (badness 10000) detected at line 16
 []
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 25--26
+Underfull \hbox (badness 2837) in paragraph at lines 28--29
 \T1/cmr/m/n/12 da apli-ca-ção, como per-for-mance, usa-bi-li-dade, con-fi-a-bi-
 li-dade, en-tre ou-tros.
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 25--26
+Underfull \hbox (badness 2073) in paragraph at lines 28--29
 \T1/cmr/m/n/12 ca-rac-te-rís-ti-cas mí-ni-mas de um soft-ware de qua-li-dade, f
 i-cando a cargo do
  []
@@ -1334,19 +1413,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
-Underfull \hbox (badness 10000) detected at line 31
+[20]
+Underfull \hbox (badness 10000) detected at line 34
 []
  []
 
-<figs/casos_de_uso.png, id=597, 709.14937pt x 525.46312pt>
+<figs/casos_de_uso.png, id=703, 709.14937pt x 525.46312pt>
 File: figs/casos_de_uso.png Graphic file (type png)
 
 <use figs/casos_de_uso.png>
-Package pdftex.def Info: figs/casos_de_uso.png used on input line 37.
+Package pdftex.def Info: figs/casos_de_uso.png used on input line 40.
 (pdftex.def)             Requested size: 319.11427pt x 236.45622pt.
 
-Underfull \hbox (badness 10000) detected at line 43
+Underfull \hbox (badness 10000) detected at line 46
 []
  []
 
@@ -1356,11 +1435,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <./figs/casos_de_uso.png>]
-<figs/MER_web.png, id=605, 743.77875pt x 593.21625pt>
+[21 <./figs/casos_de_uso.png>]
+Underfull \hbox (badness 5726) in paragraph at lines 50--51
+[]\T1/cmr/m/n/12 Nesse di-a-grama, re-pre-sen-ta-mos nos-sas ta-be-las bá-si-ca
+s (core) para o
+ []
+
+<figs/MER_web.png, id=709, 743.77875pt x 593.21625pt>
 File: figs/MER_web.png Graphic file (type png)
  <use figs/MER_web.png>
-Package pdftex.def Info: figs/MER_web.png used on input line 56.
+Package pdftex.def Info: figs/MER_web.png used on input line 60.
 (pdftex.def)             Requested size: 334.69734pt x 266.94484pt.
 )
 
@@ -1369,7 +1453,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./figs/MER_web.png>]
+[22 <./figs/MER_web.png>]
 \openout2 = `chp4/rails.aux'.
 
  (./chp4/rails.tex
@@ -1380,52 +1464,21 @@ Underfull \hbox (badness 10000) detected at line 5
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 7--8
-[]\T1/cmr/m/n/12 Para a con-fi-gu-ra-ção do am-bi-ente Ruby on Rails, foi uti-l
-i-zado um site
- []
+LaTeX Warning: Citation `railsinstaller' on page 23 undefined on input line 7.
 
-[22
+Package acronym Info: Label `acro:IDE' newly defined as it shall be overridden
+although it is yet undefined on input line 17.
+[23
 
 
 
 ]
-Underfull \hbox (badness 10000) detected at line 33
+
+LaTeX Warning: Citation `caelum' on page 24 undefined on input line 26.
+
+
+Underfull \hbox (badness 10000) detected at line 35
 []
- []
-
-
-Underfull \hbox (badness 10000) detected at line 42
-[]
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23]
-Underfull \hbox (badness 2005) in paragraph at lines 54--55
-[]\T1/cmr/m/n/12 test: uti-li-zado para tes-tar a apli-ca-ção, nor-mal-mente qu
-ando se usa
- []
-
-
-Underfull \hbox (badness 10000) detected at line 59
-[]
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 61--64
-\T1/cmr/m/n/12 que crie um sen-tido. Seu ob-je-tivo prin-ci-pal é re-pre-sen-ta
-r abs-tra-ta-mente
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
-\T1/cmr/m/n/12 uma parte do mundo real, co-nhe-cida como Uni-verso de Dis-curso
-.
  []
 
 
@@ -1435,16 +1488,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24]
-Underfull \hbox (badness 1442) in paragraph at lines 77--78
-[]\T1/cmr/m/n/12 Uma classe cha-mada usu-a-rio.rb, den-tro de app/-mo-dels, e e
-s-tende de
+Underfull \hbox (badness 10000) detected at line 44
+[]
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 86--88
-\T1/cmr/m/n/12 re-pre-sen-tam re-la-ções en-tre ta-be-las do banco de da-dos, a
-s quais de-vem ser
+LaTeX Warning: Reference `fund' on page 25 undefined on input line 49.
+
+Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
+although it is yet undefined on input line 49.
+Package acronym Info: Label `acro:TDD' newly defined as it shall be overridden
+although it is yet undefined on input line 56.
+
+Underfull \hbox (badness 10000) detected at line 61
+[]
  []
+
+
+LaTeX Warning: Citation `ufmsbd' on page 25 undefined on input line 63.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1453,14 +1514,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25]
-Underfull \hbox (badness 6910) in paragraph at lines 91--92
-[]$\OML/cmm/m/it/12 has[]ne$\T1/cmr/m/n/12 : si-mi-lar ao $\OML/cmm/m/it/12 has
-[]any$\T1/cmr/m/n/12 , po-rém com ape-nas uma ins-tân-cia
+Package acronym Info: Label `acro:SGBD' newly defined as it shall be overridden
+
+although it is yet undefined on input line 67.
+
+
+LaTeX Warning: Reference `app' on page 26 undefined on input line 75.
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 79--80
+[]$\OML/cmm/m/it/12 railsgeneratemodelUsuarionome \OT1/cmr/m/n/12 : \OML/cmm/m/
+it/12 stringsobrenome \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 stringapelido \OT1/cmr
+/m/n/12 :
  []
 
 
-Overfull \hbox (278.04263pt too wide) in paragraph at lines 99--101
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Underfull \hbox (badness 1442) in paragraph at lines 84--85
+[]\T1/cmr/m/n/12 Uma classe cha-mada usu-a-rio.rb, den-tro de app/-mo-dels, e e
+s-tende de
  []
 
 
@@ -1470,14 +1541,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-[]\T1/cmr/m/n/12 Isso gera um ar-quivo mi-gar-tion cha-mado $\OT1/cmr/m/n/12 \ 
-\OML/cmm/m/it/12 < data[]ora >
+Underfull \hbox (badness 6910) in paragraph at lines 101--102
+[]$\OML/cmm/m/it/12 has[]ne$\T1/cmr/m/n/12 : si-mi-lar ao $\OML/cmm/m/it/12 has
+[]any$\T1/cmr/m/n/12 , po-rém com ape-nas uma ins-tân-cia
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+[]\T1/cmr/m/n/12 As de-cla-ra-ções de re-la-ci-o-na-mento criam al-guns mé-to-d
+os de acesso
+ []
+
+
+Overfull \hbox (278.04263pt too wide) in paragraph at lines 111--113
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -1487,6 +1564,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+[]\T1/cmr/m/n/12 Isso gera um ar-quivo mi-gar-tion cha-mado $\OT1/cmr/m/n/12 \ 
+\OML/cmm/m/it/12 < data[]ora >
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1494,7 +1576,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) detected at line 182
+Underfull \hbox (badness 10000) detected at line 154
 []
  []
 
@@ -1505,7 +1587,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
-Underfull \hbox (badness 10000) detected at line 207
+Package acronym Info: Label `acro:HTML' newly defined as it shall be overridden
+
+although it is yet undefined on input line 186.
+
+Underfull \hbox (badness 10000) detected at line 203
 []
  []
 
@@ -1515,34 +1601,133 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
-Overfull \hbox (59.5441pt too wide) in paragraph at lines 233--234
+[30] <figs/railslogin.png, id=816, 416.757pt x 148.8762pt>
+File: figs/railslogin.png Graphic file (type png)
+
+<use figs/railslogin.png>
+Package pdftex.def Info: figs/railslogin.png used on input line 224.
+(pdftex.def)             Requested size: 416.75598pt x 148.87584pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31] <figs/railsedituser.png, id=821, 416.757pt x 230.7822pt>
+File: figs/railsedituser.png Graphic file (type png)
+
+<use figs/railsedituser.png>
+Package pdftex.def Info: figs/railsedituser.png used on input line 232.
+(pdftex.def)             Requested size: 416.75598pt x 230.78163pt.
+
+<figs/railsforgetpass.png, id=822, 192.2382pt x 120.9318pt>
+File: figs/railsforgetpass.png Graphic file (type png)
+
+<use figs/railsforgetpass.png>
+Package pdftex.def Info: figs/railsforgetpass.png used on input line 240.
+(pdftex.def)             Requested size: 192.23772pt x 120.93149pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32 <./figs/railslogin.png> <./figs/railsedituser.png> <./figs/railsforgetpass.
+png>] <figs/ioslogin.png, id=832, 166.7028pt x 313.17pt>
+File: figs/ioslogin.png Graphic file (type png)
+
+<use figs/ioslogin.png>
+Package pdftex.def Info: figs/ioslogin.png used on input line 249.
+(pdftex.def)             Requested size: 166.70238pt x 313.16922pt.
+
+Underfull \hbox (badness 10000) detected at line 254
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33 <./figs/ioslogin.png>]
+Overfull \hbox (59.5441pt too wide) in paragraph at lines 284--285
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
+Overfull \hbox (144.12418pt too wide) in paragraph at lines 286--287
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.25406pt too wide) in paragraph at lines 287--288
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
-Overfull \hbox (144.12418pt too wide) in paragraph at lines 235--236
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (17.25406pt too wide) in paragraph at lines 236--237
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (256.89761pt too wide) in paragraph at lines 243--244
+[34]
+Overfull \hbox (256.89761pt too wide) in paragraph at lines 294--295
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) detected at line 272
+Underfull \hbox (badness 2197) in paragraph at lines 299--300
+[]\T1/cmr/m/n/12 É im-por-tante ob-ser-var que to-dos os atri-bu-tos de classe 
+do con-trol-ler,
+ []
+
+
+LaTeX Warning: Citation `bootstrap' on page 35 undefined on input line 302.
+
+
+LaTeX Warning: Citation `githubpop' on page 35 undefined on input line 302.
+
+Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
+although it is yet undefined on input line 304.
+<figs/bootstrapcontrol.png, id=873, 258.7266pt x 76.6062pt>
+File: figs/bootstrapcontrol.png Graphic file (type png)
+
+<use figs/bootstrapcontrol.png>
+Package pdftex.def Info: figs/bootstrapcontrol.png used on input line 309.
+(pdftex.def)             Requested size: 258.72594pt x 76.606pt.
+
+<figs/bootstraplayout1.png, id=874, 416.757pt x 110.3322pt>
+File: figs/bootstraplayout1.png Graphic file (type png)
+
+<use figs/bootstraplayout1.png>
+Package pdftex.def Info: figs/bootstraplayout1.png used on input line 318.
+(pdftex.def)             Requested size: 416.75598pt x 110.33191pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./figs/bootstrapcontrol.png>]
+<figs/bootstraplayout2.png, id=886, 168.63pt x 183.5658pt>
+File: figs/bootstraplayout2.png Graphic file (type png)
+
+<use figs/bootstraplayout2.png>
+Package pdftex.def Info: figs/bootstraplayout2.png used on input line 327.
+(pdftex.def)             Requested size: 168.62958pt x 183.56534pt.
+
+<figs/bootstraplayout3.png, id=887, 156.1032pt x 182.1204pt>
+File: figs/bootstraplayout3.png Graphic file (type png)
+
+<use figs/bootstraplayout3.png>
+Package pdftex.def Info: figs/bootstraplayout3.png used on input line 334.
+(pdftex.def)             Requested size: 156.1028pt x 182.11995pt.
+
+Underfull \hbox (badness 10000) detected at line 341
 []
  []
 
@@ -1552,14 +1737,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32])
+[36 <./figs/bootstraplayout1.png> <./figs/bootstraplayout2.png> <./figs/bootstr
+aplayout3.png>]
+
+LaTeX Warning: Citation `quickheroku' on page 37 undefined on input line 348.
+
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33]
+[37]
 \openout2 = `chp5/comparativo.aux'.
 
  (./chp5/comparativo.tex
@@ -1579,7 +1769,7 @@ Underfull \hbox (badness 10000) detected at line 18
 []
  []
 
-[34
+[38
 
 
 
@@ -1590,14 +1780,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]
+[39]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36]
+[40]
 Underfull \hbox (badness 10000) detected at line 77
 []
  []
@@ -1608,7 +1798,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37]
+[41]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1656,7 +1846,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[42]
 Overfull \hbox (151.17252pt too wide) in paragraph at lines 121--122
 [][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1692,7 +1882,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[43]
 Overfull \hbox (214.60757pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1718,7 +1908,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
+[44]
 Underfull \hbox (badness 1742) in paragraph at lines 196--197
 \T1/cmr/m/n/12 on-Cre-ate(SQLiteDatabase) e onUp-grade(SQLiteDatabase, int, int
 ), que
@@ -1730,7 +1920,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[45]
 Overfull \hbox (67.77377pt too wide) in paragraph at lines 214--215
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1741,7 +1931,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]
+[46]
 Overfull \hbox (65.14694pt too wide) in paragraph at lines 228--230
 []\T1/cmr/m/n/12 SharedPreferencespreferences = Pre-fe-ren-ce-Ma-na-ger.getDefa
 ultSharedPreferences(context);
@@ -1763,7 +1953,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[47]
 Overfull \hbox (383.76773pt too wide) in paragraph at lines 268--270
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1811,7 +2001,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]
+[48]
 Overfull \hbox (80.68912pt too wide) in paragraph at lines 297--299
 [][][][][][][][][][][][][][][][] 
  []
@@ -1864,7 +2054,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
+[49]
 Underfull \hbox (badness 1377) in paragraph at lines 324--325
 []\T1/cmr/m/n/12 Content-Type: nesse campo é de-fi-nido o tipo de ar-quivo que 
 es-tará
@@ -1876,7 +2066,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]
+[50]
 Overfull \hbox (299.18765pt too wide) in paragraph at lines 345--346
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1888,12 +2078,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]
+[51]
 \openout2 = `chp6/resultados.aux'.
 
  (./chp6/resultados.tex
 Cap\'{\i }tulo 6.
-) [48
+) [52
 
 
 
@@ -1907,34 +2097,26 @@ Underfull \hbox (badness 10000) detected at line 4
 []
  []
 
-) [49
 
+Underfull \hbox (badness 10000) detected at line 11
+[]
+ []
 
+[53
 
-] (./Monografia.bbl [50
 
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51]
-Underfull \hbox (badness 1755) in paragraph at lines 179--183
-[]\T1/cmr/m/n/12 MORIMOTO, C. \T1/cmr/m/it/12 Hard-ware - O Guia De-fi-ni-tivo\
-T1/cmr/m/n/12 . 
+Underfull \hbox (badness 10000) detected at line 19
+[]
  []
 
+Package acronym Info: Label `acro:SSH' newly defined as it shall be overridden
+although it is yet undefined on input line 23.
 
-Underfull \hbox (badness 1210) in paragraph at lines 179--183
-\T1/cmr/m/n/12 SU-LINA, 2007. ISBN 9788599593103. Dis-po-ní-vel em: 
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 186--190
-\T1/cmr/m/n/12 SU-LINA, 2010. ISBN 9788599593165. Dis-po-ní-vel em: 
+Underfull \hbox (badness 1314) in paragraph at lines 23--24
+\T1/cmr/m/n/12 se-gu-ros, como [][][]\T1/cmr/m/it/12 Secure Shell \T1/cmr/m/n/1
+2 ([])[]. Dessa forma, po-de-ria ga-ran-tir a
  []
 
 
@@ -1943,26 +2125,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
+[54])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53])
+[55] (./Monografia.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
- (./Monografia.aux (./pretexto/capa_externa.aux) (./pretexto/capa.aux)
-(./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
+ (./Monografia.aux (./pretexto/capa_externa.aux)
+(./pretexto/capa.aux) (./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
 (./pretexto/abstract.aux) (./pretexto/dedicatoria.aux)
 (./pretexto/epistrofe.aux) (./pretexto/acronimos.aux) (./chp1/introducao.aux)
 (./chp2/fundamentacao.aux) (./chp3/aplicacao.aux) (./chp4/rails.aux)
@@ -1970,7 +2144,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `Monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 4909B2A243405A298EFD00C6B57B0527;4857.
+(rerunfilecheck)             Checksum: F530F036775EFB7889B195EFC1A985DD;4931.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1978,11 +2155,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 13877 strings out of 493633
- 198490 string characters out of 3143378
- 349653 words of memory out of 3000000
- 16291 multiletter control sequences out of 15000+200000
- 20632 words of font info for 50 fonts, out of 3000000 for 9000
+ 13524 strings out of 493633
+ 192230 string characters out of 3143378
+ 339963 words of memory out of 3000000
+ 15924 multiletter control sequences out of 15000+200000
+ 24175 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,45p,1468b,1801s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2000,17 +2177,20 @@ texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/te
 xmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/texm
 f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-
 dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2011/texmf-di
-st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist
-/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2011/texmf-dist/fonts
-/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/cm-super/sftt1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb>
-Output written on Monografia.pdf (68 pages, 711011 bytes).
+st/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/fonts
+/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
+e1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
+/public/cm-super/sftt1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
+ublic/cm-super/sftt1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb>
+Output written on Monografia.pdf (69 pages, 1094452 bytes).
 PDF statistics:
- 1221 PDF objects out of 1440 (max. 8388607)
- 1114 compressed objects within 12 object streams
+ 1282 PDF objects out of 1440 (max. 8388607)
+ 1153 compressed objects within 12 object streams
  430 named destinations out of 1000 (max. 500000)
- 640 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

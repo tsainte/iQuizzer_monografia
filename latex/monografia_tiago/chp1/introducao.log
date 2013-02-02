@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 JAN 2013 09:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 FEB 2013 10:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -17,6 +17,15 @@ iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
 ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
 ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
 .
+./introducao.tex:1: Undefined control sequence.
+l.1 \chapter
+            {Aplicação} \label{CHP:TEO}%%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 ./introducao.tex:1: LaTeX Error: Missing \begin{document}.
 
@@ -24,12 +33,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 E
-     ste capítulo visa apresentar o contexto no qual o trabalho realizado es...
-
+l.1 \chapter{A
+              plicação} \label{CHP:TEO}%%
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+Missing character: There is no A in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no ã in font nullfont!
+Missing character: There is no o in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -393,12 +410,12 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
 []
  []
 
-./introducao.tex:3: Undefined control sequence.
-l.3 \section
+./introducao.tex:4: Undefined control sequence.
+l.4 \section
             {Contextualização}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -407,13 +424,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./introducao.tex:3: LaTeX Error: Missing \begin{document}.
+./introducao.tex:4: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 \section{C
+l.4 \section{C
               ontextualização}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -435,18 +452,18 @@ Missing character: There is no ç in font nullfont!
 Missing character: There is no ã in font nullfont!
 Missing character: There is no o in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--5
 [] 
  []
 
 
-./introducao.tex:5: LaTeX Error: Missing \begin{document}.
+./introducao.tex:6: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5         A
+l.6         A
               computação em nuvem propõe que recursos de hardware e software...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -666,6 +683,24 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[]
+ []
+
+
+./introducao.tex:8: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 W
+     eb service é uma solução utilizada para realizar a comunicação entre si...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Missing character: There is no W in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -1479,7 +1514,15 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no ( in font nullfont!
+./introducao.tex:11: Undefined control sequence.
+l.11 ...odendo inclusive, estar em movimento. \url
+                                                  {https://portal.fucapi.br/...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1530,22 +1573,40 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
-./introducao.tex:9: Missing $ inserted.
+./introducao.tex:11: Missing $ inserted.
 <inserted text> 
                 $
-l.9 ...portal.fucapi.br/tec/imagens/revistas/ed02_
-                                                  04.pdf). Originalmente, te...
+l.11 ...ortal.fucapi.br/tec/imagens/revistas/ed02_
+                                                  04.pdf}. Originalmente, te...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 9.
-./introducao.tex:13: Missing $ inserted.
+(Font)              <5> on input line 11.
+./introducao.tex:11: Extra }, or forgotten $.
+l.11 ...ucapi.br/tec/imagens/revistas/ed02_04.pdf}
+                                                  . Originalmente, telefones...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./introducao.tex:15: Undefined control sequence.
+l.15 \section
+             {Objetivos}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./introducao.tex:16: Missing $ inserted.
 <inserted text> 
                 $
-l.13 
+l.16 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1555,8 +1616,6 @@ Missing character: There is no ç in font cmr10!
 Missing character: There is no ã in font cmr10!
 Missing character: There is no ç in font cmr10!
 Missing character: There is no ã in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no ” in font cmr10!
 Missing character: There is no ã in font cmr10!
 Missing character: There is no ç in font cmr10!
 Missing character: There is no é in font cmr10!
@@ -1573,76 +1632,41 @@ Missing character: There is no ã in font cmr10!
 Missing character: There is no ç in font cmr10!
 Missing character: There is no ã in font cmr10!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 5--13
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--16
 []
  []
 
 
-Overfull \hbox (5339.74976pt too wide) in paragraph at lines 5--13
-[]\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 :pdf\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :Orig
-inalmente; telefonescelularespossuamapenasacapacidadederealizaracomunicaoporvoz
-:Comopassardotempo; algumasfuncionalidadesextrasforamsendoimplementadase; atual
-mente; osdispositivospossuemumamplopoderdeprocessamentoecomunicao:Taisaparelhos
-receberamanomenclaturacomercialdesmartphone:Smartphones\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 outelefonesinteligentes\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 socelularesc
-omfuncionalidadesavanadas; quepodemserestendidasatravsdeprogramasadicionadosaos
-eusistemaoperacional:EmsistemasoperacionaiscomoiOSeAndroid; existemcentenasdemi
-lharesdeaplicativosquepodemserbaixadosemlojasvirtuais; comoAppStoreeGooglePlay;
- respectivamente:Ascategoriaslderesemnmerodeaplicativosbaixadossojogosesociais:
-Redesocialumaestruturacompostaporpessoasouorganizaesconectadas; demodoapartilha
-rvaloreseobjetivoscomuns:Existemdiversostiposderedes; comoasderelacionamento\OT
-1/cmr/m/n/10 (\OML/cmm/m/it/10 Facebook; Orkut; Twitter\OT1/cmr/m/n/10 )\OML/cm
-m/m/it/10 ; redesprofissionais\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 LinkedIn\OT1/cm
-r/m/n/10 )\OML/cmm/m/it/10 ; redescomunitrias\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
-Cromaz\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; entreoutros:Emredesderelacionamentosc
-omoFacebookeOrkut; surgiramalgunsjogosquebuscaminteragiraspessoas; aproveitando
-caractersticasdeintegraosocial:Taisjogosrecebemadenominaodesocialnetworkgaming:
-$ 
+Overfull \hbox (5398.8685pt too wide) in paragraph at lines 8--16
+[]\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 :pdf:Originalmente; telefonescelularespossu
+amapenasacapacidadederealizaracomunicaoporvoz:Comopassardotempo; algumasfuncion
+alidadesextrasforamsendoimplementadase; atualmente; osdispositivospossuemumampl
+opoderdeprocessamentoecomunicao:Taisaparelhosreceberamanomenclaturacomercialde\
+OT1/cmr/m/n/10 \\OML/cmm/m/it/10 smartphone[]:Smartphones\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 outelefonesinteligentes\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 socelulare
+scomfuncionalidadesavanadas; quepodemserestendidasatravsdeprogramasadicionadosa
+oseusistemaoperacional:EmsistemasoperacionaiscomoiOSeAndroid; existemcentenasde
+milharesdeaplicativosquepodemserbaixadosemlojasvirtuais; comoAppStoreeGooglePla
+y; respectivamente:Ascategoriaslderesemnmerodeaplicativosbaixadossojogosesociai
+s:Redesocialumaestruturacompostaporpessoasouorganizaesconectadas; demodoapartil
+harvaloreseobjetivoscomuns:Existemdiversostiposderedes; comoasderelacionamento\
+OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Facebook; Orkut; Twitter\OT1/cmr/m/n/10 )\OML/
+cmm/m/it/10 ; redesprofissionais\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 LinkedIn\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 ; redescomunitrias\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 Cromaz\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; entreoutros:Emredesderelacionamento
+scomoFacebookeOrkut; surgiramalgunsjogosquebuscaminteragiraspessoas; aproveitan
+docaractersticasdeintegraosocial:Taisjogosrecebemadenominaode\OT1/cmr/m/n/10 \\
+OML/cmm/m/it/10 socialnetworkgaming[]:[]$ 
  []
 
-./introducao.tex:14: Undefined control sequence.
-l.14 \section
-             {Objetivos}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-./introducao.tex:14: LaTeX Error: Missing \begin{document}.
+./introducao.tex:17: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \section{O
-               bjetivos}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no O in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no j in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
-[] 
- []
-
-
-./introducao.tex:16: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 E
+l.17 E
       sta seção visa descrever os objetivos deste trabalho através de um pan...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1787,12 +1811,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
 []
  []
 
-./introducao.tex:18: Undefined control sequence.
-l.18 \subsection
+./introducao.tex:19: Undefined control sequence.
+l.19 \subsection
                 {Objetivos Gerais}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1801,13 +1825,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./introducao.tex:18: LaTeX Error: Missing \begin{document}.
+./introducao.tex:19: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \subsection{O
+l.19 \subsection{O
                   bjetivos Gerais}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1828,18 +1852,18 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 18--19
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--20
 []
  []
 
 
-./introducao.tex:20: LaTeX Error: Missing \begin{document}.
+./introducao.tex:21: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20         O
+l.21         O
                principal objetivo desse trabalho é a criação de uma platafor...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2477,12 +2501,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 20--23
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--24
 []
  []
 
-./introducao.tex:24: Undefined control sequence.
-l.24 \subsection
+./introducao.tex:25: Undefined control sequence.
+l.25 \subsection
                 {Objetivos Específicos}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2491,13 +2515,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./introducao.tex:24: LaTeX Error: Missing \begin{document}.
+./introducao.tex:25: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 \subsection{O
+l.25 \subsection{O
                   bjetivos Específicos}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2523,18 +2547,18 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 24--25
+Overfull \hbox (20.0pt too wide) in paragraph at lines 25--26
 []
  []
 
 
-./introducao.tex:26: LaTeX Error: Missing \begin{document}.
+./introducao.tex:27: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 O
+l.27 O
       s objetivos específicos deste trabalho são enumerados a seguir:
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2596,25 +2620,10 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 26--27
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--28
 []
  []
 
-
-./introducao.tex:28: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 1
-      .      Análise das tecnologias existentes para implementação da arquit...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no á in font nullfont!
@@ -2684,8 +2693,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -2756,8 +2763,6 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -2824,8 +2829,6 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -2920,8 +2923,6 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -2944,8 +2945,6 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
@@ -3025,31 +3024,14 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 28--34
-[]
- []
-
-./introducao.tex:35: Undefined control sequence.
-l.35 \section
+./introducao.tex:36: Undefined control sequence.
+l.36 \section
              {Metodologia utilizada}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-./introducao.tex:35: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 \section{M
-               etodologia utilizada}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no M in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -3071,24 +3053,6 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
-[]
- []
-
-
-./introducao.tex:37: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37         P
-              rimeiramente, uma revisão bibliográfica referente às áreas de ...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no P in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -3738,30 +3702,18 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 37--38
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--39
 []
  []
 
-./introducao.tex:39: Undefined control sequence.
-l.39 \section
+./introducao.tex:40: Undefined control sequence.
+l.40 \section
              {Estrutura da monografia }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-./introducao.tex:39: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 \section{E
-               strutura da monografia }
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no E in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -3785,22 +3737,9 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--41
 []
  []
-
-
-./introducao.tex:41: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 E
-      sta monografia está organizada em seis capítulos, incluindo-se a Intro...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no E in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -4705,11 +4644,11 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 7 strings out of 493633
- 166 string characters out of 3143378
+ 9 strings out of 493633
+ 182 string characters out of 3143378
  55245 words of memory out of 3000000
- 3407 multiletter control sequences out of 15000+200000
+ 3409 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 18i,1n,12p,794b,56s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 18i,2n,12p,794b,71s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
