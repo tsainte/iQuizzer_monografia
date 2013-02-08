@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="6cm" height="17cm" viewBox="638 214 103 323" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <polygon style="fill: #ffffff" points="640.833,486.4 690,459.85 739.167,486.4 690,510 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 685.083 286.783 L 690,288.75"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 680.167 307.433 L 690,312.35"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 675.25 330.05 L 690,338.9"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 670.333 352.667 L 690,362.5"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 665.417 374.3 L 690,386.1"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 660.5 396.917 L 690,412.65"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 655.583 419.533 L 690,436.25"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 650.667 441.167 L 690,459.85"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 645.75 462.8 L 690,486.4"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 694.917 286.783 L 690,288.75"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 699.833 307.433 L 690,312.35"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 704.75 331.033 L 690,338.9"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 708.683 352.667 L 690,362.5"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 714.583 374.3 L 690,386.1"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 720.483 396.917 L 690,412.65"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 724.417 419.533 L 690,436.25"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 729.333 441.167 L 690,459.85"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 734.25 462.8 L 690,486.4"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 690 265.15 L 684.1,238.6 L 690,251.875 L 677.708,215"/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #000000" points="690,265.15 739.167,486.4 690,510 640.833,486.4 "/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #000000" d="M 640.833 486.4 L 690,459.85 L 739.167,486.4"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 4; stroke: #000000" d="M 690 265.15 L 690,510"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="690" y="531.833">
+      <tspan x="690" y="531.833"></tspan>
+    </text>
+  </g>
+</svg>

@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  31 OCT 2012 17:21
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  6 FEB 2013 14:15
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**Monografia.tex
+**Monografia
 (./Monografia.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -933,7 +932,7 @@ LaTeX Info: Redefining \Ref on input line 110.
 \openout2 = `pretexto/capa_externa.aux'.
 
  (./pretexto/capa_externa.tex
-<figs/ufc.jpg, id=215, 383.4325pt x 466.74374pt>
+<figs/ufc.jpg, id=211, 383.4325pt x 466.74374pt>
 File: figs/ufc.jpg Graphic file (type jpg)
  <use figs/ufc.jpg>
 Package pdftex.def Info: figs/ufc.jpg used on input line 4.
@@ -1004,14 +1003,56 @@ although it is yet undefined on input line 7.
 \openout5 = `Monografia.toc'.
 
  [6] (./Monografia.lof
+
+LaTeX Warning: Citation `Mamun:2007' on page vii undefined on input line 4.
+
+
+LaTeX Warning: Citation `Morimoto:2007' on page vii undefined on input line 9.
+
+
+LaTeX Warning: Citation `Potts:2008' on page vii undefined on input line 10.
+
+
+LaTeX Warning: Citation `Mamun:2007' on page vii undefined on input line 11.
+
 Package acronym Info: Label `acro:HDD' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
+
+LaTeX Warning: Citation `Happy:ssd' on page vii undefined on input line 15.
+
+
+LaTeX Warning: Citation `Rent:20103' on page vii undefined on input line 16.
+
+
+LaTeX Warning: Citation `Rent:20103' on page vii undefined on input line 17.
+
+
+LaTeX Warning: Citation `Toshiba:2010' on page vii undefined on input line 18.
+
+
+LaTeX Warning: Citation `Wesz:2007' on page vii undefined on input line 20.
+
+
+LaTeX Warning: Citation `SCSI:Sam' on page vii undefined on input line 21.
+
+
+LaTeX Warning: Citation `SCSI:Sam' on page vii undefined on input line 22.
+
+
+LaTeX Warning: Citation `ATA8:AAM' on page vii undefined on input line 23.
+
+
+LaTeX Warning: Citation `SCSI:Sam' on page vii undefined on input line 26.
+
+
+LaTeX Warning: Citation `SCSI:AtaPassThrough' on page vii undefined on input li
+ne 27.
+
 )
 \tf@lof=\write6
 \openout6 = `Monografia.lof'.
 
-
-[7] (./Monografia.lot
+ [7] (./Monografia.lot
 Package acronym Info: Label `acro:SMART' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 5.
@@ -1091,6 +1132,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package acronym Info: Label `acro:HD' newly defined as it shall be overridden
 although it is yet undefined on input line 22.
 
+
+LaTeX Warning: Citation `Carrier:2005file' on page 3 undefined on input line 22
+.
+
+
+LaTeX Warning: Citation `Tanenbaum:2001' on page 3 undefined on input line 24.
+
+
 Underfull \hbox (badness 10000) detected at line 28
 []
  []
@@ -1154,6 +1203,12 @@ ec-no-lo-gias para
  []
 
 
+LaTeX Warning: Citation `HD:hibrido' on page 6 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Mamun:2007' on page 6 undefined on input line 10.
+
+
 Underfull \hbox (badness 1540) in paragraph at lines 10--11
 []\T1/cmr/m/n/12 Os dis-cos rí-gi-dos de-sem-pe-nham um grande pa-pel neste de-
 sen-vol-vi-mento
@@ -1163,12 +1218,16 @@ sen-vol-vi-mento
 
 
 
-] <figs/piramide.pdf, id=619, 318.43968pt x 277.035pt>
+] <figs/piramide.pdf, id=561, 318.43968pt x 277.035pt>
 File: figs/piramide.pdf Graphic file (type pdf)
 
 <use figs/piramide.pdf>
 Package pdftex.def Info: figs/piramide.pdf used on input line 18.
 (pdftex.def)             Requested size: 254.75209pt x 221.6283pt.
+
+
+LaTeX Warning: Citation `Mamun:2007' on page 7 undefined on input line 19.
+
 
 Underfull \hbox (badness 10000) detected at line 24
 []
@@ -1177,6 +1236,9 @@ Underfull \hbox (badness 10000) detected at line 24
 Package acronym Info: Label `acro:DASD' newly defined as it shall be overridden
 
 although it is yet undefined on input line 25.
+
+LaTeX Warning: Citation `Harker:1981' on page 7 undefined on input line 27.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1189,37 +1251,56 @@ although it is yet undefined on input line 31.
 Package acronym Info: Label `acro:CCROS' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 35.
+
+
+LaTeX Warning: Citation `Rent:2010' on page 8 undefined on input line 35.
+
 Package acronym Info: Label `acro:EPROM' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 35.
 Package acronym Info: Label `acro:EEPROM' newly defined as it shall be overridd
 en
 although it is yet undefined on input line 35.
-
-Underfull \hbox (badness 1472) in paragraph at lines 35--36
-\T1/cmr/m/n/12 En-tão a [][] co-me-çou a de-sen-vol-ver me-mó-rias al-ter-na-ti
--vas, prin-ci-pal-mente
- []
-
-<figs/magnetic_disk.jpg, id=669, 264.99pt x 277.035pt>
+<figs/magnetic_disk.jpg, id=602, 264.99pt x 277.035pt>
 File: figs/magnetic_disk.jpg Graphic file (type jpg)
 
 <use figs/magnetic_disk.jpg>
 Package pdftex.def Info: figs/magnetic_disk.jpg used on input line 43.
 (pdftex.def)             Requested size: 142.26378pt x 148.73009pt.
 
-<figs/ccros.jpg, id=674, 194.97844pt x 187.45032pt>
+
+LaTeX Warning: Citation `IBM:MagneticDisk' on page 8 undefined on input line 43
+.
+
+
+LaTeX Warning: Citation `IBM:MagneticDisk' on page 8 undefined on input line 43
+.
+
+<figs/ccros.jpg, id=603, 194.97844pt x 187.45032pt>
 File: figs/ccros.jpg Graphic file (type jpg)
  <use figs/ccros.jpg>
 Package pdftex.def Info: figs/ccros.jpg used on input line 47.
 (pdftex.def)             Requested size: 142.26378pt x 136.77466pt.
 
-<figs/ferritecore_small.png, id=679, 283.81032pt x 277.035pt>
+
+LaTeX Warning: Citation `Richards:1965' on page 8 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Richards:1965' on page 8 undefined on input line 47.
+
+<figs/ferritecore_small.png, id=604, 283.81032pt x 277.035pt>
 File: figs/ferritecore_small.png Graphic file (type png)
 
 <use figs/ferritecore_small.png>
 Package pdftex.def Info: figs/ferritecore_small.png used on input line 50.
 (pdftex.def)             Requested size: 142.26378pt x 138.87224pt.
+
+
+LaTeX Warning: Citation `Rent:2010' on page 8 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Rent:2010' on page 8 undefined on input line 50.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []\T1/cmr/m/n/10 (c) Ma-triz de Nú-cleos de
@@ -1228,6 +1309,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--50
 Package acronym Info: Label `acro:RAMAC' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 58.
+
+LaTeX Warning: Citation `Stevens:1981' on page 8 undefined on input line 58.
+
+
+LaTeX Warning: Citation `Harker:1981' on page 8 undefined on input line 58.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1239,17 +1326,25 @@ Package acronym Info: Label `acro:ABS' newly defined as it shall be overridden
 although it is yet undefined on input line 60.
 
 
+LaTeX Warning: Citation `Strom:2007' on page 9 undefined on input line 60.
+
+<figs/ibm350.jpg, id=633, 301.125pt x 346.29375pt>
+File: figs/ibm350.jpg Graphic file (type jpg)
+ <use figs/ibm350.jpg>
+Package pdftex.def Info: figs/ibm350.jpg used on input line 70.
+(pdftex.def)             Requested size: 150.56212pt x 173.14644pt.
+
+
+LaTeX Warning: Citation `Morimoto:2007' on page 9 undefined on input line 71.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [9 <./figs/magnetic_disk.jpg> <./figs/ccros.jpg> <./figs/ferritecore_small.png>
-] <figs/ibm350.jpg, id=733, 301.125pt x 346.29375pt>
-File: figs/ibm350.jpg Graphic file (type jpg)
- <use figs/ibm350.jpg>
-Package pdftex.def Info: figs/ibm350.jpg used on input line 70.
-(pdftex.def)             Requested size: 150.56212pt x 173.14644pt.
+]
 Package acronym Info: Label `acro:VCM' newly defined as it shall be overridden
 although it is yet undefined on input line 82.
 
@@ -1264,6 +1359,21 @@ Package acronym Info: Label `acro:ISA' newly defined as it shall be overridden
 although it is yet undefined on input line 86.
 
 
+LaTeX Warning: Citation `Morimoto:2007' on page 11 undefined on input line 86.
+
+
+LaTeX Warning: Citation `Masuoka:1984' on page 11 undefined on input line 92.
+
+
+LaTeX Warning: Citation `Bez:2003' on page 11 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Kunnet:1988' on page 11 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Bez:2003' on page 11 undefined on input line 96.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -1275,17 +1385,24 @@ Underfull \hbox (badness 10000) detected at line 100
  []
 
 
+LaTeX Warning: Citation `Mamun:2007' on page 12 undefined on input line 104.
+
+
 Underfull \hbox (badness 4872) in paragraph at lines 104--105
 []\T1/cmr/m/n/12 Os dis-cos rí-gi-dos fo-ram pro-je-ta-dos para se-rem ins-ta-l
 a-dos den-tro de
  []
 
-<figs/form_factors.jpg, id=784, 803.0pt x 602.25pt>
+<figs/form_factors.jpg, id=674, 803.0pt x 602.25pt>
 File: figs/form_factors.jpg Graphic file (type jpg)
 
 <use figs/form_factors.jpg>
 Package pdftex.def Info: figs/form_factors.jpg used on input line 113.
 (pdftex.def)             Requested size: 361.34666pt x 271.01pt.
+
+
+LaTeX Warning: Citation `Potts:2008' on page 12 undefined on input line 114.
+
 
 Underfull \hbox (badness 1199) in paragraph at lines 118--120
 \T1/cmr/m/n/12 in-ter-li-gam pas-sa-ram por mui-tas mu-dan-ças. Atu-al-mente ex
@@ -1306,12 +1423,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Citation `Mason:2000' on page 13 undefined on input line 128.
 
-[13 <./figs/form_factors.jpg>]
 Package acronym Info: Label `acro:SATA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 130.
@@ -1323,19 +1436,27 @@ although it is yet undefined on input line 130.
 Package acronym Info: Label `acro:SPI' newly defined as it shall be overridden
 although it is yet undefined on input line 130.
 
-Underfull \hbox (badness 10000) detected at line 132
-[]
- []
-
-Package acronym Info: Label `acro:PCB' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] <figs/componenteshdd.png, id=874, 350.81062pt x 356.0803pt>
+[13 <./figs/form_factors.jpg>]
+Underfull \hbox (badness 10000) detected at line 132
+[]
+ []
+
+
+LaTeX Warning: Citation `Morimoto:2007' on page 14 undefined on input line 136.
+
+
+Package acronym Info: Label `acro:PCB' newly defined as it shall be overridden
+although it is yet undefined on input line 142.
+
+LaTeX Warning: Citation `Carrier:2005file' on page 14 undefined on input line 1
+42.
+
+<figs/componenteshdd.png, id=743, 350.81062pt x 356.0803pt>
 File: figs/componenteshdd.png Graphic file (type png)
 
 <use figs/componenteshdd.png>
@@ -1343,25 +1464,54 @@ Package pdftex.def Info: figs/componenteshdd.png used on input line 150.
 (pdftex.def)             Requested size: 280.64886pt x 284.86462pt.
 
 
+LaTeX Warning: Citation `Mamun:2007' on page 14 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Strom:2007' on page 14 undefined on input line 155.
+
+
+LaTeX Warning: Citation `Strom:2007' on page 14 undefined on input line 155.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./figs/componenteshdd.png>]
-<figs/discos_cabecas_braco.png, id=897, 338.01282pt x 136.25906pt>
+[14]
+
+LaTeX Warning: Citation `Zhao:2007' on page 15 undefined on input line 157.
+
+<figs/discos_cabecas_braco.png, id=763, 338.01282pt x 136.25906pt>
 File: figs/discos_cabecas_braco.png Graphic file (type png)
 
 <use figs/discos_cabecas_braco.png>
 Package pdftex.def Info: figs/discos_cabecas_braco.png used on input line 163.
 (pdftex.def)             Requested size: 227.62204pt x 91.7609pt.
 
-<figs/trilhas_setores.png, id=904, 240.9pt x 207.77625pt>
+
+LaTeX Warning: Citation `Vasconcelos:2002' on page 15 undefined on input line 1
+63.
+
+
+LaTeX Warning: Citation `Vasconcelos:2002' on page 15 undefined on input line 1
+63.
+
+<figs/trilhas_setores.png, id=766, 240.9pt x 207.77625pt>
 File: figs/trilhas_setores.png Graphic file (type png)
 
 <use figs/trilhas_setores.png>
 Package pdftex.def Info: figs/trilhas_setores.png used on input line 165.
 (pdftex.def)             Requested size: 142.26378pt x 122.70421pt.
+
+
+LaTeX Warning: Citation `Vasconcelos:2002' on page 15 undefined on input line 1
+65.
+
+
+LaTeX Warning: Citation `Vasconcelos:2002' on page 15 undefined on input line 1
+65.
+
 
 Underfull \hbox (badness 10000) detected at line 170
 []
@@ -1373,16 +1523,29 @@ Underfull \hbox (badness 1377) in paragraph at lines 171--172
 -po-si-ti-vos que
  []
 
-<figs/ssd.png, id=912, 200.24812pt x 244.66406pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <./figs/componenteshdd.png>]
+<figs/ssd.png, id=777, 200.24812pt x 244.66406pt>
 File: figs/ssd.png Graphic file (type png)
  <use figs/ssd.png>
 Package pdftex.def Info: figs/ssd.png used on input line 175.
 (pdftex.def)             Requested size: 170.71652pt x 208.5926pt.
+
+
+LaTeX Warning: Citation `Happy:ssd' on page 16 undefined on input line 176.
+
 Package acronym Info: Label `acro:DRAM' newly defined as it shall be overridden
 
 although it is yet undefined on input line 180.
 
-<figs/ssd_controller.png, id=922, 351.3125pt x 270.00874pt>
+LaTeX Warning: Citation `Rent:20102' on page 16 undefined on input line 180.
+
+<figs/ssd_controller.png, id=783, 351.3125pt x 270.00874pt>
 File: figs/ssd_controller.png Graphic file (type png)
 
 <use figs/ssd_controller.png>
@@ -1390,13 +1553,19 @@ Package pdftex.def Info: figs/ssd_controller.png used on input line 184.
 (pdftex.def)             Requested size: 227.62204pt x 174.94739pt.
 
 
+LaTeX Warning: Citation `Rent:20103' on page 16 undefined on input line 185.
+
+
+LaTeX Warning: Citation `Intel:2010' on page 16 undefined on input line 189.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <./figs/discos_cabecas_braco.png> <./figs/trilhas_setores.png>]
-<figs/ssd_controller_elements.png, id=943, 96.36pt x 96.36pt>
+[16 <./figs/discos_cabecas_braco.png> <./figs/trilhas_setores.png> <./figs/ssd.
+png>] <figs/ssd_controller_elements.png, id=794, 96.36pt x 96.36pt>
 File: figs/ssd_controller_elements.png Graphic file (type png)
 
 <use figs/ssd_controller_elements.png>
@@ -1404,6 +1573,16 @@ Package pdftex.def Info: figs/ssd_controller_elements.png used on input line 19
 3.
 (pdftex.def)             Requested size: 227.62204pt x 227.62224pt.
 
+
+LaTeX Warning: Citation `Rent:20103' on page 17 undefined on input line 194.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17 <./figs/ssd_controller.png> <./figs/ssd_controller_elements.png>]
 Underfull \hbox (badness 10000) detected at line 201
 []
  []
@@ -1412,53 +1591,53 @@ Package acronym Info: Label `acro:LBA' newly defined as it shall be overridden
 although it is yet undefined on input line 203.
 Package acronym Info: Label `acro:CHS' newly defined as it shall be overridden
 although it is yet undefined on input line 203.
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <./figs/ssd.png> <./figs/ssd_controller.png>]
 Package acronym Info: Label `acro:MLC' newly defined as it shall be overridden
 although it is yet undefined on input line 208.
 Package acronym Info: Label `acro:SLC' newly defined as it shall be overridden
 although it is yet undefined on input line 208.
 
+LaTeX Warning: Citation `Morimoto:2010' on page 18 undefined on input line 208.
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
 
-[18 <./figs/ssd_controller_elements.png>]
 
-pdfTeX warning: pdflatex (file ./figs/benchmark.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-<figs/benchmark.pdf, id=980, 271.0125pt x 207.77625pt>
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./figs/benchmark.pdf): PDF inclusion
+: found PDF version <1.6>, but at most version <1.5> allowed
+<figs/benchmark.pdf, id=819, 271.0125pt x 207.77625pt>
 File: figs/benchmark.pdf Graphic file (type pdf)
 
 <use figs/benchmark.pdf>
 Package pdftex.def Info: figs/benchmark.pdf used on input line 212.
 (pdftex.def)             Requested size: 312.9803pt x 239.96169pt.
 
+
+LaTeX Warning: Citation `Toshiba:2010' on page 18 undefined on input line 213.
+
+
+LaTeX Warning: Citation `Parrish:2011' on page 18 undefined on input line 219.
+
+
+LaTeX Warning: Citation `SHimpo' on page 18 undefined on input line 219.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 Underfull \hbox (badness 10000) detected at line 222
 []
  []
 
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./figs/benchmark.pdf>])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
+[19 <./figs/benchmark.pdf>]
 \openout2 = `chp3/ferramentas.aux'.
 
  (./chp3/ferramentas.tex
@@ -1468,17 +1647,28 @@ Underfull \hbox (badness 10000) detected at line 5
 []
  []
 
-<figs/falha_erro_defeito.jpg, id=1083, 483.30562pt x 186.6975pt>
+
+LaTeX Warning: Citation `lee1990fault' on page 20 undefined on input line 11.
+
+<figs/falha_erro_defeito.jpg, id=913, 483.30562pt x 186.6975pt>
 File: figs/falha_erro_defeito.jpg Graphic file (type jpg)
 
 <use figs/falha_erro_defeito.jpg>
 Package pdftex.def Info: figs/falha_erro_defeito.jpg used on input line 18.
 (pdftex.def)             Requested size: 284.52756pt x 109.91411pt.
- [21
+
+
+LaTeX Warning: Citation `Wesz:2007' on page 20 undefined on input line 19.
+
+[20
 
 
 
 ]
+
+LaTeX Warning: Citation `Isermann:2011' on page 21 undefined on input line 27.
+
+
 Underfull \hbox (badness 1817) in paragraph at lines 31--32
 []\T1/cmr/m/n/12 São re-sul-tado da aná-lise de um ope-ra-dor hu-mano.
  []
@@ -1494,9 +1684,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <./figs/falha_erro_defeito.jpg>]
+[21 <./figs/falha_erro_defeito.jpg>]
+
+LaTeX Warning: Citation `Kari:1997' on page 22 undefined on input line 39.
+
 Package acronym Info: Label `acro:CRC' newly defined as it shall be overridden
 although it is yet undefined on input line 41.
+
+LaTeX Warning: Citation `Sector:2001' on page 22 undefined on input line 41.
+
+
+LaTeX Warning: Citation `Kari:1997' on page 22 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Morimoto:20102' on page 22 undefined on input line 45.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Underfull \hbox (badness 1048) in paragraph at lines 47--48
+\T1/cmr/m/n/12 usada pe-los sis-tema ope-ra-ci-o-nal. Por exem-plo, cada 1GB de
+ me-mó-ria na
+ []
+
+
+LaTeX Warning: Citation `Bez:2003' on page 23 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Zhao:2007' on page 23 undefined on input line 53.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1505,18 +1725,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-Underfull \hbox (badness 1048) in paragraph at lines 47--48
-\T1/cmr/m/n/12 usada pe-los sis-tema ope-ra-ci-o-nal. Por exem-plo, cada 1GB de
- me-mó-ria na
- []
+
+LaTeX Warning: Citation `Kari:1997' on page 24 undefined on input line 57.
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24]
 Underfull \hbox (badness 10000) detected at line 60
 []
  []
@@ -1562,12 +1774,24 @@ Overfull \hbox (19.24666pt too wide) in paragraph at lines 69--81
  []
 
 
+LaTeX Warning: Citation `Hughes:2002' on page 24 undefined on input line 85.
+
+
+LaTeX Warning: Citation `Hughes:2002' on page 24 undefined on input line 87.
+
+
+LaTeX Warning: Citation `ATA8:ACS' on page 24 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Self' on page 24 undefined on input line 87.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[24]
 Underfull \hbox (badness 2205) in paragraph at lines 90--91
 []\T1/cmr/m/n/12 Segue o mesmo prin-cí-pio do [][] \T1/cmr/m/it/12 Short
  []
@@ -1578,16 +1802,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[25]
 Underfull \hbox (badness 10000) detected at line 95
 []
  []
 
 
+LaTeX Warning: Citation `ATA8:AAM' on page 26 undefined on input line 97.
 
-pdfTeX warning: pdflatex (file ./figs/scsiLayer.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-<figs/scsiLayer.pdf, id=1196, 449.3889pt x 249.66273pt>
+
+LaTeX Warning: Citation `SCSI:Sam' on page 26 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Zielski:2007' on page 26 undefined on input line 101.
+
+
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./figs/scsiLayer.pdf): PDF inclusion
+: found PDF version <1.6>, but at most version <1.5> allowed
+<figs/scsiLayer.pdf, id=985, 449.3889pt x 249.66273pt>
 File: figs/scsiLayer.pdf Graphic file (type pdf)
 
 <use figs/scsiLayer.pdf>
@@ -1595,43 +1828,58 @@ Package pdftex.def Info: figs/scsiLayer.pdf used on input line 109.
 (pdftex.def)             Requested size: 398.33858pt x 221.30388pt.
 
 
+LaTeX Warning: Citation `SCSI:Sam' on page 26 undefined on input line 110.
+
+
+LaTeX Warning: Citation `t10' on page 26 undefined on input line 115.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
+[26]
 Package acronym Info: Label `acro:iSCSI' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 117.
 Package acronym Info: Label `acro:USB' newly defined as it shall be overridden
 although it is yet undefined on input line 117.
- <figs/scsi.png, id=1217, 484.81125pt x 240.14719pt>
+ <figs/scsi.png, id=998, 484.81125pt x 240.14719pt>
 File: figs/scsi.png Graphic file (type png)
  <use figs/scsi.png>
 Package pdftex.def Info: figs/scsi.png used on input line 120.
 (pdftex.def)             Requested size: 398.33858pt x 197.32503pt.
 
 
+LaTeX Warning: Citation `SCSI:Sam' on page 27 undefined on input line 121.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28 <./figs/scsiLayer.pdf>]
+[27 <./figs/scsiLayer.pdf>]
 
-pdfTeX warning: pdflatex (file ./figs/ataLayer.pdf): PDF inclusion: found PDF v
-ersion <1.6>, but at most version <1.5> allowed
-<figs/ataLayer.pdf, id=1247, 420.48091pt x 206.30074pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./figs/ataLayer.pdf): PDF inclusion:
+ found PDF version <1.6>, but at most version <1.5> allowed
+<figs/ataLayer.pdf, id=1026, 420.48091pt x 206.30074pt>
 File: figs/ataLayer.pdf Graphic file (type pdf)
 
 <use figs/ataLayer.pdf>
 Package pdftex.def Info: figs/ataLayer.pdf used on input line 134.
 (pdftex.def)             Requested size: 398.33858pt x 195.43999pt.
- <figs/ata.png, id=1258, 560.8453pt x 316.93407pt>
-File: figs/ata.png Graphic file (type png)
 
-<use figs/ata.png>
+
+LaTeX Warning: Citation `ATA8:AAM' on page 28 undefined on input line 135.
+
+
+LaTeX Warning: Citation `ATA8:AAM' on page 28 undefined on input line 138.
+
+<figs/ata.png, id=1033, 560.8453pt x 316.93407pt>
+File: figs/ata.png Graphic file (type png)
+ <use figs/ata.png>
 Package pdftex.def Info: figs/ata.png used on input line 143.
 (pdftex.def)             Requested size: 398.33858pt x 225.09729pt.
 
@@ -1641,7 +1889,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <./figs/scsi.png>]
+[28 <./figs/scsi.png>]
 Underfull \hbox (badness 10000) detected at line 148
 []
  []
@@ -1653,7 +1901,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./figs/ataLayer.pdf> <./figs/ata.png>]
+[29 <./figs/ataLayer.pdf> <./figs/ata.png>]
 \openout2 = `chp4/metodologia.aux'.
 
  (./chp4/metodologia.tex
@@ -1674,7 +1922,7 @@ Underfull \hbox (badness 1275) in paragraph at lines 9--10
 di-ver-sos []s[], para
  []
 
-[31
+[30
 
 
 
@@ -1695,9 +1943,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[31]
+
+LaTeX Warning: Citation `Tanenbaum:2001' on page 32 undefined on input line 35.
+
+
+
+LaTeX Warning: Citation `Final' on page 32 undefined on input line 37.
+
+
+LaTeX Warning: Citation `SCSI:programming' on page 32 undefined on input line 3
+7.
+
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 40.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmss.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
@@ -1706,15 +1965,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33]
+[32]
 
-pdfTeX warning: pdflatex (file ./figs/scsiCdb.pdf): PDF inclusion: found PDF ve
-rsion <1.6>, but at most version <1.5> allowed
-<figs/scsiCdb.pdf, id=1333, 511.14964pt x 230.61156pt>
+LaTeX Warning: Citation `Final' on page 33 undefined on input line 52.
+
+
+LaTeX Warning: Citation `Tao:2009' on page 33 undefined on input line 52.
+
+
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./figs/scsiCdb.pdf): PDF inclusion: 
+found PDF version <1.6>, but at most version <1.5> allowed
+<figs/scsiCdb.pdf, id=1096, 511.14964pt x 230.61156pt>
 File: figs/scsiCdb.pdf Graphic file (type pdf)
  <use figs/scsiCdb.pdf>
 Package pdftex.def Info: figs/scsiCdb.pdf used on input line 62.
 (pdftex.def)             Requested size: 398.33858pt x 179.72145pt.
+
+
+LaTeX Warning: Citation `SCSI:Sam' on page 33 undefined on input line 64.
+
+
+LaTeX Warning: Citation `SCSI:toolbox' on page 33 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Bart:2010' on page 33 undefined on input line 68.
+
+
+LaTeX Warning: Citation `SCSI:ATAtranslation' on page 33 undefined on input lin
+e 68.
+
+
+LaTeX Warning: Citation `SCSI:AtaPassThrough' on page 33 undefined on input lin
+e 68.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1722,7 +2005,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34 <./figs/scsiCdb.pdf>]
+[33 <./figs/scsiCdb.pdf>]
 Underfull \hbox (badness 1308) in paragraph at lines 70--71
 \T1/cmr/m/n/12 Fi-gura []4.2[] a es-tru-tura do co-mando é apre-sen-tada. Di-ve
 r-sos tes-tes fo-ram
@@ -1736,14 +2019,19 @@ Underfull \hbox (badness 1303) in paragraph at lines 70--71
 
 
 
-pdfTeX warning: pdflatex (file ./figs/atapassthrough.pdf): PDF inclusion: found
- PDF version <1.6>, but at most version <1.5> allowed
-<figs/atapassthrough.pdf, id=1370, 555.82657pt x 353.47055pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./figs/atapassthrough.pdf): PDF incl
+usion: found PDF version <1.6>, but at most version <1.5> allowed
+<figs/atapassthrough.pdf, id=1122, 555.82657pt x 353.47055pt>
 File: figs/atapassthrough.pdf Graphic file (type pdf)
 
 <use figs/atapassthrough.pdf>
 Package pdftex.def Info: figs/atapassthrough.pdf used on input line 74.
 (pdftex.def)             Requested size: 398.33858pt x 253.3228pt.
+
+
+LaTeX Warning: Citation `SCSI:AtaPassThrough' on page 34 undefined on input lin
+e 76.
+
 
 Underfull \hbox (badness 1210) in paragraph at lines 83--84
 \T1/cmr/m/n/12 ser com-pa-tí-vel e tão efi-ci-ente e por-tá-vel quanto a lin-gu
@@ -1756,7 +2044,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]
+[34]
 Underfull \hbox (badness 1668) in paragraph at lines 89--90
 \T1/cmr/m/n/12 e \T1/cmr/m/it/12 SmartCmd\T1/cmr/m/n/12 , es-tes co-man-dos são
  [][]. As clas-ses li-ga-das à \T1/cmr/m/it/12 SmartCmd
@@ -1768,8 +2056,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36 <./figs/atapassthrough.pdf>]
-<figs/framework.pdf, id=1407, 416.83328pt x 429.4946pt>
+[35 <./figs/atapassthrough.pdf>]
+<figs/framework.pdf, id=1153, 416.83328pt x 429.4946pt>
 File: figs/framework.pdf Graphic file (type pdf)
 
 <use figs/framework.pdf>
@@ -1821,7 +2109,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37 <./figs/framework.pdf>]
+[36 <./figs/framework.pdf>]
 Underfull \hbox (badness 2941) in paragraph at lines 139--139
 []|\T1/cmr/m/sc/12 Read Ve-rify Sec-tors
  []
@@ -1852,11 +2140,22 @@ Overfull \hbox (19.3147pt too wide) in paragraph at lines 132--154
  []
 
 
+LaTeX Warning: Citation `adams2003high' on page 37 undefined on input line 162.
+
+
+
 Underfull \hbox (badness 2126) in paragraph at lines 169--170
 [][][] \T1/cmr/m/it/12 Short Self-Test \T1/cmr/m/n/12 exe-cuta o co-mando [][] 
 \T1/cmr/m/it/12 Exe-cute off-line
  []
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1879,40 +2178,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [40]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Citation `PCdoc' on page 41 undefined on input line 193.
 
-[41] <figs/linearseek.pdf, id=1478, 168.63pt x 453.94594pt>
+<figs/linearseek.pdf, id=1220, 168.63pt x 453.94594pt>
 File: figs/linearseek.pdf Graphic file (type pdf)
 
 <use figs/linearseek.pdf>
 Package pdftex.def Info: figs/linearseek.pdf used on input line 199.
 (pdftex.def)             Requested size: 142.26378pt x 382.97438pt.
 
-<figs/funnelseek.pdf, id=1479, 268.00125pt x 453.94594pt>
+<figs/funnelseek.pdf, id=1221, 268.00125pt x 453.94594pt>
 File: figs/funnelseek.pdf Graphic file (type pdf)
 
 <use figs/funnelseek.pdf>
 Package pdftex.def Info: figs/funnelseek.pdf used on input line 201.
 (pdftex.def)             Requested size: 227.62204pt x 385.55109pt.
 
-<figs/randomseek.pdf, id=1480, 168.63pt x 381.67593pt>
+<figs/randomseek.pdf, id=1222, 168.63pt x 381.67593pt>
 File: figs/randomseek.pdf Graphic file (type pdf)
 
 <use figs/randomseek.pdf>
 Package pdftex.def Info: figs/randomseek.pdf used on input line 208.
 (pdftex.def)             Requested size: 142.26378pt x 322.00333pt.
 
-<figs/surfacescan.pdf, id=1481, 177.66376pt x 490.08093pt>
+<figs/surfacescan.pdf, id=1223, 177.66376pt x 490.08093pt>
 File: figs/surfacescan.pdf Graphic file (type pdf)
 
 <use figs/surfacescan.pdf>
 Package pdftex.def Info: figs/surfacescan.pdf used on input line 210.
 (pdftex.def)             Requested size: 142.26378pt x 392.43918pt.
 
-<figs/targetedread.pdf, id=1482, 268.00125pt x 417.81094pt>
+<figs/targetedread.pdf, id=1224, 268.00125pt x 417.81094pt>
 File: figs/targetedread.pdf Graphic file (type pdf)
 
 <use figs/targetedread.pdf>
@@ -1920,12 +2216,18 @@ Package pdftex.def Info: figs/targetedread.pdf used on input line 217.
 (pdftex.def)             Requested size: 284.52756pt x 443.57239pt.
 
 
+LaTeX Warning: Citation `squash' on page 41 undefined on input line 226.
+
+
+LaTeX Warning: Citation `boot:ram' on page 41 undefined on input line 228.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]
+[41]
 Underfull \hbox (badness 10000) detected at line 232
 []
  []
@@ -1937,21 +2239,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <./figs/linearseek.pdf> <./figs/funnelseek.pdf>]
+[42 <./figs/linearseek.pdf> <./figs/funnelseek.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44 <./figs/randomseek.pdf> <./figs/surfacescan.pdf>]
+[43 <./figs/randomseek.pdf> <./figs/surfacescan.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45 <./figs/targetedread.pdf>]
+[44 <./figs/targetedread.pdf>]
 \openout2 = `chp5/resultados.aux'.
 
  (./chp5/resultados.tex
@@ -1961,29 +2263,29 @@ Underfull \hbox (badness 10000) detected at line 5
 []
  []
 
-<figs/tela.png, id=1643, 695.59875pt x 554.07pt>
+<figs/tela.png, id=1378, 695.59875pt x 554.07pt>
 File: figs/tela.png Graphic file (type png)
  <use figs/tela.png>
 Package pdftex.def Info: figs/tela.png used on input line 12.
 (pdftex.def)             Requested size: 347.79852pt x 277.03432pt.
 
-<figs/help.png, id=1645, 694.595pt x 502.87875pt>
+<figs/help.png, id=1380, 694.595pt x 502.87875pt>
 File: figs/help.png Graphic file (type png)
  <use figs/help.png>
 Package pdftex.def Info: figs/help.png used on input line 21.
 (pdftex.def)             Requested size: 347.29665pt x 251.43875pt.
 
-<figs/percent.png, id=1647, 693.59125pt x 272.01625pt>
+<figs/percent.png, id=1382, 693.59125pt x 272.01625pt>
 File: figs/percent.png Graphic file (type png)
  <use figs/percent.png>
 Package pdftex.def Info: figs/percent.png used on input line 29.
 (pdftex.def)             Requested size: 346.79477pt x 136.00778pt.
 
-[46
+[45
 
 
 
-] <figs/final.png, id=1653, 695.59875pt x 357.335pt>
+] <figs/final.png, id=1388, 695.59875pt x 357.335pt>
 File: figs/final.png Graphic file (type png)
  <use figs/final.png>
 Package pdftex.def Info: figs/final.png used on input line 37.
@@ -1995,7 +2297,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47 <./figs/tela.png> <./figs/help.png>]
+[46 <./figs/tela.png> <./figs/help.png>]
 Underfull \hbox (badness 10000) detected at line 42
 []
  []
@@ -2006,7 +2308,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <./figs/percent.png> <./figs/final.png>]
+[47 <./figs/percent.png> <./figs/final.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []|\T1/cmr/m/n/12 Western Di-gi-tal
  []
@@ -2024,6 +2326,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+[48]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [49]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2032,18 +2341,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51]
 Underfull \hbox (badness 10000) detected at line 154
 []
  []
 
-<figs/tempo_medio.png, id=1690, 458.46281pt x 263.48438pt>
+<figs/tempo_medio.png, id=1425, 458.46281pt x 263.48438pt>
 File: figs/tempo_medio.png Graphic file (type png)
 
 <use figs/tempo_medio.png>
@@ -2056,7 +2358,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
+[51]
 Underfull \hbox (badness 1365) in paragraph at lines 194--194
 []|[][]\T1/cmr/m/n/10.95 Comparação dos Re-sul-ta-dos ob-ti-dos com a se-le-ção
  de al-go-rit-mos e o
@@ -2068,7 +2370,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]
+[52]
 Underfull \hbox (badness 10000) detected at line 214
 []
  []
@@ -2080,7 +2382,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54 <./figs/tempo_medio.png>]
+[53 <./figs/tempo_medio.png>]
 \openout2 = `chp6/conclusoes.aux'.
 
  (./chp6/conclusoes.tex
@@ -2097,7 +2399,7 @@ Underfull \hbox (badness 3375) in paragraph at lines 9--10
 i-cul-da-des fo-ram
  []
 
-[55
+[54
 
 
 
@@ -2113,63 +2415,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56] (./Monografia.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 19.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [57
-
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[58]
-Underfull \hbox (badness 1755) in paragraph at lines 179--183
-[]\T1/cmr/m/n/12 MORIMOTO, C. \T1/cmr/m/it/12 Hard-ware - O Guia De-fi-ni-tivo\
-T1/cmr/m/n/12 . 
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 179--183
-\T1/cmr/m/n/12 SU-LINA, 2007. ISBN 9788599593103. Dis-po-ní-vel em: 
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 186--190
-\T1/cmr/m/n/12 SU-LINA, 2010. ISBN 9788599593165. Dis-po-ní-vel em: 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[59]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[60])
+[55] (./Monografia.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[61]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
- (./Monografia.aux (./pretexto/capa_externa.aux) (./pretexto/capa.aux)
-(./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
+ (./Monografia.aux (./pretexto/capa_externa.aux)
+(./pretexto/capa.aux) (./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
 (./pretexto/abstract.aux) (./pretexto/dedicatoria.aux)
 (./pretexto/epistrofe.aux) (./chp1/introducao.aux) (./chp2/hd.aux)
 (./chp3/ferramentas.aux) (./chp4/metodologia.aux) (./chp5/resultados.aux)
@@ -2177,7 +2427,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `Monografia.out' has not changed.
-(rerunfilecheck)             Checksum: B58954C322CBFD4A931110D441D22B22;3443.
+(rerunfilecheck)             Checksum: 22FDAEE13E63559746F71A3A17626992;3373.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2185,13 +2438,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 13854 strings out of 493633
- 199704 string characters out of 3143378
- 346093 words of memory out of 3000000
- 16356 multiletter control sequences out of 15000+200000
- 30225 words of font info for 70 fonts, out of 3000000 for 9000
+ 13426 strings out of 493633
+ 192137 string characters out of 3143378
+ 337221 words of memory out of 3000000
+ 15988 multiletter control sequences out of 15000+200000
+ 30688 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,19n,45p,1468b,562s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,19n,45p,1464b,562s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
@@ -2202,29 +2455,29 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/20
 11/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/texlive/2011
-/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2011/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2011/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/font
-s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/
-type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
-1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
-public/cm-super/sfss1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti0800.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
-/cm-super/sfti1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/c
-m-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-
-super/sftt1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/ut
+/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2011/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/fonts/
+type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
+1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
+public/cm-super/sfrm1440.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/cm-super/sfss1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti0800.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/cm-super/sfti1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/c
+m-super/sfti1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-
+super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb>
-Output written on Monografia.pdf (74 pages, 2971203 bytes).
+Output written on Monografia.pdf (68 pages, 2913367 bytes).
 PDF statistics:
- 1943 PDF objects out of 2073 (max. 8388607)
- 1725 compressed objects within 18 object streams
- 313 named destinations out of 1000 (max. 500000)
- 585 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1599 PDF objects out of 1728 (max. 8388607)
+ 1402 compressed objects within 15 object streams
+ 256 named destinations out of 1000 (max. 500000)
+ 577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

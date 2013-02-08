@@ -12,33 +12,33 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Componentes de um \ac {HDD}}}{16}{figure.2.6}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces a}}{16}{figure.2.6}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces b}}{16}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Solid-State Drive, adaptada de \cite {Happy:ssd}}}{17}{figure.2.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Solid-State Drive, adaptada de \cite {Happy:ssd}}}{16}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Componentes de um SSD, adaptada de \cite {Rent:20103}}}{17}{figure.2.8}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Controladora de um SSD, adaptada de \cite {Rent:20103}}}{18}{figure.2.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Controladora de um SSD, adaptada de \cite {Rent:20103}}}{17}{figure.2.9}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces \emph {Benchmark} realizado pela PCmark05, adaptada de \cite {Toshiba:2010}}}{19}{figure.2.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo de tr\^es universos, adaptada de \cite {Wesz:2007}}}{22}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces SCSI, modelo de camadas, adaptada de \cite {SCSI:Sam}}}{28}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Fam\IeC {\'\i }lia de padr\~oes SCSI, adaptada de \cite {SCSI:Sam}}}{29}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces ATA, modelo de camadas, adaptada de \cite {ATA8:AAM}}}{30}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Fam\IeC {\'\i }lia de padr\~oes ATA}}{30}{figure.3.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo de tr\^es universos, adaptada de \cite {Wesz:2007}}}{21}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces SCSI, modelo de camadas, adaptada de \cite {SCSI:Sam}}}{27}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Fam\IeC {\'\i }lia de padr\~oes SCSI, adaptada de \cite {SCSI:Sam}}}{28}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces ATA, modelo de camadas, adaptada de \cite {ATA8:AAM}}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Fam\IeC {\'\i }lia de padr\~oes ATA}}{29}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comando de 10 bytes t\IeC {\'\i }pico, adaptado de \cite {SCSI:Sam}}}{34}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Comando ATA Pass-Through, adaptado de \cite {SCSI:AtaPassThrough}}}{36}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de Classes do Framework}}{37}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Linear e Funnel Seek}}}{43}{figure.4.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces a}}{43}{figure.4.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces b}}{43}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Random Seek e Surface Scan}}}{44}{figure.4.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces c}}{44}{figure.4.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces d}}{44}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Targeted Read}}}{45}{figure.4.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces e}}{45}{figure.4.6}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comando de 10 bytes t\IeC {\'\i }pico, adaptado de \cite {SCSI:Sam}}}{33}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Comando ATA Pass-Through, adaptado de \cite {SCSI:AtaPassThrough}}}{35}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de Classes do Framework}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Linear e Funnel Seek}}}{42}{figure.4.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces a}}{42}{figure.4.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces b}}{42}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Random Seek e Surface Scan}}}{43}{figure.4.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces c}}{43}{figure.4.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces d}}{43}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Fluxograma dos algoritmos implementados: \emph {Targeted Read}}}{44}{figure.4.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces e}}{44}{figure.4.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Tela inicial da Camada de Aplica\c c\~ao}}{47}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Tela de ajuda}}{47}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Tela de teste em execu\c c\~ao}}{48}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Tela de teste conclu\IeC {\'\i }do}}{48}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Tempo m\'edio dos testes para dispositivos HDD}}{54}{figure.5.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Tela inicial da Camada de Aplica\c c\~ao}}{46}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Tela de ajuda}}{46}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Tela de teste em execu\c c\~ao}}{47}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Tela de teste conclu\IeC {\'\i }do}}{47}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Tempo m\'edio dos testes para dispositivos HDD}}{53}{figure.5.5}
 \addvspace {10\p@ }
 \contentsfinish 

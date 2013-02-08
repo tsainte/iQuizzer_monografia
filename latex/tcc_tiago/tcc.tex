@@ -1,0 +1,194 @@
+% \documentclass[12pt,a4paper,twoside,fleqn,final]{book}
+
+%%% para vers{\~o}es parciais do dumento final utilizar:
+% \documentclass[12pt,a4paper,draft]{book}
+\documentclass[12pt,a4paper,oneside]{book}
+
+% \documentclass[12pt,a4paper,twoside,fleqn,draft]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBULO DO DOCUMENTO COMEÇA AQUI
+
+% \usepackage[active]{srcltx}
+\usepackage{tcc}
+
+% \usepackage{showkeys} % Imprime os labels de equações, referências, citações,
+% etc. Útil para versão draft. Desativar na versão final.
+
+\setcounter{secnumdepth}{3} % Sem isso as subsubsection não estavem vindo com número (algum pacote provavelmente setou secnumdepth para 2.
+
+\usepackage{tcc_defs}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.ps,.eps}
+
+%% Pacote fixme - Serve para colocar notas de "fixme" no documento usando \fixme{nota}.  Na versão final ele dá erro se tiver alguma nota fixme restante
+% \usepackage[draft]{fixme}
+
+%\usepackage[brazil]{babel}
+
+\usepackage[nottoc]{tocbibind} % Adiciona a lista de figuras, lista de tabelas
+% e referências bibliográficas no sumário. Assim não tenho que adicionar essas
+% três manualmente (mas ainda preciso adicionar lista de símbolos e de siglas)
+
+% paragrafoss
+\usepackage{parskip}
+
+\definecolor{lightgray}{gray}{0.9}
+
+% \includeonly{cap02}
+% \includeonly{cap03}
+
+\usepackage{assinatura}
+% Com os comando \includeonly vc pode passar o Latex apenas nos capítulos em que está trabalhando
+% \includeonly{capa,agradecimentos}
+% \includeonly{capa_externa,capa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}{iQuizzer: estudo de caso para integração entre aplicações Web e dispositivos móveis}
+\newcommand{\autor}{Tiago Augusto da Silva Bencardino}
+\newcommand{\orientador}{Prof. Dr. José Marques Soares}
+
+\usepackage{listings}
+%\lstset{literate=%
+%{æ}{{\ae}}1
+%{å}{{\aa}}1
+%{ø}{{\o}}1
+%{Æ}{{\AE}}1
+%{Å}{{\AA}}1
+%{Ø}{{\O}}1
+%}
+\lstset{extendedchars=\true}
+%\lstset{inputencoding=ansinew, frame=single, breaklines=true, breakatwhitespace=true, }
+\usepackage{courier}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true, keywordstyle=\color{blue}, backgroundcolor=\color{gray!10}}
+\lstset{frame=single}
+
+
+%%% PREAMBULO DO DOCUMENTO ACABA AQUI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPA
+\include{cover_ext}
+\include{cover_int}
+\include{folhadeaprovacao}
+% \input{acronyms}
+
+\thispagestyle{empty}%
+%% ADICIONAR DEPOIS
+%\includegraphics[width=0.99\textwidth]{ficha_catalografica.eps}
+\newpage
+
+\thispagestyle{empty}%
+%% ADICIONAR DEPOIS
+% \includegraphics[width=0.99\textwidth]{aprovacao.eps}
+
+\frontmatter % As páginas são numeradas com algarismos romanos
+\pagestyle{roman}%
+
+\setlength{\parindent}{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% RESUMO
+\include{resumo}
+
+\include{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DEDICATÓRIA
+\include{dedicatory}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AGRADECIMENTOS
+\include{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ABREVIAÇÕES
+\include{listOfAcronyms}
+
+% \begin{singlespace}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% ÍNDICE
+    %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    \renewcommand{\listtablename}{Lista de Tabelas}
+    \renewcommand{\listfigurename}{Lista de Figuras}
+    \renewcommand{\contentsname}{Sum\'{a}rio}
+    \tableofcontents%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE FIGURAS
+
+    \listoffigures
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE TABELAS
+
+    \listoftables
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE ALGORITMOS
+%     \listofalgorithms%
+%     \phantomsection
+%     \addcontentsline{toc}{chapter}{Lista de Algoritmos}%
+
+    %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+%     \newpage
+%     \include{notation}
+% \end{singlespace}
+
+\renewcommand{\chaptername}{Cap\'{i}tulo}
+
+\pagestyle{capitulo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 1: Introducao
+\mainmatter % numeração de página tradicional
+\include{cap01}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 2: Fundamentacao Teorica
+\include{cap02}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 3: Desenvolvimento do Problema
+\include{cap03}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 4: Resultados
+ \include{cap04}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPÍTULO 5: Conclusao e Trabalhos Futuros
+\include{cap05}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%% CAPÍTULO 6: Conclusões
+ \include{cap06}
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%% APÊNDICE
+% \appendix
+% \begin{appendices}
+%     \include{appendix_A}
+% %     \include{apendice_B}
+% \end{appendices}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%% INDICE REMISSIVO
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%% GLOSSÁRIO
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%% REFERÊNCIAS BIBLIOGRÁFICAS
+\nocite{*}
+\bibliographystyle{IEEEtran}
+% % \{singlespace
+% % \bibliographystyle{IEEEtranPor}
+% % \tiny
+% % \bibliography{refs.bib}}
+%
+%\bibliographystyle{IEEEtran}
+\bibliography{mybiblio.bib}
+% \addcontentsline{toc}{chapter}{\bibname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Lista de "Fix-me"s
+% \listoffixmes
+\end{document}

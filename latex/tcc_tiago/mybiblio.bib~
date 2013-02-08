@@ -1,0 +1,432 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF-8
+
+@STRING{IEEE_CM = {IEEE Communications Magazine}}
+
+@STRING{IEEE_GLOBECOM = {IEEE Global Communications Conference }}
+
+@STRING{IEEE_PIRMC = {IEEE Personal, Indoor and Mobile Radio Communications}}
+
+@STRING{IEEE_TSP = {IEEE Transactions on Signal Processing}}
+
+@STRING{IEEE_WCNC = {IEEE Wireless Communications and Networking Conference}}
+
+@STRING{ISWCS = {International Symposium on Wireless Communication Systems}}
+
+@STRING{ITU = {International Telecommunication Union}}
+
+@MISC{site:3g,
+  author = {{3G}},
+  title = {What is {3G}},
+  howpublished = {\url{http://www.3g.co.uk/what-is-3g/}},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Bazaraa2006,
+  title = {Nonlinear programming: theory and algorithms},
+  publisher = {Wiley-Interscience},
+  year = {2006},
+  author = {Mokhtar S. Bazaraa and Hanif D. Sherali and C. M. Shetty},
+  keywords = {optimization},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Boyd2004,
+  title = {Convex Optimization},
+  publisher = {Cambridge University Press},
+  year = {2004},
+  author = {Stephen Boyd and Lieven Vandenberghe},
+  keywords = {optimization},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:howstf_wimax,
+  author = {Marshall Brain and Ed Grabianowski},
+  title = {How WiMAX Works},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@INPROCEEDINGS{Campelo2012,
+  author = {Manoel B. Campêlo and Carlos D. Rodrigues and José Mairton Barros
+	da Silva Júnior and Yuri C. B. Silva and Tarcisio F. Maciel and Francisco
+	R. P. Cavalcanti},
+  title = {Emparelhamento de subportadoras de transmissão e alocação de potência
+	em sistemas de dois saltos},
+  booktitle = {Proceedings of XVI CLAIO/XLIV SBPO},
+  year = {2012},
+  keywords = {subcarrier matching, power allocation},
+  owner = {mairton},
+  timestamp = {2012.07.31}
+}
+
+@BOOK{Cover2006,
+  title = {Elements of Information Theory},
+  publisher = {Wiley-Interscience},
+  year = {2006},
+  author = {Thomas M. Cover and Joy A Thomas},
+  keywords = {information theory},
+  series = {Wiley Series in Telecommunications and Signal Processing},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:nokia_gsm,
+  author = {Ian Delaney},
+  title = {Happy Birthday {GSM}},
+  howpublished = {\url{http://conversations.nokia.com/}},
+  year = {2011},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Dohler2010,
+  title = {Cooperative Communications: Hardware, Channel \& Phy},
+  publisher = {John Wiley \& Sons},
+  year = {2010},
+  author = {Mischa Dohler and Yonghui Li},
+  keywords = {cooperative communications},
+  owner = {mairton},
+  timestamp = {2012.07.23}
+}
+
+@MISC{ericsson2007,
+  author = {{Ericsson}},
+  title = {The evolution of {EDGE}},
+  month = {February},
+  year = {2007},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@MASTERSTHESIS{fonseca2009,
+  author = {Ariane Fonseca},
+  title = {{Roberto Landell de Moura}, O Pai Brasileiro do Rádio},
+  school = {FATEA},
+  year = {2009},
+  type = {Trabalho de Conclusão de Curso},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Goldsmith2005,
+  title = {Wireless Communications},
+  publisher = {Cambridge University Press},
+  year = {2005},
+  author = {Andrea Goldsmith},
+  keywords = {wireless communications},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@ARTICLE{Hajiaghayi2011,
+  author = {M. Hajiaghayi and Min Dong and Ben Liang},
+  title = {Jointly Optimal Channel Pairing and Power Allocation for Multichannel
+	Multihop Relaying},
+  journal = IEEE_TSP,
+  year = {2011},
+  volume = {59},
+  pages = {14},
+  keywords = {subcarrier matching, power allocation},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Haykin2008,
+  title = {Introdução aos Sistemas de Comunicação},
+  publisher = {Bookman},
+  year = {2008},
+  author = {Simon Haykin and Michael Moher},
+  keywords = {communications systems},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Haykin2007,
+  title = {Sistemas Modernos De Comunicações Wireless},
+  publisher = {Bookman},
+  year = {2007},
+  author = {Simon Haykin and Michael Moher},
+  keywords = {wireless communications},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOKLET{ITU2011,
+  title = {The World in 2011},
+  author = {{International Telecommunication Union}},
+  year = {2011},
+  owner = {root},
+  timestamp = {2012.06.13},
+  url = {http://www.itu.int/ITU-D/ict/facts/2011/index.html}
+}
+
+@BOOK{Kurose2007,
+  title = {Computer Networking: A Top-Down Approach},
+  publisher = {Addison Wesley},
+  year = {2007},
+  author = {James F. Kurose and Keith W. Ross},
+  keywords = {computer networking},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:howstf,
+  author = {Julia Layton and Curt Franklin},
+  title = {Como funciona o bluetooth},
+  howpublished = {\url{http://www.hsw.uol.com.br/}},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Liu2009,
+  title = {Cooperative Communications And Networking},
+  publisher = {Cambridge University Press},
+  year = {2009},
+  author = {K. J. Ray Liu and Ahmed K. Sadek and Weifeng Su and Andres Kwasinksi},
+  keywords = {cooperative communications},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@MISC{lobo2007,
+  author = {Luiz Lobo},
+  title = {Introdução à Comunicação},
+  howpublished = {\url{http://luizlobo.wordpress.com}},
+  year = {2007},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Maxwell1873,
+  title = {A Treatise on Electricity and Magnetism},
+  publisher = {Oxford:Clarendon Press},
+  year = {1873},
+  author = {James Clerk Maxwell},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Nee2000,
+  title = {OFDM for Wireless Multimedia Communications},
+  publisher = {Artech House},
+  year = {2000},
+  author = {Richard van Nee and Ramjee Prasad},
+  keywords = {wireless communications},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@ARTICLE{Nosratinia2004,
+  author = {A. Nosratinia and T. E. Hunter and A. Hedayat},
+  title = {Cooperative communication in wireless networks},
+  journal = IEEE_CM,
+  year = {2004},
+  volume = {42},
+  pages = {74-80},
+  keywords = {cooperative communications},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@ARTICLE{Nyquist1928,
+  author = {Harry Nyquist},
+  title = {Certain Topics in Telegraph Transmission Theory},
+  journal = {Transactions of the American Institute of Electrical Engineers},
+  year = {1928},
+  volume = {47},
+  pages = {617-644},
+  keywords = {information theory},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:olhar_4g,
+  author = {{Olhar Digital}},
+  title = {{4G} será instalado no Brasil mesmo sem amadurecimento do {3G}},
+  howpublished = {\url{http://olhardigital.uol.com.br/home.php}},
+  year = {2012},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Papoulis1984,
+  title = {Probability, Random Variables, and Stochastic Processes},
+  publisher = {McGraw-Hill},
+  year = {1984},
+  author = {Athanasios Papoulis},
+  keywords = {probability},
+  series = {McGraw-Hill series in electrical engineering},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Proakis2008,
+  title = {Digital Communications},
+  publisher = {McGraw-Hill},
+  year = {2008},
+  author = {John G. Proakis and Masoud Salehi},
+  keywords = {communications systems},
+  series = {Communications and signal processing},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Rappaport1996,
+  title = {Wireless Communications: Principles and Practice},
+  publisher = {Prentice Hall PTR},
+  year = {1996},
+  author = {Theodore S. Rappaport},
+  keywords = {wireless communications},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@INPROCEEDINGS{Rumney2009,
+  author = {Moray Rumney},
+  title = {{IMT}-Advanced: {4G} Wireless Takes Shape in an Olympic Year},
+  booktitle = {Agilent Technologies Publication},
+  year = {2009},
+  journal = {Agilent Measurement Journal},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Saunders2007,
+  title = {Antennas And Propagation for Wireless Communication Systems},
+  publisher = {John Wiley \& Sons},
+  year = {2007},
+  author = {Simon R. Saunders and Alejandro Aragón-Zavala},
+  keywords = {wireless communications},
+  owner = {mairton},
+  timestamp = {2012.07.11}
+}
+
+@ARTICLE{Shannon1948,
+  author = {Claude Shannon and Noshirwan Petigara and Satwiksai Seshasai},
+  title = {A Mathematical Theory of Communication},
+  journal = {Bell System Technical Journal},
+  year = {1948},
+  volume = {27},
+  pages = {379-423},
+  keywords = {information theory},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@INPROCEEDINGS{Mairton2012,
+  author = {José Mairton Barros da Silva Júnior and Yuri C. B. Silva and Tarcisio
+	Ferreira Maciel and Fco. Rodrigo P. Cavalcanti and Carlos D. Rodrigues
+	and Manoel B. Campêlo Neto},
+  title = {Power Allocation Schemes for Multichannel Two-hop Relaying Systems},
+  booktitle = ISWCS,
+  year = {2012},
+  keywords = {subcarrier matching, power allocation},
+  owner = {root},
+  timestamp = {2012.06.14}
+}
+
+@BOOK{Tanenbaum2003,
+  title = {Redes de computadores},
+  publisher = {Campus},
+  year = {2003},
+  author = {Andrew Stuart Tanenbaum},
+  keywords = {computer networking},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:teleco_3g,
+  author = {{Teleco}},
+  title = {{3G} no Brasil},
+  howpublished = {\url{http://www.teleco.com.br/3g_brasil.asp}},
+  year = {2012},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Tse2005,
+  title = {Fundamentals of Wireless Communication},
+  publisher = {Cambridge University Press},
+  year = {2005},
+  author = {D. Tse and P. Viswanath},
+  keywords = {wireless communications},
+  owner = {mairton},
+  timestamp = {2012.07.12}
+}
+
+@INPROCEEDINGS{Wang2009,
+  author = {Wenyi Wang and Renbiao Wu},
+  title = {Capacity maximization for {OFDM} two-hop relay system with separate
+	power constraints},
+  booktitle = {Proc. International Conference on Communications and Networking in
+	China},
+  year = {2009},
+  keywords = {subcarrier matching, power allocation},
+  doi = {10.1109/CHINACOM.2009.5339924},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@ARTICLE{Wang2008,
+  author = {Wenyi Wang and Shefeng Yan and Shuyuan Yang},
+  title = {Optimally joint subcarrier matching and power allocation in {OFDM}
+	multihop system},
+  journal = {EURASIP Journal on Advances in Signal Processing},
+  year = {2008},
+  pages = {1-8},
+  type = {subcarrier matching and power allocation},
+  owner = {mairtonjr},
+  timestamp = {2012.05.31}
+}
+
+@MISC{site:wimax_forum,
+  author = {{WiMAX Forum}},
+  title = {WiMAX and the {IEEE} {802.16m} Air Interface Standard},
+  howpublished = {\url{http://www.wimaxforum.org/}},
+  year = {2010},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@BOOK{Aur2010,
+  title = {Dicionário Aurélio da Língua Portuguesa},
+  publisher = {Positivo},
+  year = {2010},
+  owner = {mairton},
+  timestamp = {2012.05.31}
+}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 KeywordGroup:Subcarrier Matching\;0\;keywords\;subcarrier matching\;
+1\;0\;;
+1 KeywordGroup:Information Theory\;0\;keywords\;information theory\;1\
+;0\;;
+1 KeywordGroup:Optimization\;0\;keywords\;optimization\;0\;0\;;
+1 KeywordGroup:Cooperative Communications\;0\;keywords\;cooperative\;0
+\;0\;;
+1 KeywordGroup:Wireless Communications\;0\;keywords\;wireless communic
+ations\;0\;0\;;
+1 KeywordGroup:Communications Systems\;0\;keywords\;communications sys
+tems\;0\;0\;;
+1 KeywordGroup:Computer Networking\;0\;keywords\;computer networking\;
+0\;0\;;
+1 KeywordGroup:D2D\;0\;keywords\;d2d\;1\;0\;;
+}
+

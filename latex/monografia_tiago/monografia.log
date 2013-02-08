@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 FEB 2013 18:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  6 FEB 2013 13:58
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**Monografia.tex
+**Monografia
 (./Monografia.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -1252,6 +1251,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [11]
 Package acronym Info: Label `acro:DRY' newly defined as it shall be overridden
 although it is yet undefined on input line 130.
+Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
+although it is yet undefined on input line 131.
 
 
 LaTeX Warning: Citation `mvc' on page 12 undefined on input line 131.
@@ -1259,18 +1260,8 @@ LaTeX Warning: Citation `mvc' on page 12 undefined on input line 131.
 
 LaTeX Warning: Citation `caelum' on page 12 undefined on input line 135.
 
-
-Underfull \hbox (badness 1314) in paragraph at lines 141--142
-[]\T1/cmr/m/n/12 JRuby: im-ple-men-ta-ção al-ter-na-tiva que per-mite usar a JV
-M do Java
- []
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 141--142
-\T1/cmr/m/n/12 para in-ter-pe-tar có-digo Ruby. Uma de suas prin-ci-pais van-ta
--gens é a
- []
-
+Package acronym Info: Label `acro:JVM' newly defined as it shall be overridden
+although it is yet undefined on input line 141.
 
 Underfull \hbox (badness 10000) detected at line 145
 []
@@ -1285,7 +1276,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12] <figs/smartpizza.png, id=661, 362.3136pt x 217.7736pt>
+[12]
+Package acronym Info: Label `acro:NFC' newly defined as it shall be overridden
+although it is yet undefined on input line 151.
+ <figs/smartpizza.png, id=668, 362.3136pt x 217.7736pt>
 File: figs/smartpizza.png Graphic file (type png)
 
 <use figs/smartpizza.png>
@@ -1418,7 +1412,7 @@ Underfull \hbox (badness 10000) detected at line 34
 []
  []
 
-<figs/casos_de_uso.png, id=703, 709.14937pt x 525.46312pt>
+<figs/casos_de_uso.png, id=711, 709.14937pt x 525.46312pt>
 File: figs/casos_de_uso.png Graphic file (type png)
 
 <use figs/casos_de_uso.png>
@@ -1441,7 +1435,7 @@ Underfull \hbox (badness 5726) in paragraph at lines 50--51
 s (core) para o
  []
 
-<figs/MER_web.png, id=709, 743.77875pt x 593.21625pt>
+<figs/MER_web.png, id=717, 743.77875pt x 593.21625pt>
 File: figs/MER_web.png Graphic file (type png)
  <use figs/MER_web.png>
 Package pdftex.def Info: figs/MER_web.png used on input line 60.
@@ -1495,8 +1489,6 @@ Underfull \hbox (badness 10000) detected at line 44
 
 LaTeX Warning: Reference `fund' on page 25 undefined on input line 49.
 
-Package acronym Info: Label `acro:MVC' newly defined as it shall be overridden
-although it is yet undefined on input line 49.
 Package acronym Info: Label `acro:TDD' newly defined as it shall be overridden
 although it is yet undefined on input line 56.
 
@@ -1601,7 +1593,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30] <figs/railslogin.png, id=816, 416.757pt x 148.8762pt>
+[30] <figs/railslogin.png, id=823, 416.757pt x 148.8762pt>
 File: figs/railslogin.png Graphic file (type png)
 
 <use figs/railslogin.png>
@@ -1614,14 +1606,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31] <figs/railsedituser.png, id=821, 416.757pt x 230.7822pt>
+[31] <figs/railsedituser.png, id=828, 416.757pt x 230.7822pt>
 File: figs/railsedituser.png Graphic file (type png)
 
 <use figs/railsedituser.png>
 Package pdftex.def Info: figs/railsedituser.png used on input line 232.
 (pdftex.def)             Requested size: 416.75598pt x 230.78163pt.
 
-<figs/railsforgetpass.png, id=822, 192.2382pt x 120.9318pt>
+<figs/railsforgetpass.png, id=829, 192.2382pt x 120.9318pt>
 File: figs/railsforgetpass.png Graphic file (type png)
 
 <use figs/railsforgetpass.png>
@@ -1635,7 +1627,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32 <./figs/railslogin.png> <./figs/railsedituser.png> <./figs/railsforgetpass.
-png>] <figs/ioslogin.png, id=832, 166.7028pt x 313.17pt>
+png>] <figs/ioslogin.png, id=839, 166.7028pt x 313.17pt>
 File: figs/ioslogin.png Graphic file (type png)
 
 <use figs/ioslogin.png>
@@ -1692,14 +1684,14 @@ LaTeX Warning: Citation `githubpop' on page 35 undefined on input line 302.
 
 Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
 although it is yet undefined on input line 304.
-<figs/bootstrapcontrol.png, id=873, 258.7266pt x 76.6062pt>
+<figs/bootstrapcontrol.png, id=880, 258.7266pt x 76.6062pt>
 File: figs/bootstrapcontrol.png Graphic file (type png)
 
 <use figs/bootstrapcontrol.png>
 Package pdftex.def Info: figs/bootstrapcontrol.png used on input line 309.
 (pdftex.def)             Requested size: 258.72594pt x 76.606pt.
 
-<figs/bootstraplayout1.png, id=874, 416.757pt x 110.3322pt>
+<figs/bootstraplayout1.png, id=881, 416.757pt x 110.3322pt>
 File: figs/bootstraplayout1.png Graphic file (type png)
 
 <use figs/bootstraplayout1.png>
@@ -1713,14 +1705,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [35 <./figs/bootstrapcontrol.png>]
-<figs/bootstraplayout2.png, id=886, 168.63pt x 183.5658pt>
+<figs/bootstraplayout2.png, id=893, 168.63pt x 183.5658pt>
 File: figs/bootstraplayout2.png Graphic file (type png)
 
 <use figs/bootstraplayout2.png>
 Package pdftex.def Info: figs/bootstraplayout2.png used on input line 327.
 (pdftex.def)             Requested size: 168.62958pt x 183.56534pt.
 
-<figs/bootstraplayout3.png, id=887, 156.1032pt x 182.1204pt>
+<figs/bootstraplayout3.png, id=894, 156.1032pt x 182.1204pt>
 File: figs/bootstraplayout3.png Graphic file (type png)
 
 <use figs/bootstraplayout3.png>
@@ -2132,17 +2124,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55] (./Monografia.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
- (./Monografia.aux (./pretexto/capa_externa.aux)
-(./pretexto/capa.aux) (./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
+[55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
+ (./Monografia.aux (./pretexto/capa_externa.aux) (./pretexto/capa.aux)
+(./pretexto/folhadeaprovacao.aux) (./pretexto/resumo.aux)
 (./pretexto/abstract.aux) (./pretexto/dedicatoria.aux)
 (./pretexto/epistrofe.aux) (./pretexto/acronimos.aux) (./chp1/introducao.aux)
 (./chp2/fundamentacao.aux) (./chp3/aplicacao.aux) (./chp4/rails.aux)
 (./chp5/comparativo.aux) (./chp6/resultados.aux) (./chp7/conclusoes.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `Monografia.out' has not changed.
 (rerunfilecheck)             Checksum: F530F036775EFB7889B195EFC1A985DD;4931.
 
@@ -2152,16 +2144,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
  ) 
 Here is how much of TeX's memory you used:
- 13524 strings out of 493633
- 192230 string characters out of 3143378
- 339963 words of memory out of 3000000
- 15924 multiletter control sequences out of 15000+200000
+ 13537 strings out of 493633
+ 192326 string characters out of 3143378
+ 340195 words of memory out of 3000000
+ 15936 multiletter control sequences out of 15000+200000
  24175 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,45p,1468b,1801s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,45p,1464b,1801s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
@@ -2187,10 +2179,10 @@ e1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/cm-super/sftt1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
 ublic/cm-super/sftt1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb>
-Output written on Monografia.pdf (69 pages, 1094452 bytes).
+Output written on Monografia.pdf (69 pages, 1097014 bytes).
 PDF statistics:
- 1282 PDF objects out of 1440 (max. 8388607)
- 1153 compressed objects within 12 object streams
- 430 named destinations out of 1000 (max. 500000)
+ 1292 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 434 named destinations out of 1000 (max. 500000)
  693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

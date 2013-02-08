@@ -16,57 +16,92 @@ A level-1 auxiliary file: chp4/rails.aux
 A level-1 auxiliary file: chp5/comparativo.aux
 A level-1 auxiliary file: chp6/resultados.aux
 A level-1 auxiliary file: chp7/conclusoes.aux
-I couldn't open database file abnt-options.bib
----line 47 of file Monografia.aux
- : \bibdata{abnt-options
- :                      ,referencias}
-I'm skipping whatever remains of this command
-I couldn't open style file abnt-alf.bst
----line 48 of file Monografia.aux
- : \bibstyle{abnt-alf
- :                   }
-I'm skipping whatever remains of this command
-I found no database files---while reading file Monografia.aux
-I found no style file---while reading file Monografia.aux
-You've used 9 entries,
-            0 wiz_defined-function locations,
-            109 strings with 974 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
+The style file: abnt-alf.bst
+I found no \bibdata command---while reading file Monografia.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--I didn't find a database entry for "abnt-url-package=hyperref"
+Warning--I didn't find a database entry for "abnt-and-type=e"
+Warning--I didn't find a database entry for "abnt-full-initials=no"
+Warning--I didn't find a database entry for "abnt-last-names=abnt"
+Warning--I didn't find a database entry for "abnt-etal-list=2"
+Warning--I didn't find a database entry for "abnt-etal-text=emph"
+Warning--I didn't find a database entry for "fucapi"
+Warning--I didn't find a database entry for "cloudstack"
+Warning--I didn't find a database entry for "guardianstartup"
+Warning--I didn't find a database entry for "faceheroku"
+Warning--I didn't find a database entry for "restfulws"
+Warning--I didn't find a database entry for "comparexmljson"
+Warning--I didn't find a database entry for "w3json"
+Warning--I didn't find a database entry for "caelum"
+Warning--I didn't find a database entry for "rails3"
+Warning--I didn't find a database entry for "rails4"
+Warning--I didn't find a database entry for "fowler"
+Warning--I didn't find a database entry for "mvc"
+Warning--I didn't find a database entry for "yahoosmart"
+Warning--I didn't find a database entry for "neowin"
+Warning--I didn't find a database entry for "usecabecaiphone"
+Warning--I didn't find a database entry for "lecheta"
+Warning--I didn't find a database entry for "railsinstaller"
+Warning--I didn't find a database entry for "ufmsbd"
+Warning--I didn't find a database entry for "bootstrap"
+Warning--I didn't find a database entry for "githubpop"
+Warning--I didn't find a database entry for "quickheroku"
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=5001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 0 entries,
+            6480 wiz_defined-function locations,
+            1194 strings with 9700 characters,
+and the built_in function-call counts, 693 in all, are:
+= -- 186
 > -- 0
 < -- 0
-+ -- 0
++ -- 47
 - -- 0
-* -- 0
-:= -- 0
+* -- 28
+:= -- 158
 add.period$ -- 0
 call.type$ -- 0
 change.case$ -- 0
 chr.to.int$ -- 0
 cite$ -- 0
 duplicate$ -- 0
-empty$ -- 0
+empty$ -- 1
 format.name$ -- 0
-if$ -- 0
+if$ -- 142
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 0
+newline$ -- 8
 num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
+pop$ -- 26
+preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 0
-stack$ -- 0
-substring$ -- 0
+skip$ -- 40
+stack$ -- 1
+substring$ -- 45
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
+while$ -- 2
 width$ -- 0
-write$ -- 0
-(There were 4 error messages)
+write$ -- 8
+(There was 1 error message)

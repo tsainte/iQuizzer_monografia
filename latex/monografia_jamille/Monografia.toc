@@ -20,33 +20,32 @@
 \contentsline {section}{\numberline {2.5}\emph {Solid-State Drive}}{16}{section.2.5}
 \contentsline {section}{\numberline {2.6}\emph {Hard Disk Drive} versus \emph {Solid-State Drive } }{18}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Desempenho}{18}{subsection.2.6.1}
-\contentsline {section}{\numberline {2.7}Resumo do Cap\IeC {\'\i }tulo}{20}{section.2.7}
-\contentsline {chapter}{\numberline {3}Fundamenta\c c\~ao Te\'orica}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Fundamentos de Diagn\'ostico de Falhas}{21}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Falha, Erro e Defeito}{21}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Diagn\'ostico de Falhas}{22}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Falhas em Discos R\IeC {\'\i }gidos}{23}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}SMART}{25}{section.3.2}
-\contentsline {section}{\numberline {3.3}Protocolos}{27}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}SCSI}{27}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}ATA}{28}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Resumo do Cap\IeC {\'\i }tulo}{30}{section.3.4}
-\contentsline {chapter}{\numberline {4}Metodologia e Implementa\c c\~ao}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Metodologia}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Inser\c c\~ao de Falhas}{32}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Metodologia de Teste}{32}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Implementa\c c\~ao}{32}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}ATA, SCSI, SMART e o Linux}{33}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}\emph {Framework} Proposto}{35}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Camada da Aplica\c c\~ao}{38}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\emph {Bootable}}{42}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Resumo do Cap\IeC {\'\i }tulo}{43}{section.4.3}
-\contentsline {chapter}{\numberline {5}Resultados}{46}{chapter.5}
-\contentsline {section}{\numberline {5.1}Camada de Aplica\c c\~ao}{46}{section.5.1}
-\contentsline {section}{\numberline {5.2}Testes}{48}{section.5.2}
-\contentsline {section}{\numberline {5.3}Tempo de Execu\c c\~ao}{52}{section.5.3}
-\contentsline {section}{\numberline {5.4}Resumo do Cap\IeC {\'\i }tulo}{54}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclus\~ao}{55}{chapter.6}
-\contentsline {section}{\numberline {6.1}Perspectivas Futuras}{56}{section.6.1}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{61}{chapter*.47}
+\contentsline {section}{\numberline {2.7}Resumo do Cap\IeC {\'\i }tulo}{19}{section.2.7}
+\contentsline {chapter}{\numberline {3}Fundamenta\c c\~ao Te\'orica}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Fundamentos de Diagn\'ostico de Falhas}{20}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Falha, Erro e Defeito}{20}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Diagn\'ostico de Falhas}{21}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Falhas em Discos R\IeC {\'\i }gidos}{22}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}SMART}{24}{section.3.2}
+\contentsline {section}{\numberline {3.3}Protocolos}{26}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}SCSI}{26}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}ATA}{27}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Resumo do Cap\IeC {\'\i }tulo}{29}{section.3.4}
+\contentsline {chapter}{\numberline {4}Metodologia e Implementa\c c\~ao}{30}{chapter.4}
+\contentsline {section}{\numberline {4.1}Metodologia}{30}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Inser\c c\~ao de Falhas}{31}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Metodologia de Teste}{31}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Implementa\c c\~ao}{31}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}ATA, SCSI, SMART e o Linux}{32}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}\emph {Framework} Proposto}{34}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Camada da Aplica\c c\~ao}{37}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\emph {Bootable}}{41}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Resumo do Cap\IeC {\'\i }tulo}{42}{section.4.3}
+\contentsline {chapter}{\numberline {5}Resultados}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Camada de Aplica\c c\~ao}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Testes}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Tempo de Execu\c c\~ao}{51}{section.5.3}
+\contentsline {section}{\numberline {5.4}Resumo do Cap\IeC {\'\i }tulo}{53}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclus\~ao}{54}{chapter.6}
+\contentsline {section}{\numberline {6.1}Perspectivas Futuras}{55}{section.6.1}
 \contentsfinish 

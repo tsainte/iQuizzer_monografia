@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: tcc.aux
+A level-1 auxiliary file: cover_ext.aux
+A level-1 auxiliary file: cover_int.aux
+A level-1 auxiliary file: folhadeaprovacao.aux
+A level-1 auxiliary file: resumo.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: dedicatory.aux
+A level-1 auxiliary file: acknowledgement.aux
+A level-1 auxiliary file: listOfAcronyms.aux
+A level-1 auxiliary file: cap01.aux
+A level-1 auxiliary file: cap02.aux
+A level-1 auxiliary file: cap03.aux
+A level-1 auxiliary file: cap04.aux
+A level-1 auxiliary file: cap05.aux
+A level-1 auxiliary file: cap06.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: mybiblio.bib.bib
+Warning--I didn't find a database entry for "fowler"
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Nurzhan Nurseitov, Michael Paulson, Randall Reynolds, Clemente Izurieta" for entry comparexmljson
+while executing---line 2419 of file IEEEtran.bst
+Warning--empty author and editor in rails3
+Warning--empty year in rails3
+Warning--empty author and editor in usecabecaiphone
+Warning--empty publisher in usecabecaiphone
+Warning--empty publisher in lecheta
+
+Done.
+You've used 24 entries,
+            4039 wiz_defined-function locations,
+            931 strings with 11259 characters,
+and the built_in function-call counts, 7992 in all, are:
+= -- 562
+> -- 90
+< -- 0
++ -- 46
+- -- 22
+* -- 231
+:= -- 1391
+add.period$ -- 46
+call.type$ -- 24
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 740
+empty$ -- 945
+format.name$ -- 22
+if$ -- 1758
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 155
+newline$ -- 95
+num.names$ -- 22
+pop$ -- 395
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 687
+stack$ -- 0
+substring$ -- 19
+swap$ -- 392
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 24
+warning$ -- 5
+while$ -- 22
+width$ -- 26
+write$ -- 193
+(There was 1 error message)

@@ -1,0 +1,54 @@
+\input{preambulo.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Joint Subcarrier Matching and Power All.]{Optimally Joint Subcarrier Matching and Power Allocation in OFDM Multihop System}
+\author[Wenji Wang]{Wenji Wang 
+        Shefeng Yan 
+        Shuyuan Yang}
+\institute[Chinese Academy of Science]{
+Department of Integrated Digital System\\
+Institute of Acoustics\\
+Chinese Academy of Science}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Justify itemize
+\let\olditem=\item%
+\renewcommand{\item}{\olditem \justifying}%
+
+\newcommand{\AtBeginSec}
+{
+\frame{\tableofcontents[currentsection]}
+}
+
+\newcommand{\ft}{\frametitle}
+
+\newcounter{qcounter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               TITLEPAGE           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               INTRODUCTION         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{introduction.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               SYSTEM MODEL         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{problem_form.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               OPTIMALLY            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{optimally.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               OPTIMALLY FOR N      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{n_optimally.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               RESULTS              %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{results.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               CONCLUSION           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{conclusion.tex}
+
+\end{document}

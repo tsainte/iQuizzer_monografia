@@ -1,0 +1,22 @@
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces MarketShare Q3 2012\relax }}{12}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso para Criador e Jogador \relax }}{19}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de entidades \relax }}{20}{figure.caption.19}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tela mostrada quando o usuario tenta acessar recurso e nao est\IeC {\'a} logado \relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Edi\IeC {\c c}\IeC {\~a}o de dados do usu\IeC {\'a}rio \relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Lembrar senha do usu\IeC {\'a}rio \relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Login no mobile (iOS) \relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Exemplo de controle bootstrap \relax }}{32}{figure.caption.29}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela desktop extendida\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela mobile com menu suprimido \relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Tela mobile com menu extendido \relax }}{33}{figure.caption.32}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Criando liga\IeC {\c c}\IeC {\~a}o entre interface builder e o c\IeC {\'o}digo \relax }}{37}{figure.caption.33}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Criando IBAction e associando evento \relax }}{37}{figure.caption.34}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ferramenta gr\IeC {\'a}fica para manipula\IeC {\c c}\IeC {\~a}o do Xcodemodel \relax }}{41}{figure.caption.35}
+\addvspace {10\p@ }
+\contentsfinish 

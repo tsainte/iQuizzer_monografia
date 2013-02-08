@@ -2,15 +2,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Exemplos de atributos \ac {SMART} para \ac {ATA}}}{26}{table.3.1}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Exemplos de atributos \ac {SMART} para \ac {ATA}}}{25}{table.3.1}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Comandos \ac {SCSI} selecionados em ordem alfab\'etica}}{39}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Comandos \ac {ATA} selecionados em ordem alfab\'etica}}{40}{table.4.2}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Comandos \ac {SCSI} selecionados em ordem alfab\'etica}}{38}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Comandos \ac {ATA} selecionados em ordem alfab\'etica}}{39}{table.4.2}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Nota\c c\~ao utilizada nas tabelas de resultados }}{49}{table.5.1}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Lista dos dispositivos testados}}{50}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados dos Testes.}}{51}{table.5.3}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Tempos de Execu\c c\~ao dos Testes, em segundos.}}{53}{table.5.4}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Compara\c c\~ao dos Resultados obtidos com a sele\c c\~ao de algoritmos e o PC-Doctor.}}{53}{table.5.5}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Nota\c c\~ao utilizada nas tabelas de resultados }}{48}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Lista dos dispositivos testados}}{49}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados dos Testes.}}{50}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Tempos de Execu\c c\~ao dos Testes, em segundos.}}{52}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Compara\c c\~ao dos Resultados obtidos com a sele\c c\~ao de algoritmos e o PC-Doctor.}}{52}{table.5.5}
 \addvspace {10\p@ }
 \contentsfinish 
