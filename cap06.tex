@@ -1,0 +1,30 @@
+\chapter{Conclusão} \label{CHP:CONC}
+
+
+\section{Contribuições}
+	Este trabalho busca apresentar duas contribuições sob diferentes perspectivas: a primeira, referente ao aplicativo \emph{iQuizzer}, mostra a concepção de uma aplicação distribuída desenvolvida em uma arquitetura que integra diferentes tecnologias; a segunda, referente à documentação de configuração e de implementação de arquitetura de aplicativo móvel utilizando \emph{web services}, apresenta detalhes sobre a implementação, buscando, quando possível discutir diferenças entre o desenvolvimento para \emph{iOS} e \emph{Android}.
+	
+	Os estudos foram contextualizados no desenvolvimento do aplicativo \emph{iQuizzer}, disponibilizado nas versões \emph{web} e \emph{mobile}, que visa estimular a busca por conhecimento sobre assuntos diversos, tanto para quem cria um \emph{quiz} quanto para quem joga. Além disso, a aplicação desenvolvida permite que enquetes sejam realizadas de maneira rápida, sendo os resultados avaliados remotamente em uma plataforma \emph{web}.
+	
+	A documentação feita nesta monografia fornece uma base para muitas das aplicações que estão em desenvolvimento na atualidade, utilizando a abordagem de \emph{web service} integrada à computação móvel. Tal abordagem vem sendo utilizada por um grande número de \emph{startups}, as quais necessitam, essencialmente, desenvolver e avaliar seus produtos de maneira rápida, mesmo que o produto ainda esteja em fase de desenvolvimento.
+
+	Todos os projetos encontram-se versionados, disponíveis no GitHub nos repositórios iQuizzer\_Rails\cite{codigosrails}, iQuizzer\_iOS\cite{codigosios} e iQuizzer\_Android\cite{codigosandroid}.
+\section{Limitações}
+	
+	Algumas das funcionalidades não implementadas para o iQuizzer representam algumas das limitações do projeto, como: a não atualização dos \emph{quizzes} depois de baixados, mesmo que modificados na \emph{web}; a não adoção de conexões assíncronas; a falta de integração com as redes sociais; a falta de criptografia na troca de mensagens. Entretanto, estes aspectos podem ser relacionados como expansões deste trabalho. 
+	
+	No que concerne às plataformas de desenvolvimento \emph{mobile}, existem duas limitações de versões: o aplicativo desenvolvido em \emph{iOS} não funciona em versões inferiores ao \emph{iOS 5.0}, devido ao uso de bibliotecas exclusivas dessa versão; de maneira similar, o aplicativo desenvolvido em \emph{Android} não funciona em versões inferiores ao \emph{Android 2.3 Gingerbread}.
+	
+ 
+\section{Trabalhos futuros}\label{SEC:FUTURO}
+	A fim de lançar a aplicação \emph{iQuizzer} no mercado, de maneira escalável e competitiva, algumas funcionalidades deveriam ser implementadas:
+\begin{itemize}
+\item Integração com as redes sociais: o módulo \emph{web} poderia ser disponível como um aplicativo para \emph{Facebook}, onde o controle de usuários seria feito pela própria conta do usuário na rede. Além disso, as ações do usuário, tanto na parte \emph{web} como na parte mobile, podem corresponder a ações no \emph{Facebook}, de modo a divulgar a plataforma;
+\item Segurança: toda a troca de mensagens pode ser feita utilizando protocolos seguros, como \ac{SSH}. Dessa forma, poderia garantir a inviabilidade da informação trocada;
+\item Elementos de rede social: ações como ``curtir'', ``comentar'' e ``seguir usuário'' podem ser colocadas dentro da plataforma, de modo a aumentar a experiência do usuário;
+\item Disponibilização do jogo para outras plataformas: a função de jogar um quiz pode ser disponibilizada na \emph{web}, no \emph{Windows Phone}, entre outros;
+\item Conexões assíncronas, de modo a otimizar a experiência do usuário em relação a usabilidade;
+\item Melhorias no \emph{layout}: no estado atual, a aplicação não possui uma identidade visual, o que é de vital importância para o sucesso comercial do aplicativo;
+\item Notificações e controles de atualização de \emph{quizzes};
+\item Monetização, com propagandas ou venda de \emph{quizzes}: pode-se monetizar a aplicação colocando \emph{banners}, tanto na \emph{web} como no \emph{mobile}. Poderia, também, ser criado um mini-sistema de venda de \emph{quizzes}, onde os criadores de cada \emph{quiz} lucrassem com a compra de \emph{quizzes} pelos jogadores.
+\end{itemize}

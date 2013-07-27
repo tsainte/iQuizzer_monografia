@@ -1,0 +1,58 @@
+\input{preambulo.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Trabalho de Conclusão de Curso]{Aloca\c{c}\~{a}o de Pot\^{e}ncia e Emparelhamento de Subportadoras em Sistemas Multicanais de 2 Saltos}
+\author{Jos\'{e} Mairton Barros da Silva J\'{u}nior}
+\institute[UFC]{Orientador: \orientador\\ 
+                Co-orientador: \corientador\\
+                Co-orientador: \coorientador\\
+                Universidade Federal do Cear\'{a}
+}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Justify itemize
+\let\olditem=\item%
+\renewcommand{\item}{\olditem \justifying}%
+
+\newcommand{\AtBeginSec}
+{
+\frame{\tableofcontents[currentsection]}
+}
+
+\newenvironment{bigitem}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{2pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\newcounter{qcounter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               TITLEPAGE           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\note{Talk for 30 minutes} % Add notes to yourself that will be displayed when
+                           % typeset with the notes or notesonly class options
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%               INTRODUCAO         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{introducao.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%        FORMULACAO TEORICA        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{fund_teor.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%    DESENVOLVIMENTO DO PROBLEMA   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{des_prob.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   RESULTADOS COMP. E DISCUSSAO   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{res_comp_disc.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  CONCLUSAO E TRABALHOS FUTUROS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{conclusao.tex}
+
+\end{document}

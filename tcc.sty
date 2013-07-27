@@ -1,0 +1,210 @@
+\ProvidesPackage{tcc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% O package inputenc adiciona suporte a caracteres ISO-8859-1.
+%%% Acentuação sem caracteres especiais,
+%%% e.g., "função" em vez de "fun\c c\~ao".
+\RequirePackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Hifenização correta de caracteres acentuados em Português.
+\RequirePackage[T1]{fontenc}
+
+% remove hifenização
+\RequirePackage[none]{hyphenat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Suporte para gerar o documento em Inglês e Português.
+%%% Última opção é padrão no documento.
+\RequirePackage[english,brazil]{babel}
+% \RequirePackage[english,brazil]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% indenta o primeiro parágrafo, estilo brasileiro.
+\RequirePackage{indentfirst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Índice Remissivo
+%%%\RequirePackage{makeidx}
+%Para criar índice remissivo. Coloque o comando \makeindex no preamble e use \index{} para adicionar um ítem no indice remissivo. O \printindex serve para colocar o índice remissivo no local desejado. Note que precisará a seguinte sequência de execussão: latex, makeindex, latex, latex para criar corretamente o índice remissivo (caso use bibtex também, a sequência será algo como latex, makeindex, bibtex, latex, latex)
+
+\RequirePackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Acronym Package :: options: [printonlyused], [nolist]
+\RequirePackage[printonlyused]{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problema com kile
+% \RequirePackage[hang,small,bf]{caption2}
+
+%%% permitir range de citacoes
+\RequirePackage[]{rangecite}
+\RequirePackage[sort]{cite}
+
+% \RequirePackage{}
+
+% \RequirePackage{}
+
+% \RequirePackage{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[hyperfootnotes=false,breaklinks,colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
+%Obs.: Footnotes não seguem o link, então é melhor desabilitar.
+
+%%% Usar hyperlinks e adicionar informações de autor, keyword, title, etc., no PDF
+ \hypersetup{
+pdfauthor = {Jos\'{e} Mairton Barros da Silva J\'{u}nior},
+pdftitle = {Aloca\c{c}\~{a}o de Pot\^{e}ncia e Emparelhamento de Subportadoras em Sistemas Multicanais de 2 saltos},
+% pdfsubject = {Overload Prediction for RT Services},
+% pdfkeywords = {Overload Prediction, Delay, Congestion Control Algorithms},
+pdfcreator = {Jos\'{e} Mairton Barros da Silva J\'{u}nior},
+% pdfproducer = {dvips + ps2pdf}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Mudar fonte - Escolha uma das opções abaixo
+% \usepackage{mathptmx} % Times + Helvetica + Courier + Times Math
+% \usepackage{mathpazo} % Palatino + Helvetica + Courier + Palatino Math
+% \usepackage{newcent}  % New Century Schoolbook + Avant Garde + Courier
+% \usepackage{bookman}  % Bookman + Avant Garde + Courier
+% \usepackage{concmath}
+\usepackage{lmodern}
+% \usepackage{gfsartemisia-euler}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Usar pacote fancyref e adaptá-lo para o português
+% \usepackage[plain]{fancyref}
+% \fancyrefchangeprefix{\fancyrefeqlabelprefix}{E}
+% \fancyrefchangeprefix{\fancyreffiglabelprefix}{F}
+% \fancyrefchangeprefix{\fancyrefseclabelprefix}{S}
+% \fancyrefchangeprefix{\fancyrefchaplabelprefix}{C}
+% \fancyrefchangeprefix{\fancyreftablabelprefix}{T}
+% % \fancyrefchangeprefix{\fancyreflabelprefix{enum}}{enum}
+% % \fancyrefchangeprefix{\fancyreflabelprefix{fn}}{fn} %footnote
+% \renewcommand*{\Frefeqname}{Equação}
+% \renewcommand*{\Frefsecname}{Sessão}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Para incluir gráficos -- Formato .eps
+\RequirePackage[dvips]{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package subfigure --- Figuras dentro de figuras.
+\RequirePackage{subfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package wrapfig --- Figuras e tabelas ao lado de texto
+\RequirePackage{wrapfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package placeins --- mantem figuras e tabelas na
+%%% seção onde são declaradas
+%%% \usepackage[below]{placeins}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Redefinir dimensões da página
+\RequirePackage[dvips]{geometry}
+% \geometry{a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3cm} % Original Carlos
+\geometry{a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package alltt -- Funciona como o pacote verbatim,
+%%% mas permite inclusão de texto proveniente de arquivos.
+\RequirePackage{alltt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% suporte a tabelas coloridas
+\RequirePackage{colortbl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% fácil manipulação das propiedades de uma tabela
+\RequirePackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% configuração das dimensões de uma tabela (manipula colunas)
+%%% ajusta a tabela as dimensões da página
+\RequirePackage{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Suporte para múltiplas colunas
+\RequirePackage{multicol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package longtable -- Suporte para tabelas que ocupam mais de uma página.
+\RequirePackage{longtable}
+
+\RequirePackage{ltxtable}
+
+\RequirePackage{multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package psfrag -- Suporte para superposição de texto do LaTeX em
+%%% figuras PostScript. Carregado somente na versão DVI/PS.
+\RequirePackage[dvips]{psfrag}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package enumerare -- Extensão do ambiente "enumerate".
+\RequirePackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package algorithm -- pacote para manipulação de pseudo-código.
+\RequirePackage[ruled,chapter]{algorithm}
+%plain,boxed,ruled
+%part,chapter,section,subsection,subsubsection,nothing
+% \RequirePackage{algorithmic} erro com o pacote abaixo
+% \RequirePackage{algpseudocode}
+\RequirePackage{pseudocode}
+% \RequirePackage{fancybox} % necessário para o pacote acima
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package fancyhdr -- manipulação fácil de cabeçalhos e notas de radapé.
+\RequirePackage{fancyhdr}
+\RequirePackage[Lenny]{fncychap}
+%\RequirePackage[nobottomtitles,clearempty]{titlesec}
+\RequirePackage[clearempty,compact]{titlesec}
+
+\RequirePackage{titletoc}
+\RequirePackage{listings}
+
+% pacotes matematicos
+% mathtools causa muitos warnings
+% necessario para utilizar dcases
+\RequirePackage{amsmath,amsfonts,amsbsy,amssymb,amsthm,amstext,amsgen,mathtools}
+\newtheorem{theo}{Teorema}
+%\RequirePackage{afterpage}
+
+% incluir bibliografia, índice e listas no sumário
+%\RequirePackage[nottoc,notlof,notlot]{tocbibind}
+%\settocname{teste}
+
+%\RequirePackage[lined,algonl,boxed]{algorithm2e}
+%\RequirePackage{footmisc}
+\RequirePackage{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% traduzir automaticamente os meses das referências para português
+% \RequirePackage{datetimepor}
+\RequirePackage{datetime}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% incluir palavra "apêndice" antes da indexação dos capítulos do apêndice
+\RequirePackage[titletoc,title]{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% permitir criacao de graficos pelo tikz
+\RequirePackage{tikz}
+% Tikz blocks
+\usetikzlibrary{matrix,shapes,patterns,decorations}
+\tikzstyle{block} = [draw,rectangle,minimum height=3cm,minimum width=1cm]
+\tikzstyle{user} = [draw,rectangle,minimum height=5mm,minimum width=1cm]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{point} = [coordinate]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

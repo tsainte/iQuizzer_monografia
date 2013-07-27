@@ -1,0 +1,65 @@
+\chapter{Introdução} \label{CHP:TEO}%%
+	Este capítulo visa apresentar o contexto no qual o trabalho realizado está inserido, assim como definir seus objetivos e justificar seus propósitos. Na Seção 1.1, é apresentada uma contextualização para a solução gerada. Os objetivos geral e específicos são indicados na Seção 1.2. Por fim, a Seção 1.3 realiza uma breve descrição da metodologia empregada e a Seção 1.4 descreve o formato no qual esta monografia está organizada.
+ 
+\section{Contextualização}
+ 
+        A computação em nuvem propõe que recursos de \emph{hardware} e \emph{software} sejam providos como serviço pela internet. Sob essa visão, sistemas como \emph{web services} podem ser hospedados sobre uma infraestrutura de terceiros, de modo a diminuir custos operacionais.
+
+		\emph{Web service} é uma solução utilizada para realizar a comunicação entre sistemas distintos, que podem utilizar diferentes tecnologias de implementação e estar sob as mais diversas plataformas.  Assim, aplicações feitas por equipes diferentes, em diferentes contextos, podem se comunicar e executar ações ou consumir recursos.
+		
+		
+        A função de um \emph{web service} é possibilitar que os recursos de uma aplicação de \emph{software} estejam disponíveis na rede de uma forma padronizada, ou seja, sobre um protocolo em que cliente e servidor entendam a mensagem.
+        
+		Existem algumas formas padronizadas de implementar serviços, sendo as mais comuns as soluções em \ac{SOAP} e \ac{REST}. \ac{REST} é um padrão de \emph{web} service mais comum em computação móvel.
+		
+        A computação móvel pode ser representada como um novo paradigma computacional que permite a usuários desse ambiente terem acesso a serviços independentemente de sua localização podendo, inclusive, estar em movimento \cite {fucapi}. Originalmente, telefones celulares possuíam apenas a capacidade de realizar a comunicação por voz. Com o passar do tempo, algumas funcionalidades extras foram sendo implementadas e, atualmente, os dispositivos possuem um amplo poder de processamento e comunicação. Tais aparelhos receberam a nomenclatura comercial de \emph{smartphone}.
+		
+        \emph{Smartphones} (ou telefones inteligentes) são celulares com funcionalidades avançadas, que podem ser estendidas através de programas adicionados ao seu sistema operacional.  Em sistemas operacionais como \emph{iOS} e \emph{Android}, existem uma vasta gama de aplicativos que podem ser baixados em lojas virtuais, como \emph{App Store} e \emph{Google Play}, respectivamente. As categorias líderes em número de aplicativos baixados são jogos e sociais.
+		
+        Rede social é uma estrutura composta por pessoas ou organizações conectadas, de modo a partilhar valores e objetivos comuns. Existem diversos tipos de redes, como as de relacionamento (\emph{Facebook}, \emph{Orkut}, \emph{Twitter}), redes profissionais (\emph{LinkedIn}), redes comunitárias (\emph{Cromaz}), entre outros.      
+		
+        Em redes de relacionamentos como \emph{Facebook} e \emph{Orkut}, surgiram alguns jogos que possibilitam a interação de pessoas, aproveitando características de integração social. Tais jogos recebem a denominação de \emph{social network gaming}.
+\section{Objetivos}
+ 
+	Esta seção visa descrever os objetivos deste trabalho através de um panorama geral de seus propósitos e da descrição de pontos específicos que devem ser atendidos.
+ 
+\subsection{Objetivos Gerais}
+ 
+        O principal objetivo desse trabalho é a criação de uma plataforma \emph{web}, hospedada mediante serviço de computação em nuvem, que interaja com duas aplicações \emph{mobile} (em \emph{iOS} e em \emph{Android}), através de um serviço de \emph{web} service utilizando \ac{REST}.
+		
+		A aplicação \emph{web} permitirá a criação de questionários e enquetes, os quais denominamos de \emph{quizzes}, bem como o acompanhamento das respostas marcadas.  Por sua vez, as aplicações móveis em \emph{iOS} e \emph{Android} permitirão que os usuários possam baixar os \emph{quizzes} de seu interesse e jogá-los, de forma competitiva ou apenas responder, a depender do modo de jogo inerente ao \emph{quiz} em questão.	
+			
+		A depender do modo como cada \emph{quiz} for criado, será creditada uma pontuação por jogo. Além disso, será creditada uma pontuação referente à criação de cada quiz e à adição de perguntas.
+ 
+\subsection{Objetivos Específicos}
+ 
+Os objetivos específicos deste trabalho são enumerados a seguir:
+\begin{enumerate}
+\item Análise das tecnologias existentes para implementação dos aplicativos propostos;
+\item Modelagem de uma interface gráfica de fácil utilização, para sistemas \emph{web} e \emph{mobile};
+\item Implementação do sistema \emph{web} e hospedagem em um serviço de computação em nuvem utilizando \ac{PaaS};
+\item Apresentar o \emph{Ruby on Rails} como \emph{framework} \emph{web} que oferece alta produtividade no desenvolvimento, fácil manutenção e rápida interação com aplicativos móveis;
+\item Apresentar a implementação dos clientes móveis da aplicação em \emph{iOS} e \emph{Android};
+\item Comparar algumas funcionalidades e implementações do desenvolvimento para \emph{iOS} e \emph{Android};
+\item Fornecer documentação de referência para projetos de arquitetura similar.
+ \end{enumerate}
+\section{Metodologia utilizada}
+ 
+        Primeiramente, uma revisão bibliográfica referente às áreas de computação em nuvem, \emph{web services} e computação móvel foi realizada com o intuito de familiarização com o estado da arte (no que concerne às tecnologias atuais que seguem esse modelo). Em seguida, deu-se início a uma escolha de ferramentas e tecnologias que seriam utilizadas para a implementação do \emph{software}.  Após a escolha, a codificação da parte \emph{mobile} em \emph{iOS} e \emph{web} em \emph{Rails}  foi feita, sendo implementada posteriormente em \emph{Android}. Nas duas últimas etapas posteriores, testes e melhorias se deram de forma concomitante.  A última etapa é reservada a melhorias e modificações demandadas por usuários, conforme o produto for sendo utilizado quando lançado no mercado.
+ 
+\section{Estrutura da monografia }
+ 
+Esta monografia está organizada em seis capítulos, incluindo-se a introdução aqui apresentada.
+
+O capítulo \ref{CHP:FUND} aborda os conceitos gerais que serão utilizados por todo o trabalho, como computação em nuvem, \emph{web service} e tecnologias correlatas, computação móvel e os trabalhos  relacionados que constituíram o embasamento teórico deste trabalho.
+
+  No capítulo \ref{CHP:APP}, a aplicação desenvolvida é abordada através da apresentação das ferramentas utilizadas para sua criação e descrição dos requisitos, funcionais e não-funcionais, e das camadas que compõem a arquitetura da aplicação.
+  
+O capítulo \ref{CHP:RAILS} apresenta a tecnologia \emph{web} \emph{Ruby on Rails} e mostra como algumas funcionalidades foram implementadas.
+
+O capítulo \ref{CHP:COMP} traça um comparativo entre as funcionalidades que foram implementadas para as plataformas \emph{iOS} e \emph{Android}.
+
+%No Capítulo 6, apresenta-se a metodologia de testes proposta para os usuários-teste e, em seguida, realiza a apresentação e análise dos resultados obtidos.
+
+
+Por fim, o capítulo \ref{CHP:CONC} apresenta considerações finais acerca do trabalho realizado.

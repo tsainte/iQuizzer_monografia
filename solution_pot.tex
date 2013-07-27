@@ -1,0 +1,254 @@
+\begin{proof}
+    Para $P_i^s=P_i^r=0$, o teorema é válido. Para a demonstração do Teorema \ref{teo:pot_lin_ret} e $P_i^s\neq P_i^r\neq 0$, vamos analisar as condições de \ac{KKT} de \eqref{eq:pot_emp_pro}. Podemos rescrever o problema \eqref{eq:pot_emp_pro} como:
+    \begin{subequations}\label{eq:prob_aux}
+            \begin{align}
+                    \min_{P_i^s,P_i^r,C_i} - &\sum_{i=1}^NC_i,\\
+                    \text{s.t.}\quad & C_i - R_i^s(P_i^s) \leq 0, \forall i, \\
+                      &C_i - R_i^r(P_i^r) \leq 0, \forall i, \\
+                      &-P_i^s \leq 0, \forall i,\\
+                      &-P_i^r \leq 0, \forall i, \\
+                      &-C_{i} \leq 0, \forall i.\\
+                      &\sum_{i=1}^N P_i^s \leq P_{t}^s,\\
+                      &\sum_{i=1}^N P_i^r \leq P_{t}^r,\\
+            \end{align}
+    \end{subequations}
+    A variável $C_i$ é acrescentada para deixar o problema mais tratável. O Lagrangeano é:
+    \begin{equation}
+            \begin{split}
+                    L(P_i^s; P_i^r; C_i;\lambda_i;\mu_i;\gamma_i;\nu_i;\phi_i;\alpha;\beta) &= -\sum_{i=1}^N C_i +\sum_{i=1}^N \lambda_i(C_i - R_i^s) +\sum_{i=1}^N \mu_i(C_i - R_i^r) + \\
+                    & + \sum_{i=1}^N \gamma_i(-P_i^s) + \sum_{i=1}^N \nu_i(-P_i^r) + \sum_{i=1}^N \phi_i(-C_{i}) + \\ 
+        & + \alpha\left(\sum_{i=1}^NP_i^s - P_{t}^s\right) + \beta\left(\sum_{i=1}^NP_i^r - P_{t}^r\right)
+            \end{split}
+    \end{equation}
+    onde a relação entre os multiplicadores e suas respectivas restrições está abaixo:
+    \begin{subequations}\label{eq:lag_mul}
+        \begin{align}
+              \lambda_i &\Rightarrow\; C_i - R_i^s(P_i^s) \leq 0,\\
+              \mu_i &\Rightarrow\; C_i - R_i^r(P_i^r) \leq 0,\\
+              \alpha &\Rightarrow\; \sum_{i=1}^N P_i^s \leq P_{t}^s,\\
+              \beta &\Rightarrow\;  \sum_{i=1}^N P_i^r \leq P_{t}^r,\\
+              \gamma_i &\Rightarrow\; -P_i^s \leq 0,\\
+              \nu_i &\Rightarrow\; -P_i^r \leq 0,\\
+              \phi_i &\Rightarrow\; -C_i \leq 0.
+        \end{align} 
+    \end{subequations}
+
+    \subsection{Condições de KKT}
+
+    As condições de \ac{KKT} para o problema \eqref{eq:prob_aux} são:
+    \begin{subequations}\label{eq:kkt_prob}
+            \begin{align}
+                    \dfrac{\partial L}{\partial C_i} &= 0, \label{eq:kkt_prob_a}\\
+                    \dfrac{\partial L}{\partial P_i^s} &= 0, \label{eq:kkt_prob_b}\\
+                    \dfrac{\partial L}{\partial P_i^r} &= 0, \label{eq:kkt_prob_c}\\
+                    \lambda_i(C_i - R_i^s) &= 0, \label{eq:kkt_prob_d}\\
+                    \mu_i(C_i - R_i^r) &= 0, \label{eq:kkt_prob_e}\\
+                    \gamma_i P_i^s &= 0, \label{eq:kkt_prob_f}\\
+                    \nu_i P_i^r &= 0, \label{eq:kkt_prob_g}\\
+                    \phi_i C_i &= 0, \label{eq:kkt_prob_h} \\
+                    \sum_{i=1}^N P_i^s &\leq P_{t}^s, \label{eq:kkt_prob_i}\\
+                    \sum_{i=1}^N P_i^r &\leq P_{t}^r. \label{eq:kkt_prob_j}\\
+                    \lambda_i,\mu_i,\gamma_i,\nu_i,\phi_i,\alpha,\beta,P_i^s,P_i^r,C_i & \geq 0. \label{eq:kkt_prob_k}\\
+                    \alpha\left(\sum_{i=1}^N P_i^s - P_{t}^s\right) &= 0, \label{eq:kkt_prob_l}\\
+                    \beta\left(\sum_{i=1}^N P_i^r - P_{t}^r\right) &= 0, \label{eq:kkt_prob_m}\\
+            \end{align}
+    \end{subequations}
+
+    \subsection{Análise das condições de KKT}
+
+    Desenvolvendo a condição de \ac{KKT} em \eqref{eq:kkt_prob_a} temos:
+    \begin{equation}\label{eq:phi}
+    \dfrac{\partial L}{\partial C_i} = -1 + \lambda_i + \mu_i - \phi_i = 0 \quad \Rightarrow \quad \phi_i = \lambda_i + \mu_i - 1.\\
+    \end{equation}
+
+    Em relação à condição de \ac{KKT} em \eqref{eq:kkt_prob_b} temos:
+    \begin{equation}\label{eq:gamma}
+    \begin{split}
+            \dfrac{\partial L}{\partial P_i^s} = 0 \quad &\Rightarrow \quad -\dfrac{\partial R_i^s}{\partial P_i^s}\lambda_i +\alpha -\gamma_i = 0 \quad \Rightarrow \quad -\dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s} +\alpha -\gamma_i = 0  \\
+            & \Rightarrow \quad \gamma_i = \alpha -\dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}.
+    \end{split}
+    \end{equation}
+
+    Desenvolvendo a condição de \ac{KKT} em \eqref{eq:kkt_prob_c} temos:
+    \begin{equation}\label{eq:nu}
+    \begin{split}
+    \dfrac{\partial L}{\partial P_i^r} = 0 \quad &\Rightarrow \quad -\dfrac{\partial R_i^r}{\partial P_i^r}\mu_i +\beta -\nu_i  = 0\quad \Rightarrow \quad -\dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r} +\beta -\nu_i = 0 \\
+    &\Rightarrow \quad \nu_i = \beta -\dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}. 
+    \end{split}
+    \end{equation}
+
+    Eliminamos $\phi_i$ do sistema, substituindo \eqref{eq:phi} em \eqref{eq:kkt_prob_k} e \eqref{eq:kkt_prob_h}. Obtemos:
+    \begin{subequations}
+            \begin{align}
+                    \phi_i \geq 0 \quad &\Rightarrow \quad \lambda_i + \mu_i - 1 \geq 0 \quad \Rightarrow \quad \lambda_i + \mu_i \geq 1, \\
+                    \phi_i C_i = 0 \quad &\Rightarrow \quad (\lambda_i + \mu_i - 1) C_i = 0.
+            \end{align}
+    \end{subequations}
+
+    Eliminamos $\gamma_i$ do sistema, substituindo \eqref{eq:gamma} em \eqref{eq:kkt_prob_k} e \eqref{eq:kkt_prob_f}. Chegamos em:
+    \begin{subequations}
+            \begin{align}
+                    \gamma_i \geq 0 \quad &\Rightarrow \quad \alpha \geq \dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}, \\
+                    \gamma_i P_i^s = 0 \quad &\Rightarrow \quad \left(\alpha -\dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}\right) P_i^s = 0.
+            \end{align}
+    \end{subequations}
+
+    Eliminamos $\nu_i$ do sistema, substituindo \eqref{eq:nu} em \eqref{eq:kkt_prob_k} e \eqref{eq:kkt_prob_g}. Obtemos então:
+    \begin{subequations}
+            \begin{align}
+                    \nu_i \geq 0 \quad &\Rightarrow \quad \beta \geq \dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}, \\
+                    \nu_i P_i^r = 0 \quad &\Rightarrow \quad \left(\beta -\dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}\right) P_i^r = 0.
+            \end{align}
+    \end{subequations}
+
+    Podemos agora reorganizar o conjunto de condições de \ac{KKT} \eqref{eq:kkt_prob}, retirando as variáveis que não são mais necessárias, obtendo o sistema: 
+    \begin{subequations}\label{eq:kkt_prob2}
+            \begin{align}
+                    \allowdisplaybreaks[4]
+                    \lambda_i + \mu_i &\geq 1, \label{eq:kkt_prob2_a}\\
+                    (\lambda_i + \mu_i - 1) C_i &= 0, \label{eq:kkt_prob2_b}\\
+                    \lambda_i(C_i - R_i^s) &= 0, \label{eq:kkt_prob2_c}\\
+                    \mu_i(C_i - R_i^r) &= 0, \label{eq:kkt_prob2_d}\\
+                    \alpha &\geq \dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}, \label{eq:kkt_prob2_f}\\
+                    \left(\alpha -\dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}\right) P_i^s &= 0, \label{eq:kkt_prob2_g}\\
+                    \beta &\geq \dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}, \label{eq:kkt_prob2_h}\\
+                    \left(\beta -\dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}\right) P_i^r &= 0, \label{eq:kkt_prob2_i}\\
+                    \sum_{i=1}^N P_i^s &\leq P_{t}^s, \label{eq:kkt_prob2_j}\\
+                    \sum_{i=1}^N P_i^r &\leq P_{t}^r. \label{eq:kkt_prob2_k}\\
+                    \lambda_i,\mu_i,C_i,\alpha,\beta,P_i^s,P_i^r &\geq 0, \label{eq:kkt_prob2_l}
+            \end{align}
+    \end{subequations}
+    Desenvolvendo a condição de \ac{KKT} em \eqref{eq:kkt_prob2_g} a partir da equação \eqref{eq:kkt_prob2_f}, podemos supor alguns valores para $\alpha$:
+    \begin{align}
+    (1)\quad     &\alpha < g_i^s\lambda_i \Rightarrow\; P_i^s > 0 ,\\
+                &\quad P_i^s = \frac{\lambda_i}{\alpha} - \frac{1}{g_i^s},\\
+    (2)\quad     &\alpha \geq g_i^s\lambda_i \Rightarrow\; P_i^s = 0.
+    \end{align}
+    Pois, se $P_i^s > 0$ teríamos $\alpha \geq g_i^s\lambda_i > \dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}$, mas neste caso $\alpha =\dfrac{g_i^s\lambda_i}{1 + P_i^sg_i^s}$, por \eqref{eq:kkt_prob2_f}. Logo, $P_i^s = 0$. Ou seja, para a potência do enlace \ac{ERB}-\ac{ER} temos:
+    \begin{equation}\label{eq_pot_sr}
+    P_i^s=
+        \begin{cases}
+          \dfrac{\lambda_i}{\alpha} - \dfrac{1}{g_i^s} &,\; \alpha < g_i^s\lambda_i,\\
+          0 &,\; \alpha \geq g_i^s\lambda_i.
+        \end{cases}
+    \end{equation}
+
+    De maneira similar, podemos obter para o enlace \ac{ER}-\ac{EA}, através da equação \eqref{eq:kkt_prob2_g} e \eqref{eq:kkt_prob2_h}, que 
+%     \begin{align}
+%     P_i^r\left(\beta -\dfrac{g_i^r\mu_i}{1 + P_i^rg_i^r}\right) = 0
+%     \end{align}
+%     Verificando agora hipóteses similares para $\beta$:
+%     \begin{align}
+%     (1)\quad & \beta < g_i^r\mu_i \Rightarrow\; P_i^r > 0, \\
+%             &\quad P_i^r = \dfrac{\mu_i}{\beta} - \dfrac{1}{g_i^r},\\
+%     (2)\quad & \beta > g_i^r\mu_i \Rightarrow\; P_i^r = 0.
+%     \end{align}
+    a potência no enlace \ac{ER}-\ac{EA} é dada por:
+    \begin{equation}\label{eq:pot_rd}
+    P_i^r=
+        \begin{cases}         
+            \dfrac{\mu_i}{\beta} - \dfrac{1}{g_i^r} &,\; \beta < g_i^r\mu_i,\\
+            0 &,\; \beta \geq g_i^r\mu_i.
+        \end{cases}
+    \end{equation}
+
+    Com isso, podemos reescrever as condições de \ac{KKT} novamente, retirando aquelas que não são mais necessárias, resultando:
+    \begin{subequations}\label{eq:kkt_prob3}
+            \begin{align}
+                    \lambda_i + \mu_i &\geq 1, \label{eq:kkt_prob3_a}\\
+                    (\lambda_i + \mu_i - 1) C_i &= 0, \label{eq:kkt_prob3_b}\\
+                    \lambda_i(C_i - R_i^s) &= 0, \label{eq:kkt_prob3_c}\\
+                    \mu_i(C_i - R_i^r) &= 0, \label{eq:kkt_prob3_d}\\
+                    P_i^s&=
+                      \begin{cases}
+                        \dfrac{\lambda_i}{\alpha} - \dfrac{1}{g_i^s} &,\; \alpha < g_i^s\lambda_i\\
+                        0 &,\; \alpha \geq g_i^s\lambda_i
+                      \end{cases}\label{eq:kkt_prob3_e}\\
+                    P_i^r&=
+                      \begin{cases}         
+                        \dfrac{\mu_i}{\beta} - \dfrac{1}{g_i^r} &,\; \beta < g_i^r\mu_i\\
+                        0 &,\; \beta \geq g_i^r\mu_i
+                      \end{cases}\label{eq:kkt_prob3_f}\\                
+                    \sum_{i=1}^N P_i^s &\leq P_{t}^s, \label{eq:kkt_prob3_g}\\
+                    \sum_{i=1}^N P_i^r &\leq P_{t}^r. \label{eq:kkt_prob3_j}\\
+                    \lambda_i,\mu_i &\geq 0, \label{eq:kkt_prob3_k}
+            \end{align}
+    \end{subequations}
+
+    Desenvolvendo as restrições \eqref{eq:kkt_prob3_c} e \eqref{eq:kkt_prob3_d}, temos:\\
+    (1) Supondo $\lambda_i = 0$
+    \begin{equation}
+    P_i^s=
+    \begin{cases}         
+    - \dfrac{1}{g_i^s} &,\; \alpha < 0\\
+    0 &,\; \alpha \geq 0
+    \end{cases}
+    \end{equation}
+    Logo, $\alpha \geq 0$ e $P_i^s = 0$. É necessário verificar agora duas condições de \eqref{eq:kkt_prob3_a}:
+    \begin{itemize}
+    \item[i)] $\lambda_i + \mu_i = 1 \;\Rightarrow\; \mu_i = 1$
+    \begin{equation}
+    P_i^r=
+    \begin{cases}         
+    \dfrac{1}{\beta} - \dfrac{1}{g_i^r} &,\; \beta < g_i^r\\
+    0 &,\; \beta \geq g_i^r
+    \end{cases}
+    \end{equation}
+    \item[ii)] $ \lambda_i + \mu_i > 1\;\Rightarrow\;\mu_i > 1$\\
+    Através da condição \eqref{eq:kkt_prob3_b} e \eqref{eq:kkt_prob3_d}, vemos que $C_i = 0\;\Rightarrow\;R_i^r=0\;\Rightarrow\;P_i^r=0$, independente do valor de $\beta$.
+%     \begin{equation}
+%     P_i^r=
+%     \begin{cases}         
+%     \dfrac{\mu_i}{\beta} - \dfrac{1}{g_i^r} &,\; \beta < g_i^r\mu_i\\
+%     0 &,\; \beta \geq g_i^r\mu_i
+%     \end{cases}
+%     \end{equation}
+    \end{itemize}
+
+    Ou seja, em um enlace a potência é zero, mas no outro pode ser diferente de zero e positiva, independente da condição. No caso em que ambas são nulas, o teorema é válido. Supondo que $P_i^r\neq 0$, a potência do enlace \ac{ERB}-\ac{ER} será sempre nula. Esse caso não leva a otimalidade e não é de interesse prático, visto que a \ac{EA} não pode receber bits que não foram enviados pela \ac{ERB}. Com isso, $\lambda_i \neq 0$ se $\alpha < 0$ ou $\beta < g_i^r$.
+
+    (2) Supondo agora que $\mu_i = 0$
+    \begin{equation}
+    P_i^r=
+    \begin{cases}
+    - \dfrac{1}{g_i^r} &,\; \beta < 0\\
+    0 &,\; \beta \geq 0
+    \end{cases}
+    \end{equation}
+    Logo, $\beta \geq 0$ e $P_i^r = 0$. Verificando novamente a condição \eqref{eq:kkt_prob3_a}:
+    \begin{itemize}
+    \item[i)] $\lambda_i + \mu_i = 1 \;\Rightarrow\; \lambda_i = 1$
+    \begin{equation}
+    P_i^s=
+    \begin{cases}         
+    \dfrac{1}{\alpha} - \dfrac{1}{g_i^s} &,\; \alpha < g_i^s\\
+    0 &,\; \alpha \geq g_i^s
+    \end{cases}
+    \end{equation}
+    \item[ii)] $ \lambda_i + \mu_i > 1 \;\Rightarrow\; \lambda_i > 1$
+%     \begin{equation}
+%     P_i^s=
+%     \begin{cases}         
+%     \dfrac{\lambda_i}{\alpha} - \dfrac{1}{g_i^s} &,\; \alpha < g_i^s\lambda_i\\
+%     0 &,\; \alpha \geq g_i^s\lambda_i
+%     \end{cases}
+%     \end{equation}
+%     \end{itemize}
+%     Novamente a potência em um enlace é zero, mas positiva no outro. Chegamos em uma contradição parecida com a anterior, a \ac{ERB} não pode enviar bits que não serão retransmitidos para a \ac{EA}. Com isso, $\mu_i \neq 0$ se $\beta < 0$ ou $\alpha < g_i^s$.
+    Através da condição \eqref{eq:kkt_prob3_b} e \eqref{eq:kkt_prob3_c}, vemos que $C_i = 0\;\Rightarrow\;R_i^s=0\;\Rightarrow\;P_i^s=0$, independente do valor de $\alpha$.
+    \end{itemize}
+    
+    Ou seja, em um enlace a potência é zero, mas no outro pode ser diferente de zero e positiva, independente da condição, assim como no caso anterior onde $\lambda_i = 1$. No caso em que ambas são nulas, o teorema é válido. Supondo que $P_i^s\neq 0$, a potência do enlace \ac{ER}-\ac{EA} será sempre nula. Esse caso não leva a otimalidade e não é de interesse prático, visto que a \ac{ERB} não pode enviar bits que não serão retransmitidos para a \ac{EA}. Com isso, $\mu_i \neq 0$ se $\beta < 0$ ou $\alpha < g_i^s$.
+
+    (3) Logo, vemos que as outras duas situações devem ocorrer.
+    \begin{align}
+    R_i^s - C_i &= 0\\
+    R_i^r - C_i &= 0
+    \end{align}
+    Ou seja,
+    \begin{align}
+    R_i^s &= R_i^r\\
+    \ln\left(1 + g_i^sP_i^s\right) &= \ln\left(1 + g_i^rP_i^r\right)\\
+    g_i^sP_i^s &= g_i^rP_i^r
+    \end{align}
+\end{proof}
